@@ -1,1 +1,63 @@
-# Zypuc
+# Zypuc · Tienda en línea
+
+Tienda de Zypuc (tecnología, deporte, repostería y regalitos) con entrega en Pucallpa.
+Los pedidos llegan por WhatsApp al **+51 951 434 075**.
+
+## Archivos
+
+| Archivo | Para qué sirve |
+|---|---|
+| `index.html` | La tienda completa. Se abre con doble clic o desde GitHub Pages. |
+| `productos.json` | **La lista de productos.** Aquí se agregan, quitan o editan productos. |
+| `precios.json` | Lo escribe solo el actualizador de precios. No hace falta tocarlo. |
+| `scripts/actualizar_precios.py` | Programa que visita los links de cada producto y lee el precio. |
+| `.github/workflows/precios.yml` | Le dice a GitHub que corra el actualizador cada 6 horas. |
+| `logo-claro.png`, `logo-oscuro.png` | Logo para fondo claro y para modo oscuro. |
+
+## Cómo se calcula el precio
+
+```
+Precio Zypuc = (precio en la tienda donde compramos + envío a Pucallpa) × (1 + comisión)
+```
+
+Se redondea al siguiente ",90". El envío (S/ 8 por unidad) y la comisión (15 %) se cambian en `config` dentro de `productos.json`. Un producto puede tener su propio `"envio"` o `"comision"` (por ejemplo, la bicicleta tiene envío S/ 25).
+
+El aviso **"En Ripley cuesta S/ X · Ver en Ripley"** solo aparece si:
+1. esa tienda de verdad lo vende más caro que nuestro precio, y
+2. el precio de esa tienda se revisó hace 7 días o menos.
+
+Si el actualizador no puede leer un precio, guarda el último precio bueno con su fecha. Pasados 7 días sin poder revisarlo, el aviso desaparece solo. Así nunca mostramos una comparación vieja o falsa.
+
+## Agregar un producto
+
+En GitHub, abre `productos.json`, toca el lápiz ✏️ y copia uno de los productos como modelo:
+
+```json
+{
+  "id": "nombre-corto-sin-espacios",
+  "dept": "Tecnología",
+  "cat": "Periféricos",
+  "brand": "Marca",
+  "name": "Nombre completo tal como lo vende la tienda",
+  "model": "Detalle corto",
+  "image": "link de la foto del producto en la tienda",
+  "buy": { "store": "Falabella", "seller": "Vendedor", "price": 99.9, "url": "link del producto", "checked": "2026-10-14" },
+  "ref": { "store": "Ripley", "seller": "Vendedor", "price": 129, "url": "link del producto en la tienda más cara", "checked": "2026-10-14" },
+  "spec": {}
+}
+```
+
+- `buy` = donde lo compramos (la tienda más barata). `ref` = la tienda que lo vende más caro (es opcional).
+- Para la foto: abre el producto en Ripley o Falabella, clic derecho sobre la foto → "Copiar dirección de imagen".
+- Usa el **link exacto del producto**, no el de una búsqueda: así el actualizador puede leer el precio.
+- Para un producto sin precio (se consulta por WhatsApp) pon `"consult": true` y no pongas `buy`.
+- `dept` puede ser `Tecnología`, `Deporte`, `Repostería` o `Regalitos`. `cat` debe ser una de las subcategorías de `subcategorias`.
+
+## Correr el actualizador a mano
+
+En GitHub: pestaña **Actions** → **Actualizar precios** → **Run workflow**. En el resumen de la ejecución aparece cada precio leído (✅), los que no se pudieron leer (❌) y los descartados por raros (⚠️).
+
+## Publicar la tienda
+
+En GitHub: **Settings → Pages → Branch: main / (root) → Save**. En un par de minutos la tienda queda en
+`https://djpacker17.github.io/Zypuc/`.

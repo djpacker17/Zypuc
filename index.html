@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="es"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="theme-color" content="#f6f9fe">
+  <link rel="icon" href="logo-claro.png">
+  <meta property="og:title" content="Zypuc · Tecnología y dulzura">
+  <meta property="og:description" content="Tecnología, deporte, repostería y regalitos con entrega en Pucallpa. Te mostramos cuánto cuesta en otra tienda.">
+  <meta property="og:image" content="logo-claro.png">
+  <title>Zypuc · Tecnología y dulzura</title>
+  <meta name="description" content="Zypuc: tecnología, deporte, repostería y regalitos con entrega en Pucallpa. Te mostramos cuánto cuesta en otra tienda.">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Raleway:wght@700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#f6f9fe;--surface:#ffffff;--surface2:#edf4ff;--ink:#14213b;--muted:#65738c;
+      --line:#dbe5f2;--brand:#1262d4;--accent:#10b8aa;--brand-ink:#ffffff;
+      --focus:#e79510;--shadow:0 18px 50px #17305424;
+    }
+    body.dark{
+      --paper:#091323;--surface:#101f35;--surface2:#162b48;--ink:#f3f8ff;--muted:#b7c8df;
+      --line:#2b4568;--brand:#73b7ff;--accent:#42dbc9;--brand-ink:#071323;
+      --focus:#ffd35c;--shadow:0 18px 50px #000a;
+    }
+    body.sport{--brand:#4f9f2f;--accent:#b8e52b;--surface2:#effbdd;--brand-ink:#ffffff}
+    body.baking{--brand:#c94e6f;--accent:#f28c6b;--surface2:#fff0f4;--brand-ink:#ffffff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink);transition:background .32s,color .32s}
+    body.dark .tech-only-white{color:#fff!important;background:linear-gradient(105deg,#fff 0%,#d9edff 58%,#b9ddff 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 5px 24px #06152f66}
+    @media(prefers-reduced-motion:reduce){body.dark .tech-only-white{text-shadow:none}}
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    button:disabled{opacity:.5;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+    button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+      outline:3px solid var(--focus);outline-offset:3px
+    }
+    .app-wrapper{width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));overflow:hidden;position:relative}
+    .shell{width:min(1240px,calc(100% - 32px));margin:auto;position:relative;z-index:2}
+    .header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 93%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .head{min-height:74px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .logo{height:50px;width:116px;object-fit:contain}
+    .nav,.actions,.hero-actions,.cats,.chips{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .nav a{color:var(--muted);font-weight:800;text-decoration:none;padding:8px;border-radius:10px;transition:.2s}
+    .nav a:hover{background:var(--surface2);color:var(--brand)}
+    .btn,.chip,.cat,.icon-btn,.pay,.round{
+      border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;
+      min-height:42px;padding:9px 13px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      transition:transform .18s ease,background .2s,color .2s,border-color .2s,box-shadow .2s ease;
+    }
+    .icon-btn{width:42px;padding:0}
+    .round{width:35px;height:35px;padding:0;border-radius:50%;background:color-mix(in srgb,var(--surface) 92%,transparent)}
+    .btn:hover,.chip:hover,.cat:hover,.pay:hover,.icon-btn:hover,.round:hover{
+      transform:translateY(-2px);border-color:var(--brand);box-shadow:0 9px 20px color-mix(in srgb,var(--brand) 19%,transparent)
+    }
+    .btn:active,.chip:active,.cat:active,.pay:active,.icon-btn:active,.round:active{transform:scale(.96)}
+    .primary{background:var(--brand)!important;color:var(--brand-ink)!important;border-color:var(--brand)!important}
+    .primary:hover{background:color-mix(in srgb,var(--brand) 86%,var(--ink))!important}
+    .active{background:var(--surface2)!important;color:var(--brand)!important;border-color:var(--brand)!important}
+    .section{padding:48px 0;position:relative}
+    .hero{padding:56px 0;background:linear-gradient(125deg,var(--surface2),var(--paper) 68%)}
+    .hero-grid{display:grid;grid-template-columns:1fr .94fr;gap:36px;align-items:center}
+    .eyebrow{margin:0;color:var(--brand);font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    h1,h2,h3{font-family:Raleway,sans-serif}
+    .hero h1{font-size:clamp(2.7rem,5vw,5rem);line-height:.94;letter-spacing:-.07em;margin:13px 0}
+    .copy{color:var(--muted);line-height:1.62}
+    .maincat{background:none;border:0;border-bottom:2px solid transparent;color:var(--ink);font-weight:800;padding:8px 2px;transition:.2s}
+    .maincat.active{color:var(--brand);border-color:var(--brand)}
+    .select{min-height:320px;border-radius:28px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:var(--shadow);background:#10295b;text-align:left}
+    .select:before{content:"";position:absolute;inset:0;z-index:1;background-image:linear-gradient(color-mix(in srgb,var(--accent) 28%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--accent) 28%,transparent) 1px,transparent 1px);background-size:24px 24px;opacity:.55}
+    .select img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:.7}
+    .select:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#071b50bd,color-mix(in srgb,var(--accent) 45%,transparent))}
+    .select-copy{position:absolute;z-index:3;bottom:25px;left:25px;color:#fff}
+    .select-copy strong{font:800 1.7rem Raleway}
+    .title{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.06em}
+    .catbar,.subbar{display:flex;gap:8px;overflow:auto;padding:5px 0 14px}
+    .cat,.chip{white-space:nowrap;border-radius:999px}
+    .layout{display:grid;grid-template-columns:255px 1fr;gap:20px}
+    .panel{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:15px}
+    .filter{position:sticky;top:92px;height:max-content}
+    .label{display:block;font-size:.83rem;font-weight:800;margin:13px 0 6px}
+    .rating-select{position:relative}.rating-trigger{display:flex;justify-content:space-between;align-items:center;text-align:left}.rating-trigger svg{width:16px;transition:transform .2s}.rating-select.open .rating-trigger svg{transform:rotate(180deg)}.rating-menu{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 6px);display:grid;gap:4px;padding:6px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility .18s}.rating-select.open .rating-menu{opacity:1;visibility:visible;transform:none}.rating-menu button{border:0;background:transparent;color:var(--ink);padding:10px;text-align:left;border-radius:8px;font-weight:700}.rating-menu button:hover,.rating-menu button:focus-visible,.rating-menu button[aria-selected=true]{background:var(--surface2);color:var(--brand)}
+    .field{width:100%;padding:10px;border:1px solid var(--line);border-radius:11px;background:var(--surface);color:var(--ink)}
+    .price-slider,.custom-slider{
+      appearance:none;width:100%;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--accent));
+      box-shadow:0 0 16px color-mix(in srgb,var(--brand) 22%,transparent);outline:none
+    }
+    .price-slider::-webkit-slider-thumb,.custom-slider::-webkit-slider-thumb{
+      appearance:none;width:23px;height:23px;border-radius:50%;background:var(--surface);border:4px solid var(--brand);
+      box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 18%,transparent);cursor:pointer
+    }
+    .price-slider::-moz-range-thumb,.custom-slider::-moz-range-thumb{width:17px;height:17px;border-radius:50%;background:var(--surface);border:4px solid var(--brand);cursor:pointer}
+    .price-slider:focus-visible,.custom-slider:focus-visible{outline:3px solid var(--focus);outline-offset:5px}
+    .range-meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.72rem;gap:8px}
+    .range-bubble{color:var(--brand);font-weight:800;background:var(--surface2);padding:5px 9px;border-radius:999px}
+    .check{display:flex;gap:8px;color:var(--muted);margin:9px 0;font-size:.89rem}
+    .filter-tags{min-height:26px;margin-top:10px}
+    .mini-tag,.tag{display:inline-flex;background:var(--surface2);color:var(--brand);padding:4px 8px;border-radius:999px;font-size:.7rem;font-weight:800;margin:2px}
+    .toolbar{display:grid;grid-template-columns:1fr auto;gap:10px}
+    .sort-wrap{position:relative}.sort-list{position:absolute;z-index:20;right:0;top:calc(100% + 7px);width:245px;display:none;padding:7px;box-shadow:var(--shadow)}.sort-wrap.open .sort-list{display:grid;gap:5px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:15px}
+    .product{overflow:hidden;border:1px solid var(--line);background:var(--surface);border-radius:18px;transition:.2s}
+    .product:hover{transform:translateY(-5px);border-color:var(--brand);box-shadow:var(--shadow)}
+    .product-image{height:170px;position:relative;background:var(--surface2)}
+    .product-image img{width:100%;height:100%;object-fit:cover}
+    .tools{position:absolute;right:9px;top:9px;display:flex;gap:6px}
+    .round.active{background:var(--brand)!important;color:var(--brand-ink)!important}
+    .body{padding:13px}.name{font-size:1rem;margin:9px 0 3px}.meta{font-size:.76rem;color:var(--muted);min-height:32px}.price{font:800 1.1rem Raleway}
+    .reference-note{font-size:.7rem;color:var(--muted);margin-top:8px}
+    .summary{display:grid;grid-template-columns:.7fr 1.3fr;gap:20px}.rating{font:800 3.3rem Raleway;color:var(--brand)}.stars{color:#f3a522;letter-spacing:2px}
+    .review-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.review-breakdown{display:grid;gap:6px;margin-top:12px}.review-row{display:grid;grid-template-columns:78px 1fr 22px;align-items:center;gap:8px;border:0;background:transparent;color:var(--ink);text-align:left;font-size:.75rem;padding:3px;border-radius:8px}.review-row:hover{background:var(--surface2)}.review-bar{height:7px;background:var(--surface2);border-radius:99px;overflow:hidden}.review-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--accent));border-radius:inherit}
+    .liquid{height:25px;background:var(--surface2);border:1px solid var(--line);border-radius:999px;position:relative;overflow:hidden;margin:14px 0}
+    .liquid-fill{height:100%;width:10%;background:linear-gradient(90deg,var(--brand),var(--accent));border-radius:inherit;transition:width .4s}
+    .review-track{display:flex;gap:15px;overflow:auto;scroll-snap-type:x mandatory;padding:9px 2px}.review{flex:0 0 calc(33.333% - 10px);scroll-snap-align:start;min-height:180px;border:1px solid var(--line);border-radius:16px;padding:16px;background:var(--surface)}
+    .support{display:flex;justify-content:space-between;gap:18px;align-items:center}
+    .phone-pulse{display:inline-block;animation:phoneGlow 3s ease-in-out infinite}
+    .cart{position:fixed;right:18px;bottom:18px;z-index:60;width:min(350px,calc(100% - 28px));background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+    .cart-head,.cart-line{display:flex;justify-content:space-between;gap:8px;padding:11px}.cart-head button{border:0;background:none;color:var(--ink);font-weight:800}.cart-detail{padding:0 12px 12px;max-height:310px;overflow:auto}.cart.min .cart-detail{display:none}
+    .drawer{position:fixed;z-index:70;left:0;top:0;bottom:0;width:min(385px,94vw);background:var(--surface);padding:18px;overflow:auto;transform:translateX(-105%);transition:.3s}.drawer.open{transform:none}
+    .modal-layer{position:fixed;z-index:80;inset:0;background:#071329a8;display:none;place-items:center;padding:15px}.modal-layer.open{display:grid}
+    .modal{width:min(1000px,100%);max-height:90%;overflow:auto;background:var(--surface);color:var(--ink);border-radius:20px;padding:20px;box-shadow:var(--shadow)}.modal-head{display:flex;justify-content:space-between;gap:12px}
+    .paygrid{display:grid;grid-template-columns:1fr;gap:8px}.pay{min-height:58px;flex-direction:row;justify-content:flex-start;text-align:left;text-decoration:none;padding:9px 12px}.pay img{height:24px;width:48px;max-width:48px;object-fit:contain}.pay.yape,.pay.plin,.pay.paypal,.pay.other{background:var(--surface);color:var(--ink);border-color:var(--line)}.pay.active{outline:3px solid var(--brand);outline-offset:2px;border-color:var(--brand);box-shadow:inset 4px 0 0 var(--brand)}.pay:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.review-average{animation:softFloat 4s ease-in-out infinite}.account-slider{display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 10px;scrollbar-width:thin}.account-slider .chip{flex:0 0 auto;scroll-snap-align:center}
+    .comparison-table{width:100%;border-collapse:separate;border-spacing:0 8px;overflow:auto}.comparison-table th,.comparison-table td{padding:10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.comparison-table th{background:var(--surface2);color:var(--brand);font-size:.8rem}.comparison-table td{background:var(--surface)}.comparison-table .same{opacity:.52}.compare-card-title{min-width:150px;font-family:Raleway,sans-serif}.best-tag{display:inline-block;padding:3px 7px;background:var(--surface2);color:var(--brand);border-radius:999px;font-size:.67rem;font-weight:800;margin:3px 2px 0 0}
+    .toast{position:fixed;z-index:100;left:50%;bottom:95px;transform:translate(-50%,170px);background:var(--ink);color:var(--paper);padding:11px 16px;border-radius:999px;transition:.25s;font-weight:700}.toast.show{transform:translate(-50%,0)}
+    .intro{position:fixed;z-index:120;inset:0;display:grid;place-items:center;background:color-mix(in srgb,var(--paper) 96%,transparent);backdrop-filter:blur(5px);transition:opacity .28s,visibility .28s;pointer-events:none}.intro.done{opacity:0;visibility:hidden}.intro-content{text-align:center}.intro-logo{width:min(260px,68vw);height:115px;object-fit:contain;filter:drop-shadow(0 10px 22px color-mix(in srgb,var(--brand) 35%,transparent));animation:introIn .62s ease both}.intro-note{color:var(--muted);font-weight:700;font-size:.85rem}
+    .rain-layer{position:fixed;z-index:1;inset:0;pointer-events:none;overflow:hidden}.rain-item{position:absolute;top:-50px;color:var(--brand);opacity:.12;animation:fall linear infinite;filter:drop-shadow(0 3px 4px color-mix(in srgb,var(--brand) 25%,transparent))}
+    .rain-paused .rain-item{animation-play-state:paused}
+    .waves{height:100px;overflow:hidden;position:relative}.wave{position:absolute;width:160%;height:112px;left:-25%;bottom:-76px;border-radius:48%;background:var(--surface2);animation:wave 10s ease-in-out infinite}.wave.two{background:color-mix(in srgb,var(--accent) 25%,transparent);animation-delay:-4s}
+    body.motion-off *{animation-play-state:paused!important}
+    @keyframes introIn{0%{opacity:0;transform:scale(.86)}100%{opacity:1;transform:scale(1)}}
+    @keyframes fall{to{transform:translate3d(20px,calc(100 * min(var(--vh,1vh),1vh) + 110px),0) rotate(145deg)}}
+    @keyframes phoneGlow{50%{color:var(--brand);text-shadow:0 0 15px color-mix(in srgb,var(--brand) 45%,transparent);transform:translateY(-1px)}}
+    @keyframes softFloat{50%{transform:translateY(-3px)}}
+    .hero-grid>div:first-child,.section:nth-of-type(2) .shell{animation:softFloat 6s ease-in-out infinite}
+    .reveal{opacity:0;transform:translateY(12px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+    @keyframes wave{50%{transform:translateX(8%) translateY(-11px)}}
+    @media(max-width:900px){.nav{display:none}.hero-grid,.layout{grid-template-columns:1fr}.filter{position:static}.grid{grid-template-columns:repeat(2,1fr)}.review{flex-basis:calc(50% - 8px)}}
+    @media(max-width:560px){.shell{width:calc(100% - 22px)}.grid,.summary,.paygrid,.toolbar{grid-template-columns:1fr}.review{flex-basis:88%}.support{align-items:flex-start;flex-direction:column}.actions .btn span{display:none}.comparison-table{font-size:.78rem}.comparison-table th,.comparison-table td{min-width:130px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.intro{display:none}}
+    /* ===== Zypuc: fondos por categoría ===== */
+    body{background:var(--paper)!important}
+    body.gifts{--brand:#7b3fc4;--accent:#e85fa8;--surface2:#f5edff;--brand-ink:#ffffff}
+    body.dark.sport{--brand:#8fd16a;--accent:#d7f25e;--surface2:#1b3320;--brand-ink:#0b1a0d}
+    body.dark.baking{--brand:#ff8fae;--accent:#ffb38f;--surface2:#3a1d2a;--brand-ink:#2a0d17}
+    body.dark.gifts{--brand:#c39bff;--accent:#ff8fcf;--surface2:#2a1d44;--brand-ink:#170a2b}
+    .bg-stage{position:fixed;inset:0;z-index:0;pointer-events:none}
+    .bg{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+    body.cat-tech .bg-tech,body.cat-sport .bg-sport,body.cat-baking .bg-baking,body.cat-gifts .bg-gifts{opacity:1}
+    .bg-tech{background:
+      radial-gradient(circle at 12% 18%,#1262d42e,transparent 38%),
+      radial-gradient(circle at 88% 70%,#10b8aa29,transparent 40%),
+      linear-gradient(#1262d40f 1px,transparent 1px) 0 0/44px 44px,
+      linear-gradient(90deg,#1262d40f 1px,transparent 1px) 0 0/44px 44px}
+    .bg-tech:after{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle,#1262d455 2px,transparent 3px) 22px 22px/88px 88px}
+    .bg-sport{background:
+      radial-gradient(circle at 50% 120%,transparent 34%,#4f9f2f1f 34.3%,#4f9f2f1f 35%,transparent 35.3%),
+      linear-gradient(90deg,transparent calc(50% - 1px),#4f9f2f1c calc(50% - 1px),#4f9f2f1c calc(50% + 1px),transparent calc(50% + 1px)),
+      repeating-linear-gradient(90deg,#4f9f2f0d 0 80px,transparent 80px 160px),
+      radial-gradient(circle at 85% 15%,#f28c1e2b,transparent 35%)}
+    .bg-baking{background:
+      radial-gradient(circle,#c94e6f40 2.5px,transparent 3.5px) 0 0/46px 46px,
+      radial-gradient(circle,#f28c6b38 2px,transparent 3px) 23px 23px/46px 46px,
+      radial-gradient(circle at 10% 10%,#ffd1dc,transparent 45%),
+      radial-gradient(circle at 90% 85%,#ffe3d1,transparent 45%)}
+    .bg-gifts{background:
+      radial-gradient(circle at 20% 25%,#7b3fc42e,transparent 40%),
+      radial-gradient(circle at 80% 75%,#e85fa82e,transparent 40%),
+      conic-gradient(from 45deg at 50% 50%,#7b3fc40a,transparent 25%,#e85fa80a 50%,transparent 75%,#7b3fc40a)}
+    .bg-gifts:after{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle,#ffd35c 1.6px,transparent 2.4px) 10px 30px/120px 120px,
+      radial-gradient(circle,#e85fa8 1.4px,transparent 2.2px) 70px 90px/120px 120px;opacity:.7}
+    body.dark .bg{filter:saturate(1.3) brightness(.75)}
+    .app-wrapper{z-index:1}
+    .hero{background:linear-gradient(125deg,color-mix(in srgb,var(--surface2) 85%,transparent),transparent 70%)!important;transition:background .6s}
+    .header{background:color-mix(in srgb,var(--paper) 88%,transparent)!important}
+    .support{background:var(--surface2)!important}
+    a.btn{text-decoration:none}
+    .logo-dark{display:none}
+    body.dark .logo-dark{display:block}
+    body.dark .logo-light{display:none}
+    .intro-logo.logo-dark{display:none}
+    body.dark .intro-logo.logo-dark{display:block}
+    .logo{width:auto!important;height:44px!important;max-width:130px}
+    /* tarjeta destacada del hero */
+    .select{transition:transform .35s ease,box-shadow .35s ease}
+    .select:hover{transform:translateY(-3px)}
+    .select img{background:#fff;object-fit:contain!important;opacity:1!important;padding:18px}
+    .select:after{background:linear-gradient(180deg,transparent 45%,color-mix(in srgb,var(--brand) 85%,#000) 100%)!important}
+    .select-badge{position:absolute;z-index:3;top:16px;left:16px;background:var(--accent);color:#06131f;font-weight:800;font-size:.78rem;padding:6px 11px;border-radius:999px}
+    .select-badge:empty{display:none}
+    .select.swap img{animation:selectIn .6s ease}
+    @keyframes selectIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+    /* tarjetas de producto */
+    .product-image{background:#fff!important}
+    .product-image img{object-fit:contain!important;padding:12px}
+    .grid .product{animation:cardIn .45s ease both}
+    @keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .save-tag{display:inline-flex;background:#e9fbf3;color:#0d7a4f;padding:4px 8px;border-radius:999px;font-size:.7rem;font-weight:800;margin:2px 4px 2px 0}
+    body.dark .save-tag{background:#0f3a2a;color:#7ff0bf}
+    .vs-store{margin-top:8px;padding:8px 10px;border:1px dashed var(--line);border-radius:12px;font-size:.78rem;color:var(--muted);line-height:1.45}
+    .vs-store strong{color:var(--ink)}
+    .vs-store a{color:var(--brand);font-weight:800;text-decoration:none}
+    .vs-store a:hover{text-decoration:underline}
+    .src-note{font-size:.7rem;color:var(--muted);margin-top:6px}
+    .price small{font:600 .72rem "DM Sans";color:var(--muted);display:block}
+    .pay-dot{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;color:#fff;font-weight:800;flex:none}
+    .empty-reviews{padding:22px;text-align:center;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}
+    .live-pill{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:800;color:var(--muted);margin-left:8px}
+    .live-pill i{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px #22c55e33;display:inline-block}
+    .live-pill.off i{background:#f59e0b;box-shadow:0 0 0 3px #f59e0b33}
+    /* Respaldo de utilidades (por si el CDN de Tailwind no carga) */
+    .flex{display:flex}.grid{display:grid}.hidden{display:none!important}.w-full{width:100%}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}
+    .text-center{text-align:center}.justify-between{justify-content:space-between}.items-center{align-items:center}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .eyebrow.canva-text{color:var(--brand)!important}
+    body.dark h1.canva-text:not(.tech-only-white),body.dark h2.canva-text{color:var(--ink)!important}
+    body.dark .copy.canva-text,body.dark .nav a.canva-link{color:var(--muted)!important}
+    body.dark .btn.canva-button:not(.primary),body.dark .icon-btn.canva-button{background:var(--surface)!important;color:var(--ink)!important}
+    body.dark .btn.canva-button:not(.primary) .canva-text{color:var(--ink)!important}
+    .select:before{opacity:.3}
+    /* ===== Lluvia de objetos por categoría ===== */
+    .rain-layer{z-index:1}
+    .fall-item{position:absolute;top:-60px;width:var(--size);height:var(--size);animation:fallDown var(--dur) linear var(--delay) infinite;will-change:transform}
+    .fall-item svg{width:100%;height:100%;display:block;animation:swaySpin calc(var(--dur) / 2.2) ease-in-out var(--delay) infinite alternate}
+    .fall-item.d0{opacity:.22;filter:blur(1.2px)}
+    .fall-item.d1{opacity:.38}
+    .fall-item.d2{opacity:.55;filter:drop-shadow(0 6px 8px #0002)}
+    body.dark .fall-item.d0{opacity:.28}
+    body.dark .fall-item.d2{opacity:.7}
+    @keyframes fallDown{from{transform:translateY(-60px)}to{transform:translateY(calc(100vh + 120px))}}
+    @keyframes swaySpin{from{transform:translateX(calc(var(--sway) * -1)) rotate(0)}to{transform:translateX(var(--sway)) rotate(var(--spin))}}
+    .rain-layer.shower .fall-item{opacity:.8;filter:none}
+    .rain-paused .fall-item,.rain-paused .fall-item svg,body.motion-off .fall-item,body.motion-off .fall-item svg,body.tab-hidden .fall-item,body.tab-hidden .fall-item svg{animation-play-state:paused}
+    body.motion-off .rain-layer{opacity:.4}
+    .burst-item{position:fixed;z-index:200;width:26px;height:26px;pointer-events:none}
+    .burst-item svg{width:100%;height:100%}
+    /* ===== Burbujas que flotan en el fondo ===== */
+    .bg-stage:before,.bg-stage:after{content:"";position:absolute;width:46vmax;height:46vmax;border-radius:50%;filter:blur(60px);opacity:.33;transition:background 1s ease;animation:drift 26s ease-in-out infinite alternate}
+    .bg-stage:before{left:-12vmax;top:-10vmax;background:var(--brand)}
+    .bg-stage:after{right:-14vmax;bottom:-16vmax;background:var(--accent);animation-duration:32s;animation-direction:alternate-reverse}
+    body.dark .bg-stage:before,body.dark .bg-stage:after{opacity:.22}
+    @keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(8vmax,6vmax) scale(1.12)}100%{transform:translate(-4vmax,10vmax) scale(.94)}}
+    body.motion-off .bg-stage:before,body.motion-off .bg-stage:after{animation-play-state:paused}
+    /* ===== Cinta de ofertas ===== */
+    .ticker{position:relative;z-index:3;overflow:hidden;background:var(--brand);color:var(--brand-ink);font-weight:800;font-size:.82rem;border-bottom:1px solid color-mix(in srgb,var(--brand) 70%,#000);transition:background .5s}
+    .ticker-track{display:flex;gap:42px;width:max-content;padding:8px 0;animation:tick 38s linear infinite}
+    .ticker:hover .ticker-track{animation-play-state:paused}
+    .ticker a{color:inherit;text-decoration:none;white-space:nowrap}
+    .ticker b{background:color-mix(in srgb,var(--brand-ink) 18%,transparent);padding:2px 8px;border-radius:999px;margin-left:6px}
+    @keyframes tick{to{transform:translateX(-50%)}}
+    body.motion-off .ticker-track{animation-play-state:paused}
+    /* ===== Brillos pasivos ===== */
+    .save-tag{position:relative;overflow:hidden}
+    .save-tag:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,#ffffffb0 50%,transparent 70%);transform:translateX(-120%);animation:shine 4.5s ease-in-out infinite}
+    @keyframes shine{0%,70%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+    .select{animation:floaty 7s ease-in-out infinite}
+    .select:hover{animation-play-state:paused}
+    @keyframes floaty{50%{transform:translateY(-8px)}}
+    .select .glare{position:absolute;inset:0;z-index:2;background:linear-gradient(115deg,transparent 35%,#ffffff55 50%,transparent 65%);transform:translateX(-100%);animation:glare 6s ease-in-out infinite;pointer-events:none}
+    @keyframes glare{0%,60%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+    .product.tilting{transition:transform .08s linear,box-shadow .2s,border-color .2s}
+    .product .product-image:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),#ffffff66,transparent 45%);opacity:0;transition:opacity .25s;pointer-events:none}
+    .product.tilting .product-image:after{opacity:1}
+    .hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .hero-stat{background:color-mix(in srgb,var(--surface) 80%,transparent);border:1px solid var(--line);border-radius:14px;padding:9px 13px;backdrop-filter:blur(6px)}
+    .hero-stat strong{display:block;font:800 1.35rem Raleway,sans-serif;color:var(--brand)}
+    .hero-stat span{font-size:.75rem;color:var(--muted);font-weight:700}
+    /* ===== Cambio de tema con círculo (View Transitions) ===== */
+    ::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+    ::view-transition-new(root){animation:themeReveal .6s ease-out}
+    @keyframes themeReveal{from{clip-path:circle(0 at var(--vt-x,90%) var(--vt-y,5%))}to{clip-path:circle(150vmax at var(--vt-x,90%) var(--vt-y,5%))}}
+    body,body .panel,body .product,body .header,body .cart,body .btn,body .field{transition:background-color .35s,color .35s,border-color .35s}
+    /* ===== Ficha de producto ===== */
+    .pd{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .pd-img{background:#fff;border-radius:18px;border:1px solid var(--line);display:grid;place-items:center;min-height:300px;padding:18px}
+    .pd-img img{max-height:340px;object-fit:contain}
+    .pd h3{font-size:1.5rem;margin:6px 0 10px;line-height:1.15}
+    .pd .bigprice{font:800 2rem Raleway,sans-serif;color:var(--brand)}
+    .pd ul{margin:12px 0;padding-left:18px;color:var(--muted);line-height:1.7}
+    .pd .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    @media(max-width:700px){.pd{grid-template-columns:1fr}}
+    .product-image img{cursor:zoom-in}
+    .share-btn{margin-top:8px;font-size:.78rem;background:none;border:0;color:var(--muted);font-weight:800;display:inline-flex;gap:6px;align-items:center;padding:4px 0}
+    .share-btn:hover{color:var(--brand)}
+    .share-btn svg{width:15px;height:15px}
+    /* ===== Cómo comprar ===== */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .step{border:1px solid var(--line);background:var(--surface);border-radius:18px;padding:18px;position:relative;overflow:hidden}
+    .step-num{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font:800 1.1rem Raleway,sans-serif;background:var(--brand);color:var(--brand-ink);margin-bottom:10px}
+    .step h3{margin:0 0 6px}
+    @media(max-width:760px){.steps{grid-template-columns:1fr}}
+    /* ===== Pie de página ===== */
+    .site-footer{position:relative;z-index:2;background:var(--surface);border-top:1px solid var(--line)}
+    .site-footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:24px;padding:34px 0}
+    .site-footer h4{margin:0 0 10px;font-family:Raleway,sans-serif}
+    .site-footer a,.site-footer button.link{display:block;color:var(--muted);text-decoration:none;background:none;border:0;padding:4px 0;font-weight:700;text-align:left}
+    .site-footer a:hover,.site-footer button.link:hover{color:var(--brand)}
+    .site-footer .legal{border-top:1px solid var(--line);padding:14px 0;color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .libro{display:inline-flex!important;gap:8px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:9px 12px!important;margin-top:10px;color:var(--ink)!important}
+    @media(max-width:760px){.site-footer .cols{grid-template-columns:1fr}}
+    .legal-text h3{margin:18px 0 6px}.legal-text p,.legal-text li{color:var(--muted);line-height:1.6}
+    .legal-note{background:#fff7e6;border:1px solid #f5d38a;color:#8a5a00;border-radius:12px;padding:10px 12px;font-size:.85rem}
+    body.dark .legal-note{background:#3a2a07;border-color:#7a5a10;color:#ffd78a}
+    @media(prefers-reduced-motion:reduce){.fall-item,.ticker-track,.bg-stage:before,.bg-stage:after,.select,.save-tag:after,.select .glare{animation:none!important}}
+
+    /* botones heredan la tipografía de la tienda */
+    button,input,select,textarea{font-family:inherit}
+    .select-copy strong{font-family:Raleway,sans-serif;letter-spacing:-.01em}
+
+  </style>
+ </head>
+ <body data-template-id="__page-root" class="cat-tech">
+  <div class="bg-stage" aria-hidden="true"><div class="bg bg-tech"></div><div class="bg bg-sport"></div><div class="bg bg-baking"></div><div class="bg bg-gifts"></div></div>
+  <div id="intro" class="intro" aria-label="Apertura breve de Zypuc">
+   <div class="intro-content">
+    <img class="intro-logo logo-light" src="logo-claro.png" alt="Logo Zypuc Tecnología y Dulzura"><img class="intro-logo logo-dark" src="logo-oscuro.png" alt="" aria-hidden="true">
+    <p data-template-id="intro-note" class="intro-note canva-text" style="color: rgb(101, 115, 140); font-weight: 700; font-style: normal; font-size: 16px;">Tu selección futurista está lista</p>
+   </div>
+  </div>
+  <div class="app-wrapper">
+   <div id="rain-layer" class="rain-layer" aria-hidden="true"></div>
+   <header data-template-id="header-section" class="header canva-header">
+    <div class="shell head">
+     <a href="#inicio" aria-label="Ir al inicio de Zypuc"><img class="logo logo-light" src="logo-claro.png" alt="Logo Zypuc Tecnología y Dulzura"><img class="logo logo-dark" src="logo-oscuro.png" alt="" aria-hidden="true"></a>
+     <nav class="nav" aria-label="Navegación principal">
+      <a data-template-id="nav-home" class="canva-link" href="#inicio" style="color: rgb(101, 115, 140); font-weight: 700; font-style: normal; font-size: 16px;">Inicio</a> <a data-template-id="nav-products" class="canva-link" href="#productos" style="color: rgb(101, 115, 140); font-weight: 700; font-style: normal; font-size: 16px;">Productos</a> <a data-template-id="nav-reviews" class="canva-link" href="#reviews" style="color: rgb(101, 115, 140); font-weight: 700; font-style: normal; font-size: 16px;">Reviews</a> <a class="canva-link" href="#regalitos">Regalitos</a> <a data-template-id="nav-support" class="canva-link" href="#soporte" style="color: rgb(101, 115, 140); font-weight: 700; font-style: normal; font-size: 16px;">Soporte</a>
+     </nav>
+     <div class="actions">
+      <button id="motion-toggle" data-template-id="motion-button" class="icon-btn canva-button" type="button" aria-label="Pausar lluvia y animaciones" style="background: rgb(255, 255, 255); color: rgb(20, 33, 59);"><i data-lucide="cloud-rain"></i></button> <button id="theme-toggle" data-template-id="theme-button" class="btn canva-button" type="button" style="background: rgb(255, 255, 255); color: rgb(20, 33, 59); font-weight: 700;"><i data-lucide="moon"></i><span data-template-id="theme-label" class="canva-text" style="color: rgb(20, 33, 59); font-weight: 700; font-style: normal; font-size: 16px;">Tema</span></button> <button id="account-open" data-template-id="account-open-button" class="btn canva-button" type="button" style="background: rgb(255, 255, 255); color: rgb(20, 33, 59); font-weight: 700;"><i data-lucide="user-round"></i><span data-template-id="account-label" class="canva-text" style="color: rgb(20, 33, 59); font-weight: 700; font-style: normal; font-size: 16px;">Cuenta</span></button>
+     </div>
+    </div>
+   </header>
+   <div class="ticker" id="ticker" aria-label="Ofertas de hoy"><div class="ticker-track" id="ticker-track"></div></div>
+   <main>
+    <section id="inicio" class="hero">
+     <div class="shell hero-grid">
+      <div>
+       <p data-template-id="hero-eyebrow" class="eyebrow canva-text" style="color: rgb(18, 98, 212); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.12rem;">Tienda futurista, selección real</p>
+       <h1 data-template-id="hero-title" class="canva-text tech-only-white" style="color: rgb(20, 33, 59); font-weight: 800; font-style: normal; font-size: 42px; letter-spacing: -0.06rem; line-height: 0.95;">Descubre tu próxima compra en Zypuc</h1>
+       <p data-template-id="hero-copy" class="copy canva-text" style="color: rgb(101, 115, 140); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.65;">Tecnología para conectar, deporte para moverte, repostería para crear y regalitos para sorprender. Te mostramos cuánto cuesta lo mismo en otra tienda.</p>
+       <div class="hero-actions">
+        <a data-template-id="hero-catalog-button" class="btn primary canva-button" href="#productos" style="background: rgb(18, 98, 212); color: rgb(255, 255, 255); font-weight: 700;"><i data-lucide="sparkles"></i><span data-template-id="hero-catalog-label" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Explorar productos</span></a>
+       </div>
+       <div class="hero-stats" aria-live="polite"><div class="hero-stat"><strong id="stat-count">0</strong><span>más baratos que otra tienda</span></div><div class="hero-stat"><strong id="stat-max">S/ 0</strong><span>ahorro máximo hoy</span></div><div class="hero-stat"><strong id="stat-total">0</strong><span>productos con foto real</span></div></div>
+       <div class="cats" aria-label="Categorías principales">
+        <button class="maincat active" data-cat="Tecnología" type="button">Tecnología</button> <button class="maincat" data-cat="Deporte" type="button">Deporte</button> <button class="maincat" data-cat="Repostería" type="button">Repostería</button> <button class="maincat" data-cat="Regalitos" type="button">Regalitos</button>
+       </div>
+      </div><button id="select-open" class="select" type="button" aria-label="Ver el producto destacado"><span class="glare" aria-hidden="true"></span><img id="select-img" src="" alt="" referrerpolicy="no-referrer"><span class="select-badge" id="select-badge"></span><span class="select-copy"><strong id="select-title">Zypuc Select</strong><br><span id="select-sub">Selección curada para encontrar justo lo que buscas</span></span></button>
+     </div>
+    </section>
+    <section id="productos" class="section">
+     <div class="shell">
+      <p data-template-id="catalog-eyebrow" class="eyebrow canva-text" style="color: rgb(18, 98, 212); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.12rem;">Catálogo Zypuc</p>
+      <h2 data-template-id="catalog-title" class="title canva-text" style="color: rgb(20, 33, 59); font-weight: 800; font-style: normal; font-size: 31px; letter-spacing: -0.05rem;">Todo lo que buscas, por categoría.</h2>
+      <nav id="catbar" class="catbar" aria-label="Categorías"></nav>
+      <nav id="subbar" class="subbar" aria-label="Subcategorías"></nav>
+      <div class="layout">
+       <aside class="panel filter" aria-label="Filtros de productos">
+        <div class="flex justify-between items-center">
+         <strong>Filtros <span id="filter-count"></span></strong> <button id="filter-toggle" class="icon-btn" type="button" aria-label="Mostrar u ocultar filtros"><i data-lucide="sliders-horizontal"></i></button>
+        </div>
+        <div id="filters">
+         <label class="label" for="max-price">Precio máximo</label>
+         <div class="range-meta"><span>S/ 0.00</span><strong id="range-value" class="range-bubble">S/ 2,300.00</strong>
+         </div><input id="max-price" class="price-slider" type="range" min="0" max="2300" value="2300"> <label class="label">Disponibilidad</label> <label class="check"><input class="stock" value="Disponible" type="checkbox"> Disponible</label> <label class="check"><input class="stock" value="Últimas unidades" type="checkbox"> Últimas unidades</label> <label class="check"><input id="fav-filter" type="checkbox"> Solo favoritos</label> <label class="check"><input id="ref-filter" type="checkbox"> Traídos de tiendas</label> <label class="check"><input id="save-filter" type="checkbox"> Más baratos que otra tienda</label>
+         <div id="active-filters" class="filter-tags" aria-live="polite"></div><button id="clear-filters" data-template-id="clear-filters-button" class="btn w-full mt-2 canva-button" type="button" style="background: rgb(255, 255, 255); color: rgb(20, 33, 59); font-weight: 700; font-style: normal; font-size: 16px;">Limpiar filtros</button>
+        </div>
+       </aside>
+       <div>
+        <div class="toolbar">
+         <label class="sr-only" for="search">Buscar productos</label> <input id="search" class="field" type="search" placeholder="Busca productos, marcas o subcategorías">
+         <div id="sortwrap" class="sort-wrap">
+          <button id="sortbutton" class="btn" type="button" aria-expanded="false"><i data-lucide="arrow-down-up"></i><span id="sort-label">Más relevantes</span><i data-lucide="chevron-down"></i></button>
+          <div class="sort-list panel" role="menu">
+           <button class="btn active" data-sort="featured" type="button">Más relevantes</button> <button class="btn" data-sort="low" type="button">Menor precio</button> <button class="btn" data-sort="high" type="button">Mayor precio</button> <button class="btn" data-sort="save" type="button">Mayor ahorro</button>
+          </div>
+         </div>
+        </div>
+        <div id="grid" class="grid" aria-live="polite"></div>
+        <div id="empty" class="panel hidden text-center mt-4">
+         <i data-lucide="search-x"></i>
+         <h3>Sin resultados</h3>
+         <p class="copy">Prueba otros filtros, ajusta el rango o limpia la búsqueda.</p><button id="empty-clear" class="btn primary" type="button">Limpiar filtros</button>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="reviews" class="section">
+     <div class="shell">
+      <p data-template-id="reviews-eyebrow" class="eyebrow canva-text" style="color: rgb(18, 98, 212); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.12rem;">Comunidad Zypuc</p>
+      <h2 data-template-id="reviews-title" class="title canva-text" style="color: rgb(20, 33, 59); font-weight: 800; font-style: normal; font-size: 31px; letter-spacing: -0.05rem;">Reviews que ayudan a elegir.</h2>
+      <div class="panel">
+       <div class="summary">
+        <div>
+         <div id="average" class="rating review-average" aria-live="polite"></div>
+         <div class="stars" id="avg-stars"></div>
+         <p class="copy" id="avg-note">Promedio calculado con las reseñas de clientes reales.</p>
+        </div>
+        <div>
+         <h3>Compra con señales claras</h3>
+         <p class="copy">Comparte tu experiencia y descubre opiniones de la comunidad.</p>
+         <div id="review-stars-breakdown" class="review-breakdown" aria-label="Distribución de calificaciones"></div><button id="review-open" data-template-id="review-button" class="btn primary canva-button mt-3" type="button" style="background: rgb(18, 98, 212); color: rgb(255, 255, 255); font-weight: 700;"><i data-lucide="star"></i><span data-template-id="review-label" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Añadir reseña</span></button>
+        </div>
+       </div>
+       <div id="review-tabs" class="subbar" aria-label="Filtros de reseñas"></div>
+       <div id="review-track" class="review-track" tabindex="0" aria-label="Carrusel de reseñas"></div>
+      </div>
+     </div>
+    </section>
+    <section id="regalitos" class="section">
+     <div class="shell">
+      <p class="eyebrow">Detalles con intención</p>
+      <h2 class="title">Regalitos que dicen mucho</h2>
+      <p class="copy">Detalles listos para regalar, más ideas para fechas especiales. <button class="btn primary" data-cat="Regalitos" data-goto="productos" type="button" style="margin-left:6px">Ver regalitos en el catálogo</button></p>
+      <div class="grid gifts-grid">
+       <article class="product gift-card">
+        <div class="product-image"><img data-template-id="yellow-gifts-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/5695729/pexels-photo-5695729.jpeg" alt="Arreglo floral con girasoles, rosas y follaje">
+        </div>
+        <div class="body"><span class="tag">Idea de regalo · por encargo</span>
+         <h3 class="name">Flores amarillas para el 21</h3>
+         <p class="meta">Ramos con astromelias, gipsófilas, girasoles y follaje; también opciones en cesto.</p>
+         <p class="reference-note">Foto referencial. Arreglo por encargo: te cotizamos por WhatsApp.</p><button class="btn w-full mt-3" data-idea="Flores amarillas" type="button">Cotizar por WhatsApp</button>
+        </div>
+       </article>
+       <article class="product gift-card">
+        <div class="product-image"><img data-template-id="hotwheels-gifts-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/33832348/pexels-photo-33832348.jpeg" alt="Pista de carreras en miniatura con autos de colección">
+        </div>
+        <div class="body"><span class="tag">Idea de regalo · por encargo</span>
+         <h3 class="name">Ramos Hot Wheels para el 30</h3>
+         <p class="meta">Autos básicos, Monster Trucks 2 Pack, City Downtown y pack Dragon Ball de 10 autos.</p>
+         <p class="reference-note">Foto referencial. Arreglo por encargo: te cotizamos por WhatsApp.</p><button class="btn w-full mt-3" data-idea="Ramo Hot Wheels" type="button">Cotizar por WhatsApp</button>
+         <p class="reference-note">Incluye la idea “Ramo Hot Wheels con rosas” de Florería OroVerde, sin afirmar afiliación.</p>
+        </div>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section id="como-comprar" class="section">
+     <div class="shell">
+      <p class="eyebrow">Fácil y seguro</p>
+      <h2 class="title">Así compras en Zypuc</h2>
+      <div class="steps">
+       <div class="step"><div class="step-num">1</div><h3>Elige y agrega</h3><p class="copy">Mira el precio final con envío a Pucallpa y cuánto cuesta en otra tienda.</p></div>
+       <div class="step"><div class="step-num">2</div><h3>Envía tu pedido</h3><p class="copy">Tu pedido llega escrito a nuestro WhatsApp. Te confirmamos stock y fecha.</p></div>
+       <div class="step"><div class="step-num">3</div><h3>Paga y recibe</h3><p class="copy">Pagas con Yape, Plin u otro medio, y te lo entregamos en Pucallpa.</p></div>
+      </div>
+     </div>
+    </section>
+    <section id="soporte" class="section">
+     <div class="shell">
+      <div data-template-id="support-panel" class="panel support canva-panel">
+       <div>
+        <p data-template-id="support-eyebrow" class="eyebrow canva-text" style="color: rgb(18, 98, 212); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.12rem;">Soporte Zypuc</p>
+        <h2 data-template-id="support-title" class="title canva-text" style="color: rgb(20, 33, 59); font-weight: 800; font-style: normal; font-size: 30px; letter-spacing: -0.05rem;">¿Necesitas ayuda?</h2>
+        <p data-template-id="support-number" class="copy phone-pulse canva-text" style="color: rgb(101, 115, 140); font-weight: 700; font-style: normal; font-size: 16px;">+51 951 434 075</p>
+       </div>
+       <div class="actions">
+        <button id="copy-number" data-template-id="copy-number-button" class="btn canva-button" type="button" style="background: rgb(255, 255, 255); color: rgb(20, 33, 59); font-weight: 700;"><i data-lucide="copy"></i><span data-template-id="copy-number-label" class="canva-text" style="color: rgb(20, 33, 59); font-weight: 700; font-style: normal; font-size: 16px;">Copiar número</span></button>
+       </div>
+      </div>
+     </div>
+    </section>
+   </main>
+   <aside id="cart" class="cart" aria-label="Carrito de compra">
+    <div class="cart-head">
+     <button id="cart-toggle" type="button"><i data-lucide="shopping-bag"></i><span id="cart-title">Carrito · 0</span></button> <button id="cart-close" class="icon-btn" type="button" aria-label="Abrir o cerrar carrito"><i data-lucide="chevron-down"></i></button>
+    </div>
+    <div class="cart-detail">
+     <div id="cart-items"></div>
+     <p id="cart-empty" class="copy text-center">Tu carrito está listo para descubrir algo.</p>
+     <div class="cart-line"><strong>Subtotal</strong><strong id="total"></strong>
+     </div><button id="checkout" data-template-id="checkout-button" class="btn primary w-full canva-button" type="button" style="background: rgb(18, 98, 212); color: rgb(255, 255, 255); font-weight: 700;"><i data-lucide="message-circle"></i><span data-template-id="checkout-label" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Continuar al checkout</span></button>
+    </div>
+   </aside>
+   <aside id="drawer" class="drawer" aria-label="Cuenta Zypuc" aria-hidden="true">
+    <div class="flex justify-between items-center">
+     <img class="logo logo-light" src="logo-claro.png" alt="Logo Zypuc Tecnología y Dulzura"><img class="logo logo-dark" src="logo-oscuro.png" alt="" aria-hidden="true"> <button id="drawer-close" class="icon-btn" type="button" aria-label="Cerrar cuenta"><i data-lucide="x"></i></button>
+    </div>
+    <nav class="account-slider" aria-label="Secciones de cuenta">
+     <button class="chip active" data-view="profile" type="button">Perfil</button> <button class="chip" data-view="orders" type="button">Pedidos</button> <button class="chip" data-view="favorites" type="button">Favoritos</button> <button class="chip" data-view="compare" type="button">Comparar</button>
+    </nav>
+    <div id="account-content"></div>
+   </aside>
+   <div id="checkout-modal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <form id="checkout-form" class="modal">
+     <div class="modal-head">
+      <div>
+       <p class="eyebrow">Checkout Zypuc</p>
+       <h2 id="checkout-title">Coordina por WhatsApp</h2>
+      </div><button class="icon-btn close-modal" type="button" aria-label="Cerrar checkout"><i data-lucide="x"></i></button>
+     </div>
+     <div id="summary" class="panel"></div>
+     <p data-template-id="checkout-note" class="copy canva-text" style="color: rgb(101, 115, 140); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">No cobramos en esta página: el pago se coordina por WhatsApp. Los productos traídos de tiendas incluyen el envío a Pucallpa y se confirman según stock.</p>
+     <fieldset>
+      <legend class="label">Método seleccionado: <span id="payment-value">Yape</span></legend>
+      <div class="paygrid">
+       <button class="pay paypal" data-payment="PayPal" role="radio" aria-checked="false" type="button"><span class="pay-dot" style="background:#003087">P</span><strong>PayPal</strong></button> <button class="pay yape active" data-payment="Yape" role="radio" aria-checked="true" type="button"><span class="pay-dot" style="background:#742284">Y</span><strong>Yape</strong></button> <button class="pay plin" data-payment="Plin" role="radio" aria-checked="false" type="button"><span class="pay-dot" style="background:#00b3a6">P</span><strong>Plin</strong></button> <button class="pay other" data-payment="Otros medios" role="radio" aria-checked="false" type="button"><i data-lucide="wallet-cards"></i><strong>Otros</strong></button>
+      </div>
+     </fieldset>
+     <p id="checkout-message" class="copy" aria-live="polite"></p><button data-template-id="checkout-submit-button" class="btn primary w-full canva-button" type="submit" style="background: rgb(18, 98, 212); color: rgb(255, 255, 255); font-weight: 700;"><i data-lucide="message-circle"></i><span data-template-id="checkout-submit-label" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Registrar y continuar por WhatsApp</span></button>
+    </form>
+   </div>
+   <div id="review-modal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="review-title">
+    <form id="review-form" class="modal">
+     <div class="modal-head">
+      <div>
+       <p class="eyebrow">Reviews Zypuc</p>
+       <h2 id="review-title">Comparte tu experiencia</h2>
+      </div><button class="icon-btn close-modal" type="button" aria-label="Cerrar reseña"><i data-lucide="x"></i></button>
+     </div><label class="label" for="review-name">Tu nombre</label><input id="review-name" class="field" required=""> <label class="label" for="review-product">Producto</label><select id="review-product" class="field"></select> <label class="label" for="review-stars">Calificación</label><select id="review-stars" class="field"><option value="5">5 estrellas</option><option value="4">4 estrellas</option><option value="3">3 estrellas</option><option value="2">2 estrellas</option><option value="1">1 estrella</option></select> <label class="label" for="review-text">Reseña</label><textarea id="review-text" class="field" rows="4" required=""></textarea>
+     <p id="review-message" class="copy" aria-live="polite"></p><button class="btn primary w-full mt-3" type="submit">Publicar reseña <i data-lucide="send"></i></button>
+    </form>
+   </div>
+   <div id="compare-modal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="compare-title">
+    <section class="modal">
+     <div class="modal-head">
+      <div>
+       <p class="eyebrow">Balanza Zypuc</p>
+       <h2 id="compare-title">Comparar productos</h2>
+      </div><button class="icon-btn close-modal" type="button" aria-label="Cerrar comparación"><i data-lucide="x"></i></button>
+     </div>
+     <p data-template-id="compare-note" class="copy canva-text" style="color: rgb(101, 115, 140); font-weight: 700; font-style: normal; font-size: 16px;">Nuestros precios incluyen envío a Pucallpa. Los de otras tiendas son los que vimos en la fecha indicada.</p>
+     <div id="compare-grid"></div><button id="compare-clear" class="btn w-full mt-3" type="button">Limpiar comparación</button>
+    </section>
+   </div><button id="compare-open" class="btn" style="position:fixed;z-index:55;left:18px;bottom:18px;box-shadow:var(--shadow)" type="button"><i data-lucide="scale"></i><span id="compare-count">Comparar · 0</span></button>
+   <div id="toast" class="toast" aria-live="polite"></div>
+   <footer class="waves" aria-hidden="true">
+    <div class="wave"></div>
+    <div class="wave two"></div>
+   </footer>
+   <footer class="site-footer">
+    <div class="shell cols">
+     <div><img class="logo logo-light" src="logo-claro.png" alt="Zypuc"><img class="logo logo-dark" src="logo-oscuro.png" alt="" aria-hidden="true"><p class="copy">Emprendimiento estudiantil de Pucallpa: tecnología, deporte, repostería y regalitos, con entrega en la ciudad.</p><a class="libro" href="https://wa.me/51951434075?text=Hola%20Zypuc%2C%20quiero%20presentar%20un%20reclamo." target="_blank" rel="noopener">Libro de Reclamaciones</a></div>
+     <div><h4>Tienda</h4><a href="#productos" data-goto="productos" data-cat="Tecnología">Tecnología</a><a href="#productos" data-goto="productos" data-cat="Deporte">Deporte</a><a href="#productos" data-goto="productos" data-cat="Repostería">Repostería</a><a href="#productos" data-goto="productos" data-cat="Regalitos">Regalitos</a></div>
+     <div><h4>Ayuda</h4><a href="#como-comprar">Cómo comprar</a><a href="#soporte">Soporte</a><button class="link" data-legal="terminos" type="button">Términos y condiciones</button><button class="link" data-legal="privacidad" type="button">Privacidad de datos</button></div>
+    </div>
+    <div class="shell legal"><span>© 2026 Zypuc · Tecnología y dulzura</span><span>Precios en soles. Fotos de cada producto tomadas de la tienda donde se vende.</span></div>
+   </footer>
+   <div id="detail-modal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="detail-title"><section class="modal"><div class="modal-head"><div><p class="eyebrow">Ficha del producto</p><h2 id="detail-title">Producto</h2></div><button class="icon-btn close-modal" type="button" aria-label="Cerrar"><i data-lucide="x"></i></button></div><div id="detail-body"></div></section></div>
+   <div id="legal-modal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="legal-title"><section class="modal legal-text"><div class="modal-head"><div><p class="eyebrow">Zypuc</p><h2 id="legal-title">Términos</h2></div><button class="icon-btn close-modal" type="button" aria-label="Cerrar"><i data-lucide="x"></i></button></div><div id="legal-body"></div></section></div>
+
+  </div>
+  <script>
+    const LEGAL={
+      terminos:`<p class="legal-note">Plantilla para un emprendimiento estudiantil. Revísenla con un docente o un adulto responsable antes de publicarla.</p>
+      <p class="copy">Última actualización: 14 de octubre de 2026.</p>
+      <h3>1. Quiénes somos</h3><p>Zypuc es un emprendimiento de estudiantes en Pucallpa, Ucayali. Vendemos productos que compramos en tiendas formales (por ejemplo Falabella o Ripley) y te los entregamos en Pucallpa. Contacto: WhatsApp +51 951 434 075.</p>
+      <h3>2. Cómo funciona un pedido</h3><ul><li>Armas tu carrito y lo envías por WhatsApp. El pedido queda confirmado cuando te respondemos y, si corresponde, recibimos el adelanto.</li><li>Si un producto se agota o la tienda cambia el precio antes de comprarlo, te avisamos: eliges el nuevo precio o te devolvemos todo lo pagado.</li></ul>
+      <h3>3. Precios</h3><ul><li>Los precios están en soles e incluyen el envío hasta Pucallpa y nuestro servicio de compra y entrega.</li><li>Los productos "a consultar" se cotizan por WhatsApp.</li></ul>
+      <h3>4. Comparación con otras tiendas</h3><p>Cuando mostramos "En otra tienda cuesta S/ X", indicamos la tienda, el link y la fecha en que lo revisamos. Ese precio puede cambiar después; la comparación vale para esa fecha y la retiramos si deja de ser cierta o tiene más de 7 días.</p>
+      <h3>5. Pagos</h3><p>Yape, Plin u otros medios que coordinemos por WhatsApp. Esta página no cobra ni guarda datos de tarjetas.</p>
+      <h3>6. Entregas y plazos</h3><p>Los plazos son estimados (normalmente 5 a 8 días para productos traídos de tiendas) y dependen del courier hasta Pucallpa. Te avisamos cualquier retraso.</p>
+      <h3>7. Cambios, devoluciones y garantía</h3><ul><li>Si el producto llega dañado o no es lo que pediste, avísanos dentro de las 48 horas de recibirlo: lo cambiamos o te devolvemos el dinero.</li><li>La garantía del fabricante o de la tienda aplica según sus políticas; te ayudamos a hacer el trámite.</li></ul>
+      <h3>8. Productos digitales</h3><p>Solo vendemos tarjetas de regalo o códigos oficiales. No vendemos cuentas compartidas.</p>
+      <h3>9. Menores de edad</h3><p>Si eres menor de edad, compra con conocimiento de tu madre, padre o apoderado.</p>
+      <h3>10. Reclamos</h3><p>Puedes presentar un reclamo o queja en nuestro Libro de Reclamaciones; responderemos dentro del plazo que fija el Código de Protección y Defensa del Consumidor (Ley N.° 29571).</p>`,
+      privacidad:`<p class="copy">Pedimos solo lo necesario para entregarte tu pedido: nombre, teléfono, correo y dirección o colegio.</p>
+      <h3>Dónde quedan tus datos</h3><p>La cuenta, el carrito, los favoritos y tus pedidos se guardan en tu propio navegador. Esta página no los envía a ningún servidor: el pedido sale desde tu WhatsApp.</p>
+      <h3>Para qué los usamos</h3><ul><li>Confirmar, comprar y entregar tu pedido.</li><li>Avisarte si cambia el precio, el stock o la fecha de llegada.</li></ul>
+      <h3>Lo que no hacemos</h3><ul><li>No vendemos ni compartimos tus datos.</li><li>No pedimos contraseñas ni datos de tarjetas.</li></ul>
+      <h3>Tus derechos</h3><p>Puedes pedirnos ver, corregir o borrar tus datos por WhatsApp, conforme a la Ley N.° 29733 de Protección de Datos Personales.</p>`
+    };
+
+    /* ===================== Zypuc FX: tema, lluvia de objetos, animaciones ===================== */
+    const FX=(()=>{
+      const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+      const S=(body,vb="0 0 48 48")=>`<svg viewBox="${vb}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${body}</svg>`;
+      const ITEMS={
+        "Tecnología":[
+          S('<rect x="10" y="10" width="28" height="28" rx="5" fill="#1262d4"/><rect x="17" y="17" width="14" height="14" rx="2" fill="#7fc2ff"/><g stroke="#1262d4" stroke-width="3" stroke-linecap="round"><path d="M16 4v6M24 4v6M32 4v6M16 38v6M24 38v6M32 38v6M4 16h6M4 24h6M4 32h6M38 16h6M38 24h6M38 32h6"/></g>'),
+          S('<path d="M27 3 9 27h13l-3 18 20-26H25z" fill="#ffd35c" stroke="#e79510" stroke-width="2" stroke-linejoin="round"/>'),
+          S('<g fill="none" stroke="#10b8aa" stroke-width="4" stroke-linecap="round"><path d="M6 19a26 26 0 0 1 36 0"/><path d="M12 26a17 17 0 0 1 24 0"/><path d="M18 33a8 8 0 0 1 12 0"/></g><circle cx="24" cy="39" r="3" fill="#10b8aa"/>'),
+          S('<rect x="6" y="12" width="36" height="22" rx="4" fill="#14213b"/><rect x="10" y="16" width="28" height="14" rx="2" fill="#73b7ff"/><rect x="2" y="34" width="44" height="4" rx="2" fill="#65738c"/>'),
+          S('<circle cx="24" cy="24" r="7" fill="#1262d4"/><circle cx="24" cy="24" r="14" fill="none" stroke="#7fc2ff" stroke-width="3" stroke-dasharray="5 5"/>')
+        ],
+        "Deporte":[
+          S('<circle cx="24" cy="24" r="20" fill="#fff" stroke="#14213b" stroke-width="2.5"/><path d="M24 14l8 6-3 9h-10l-3-9z" fill="#14213b"/><path d="M24 4v10M32 20l10-4M29 29l7 9M19 29l-7 9M16 20 6 16" stroke="#14213b" stroke-width="2"/>'),
+          S('<circle cx="24" cy="24" r="20" fill="#ffd35c" stroke="#1262d4" stroke-width="2.5"/><path d="M8 14c10 2 20 10 22 30M40 14C30 18 22 28 24 44M6 28c12-6 26-6 36 2" fill="none" stroke="#1262d4" stroke-width="2.5"/>'),
+          S('<circle cx="24" cy="30" r="13" fill="#ffd35c" stroke="#e79510" stroke-width="2.5"/><path d="M16 4h16l-4 14h-8z" fill="#4f9f2f"/><path d="M24 24l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.6-4.8 2.6.9-5.4-3.9-3.8 5.4-.8z" fill="#fff"/>'),
+          S('<path d="M8 30c0-8 6-12 14-12h6l12 10c3 2 3 8-2 8H10c-2 0-2-3-2-6z" fill="#4f9f2f"/><path d="M8 36h34" stroke="#14213b" stroke-width="3" stroke-linecap="round"/><path d="M20 22l4 4M24 20l4 4" stroke="#fff" stroke-width="2"/>'),
+          S('<circle cx="24" cy="24" r="18" fill="#f28c1e"/><path d="M6 24h36M24 6v36M11 11c8 6 8 20 0 26M37 11c-8 6-8 20 0 26" fill="none" stroke="#14213b" stroke-width="2"/>')
+        ],
+        "Repostería":[
+          S('<path d="M12 26h24l-4 16H16z" fill="#10b8aa"/><path d="M17 26l1.5 16M24 26v16M31 26l-1.5 16" stroke="#0b7d74" stroke-width="2"/><path d="M9 27c-3-7 4-12 9-10 0-7 9-10 12-4 5-3 12 1 10 8 4 1 5 6 2 8z" fill="#ff8fae"/><circle cx="25" cy="9" r="5" fill="#e3263d"/><path d="M25 4c1-3 4-4 6-4" stroke="#4f9f2f" stroke-width="2" fill="none"/>'),
+          S('<circle cx="17" cy="33" r="10" fill="#e3263d"/><circle cx="33" cy="35" r="9" fill="#c81d33"/><path d="M17 23c2-10 8-17 16-19M33 26c0-10-2-16 0-22" stroke="#4f9f2f" stroke-width="2.5" fill="none"/><circle cx="14" cy="30" r="2.5" fill="#fff" opacity=".6"/>'),
+          S('<rect x="20" y="4" width="8" height="40" rx="4" fill="#ff8fae" transform="rotate(35 24 24)"/>'),
+          S('<circle cx="24" cy="24" r="19" fill="#f2b680"/><circle cx="24" cy="24" r="19" fill="none" stroke="#c97a3d" stroke-width="2"/><path d="M8 22c4-10 28-10 32 0-4 8-28 8-32 0z" fill="#ff8fae"/><circle cx="24" cy="24" r="6" fill="var(--paper,#fff)"/><g stroke-width="2.5" stroke-linecap="round"><path d="M14 18l2 2" stroke="#1262d4"/><path d="M31 17l2-2" stroke="#ffd35c"/><path d="M33 26l2 1" stroke="#10b8aa"/><path d="M16 28l-2 1" stroke="#fff"/></g>'),
+          S('<circle cx="24" cy="24" r="18" fill="#d9a066"/><g fill="#5a3427"><circle cx="18" cy="18" r="3"/><circle cx="29" cy="20" r="2.5"/><circle cx="22" cy="30" r="3"/><circle cx="32" cy="30" r="2"/></g>')
+        ],
+        "Regalitos":[
+          S('<rect x="7" y="20" width="34" height="24" rx="3" fill="#7b3fc4"/><rect x="4" y="13" width="40" height="9" rx="3" fill="#a678ef"/><rect x="21" y="13" width="6" height="31" fill="#ffd35c"/><path d="M24 13c-6-10-16-6-10 0M24 13c6-10 16-6 10 0" stroke="#ffd35c" stroke-width="3.5" fill="none" stroke-linecap="round"/>'),
+          S('<path d="M24 42S5 30 5 17c0-6 5-10 10-10 4 0 7 2 9 6 2-4 5-6 9-6 5 0 10 4 10 10 0 13-19 25-19 25z" fill="#e85fa8"/><circle cx="16" cy="15" r="3" fill="#fff" opacity=".5"/>'),
+          S('<path d="M24 3l6 13 14 2-10 10 3 14-13-7-13 7 3-14L4 18l14-2z" fill="#ffd35c" stroke="#e79510" stroke-width="2" stroke-linejoin="round"/>'),
+          S('<circle cx="24" cy="18" r="10" fill="#e3263d"/><path d="M17 15c4-4 10-4 14 0M18 21c3 3 9 3 12 0" stroke="#9e1427" stroke-width="2" fill="none"/><path d="M24 28v18" stroke="#4f9f2f" stroke-width="3"/><path d="M24 36c-6-1-9-6-9-6 6-1 9 3 9 6z" fill="#4f9f2f"/>'),
+          S('<path d="M24 20 8 10v20zM24 20l16-10v20z" fill="#e85fa8"/><circle cx="24" cy="20" r="5" fill="#c43c86"/><path d="M22 24l-6 16M26 24l6 16" stroke="#e85fa8" stroke-width="4" stroke-linecap="round"/>')
+        ]
+      };
+      let cat="Tecnología",motion=!reduce,layer=null;
+      function count(){return innerWidth<640?9:18}
+      function rain(newCat,shower){
+        cat=newCat||cat;layer=layer||document.getElementById("rain-layer");if(!layer)return;
+        const set=ITEMS[cat]||ITEMS["Tecnología"],n=count();
+        layer.innerHTML=Array.from({length:n},(_,i)=>{
+          const depth=i%3, size=[18,26,36][depth], dur=[16,12,9][depth]+(i%4)*1.3, sway=[14,22,30][depth];
+          const delay=shower? -(Math.random()*2) : -(i*dur/n*1.6);
+          return `<span class="fall-item d${depth}" style="left:${(i*37+11)%96}%;--size:${size}px;--dur:${shower?dur*.55:dur}s;--delay:${delay}s;--sway:${sway}px;--spin:${(i%2?1:-1)*(180+i*25)}deg">${set[i%set.length]}</span>`;
+        }).join("");
+        if(shower){layer.classList.add("shower");clearTimeout(rain.t);rain.t=setTimeout(()=>{layer.classList.remove("shower");rain(cat,false)},2600)}
+      }
+      function setMotion(on){motion=on;document.body.classList.toggle("motion-off",!on)}
+      function burst(fromEl){
+        if(reduce||!motion||!fromEl)return;
+        const r=fromEl.getBoundingClientRect(),set=ITEMS[cat]||ITEMS["Tecnología"];
+        for(let i=0;i<10;i++){
+          const s=document.createElement("span");s.className="burst-item";s.innerHTML=set[i%set.length];
+          const ang=-Math.PI/2+(Math.random()-.5)*Math.PI*1.1,dist=70+Math.random()*90;
+          s.style.left=(r.left+r.width/2)+"px";s.style.top=(r.top+r.height/2)+"px";document.body.appendChild(s);
+          s.animate([{transform:"translate(-50%,-50%) scale(.4) rotate(0)",opacity:1},{transform:`translate(calc(-50% + ${Math.cos(ang)*dist}px),calc(-50% + ${Math.sin(ang)*dist}px)) scale(1) rotate(${(Math.random()-.5)*540}deg)`,opacity:1,offset:.55},{transform:`translate(calc(-50% + ${Math.cos(ang)*dist*1.2}px),calc(-50% + ${Math.sin(ang)*dist+120}px)) scale(.7) rotate(${(Math.random()-.5)*720}deg)`,opacity:0}],{duration:1100+Math.random()*400,easing:"cubic-bezier(.2,.7,.3,1)"}).onfinish=()=>s.remove();
+        }
+      }
+      /* Tema claro / oscuro: recuerda la elección y respeta el sistema */
+      function applyTheme(dark){
+        document.body.classList.toggle("dark",dark);
+        const b=document.getElementById("theme-toggle");if(!b)return;
+        const lbl=b.querySelector("[data-template-id=theme-label]")||b.querySelector("span");if(lbl)lbl.textContent=dark?"Oscuro":"Claro";
+        b.setAttribute("aria-label",dark?"Cambiar a modo claro":"Cambiar a modo oscuro");b.setAttribute("aria-pressed",String(dark));
+        const ic=b.querySelector("svg,i");if(ic){const i=document.createElement("i");i.setAttribute("data-lucide",dark?"moon-star":"sun");ic.replaceWith(i);window.lucide&&lucide.createIcons()}
+        document.querySelector('meta[name="theme-color"]')?.setAttribute("content",dark?"#091323":"#f6f9fe");
+      }
+      function initTheme(){
+        let saved=null;try{saved=localStorage.getItem("zypuc-theme")}catch{}
+        applyTheme(saved?saved==="dark":matchMedia("(prefers-color-scheme: dark)").matches);
+      }
+      function toggleTheme(ev){
+        const dark=!document.body.classList.contains("dark");
+        try{localStorage.setItem("zypuc-theme",dark?"dark":"light")}catch{}
+        const run=()=>applyTheme(dark);
+        if(document.startViewTransition&&!reduce&&motion){
+          const x=ev?ev.clientX:innerWidth-80,y=ev?ev.clientY:40;document.documentElement.style.setProperty("--vt-x",x+"px");document.documentElement.style.setProperty("--vt-y",y+"px");
+          document.startViewTransition(run);
+        }else run();
+        return dark;
+      }
+      /* Inclinación suave de tarjetas con el mouse */
+      function tilt(){
+        if(reduce||matchMedia("(hover:none)").matches)return;
+        document.addEventListener("pointermove",e=>{
+          const card=e.target.closest&&e.target.closest(".product");document.querySelectorAll(".product.tilting").forEach(c=>{if(c!==card){c.classList.remove("tilting");c.style.transform=""}});
+          if(!card||!motion)return;const r=card.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
+          card.classList.add("tilting");card.style.transform=`perspective(800px) rotateX(${(-py*5).toFixed(2)}deg) rotateY(${(px*6).toFixed(2)}deg) translateY(-5px)`;
+          card.style.setProperty("--gx",(px+.5)*100+"%");card.style.setProperty("--gy",(py+.5)*100+"%");
+        },{passive:true});
+      }
+      /* Números que suben solos */
+      function countUp(el,to,fmt=v=>Math.round(v)){
+        if(!el)return;if(reduce){el.textContent=fmt(to);return}
+        const t0=performance.now(),d=1200;const step=t=>{const k=Math.min(1,(t-t0)/d),e=1-Math.pow(1-k,3);el.textContent=fmt(to*e);if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step);
+      }
+      document.addEventListener("visibilitychange",()=>{document.body.classList.toggle("tab-hidden",document.hidden)});
+      return {rain,burst,setMotion,initTheme,toggleTheme,tilt,countUp,get motion(){return motion}};
+    })();
+
+    const $=s=>document.querySelector(s);
+    const money=n=>"S/ "+Number(n).toFixed(2);
+    const esc=v=>String(v??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]));
+    const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch{return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
+
+    /* ---------- Datos: productos.json (editable) + precios.json (actualizado solo por GitHub) ---------- */
+    const EMBEDDED={"config": {"whatsapp": "51951434075", "telefonoVisible": "+51 951 434 075", "envioPorUnidad": 8, "comision": 15, "diasVigenciaComparacion": 7}, "subcategorias": {"Tecnología": ["Todos", "Periféricos", "Laptops", "Wearables", "Celulares", "Licencias"], "Deporte": ["Todos", "Zapatillas", "Pelotas", "Bicicletas", "Accesorios"], "Repostería": ["Todos", "Electro", "Utensilios", "Moldes"], "Regalitos": ["Todos", "Coleccionables"]}, "productos": [{"id": "jbl-tune-520bt", "dept": "Tecnología", "cat": "Periféricos", "brand": "JBL", "name": "Audífonos JBL Tune 520BT Bluetooth negro", "model": "On-ear · Bluetooth 5.3", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/1498/PMP20000049270/full_image-1.jpeg", "buy": {"store": "Falabella", "seller": "Glowlink Pe", "price": 139, "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=jbl+tune+520bt", "checked": "2026-10-14", "match": ["520bt"]}, "ref": {"store": "Ripley", "seller": "Shopcellperu", "price": 249, "url": "https://simple.ripley.com.pe/audifonos-jbl-on-ear-tune-520bt-bluetooth-53-pure-bass-sound-negro-pmp20000049270", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "logitech-m170", "dept": "Tecnología", "cat": "Periféricos", "brand": "Logitech", "name": "Mouse inalámbrico Logitech M170", "model": "Inalámbrico · receptor USB", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2065370085314/full_image-2065370085314.webp", "buy": {"store": "Ripley", "seller": "Ripley", "price": 44.9, "url": "https://simple.ripley.com.pe/mouse-inalambrico-logitech-m170-2065370085277", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "redragon-k552", "dept": "Tecnología", "cat": "Periféricos", "brand": "Redragon", "name": "Teclado mecánico Redragon Kumara K552 Rainbow (español)", "model": "Mecánico · switch red · TKL", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2239/PMP00003343311/full_image-1.jpeg", "buy": {"store": "Falabella", "seller": "Inversiones Rumia", "price": 149.99, "url": "https://www.falabella.com.pe/falabella-pe/shop/redragon-kumara-k552", "checked": "2026-10-14", "match": ["k552"]}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "lenovo-slim3i", "dept": "Tecnología", "cat": "Laptops", "brand": "Lenovo", "name": "Laptop Lenovo IdeaPad Slim 3i 15.6\" Core i3, 8 GB, 128 GB", "model": "Cotizamos el mejor precio del momento", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3325/PMP20001398666/full_image-1.jpeg", "consult": true, "spec": {"processor": "Intel Core i3", "ram": "8 GB", "storage": "128 GB", "screen": "15.6 pulgadas", "os": "Confirmar", "condition": "Nueva"}}, {"id": "redmi-watch-5-active", "dept": "Tecnología", "cat": "Wearables", "brand": "Xiaomi", "name": "Smartwatch Xiaomi Redmi Watch 5 Active", "model": "Smartwatch · negro", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3985/PMP20000577564/full_image-1.jpeg", "buy": {"store": "Falabella", "seller": "Falabella", "price": 129, "url": "https://www.falabella.com.pe/falabella-pe/shop/redmi-watch-5-active", "checked": "2026-10-14", "match": ["watch 5 active"]}, "ref": {"store": "Ripley", "seller": "Accesories Store", "price": 184, "url": "https://simple.ripley.com.pe/smartwatch-xiaomi-negro-redmi-watch-5-active-pmp20000577564", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "samsung-a16", "dept": "Tecnología", "cat": "Celulares", "brand": "Samsung", "name": "Celular Samsung Galaxy A16 128 GB, 4 GB RAM", "model": "Negro", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2065373022316/full_image-2065373022316.webp", "buy": {"store": "Falabella", "seller": "Millennials", "price": 499, "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=samsung+galaxy+a16", "checked": "2026-10-14", "match": ["a16", "128"]}, "ref": {"store": "Ripley", "seller": "Ripley", "price": 599, "url": "https://simple.ripley.com.pe/celular-samsung-galaxy-a16-128gb-2065373022309", "checked": "2026-10-14"}, "spec": {"ram": "4 GB", "storage": "128 GB", "camera": "50 MP", "screen": "6.7 pulgadas", "fiveg": "No", "battery": "5000 mAh"}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "redmi-a7-pro", "dept": "Tecnología", "cat": "Celulares", "brand": "Xiaomi", "name": "Celular Xiaomi Redmi A7 Pro 128 GB, 4 GB RAM", "model": "Negro", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2165/PMP20001667293/full_image-1.jpeg", "buy": {"store": "Falabella", "seller": "Belogar", "price": 399.9, "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=redmi+a7+pro", "checked": "2026-10-14", "match": ["a7 pro", "128"]}, "ref": {"store": "Ripley", "seller": "Moviles Telcel Peru", "price": 549, "url": "https://simple.ripley.com.pe/xiaomi-redmi-a7-pro-128gb-4gb-black-pmp20001667293", "checked": "2026-10-14"}, "spec": {"ram": "4 GB", "storage": "128 GB", "camera": "13 MP", "screen": "6.9 pulgadas", "fiveg": "No", "battery": "Confirmar"}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "moto-g06", "dept": "Tecnología", "cat": "Celulares", "brand": "Motorola", "name": "Celular Motorola Moto G06 64 GB, 4 GB RAM naranja", "model": "Naranja", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5884/PMP20001557480/full_image-2.png", "buy": {"store": "Ripley", "seller": "Techno World", "price": 380, "url": "https://simple.ripley.com.pe/motorola-g06-4gb-64gb-naranja-pmp20001557480", "checked": "2026-10-14"}, "spec": {"ram": "4 GB", "storage": "64 GB", "camera": "50 MP", "screen": "Confirmar", "fiveg": "No", "battery": "Confirmar"}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "netflix-ref", "dept": "Tecnología", "cat": "Licencias", "brand": "Netflix", "name": "Netflix · tarjeta de regalo oficial", "model": "Solo tarjetas o códigos oficiales", "image": "https://images.pexels.com/photos/5202917/pexels-photo-5202917.jpeg?auto=compress&cs=tinysrgb&w=800", "consult": true, "digital": true, "spec": {"platform": "Netflix", "access": "Tarjeta de regalo oficial", "restrictions": "Disponibilidad y región por confirmar"}}, {"id": "crunchyroll-ref", "dept": "Tecnología", "cat": "Licencias", "brand": "Crunchyroll", "name": "Crunchyroll · tarjeta de regalo oficial", "model": "Solo tarjetas o códigos oficiales", "image": "https://images.pexels.com/photos/265685/pexels-photo-265685.jpeg?auto=compress&cs=tinysrgb&w=800", "consult": true, "digital": true, "spec": {"platform": "Crunchyroll", "access": "Tarjeta de regalo oficial", "restrictions": "Disponibilidad y región por confirmar"}}, {"id": "prime-ref", "dept": "Tecnología", "cat": "Licencias", "brand": "Prime Video", "name": "Prime Video · tarjeta de regalo oficial", "model": "Solo tarjetas o códigos oficiales", "image": "https://images.pexels.com/photos/4009407/pexels-photo-4009407.jpeg?auto=compress&cs=tinysrgb&w=800", "consult": true, "digital": true, "spec": {"platform": "Prime Video", "access": "Tarjeta de regalo oficial", "restrictions": "Disponibilidad y región por confirmar"}}, {"id": "minecraft-ref", "dept": "Tecnología", "cat": "Licencias", "brand": "Minecraft", "name": "Minecraft · código oficial", "model": "Edición y plataforma por confirmar", "image": "https://images.pexels.com/photos/3977908/pexels-photo-3977908.jpeg?auto=compress&cs=tinysrgb&w=800", "consult": true, "digital": true, "spec": {"platform": "PC / consola según edición", "access": "Código oficial", "restrictions": "Edición y región por confirmar"}}, {"id": "steam-ref", "dept": "Tecnología", "cat": "Licencias", "brand": "Steam", "name": "Steam · tarjeta de saldo oficial", "model": "Monto por confirmar", "image": "https://images.pexels.com/photos/7858742/pexels-photo-7858742.jpeg?auto=compress&cs=tinysrgb&w=800", "consult": true, "digital": true, "spec": {"platform": "Steam", "access": "Tarjeta de saldo oficial", "restrictions": "Monto y región por confirmar"}}, {"id": "mikasa-v200w", "dept": "Deporte", "cat": "Pelotas", "brand": "Mikasa", "name": "Pelota de vóley Mikasa V200W (FIVB)", "model": "Oficial FIVB · talla 5", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5088/PMP20000849859/full_image-1.jpeg", "buy": {"store": "Falabella", "seller": "Mi Deporte Peru", "price": 419.9, "url": "https://www.falabella.com.pe/falabella-pe/brand/MIKASA", "checked": "2026-10-14", "match": ["v200w"]}, "ref": {"store": "Ripley", "seller": "Fubball", "price": 499.9, "url": "https://simple.ripley.com.pe/pelota-de-voley-mikasa-v200w-fivb-approved-pmp20000849859", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "puma-attacanto", "dept": "Deporte", "cat": "Pelotas", "brand": "Puma", "name": "Pelota de fútbol Puma Attacanto Graphic", "model": "Fútbol · talla 5", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2020361326432/full_image-2020361326432.webp", "buy": {"store": "Ripley", "seller": "Ripley", "price": 34.99, "url": "https://simple.ripley.com.pe/pelota-futbol-puma-attacanto-graphic-2020361326425", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "reebok-flexagon", "dept": "Deporte", "cat": "Zapatillas", "brand": "Reebok", "name": "Zapatillas mujer Reebok Flexagon Energy TR 4 negro", "model": "Training", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2084327248220/full_image-2084327248220.webp", "buy": {"store": "Ripley", "seller": "Ripley", "price": 88, "url": "https://simple.ripley.com.pe/zapatillas-mujer-reebok-training-negro-flexagon-energy-tr-4-2084327248190", "checked": "2026-10-14"}, "stock": "Agotado", "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "spinning-lcd", "dept": "Deporte", "cat": "Bicicletas", "brand": "Digital Peru", "name": "Bicicleta spinning estacionaria con pantalla LCD (hasta 120 kg)", "model": "Con medidor de ritmo cardiaco", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2808/PMP20000197526/full_image-1.jpeg", "buy": {"store": "Ripley", "seller": "Digital Peru", "price": 319, "url": "https://simple.ripley.com.pe/bicicleta-spinning-estacionaria-pmp20000197526", "checked": "2026-10-14"}, "envio": 25, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "everlast-mat", "dept": "Deporte", "cat": "Accesorios", "brand": "Everlast", "name": "Colchoneta Everlast yoga mat 6 mm verde lima", "model": "Yoga y movilidad", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2397/PMP20000141544/full_image-1.jpeg", "buy": {"store": "Ripley", "seller": "Everlast", "price": 69.9, "url": "https://simple.ripley.com.pe/colchoneta-everlast-6mm-yoga-mat-verde-lima-pmp20000141544", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "ligas-resistencia", "dept": "Deporte", "cat": "Accesorios", "brand": "Kuychi", "name": "Set de 5 ligas de resistencia elástica", "model": "Pilates y gym en casa", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2121/PMP20000177302/full_image-1.jpeg", "buy": {"store": "Ripley", "seller": "Kuychi Importaciones", "price": 29, "url": "https://simple.ripley.com.pe/set-5-ligas-resistencia-elastica-ejercicios-pilates-gym-pmp20000177302", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "shaker-600", "dept": "Deporte", "cat": "Accesorios", "brand": "Genérico", "name": "Tomatodo shaker deportivo 600 ml con compartimentos", "model": "Para proteína y bebidas", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5411/PMP20001426967/full_image-1.jpeg", "buy": {"store": "Ripley", "seller": "Tequila Sunset Lima", "price": 29.99, "url": "https://simple.ripley.com.pe/tomatodo-shaker-deportivo-botella-mezclador-proteina-compartimentos-portatil-gym-600-ml-pmp20001426967", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "oster-fpsthm3532", "dept": "Repostería", "cat": "Electro", "brand": "Oster", "name": "Batidora de mano Oster FPSTHM3532, 250 W, 6 velocidades", "model": "Blanca · función turbo", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5127/PMP20000757999/full_image-1.jpeg", "buy": {"store": "Falabella", "seller": "Electrogo by Credivargas", "price": 99, "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=batidora+oster+fpsthm3532", "checked": "2026-10-14", "match": ["3532"]}, "ref": {"store": "Ripley", "seller": "Ofertitas", "price": 129, "url": "https://simple.ripley.com.pe/batidora-de-mano-oster-250-watts-fpsth3532-blanco-pmp20000757999", "checked": "2026-10-14"}, "spec": {"power": "250 W", "material": "Plástico y acero", "pieces": "Batidora + accesorios"}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "mica-bowls", "dept": "Repostería", "cat": "Utensilios", "brand": "Mica", "name": "Set x3 bowls con tapa de acero inoxidable Mica", "model": "Para mezclar y guardar", "image": "https://media.falabella.com/falabellaPE/883021890_005/public", "buy": {"store": "Falabella", "seller": "Falabella", "price": 49.9, "url": "https://www.falabella.com.pe/falabella-pe/product/883021890/Set-X3-Bowls-Acero-Inoxidable-Mica/883021890", "checked": "2026-10-14"}, "spec": {"pieces": "3 bowls con tapa", "material": "Acero inoxidable"}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "press-molde-brownies", "dept": "Repostería", "cat": "Moldes", "brand": "Press", "name": "Molde para brownies antiadherente Press 30.5 x 20.3 x 4 cm", "model": "Antiadherente", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3872/PMP20000033695/full_image-1.jpeg", "buy": {"store": "Ripley", "seller": "Press", "price": 26.9, "url": "https://simple.ripley.com.pe/molde-para-brownies-antiadherente-305-x-203-x-4-cm-pmp20000033695", "checked": "2026-10-14"}, "spec": {"capacity": "30.5 x 20.3 x 4 cm", "material": "Antiadherente", "oven": "Sí"}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "funko-bitty-pokemon", "dept": "Regalitos", "cat": "Coleccionables", "brand": "Funko", "name": "Funko Bitty Pop! Pokémon pack x4 (Charmander, Jolteon, Lapras, Rattata)", "model": "Mini figuras de colección", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4467/PMP20001074529/full_image-1.jpeg", "buy": {"store": "Falabella", "seller": "Chase Funko Peru", "price": 109, "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=funko+bitty+pokemon", "checked": "2026-10-14", "match": ["bitty", "charmander"]}, "ref": {"store": "Ripley", "seller": "Comprafacil USA Express", "price": 195, "url": "https://simple.ripley.com.pe/funko-pop-pack-de-4-bitty-de-pokemon-charmander-jolteon-lapras-rattata-pmp20001074529", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "oster-fpsths3611", "dept": "Repostería", "cat": "Electro", "brand": "Oster", "name": "Batidora de mano y pedestal Oster FPSTHS3611, 250 W, tazón 3.7 L", "model": "Blanca · 6 velocidades", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2735/PMP20000712418/full_image-1.jpeg", "buy": {"store": "Falabella", "seller": "Tiendas Cia", "price": 237, "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=batidora+oster+fpsths3611", "checked": "2026-10-14", "match": ["3611"]}, "ref": {"store": "Ripley", "seller": "Yoldi", "price": 399, "url": "https://simple.ripley.com.pe/batidora-oster-fpsths3611-de-mano-y-pedestal-250w-pmp20000712418", "checked": "2026-10-14"}, "envio": 12, "spec": {"power": "250 W", "capacity": "Tazón 3.7 L", "pieces": "Batidora, pedestal y tazón"}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "imaco-hes35r", "dept": "Repostería", "cat": "Electro", "brand": "Imaco", "name": "Horno eléctrico Imaco HES35R 35 L, 1500 W, con rostizador", "model": "Gris · 35 litros", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2019122187108/full_image-2019122187108", "buy": {"store": "Ripley", "seller": "Ripley", "price": 299, "url": "https://simple.ripley.com.pe/horno-electrico-imaco-35l-hes35r-1500w-gris-2019122187108p", "checked": "2026-10-14"}, "envio": 25, "spec": {"power": "1500 W", "capacity": "35 litros", "oven": "Sí"}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}, {"id": "funko-squirtle", "dept": "Regalitos", "cat": "Coleccionables", "brand": "Funko", "name": "Funko Pop! Pokémon: Squirtle", "model": "Figura de vinilo en su caja", "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4467/PMP20001074381/full_image-1.jpeg", "buy": {"store": "Falabella", "seller": "Pop Hunters", "price": 60.59, "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=funko+pop+squirtle", "checked": "2026-10-14", "match": ["squirtle"]}, "ref": {"store": "Ripley", "seller": "Comprafacil USA Express", "price": 130, "url": "https://simple.ripley.com.pe/funko-pop-squirtle-de-pokemon-pmp20001074381", "checked": "2026-10-14"}, "spec": {}, "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"}]};
+    let CONFIG=EMBEDDED.config, subs=EMBEDDED.subcategorias, RAW=EMBEDDED.productos, LIVE=null, products=[];
+    const DEPT_CLASS={"Tecnología":"tech","Deporte":"sport","Repostería":"baking","Regalitos":"gifts"};
+
+    const round90=x=>{const e=Math.floor(x);return x<=e+.9?e+.9:e+1.9};
+    function daysSince(d){if(!d)return Infinity;return (Date.now()-new Date(String(d).slice(0,10)+"T12:00:00").getTime())/864e5}
+    function fmtDate(d){if(!d)return "";return new Date(String(d).slice(0,10)+"T12:00:00").toLocaleDateString("es-PE",{day:"2-digit",month:"short"})}
+    function liveOf(id,side){return LIVE&&LIVE.items&&LIVE.items[id]&&LIVE.items[id][side]}
+    function build(p){
+      const buy=p.buy?{...p.buy}:null,ref=p.ref?{...p.ref}:null;
+      for(const [side,obj] of [["buy",buy],["ref",ref]]){const l=liveOf(p.id,side);if(obj&&l&&l.price>0&&daysSince(l.checked)<=daysSince(obj.checked)){obj.price=l.price;obj.checked=l.checked;obj.live=true}}
+      let price=0;
+      if(!p.consult&&buy&&buy.price){const envio=p.envio??CONFIG.envioPorUnidad,com=p.comision??CONFIG.comision;price=round90((buy.price+envio)*(1+com/100))}
+      if(!p.consult&&p.price)price=p.price;
+      let vs=null;
+      if(ref&&ref.price&&price&&ref.price>price&&daysSince(ref.checked)<=CONFIG.diasVigenciaComparacion)vs={...ref,save:ref.price-price};
+      return {...p,price,buy,ref,vs,stock:p.stock||(p.consult?"Precio a consultar":"Disponible"),reference:buy?`${buy.store}`:"",save:vs?vs.save:0,cls:DEPT_CLASS[p.dept]||"tech"};
+    }
+    function rebuild(){products=RAW.map(build)}
+    async function loadRemote(){
+      let changed=false;
+      try{const r=await fetch("productos.json",{cache:"no-store"});if(r.ok){const d=await r.json();if(d.productos){CONFIG=d.config||CONFIG;subs=d.subcategorias||subs;RAW=d.productos;changed=true}}}catch{}
+      try{const r=await fetch("precios.json",{cache:"no-store"});if(r.ok){LIVE=await r.json();changed=true}}catch{}
+      if(changed){rebuild();renderCats();renderProducts();renderSelect();renderCart();renderLive();fillReviewProducts();renderTicker();renderStats()}
+    }
+    function renderLive(){
+      const el=$("#live-pill");if(!el)return;
+      if(LIVE&&LIVE.updated){el.classList.remove("off");el.innerHTML=`<i></i>Precios revisados ${new Date(LIVE.updated).toLocaleString("es-PE",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"})}`}
+      else{el.classList.add("off");el.innerHTML="<i></i>Precios revisados el 14 oct"}
+    }
+
+    let state={cat:"Tecnología",sub:"Todos",max:2300,sort:"featured",cart:store.get("zypuc-cart")||[],fav:store.get("zypuc-fav")||[],compare:[],payment:"Yape",motion:!matchMedia("(prefers-reduced-motion:reduce)").matches,profile:null,reviewFilter:"all"};
+    let reviews=store.get("zypuc-reviews")||[];
+    let orders=store.get("zypuc-orders")||[];
+    let toastTimer;
+    const get=id=>products.find(x=>x.id===id);
+    const saveCart=()=>store.set("zypuc-cart",state.cart);
+
+    function toast(text){$("#toast").textContent=text;$("#toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("#toast").classList.remove("show"),2700)}
+    function maxForCat(){const v=products.filter(p=>p.dept===state.cat).map(p=>p.price);return Math.max(100,Math.ceil(Math.max(0,...v)))}
+    let rainReady=false;
+    function themeRain(){FX.rain(state.cat,rainReady);rainReady=true}
+    function renderCats(){
+      $("#catbar").innerHTML=Object.keys(subs).map(x=>`<button class="cat ${x===state.cat?"active":""}" data-cat="${x}" type="button">${x}</button>`).join("");
+      $("#subbar").innerHTML=(subs[state.cat]||["Todos"]).map(x=>`<button class="chip ${x===state.sub?"active":""}" data-sub="${x}" type="button">${x}</button>`).join("");
+    }
+    function activeFilters(){
+      const tags=[];if(state.sub!=="Todos")tags.push(state.sub);if(state.max<maxForCat())tags.push("Hasta "+money(state.max));if($("#fav-filter").checked)tags.push("Favoritos");if($("#ref-filter").checked)tags.push("Traídos de tiendas");if($("#save-filter").checked)tags.push("Más baratos");
+      $("#filter-count").textContent=`(${tags.length})`;$("#active-filters").innerHTML=tags.map(t=>`<span class="mini-tag">${esc(t)}</span>`).join("");
+    }
+    function list(){
+      const q=$("#search").value.toLowerCase();
+      let result=products.filter(p=>p.dept===state.cat&&(state.sub==="Todos"||p.cat===state.sub)&&(p.price<=state.max)&&(!q||`${p.name} ${p.model} ${p.cat} ${p.brand}`.toLowerCase().includes(q))&&(!$("#fav-filter").checked||state.fav.includes(p.id))&&(!$("#ref-filter").checked||p.buy)&&(!$("#save-filter").checked||p.vs));
+      if(state.sort==="low")result.sort((a,b)=>(a.price||1e9)-(b.price||1e9));
+      if(state.sort==="high")result.sort((a,b)=>b.price-a.price);
+      if(state.sort==="save")result.sort((a,b)=>b.save-a.save);
+      if(state.sort==="featured")result.sort((a,b)=>(b.vs?1:0)-(a.vs?1:0));
+      return result;
+    }
+    function productTags(p){
+      let tags=[];
+      if(p.cat==="Celulares"&&p.spec.camera==="50 MP")tags.push("Mejor cámara");
+      return tags.map(t=>`<span class="best-tag">${t}</span>`).join("");
+    }
+    function vsBlock(p){
+      if(!p.vs)return "";
+      return `<div class="vs-store">En ${esc(p.vs.store)} cuesta <strong>${money(p.vs.price)}</strong> · <a href="${esc(p.vs.url)}" target="_blank" rel="noopener noreferrer">Ver en ${esc(p.vs.store)}</a><br>Revisado el ${fmtDate(p.vs.checked)}</div>`;
+    }
+    function renderProducts(){
+      const result=list();
+      $("#grid").innerHTML=result.map((p,i)=>`<article class="product" style="animation-delay:${Math.min(i*40,320)}ms">
+        <div class="product-image"><img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" referrerpolicy="no-referrer" data-detail="${p.id}"><div class="tools">
+          <button class="round ${state.fav.includes(p.id)?"active":""}" data-fav="${p.id}" type="button" aria-label="Añadir a favoritos"><i data-lucide="heart"></i></button>
+          <button class="round ${state.compare.includes(p.id)?"active":""}" data-compare="${p.id}" type="button" aria-label="Añadir a comparar"><i data-lucide="scale"></i></button>
+        </div></div>
+        <div class="body"><span class="tag">${esc(p.stock)}</span>${p.vs?`<span class="save-tag">Ahorras ${money(p.vs.save)}</span>`:""}
+          <h3 class="name">${esc(p.name)}</h3><p class="meta">${esc(p.model)} · ${esc(p.cat)}</p>
+          ${p.price?`<div class="price">${money(p.price)}<small>${p.buy?"Incluye envío a Pucallpa":""}</small></div>`:`<span class="tag">Precio a consultar</span>`}${productTags(p)}
+          ${vsBlock(p)}
+          <button class="share-btn" data-share="${p.id}" type="button"><i data-lucide="share-2"></i>Compartir</button>
+          ${p.digital?`<p class="src-note">Solo vendemos tarjetas o códigos oficiales.</p>`:""}
+          ${p.price?`<button class="btn primary w-full mt-3" data-add="${p.id}" type="button" ${p.stock==="Agotado"?"disabled":""}>${p.stock==="Agotado"?"Agotado":"Añadir al carrito"} <i data-lucide="shopping-bag"></i></button>`
+                   :`<button class="btn primary w-full mt-3" data-whatsapp-product="${p.id}" type="button">Consultar por WhatsApp <i data-lucide="message-circle"></i></button>`}
+        </div></article>`).join("");
+      $("#empty").classList.toggle("hidden",!!result.length);activeFilters();window.lucide&&lucide.createIcons();
+      document.querySelectorAll("#grid img").forEach((img,i)=>img.addEventListener("error",()=>{img.src=placeholder(result[i])},{once:true}));
+    }
+    function placeholder(p){const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#edf4ff"/><text x="200" y="140" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#1262d4">${esc(p.brand||"Zypuc")}</text><text x="200" y="175" text-anchor="middle" font-family="Arial" font-size="15" fill="#65738c">Foto no disponible por ahora</text></svg>`;return "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg)}
+    function renderTicker(){
+      const deals=products.filter(p=>p.vs).sort((a,b)=>b.save-a.save);const t=$("#ticker-track");if(!t)return;
+      if(!deals.length){$("#ticker").hidden=true;return}$("#ticker").hidden=false;
+      const one=deals.map(p=>`<a href="#productos" data-jump="${p.id}">${esc(p.name)} <b>${money(p.price)} · ${money(p.vs.save)} menos que en ${esc(p.vs.store)}</b></a>`).join("");
+      t.innerHTML=one+one;
+    }
+    function renderStats(){
+      const deals=products.filter(p=>p.vs);
+      FX.countUp($("#stat-count"),deals.length);
+      FX.countUp($("#stat-max"),Math.max(0,...deals.map(p=>p.save)),v=>"S/ "+Math.round(v));
+      FX.countUp($("#stat-total"),products.filter(p=>!p.digital).length);
+    }
+    function shareUrl(){return location.protocol.startsWith("http")?location.href.split("#")[0]:"https://djpacker17.github.io/Zypuc/"}
+    async function shareProduct(id){
+      const p=get(id);if(!p)return;const text=`${p.name}${p.price?` a ${money(p.price)} en Zypuc`:" en Zypuc"}${p.vs?` (en ${p.vs.store} cuesta ${money(p.vs.price)})`:""}`;
+      if(navigator.share){try{await navigator.share({title:"Zypuc",text,url:shareUrl()});return}catch{}}
+      window.open(`https://wa.me/?text=${encodeURIComponent(text+" "+shareUrl())}`,"_blank","noopener,noreferrer");
+    }
+    function openDetail(id){
+      const p=get(id);if(!p)return;
+      $("#detail-body").innerHTML=`<div class="pd"><div class="pd-img"><img src="${esc(p.image)}" alt="${esc(p.name)}" referrerpolicy="no-referrer"></div><div>
+        <span class="tag">${esc(p.dept)} · ${esc(p.cat)}</span>${p.vs?`<span class="save-tag">Ahorras ${money(p.vs.save)}</span>`:""}
+        <h3>${esc(p.name)}</h3><p class="copy">${esc(p.model)}</p>
+        ${p.price?`<div class="bigprice">${money(p.price)}</div><p class="copy" style="margin:2px 0 0">Precio final con envío a Pucallpa incluido.</p>`:`<div class="bigprice" style="font-size:1.4rem">Precio a consultar</div>`}
+        ${vsBlock(p)}
+        <ul>${p.buy?`<li>Lo compramos nuevo en ${esc(p.buy.store)} y te lo entregamos en Pucallpa.</li>`:""}${p.entrega?`<li>${esc(p.entrega)}.</li>`:""}<li>Pagas por Yape, Plin u otro medio que coordinemos por WhatsApp.</li>${p.digital?"<li>Solo tarjetas o códigos oficiales.</li>":""}</ul>
+        <div class="row">${p.price&&p.stock!=="Agotado"?`<button class="btn primary" data-add="${p.id}" type="button">Añadir al carrito <i data-lucide="shopping-bag"></i></button>`:`<button class="btn primary" data-whatsapp-product="${p.id}" type="button">Consultar por WhatsApp</button>`}<button class="btn" data-share="${p.id}" type="button"><i data-lucide="share-2"></i>Compartir</button></div>
+      </div></div>`;
+      $("#detail-title").textContent=p.brand||"Producto";$("#detail-modal").classList.add("open");window.lucide&&lucide.createIcons();
+    }
+    function openLegal(which){
+      $("#legal-title").textContent=which==="privacidad"?"Privacidad de datos":"Términos y condiciones";
+      $("#legal-body").innerHTML=which==="privacidad"?LEGAL.privacidad:LEGAL.terminos;$("#legal-modal").classList.add("open");
+    }
+    function renderSelect(){
+      const pool=products.filter(p=>p.dept===state.cat&&p.price&&p.stock!=="Agotado");
+      const best=[...pool].sort((a,b)=>b.save-a.save)[0]||pool[0];
+      const btn=$("#select-open");if(!best)return;
+      btn.dataset.product=best.id;btn.classList.remove("swap");void btn.offsetWidth;btn.classList.add("swap");
+      $("#select-img").src=best.image;$("#select-img").alt=best.name;
+      $("#select-title").textContent=best.name;
+      $("#select-sub").textContent=`Zypuc ${money(best.price)}${best.vs?` · en ${best.vs.store} ${money(best.vs.price)}`:""}`;
+      $("#select-badge").textContent=best.vs?`Ahorras ${money(best.vs.save)}`:"Destacado";
+    }
+    function renderCart(){
+      state.cart=state.cart.filter(x=>get(x.id));
+      const count=state.cart.reduce((a,x)=>a+x.qty,0),total=state.cart.reduce((a,x)=>a+get(x.id).price*x.qty,0);
+      $("#cart-title").textContent=`Carrito · ${count}`;$("#total").textContent=money(total);$("#cart-empty").classList.toggle("hidden",!!count);
+      $("#cart-items").innerHTML=state.cart.map(x=>`<div class="cart-line"><span>${esc(get(x.id).name)} × ${x.qty}</span><span><button data-qty="${x.id}" data-d="-1" type="button" aria-label="Reducir">−</button> ${money(get(x.id).price*x.qty)} <button data-qty="${x.id}" data-d="1" type="button" aria-label="Aumentar">+</button></span></div>`).join("");
+      saveCart();
+    }
+    function compareFields(items){
+      if(items.some(p=>p.cat==="Celulares"))return [["ram","RAM"],["storage","Almacenamiento"],["camera","Cámara principal"],["screen","Pantalla"],["fiveg","5G"],["battery","Batería"],["price","Precio Zypuc"],["other","Otra tienda"]];
+      if(items.some(p=>p.cat==="Laptops"))return [["processor","Procesador"],["ram","RAM"],["storage","Almacenamiento"],["screen","Pantalla"],["os","Sistema operativo"],["condition","Condición"],["price","Precio Zypuc"]];
+      if(items.some(p=>p.cat==="Licencias"))return [["platform","Plataforma"],["access","Tipo"],["restrictions","Condiciones"],["price","Precio"]];
+      if(items.some(p=>p.dept==="Repostería"))return [["capacity","Medidas"],["material","Material"],["power","Potencia"],["pieces","Incluye"],["oven","Apto para horno"],["price","Precio Zypuc"],["other","Otra tienda"]];
+      return [["brand","Marca"],["stock","Disponibilidad"],["price","Precio Zypuc"],["other","Otra tienda"]];
+    }
+    function renderCompare(){
+      const items=state.compare.map(get).filter(Boolean);$("#compare-count").textContent=`Comparar · ${items.length}`;
+      if(!items.length){$("#compare-grid").innerHTML='<p class="copy">Añade hasta cuatro productos usando la balanza de cada tarjeta.</p>';return}
+      const fields=compareFields(items);
+      $("#compare-grid").innerHTML=`<div style="overflow:auto"><table class="comparison-table"><thead><tr><th>Campo</th>${items.map(p=>`<th class="compare-card-title">${esc(p.name)}<br><small>${p.price?money(p.price):"Consultar"}</small></th>`).join("")}</tr></thead><tbody>${fields.map(([key,label])=>{
+        const values=items.map(p=>key==="price"?(p.price?money(p.price):"Consultar"):key==="other"?(p.vs?`${p.vs.store}: ${money(p.vs.price)}`:"—"):(p.spec[key]||p[key]||"Confirmar"));
+        const equal=new Set(values).size===1;
+        return `<tr><th>${label}</th>${values.map(v=>`<td class="${equal?"same":""}">${esc(v)}</td>`).join("")}</tr>`;
+      }).join("")}</tbody></table></div>`;
+    }
+    function renderReviews(){
+      const filtered=reviews.filter(r=>state.reviewFilter==="all"||r.stars===+state.reviewFilter);
+      if(reviews.length){const avg=reviews.reduce((a,r)=>a+r.stars,0)/reviews.length;$("#average").textContent=avg.toFixed(1);$("#avg-stars").textContent="★".repeat(Math.round(avg))+"☆".repeat(5-Math.round(avg));$("#avg-note").textContent=`Promedio de ${reviews.length} reseña(s) de clientes.`}
+      else{$("#average").textContent="—";$("#avg-stars").textContent="☆☆☆☆☆";$("#avg-note").textContent="Aún no hay reseñas. Sé el primero en contar tu experiencia."}
+      $("#review-tabs").innerHTML=["all",1,2,3,4,5].map(v=>`<button class="chip ${String(v)===state.reviewFilter?"active":""}" data-rfilter="${v}" type="button" aria-label="${v==="all"?"Todas las calificaciones":`${v} de 5 estrellas`}">${v==="all"?"Todas":`${v} ${"★".repeat(v)}`}</button>`).join("");
+      $("#review-stars-breakdown").innerHTML=[5,4,3,2,1].map(v=>{const count=reviews.filter(r=>r.stars===v).length;return `<button class="review-row" data-rfilter="${v}" type="button" aria-label="${v} de 5 estrellas: ${count} reseñas"><span>${v} ${"★".repeat(v)}</span><span class="review-bar"><i style="width:${reviews.length?count/reviews.length*100:0}%"></i></span><strong>${count}</strong></button>`}).join("");
+      $("#review-track").innerHTML=filtered.map(r=>`<article class="review"><div class="stars">${"★".repeat(r.stars)}${"☆".repeat(5-r.stars)}</div><h3>${esc(r.name)}</h3><strong>${esc(r.product)}</strong><p class="copy">${esc(r.text)}</p></article>`).join("")||`<p class="empty-reviews">${reviews.length?"No hay reseñas con esta valoración.":"Las reseñas aparecen aquí cuando nuestros clientes las escriben."}</p>`;
+    }
+    function fillReviewProducts(){$("#review-product").innerHTML=products.map(p=>`<option>${esc(p.name)}</option>`).join("")}
+    function setCat(cat){
+      if(!subs[cat])return;
+      state.cat=cat;state.sub="Todos";state.max=maxForCat();$("#max-price").max=state.max;$("#max-price").value=state.max;$("#range-value").textContent=money(state.max);
+      const cls=DEPT_CLASS[cat];
+      document.body.classList.toggle("sport",cat==="Deporte");document.body.classList.toggle("baking",cat==="Repostería");document.body.classList.toggle("gifts",cat==="Regalitos");
+      ["tech","sport","baking","gifts"].forEach(c=>document.body.classList.toggle("cat-"+c,c===cls));
+      document.querySelectorAll(".maincat").forEach(b=>b.classList.toggle("active",b.dataset.cat===cat));themeRain();renderCats();renderProducts();renderSelect();
+    }
+    function clearFilters(){state.sub="Todos";state.max=maxForCat();$("#search").value="";$("#max-price").value=state.max;$("#range-value").textContent=money(state.max);$("#fav-filter").checked=false;$("#ref-filter").checked=false;$("#save-filter").checked=false;renderCats();renderProducts()}
+    function waOpen(text){window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`,"_blank","noopener,noreferrer")}
+    function renderAccount(view="profile"){
+      document.querySelectorAll("[data-view]").forEach(v=>v.classList.toggle("active",v.dataset.view===view));const root=$("#account-content");
+      if(view==="profile")root.innerHTML=`<div class="panel mt-3"><h3>${state.profile?`Hola, ${esc(state.profile.name)}`:"Tu cuenta Zypuc"}</h3><p class="copy">No solicitamos contraseñas. Tus datos se quedan en este dispositivo.</p><form id="profile-form"><label class="label" for="pname">Nombre</label><input id="pname" class="field" required value="${state.profile?esc(state.profile.name):""}"><label class="label" for="pcontact">Teléfono</label><input id="pcontact" class="field" required value="${state.profile?esc(state.profile.contact):""}"><label class="label" for="pemail">Correo</label><input id="pemail" type="email" class="field" required value="${state.profile?esc(state.profile.email):""}"><label class="label" for="paddress">Dirección o colegio</label><textarea id="paddress" class="field" required>${state.profile?esc(state.profile.address):""}</textarea><button class="btn primary w-full mt-3" type="submit">Guardar cuenta</button></form></div>`;
+      else if(view==="favorites")root.innerHTML=state.fav.length?state.fav.map(id=>get(id)?`<div class="panel mt-3">${esc(get(id).name)}</div>`:"").join(""):'<p class="copy mt-4">Aún no tienes favoritos.</p>';
+      else if(view==="compare")root.innerHTML=`<div class="panel mt-3"><p class="copy">Tienes ${state.compare.length} producto(s) en comparación.</p><button id="drawer-compare" class="btn w-full" type="button">Abrir comparador</button></div>`;
+      else root.innerHTML=orders.length?orders.map(o=>`<div class="panel mt-3"><strong>${esc(o.code)}</strong> · ${new Date(o.date).toLocaleDateString("es-PE")}<p class="copy">${esc(o.items)}</p><strong>${money(o.total)}</strong> · ${esc(o.payment)}</div>`).join(""):'<p class="copy mt-4">Tus pedidos aparecerán aquí cuando los envíes por WhatsApp.</p>';
+    }
+
+    document.addEventListener("DOMContentLoaded",()=>{
+      FX.initTheme();rebuild();FX.tilt();
+      if(innerWidth<760&&!state.cart.length)$("#cart").classList.add("min");
+      const saved=sessionStorage.getItem("zypuc-profile");if(saved){try{state.profile=JSON.parse(saved)}catch{}}
+      const toolbar=document.querySelector(".toolbar");if(toolbar)toolbar.insertAdjacentHTML("afterend",'<div style="margin-top:8px"><span id="live-pill" class="live-pill off"><i></i>Precios revisados el 14 oct</span></div>');
+      fillReviewProducts();renderTicker();renderStats();
+      setCat("Tecnología");renderCart();renderCompare();renderReviews();renderLive();window.lucide&&lucide.createIcons();
+      $("#support-number")&&($("[data-template-id=support-number]").textContent=CONFIG.telefonoVisible);
+      setTimeout(()=>$("#intro").classList.add("done"),900);
+      const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");revealObserver.unobserve(entry.target)}}),{threshold:.12});
+      document.querySelectorAll("h1,h2,.eyebrow,section .copy").forEach((el,i)=>{el.classList.add("reveal");el.style.transitionDelay=`${Math.min(i*35,280)}ms`;revealObserver.observe(el)});
+      loadRemote();
+
+      $("#theme-toggle").onclick=e=>{const dark=FX.toggleTheme(e);toast(dark?"Modo oscuro activado":"Modo claro activado")};
+      $("#motion-toggle").onclick=()=>{state.motion=!state.motion;FX.setMotion(state.motion);$("#rain-layer").classList.toggle("rain-paused",!state.motion);$("#motion-toggle").setAttribute("aria-label",state.motion?"Pausar lluvia y animaciones":"Reanudar lluvia y animaciones");toast(state.motion?"Animaciones reanudadas":"Animaciones pausadas")};
+      $("#account-open").onclick=()=>{$("#drawer").classList.add("open");$("#drawer").setAttribute("aria-hidden","false");renderAccount()};
+      $("#drawer-close").onclick=()=>{$("#drawer").classList.remove("open");$("#drawer").setAttribute("aria-hidden","true")};
+      $("#cart-toggle").onclick=$("#cart-close").onclick=()=>$("#cart").classList.toggle("min");
+      $("#filter-toggle").onclick=()=>$("#filters").classList.toggle("hidden");
+      $("#search").oninput=renderProducts;$("#max-price").oninput=()=>{state.max=+$("#max-price").value;$("#range-value").textContent=money(state.max);renderProducts()};
+      ["#fav-filter","#ref-filter","#save-filter"].forEach(s=>$(s).onchange=renderProducts);
+      $("#clear-filters").onclick=$("#empty-clear").onclick=clearFilters;
+      $("#sortbutton").onclick=()=>{const open=$("#sortwrap").classList.toggle("open");$("#sortbutton").setAttribute("aria-expanded",String(open))};
+      $("#compare-open").onclick=()=>{$("#compare-modal").classList.add("open");renderCompare()};
+      $("#compare-clear").onclick=()=>{state.compare=[];renderCompare();renderProducts()};
+      $("#select-open").onclick=()=>{const id=$("#select-open").dataset.product;document.querySelector("#productos").scrollIntoView({behavior:"smooth"});if(id){$("#search").value=get(id).name;renderProducts()}};
+
+      $("#copy-number").onclick=async()=>{try{await navigator.clipboard.writeText(CONFIG.telefonoVisible);toast("Número copiado: "+CONFIG.telefonoVisible)}catch{toast("Copia manualmente: "+CONFIG.telefonoVisible)}};
+      $("#checkout").onclick=()=>{if(!state.cart.length)return toast("Agrega un producto antes de continuar.");if(!state.profile){$("#account-open").click();return toast("Completa tu cuenta antes del checkout.")}$("#summary").innerHTML=state.cart.map(x=>`<p class="copy">${esc(get(x.id).name)} × ${x.qty} · ${money(get(x.id).price*x.qty)}</p>`).join("")+`<strong>Total: ${money(state.cart.reduce((a,x)=>a+get(x.id).price*x.qty,0))}</strong>`;$("#checkout-message").textContent="";$("#checkout-modal").classList.add("open")};
+      $("#review-open").onclick=()=>$("#review-modal").classList.add("open");
+
+      document.addEventListener("click",e=>{
+        const cat=e.target.closest("[data-cat]");if(cat){setCat(cat.dataset.cat);if(cat.dataset.goto)document.getElementById(cat.dataset.goto).scrollIntoView({behavior:"smooth"});return}
+        const sub=e.target.closest("[data-sub]");if(sub){state.sub=sub.dataset.sub;renderCats();renderProducts();return}
+        const sort=e.target.closest("[data-sort]");if(sort){state.sort=sort.dataset.sort;$("#sort-label").textContent=sort.textContent;document.querySelectorAll("[data-sort]").forEach(b=>b.classList.toggle("active",b===sort));$("#sortwrap").classList.remove("open");renderProducts();return}
+        const rf=e.target.closest("[data-rfilter]");if(rf){state.reviewFilter=rf.dataset.rfilter;renderReviews();return}
+        const fav=e.target.closest("[data-fav]");if(fav){state.fav.includes(fav.dataset.fav)?state.fav=state.fav.filter(x=>x!==fav.dataset.fav):state.fav.push(fav.dataset.fav);store.set("zypuc-fav",state.fav);renderProducts();return}
+        const compare=e.target.closest("[data-compare]");if(compare){const id=compare.dataset.compare;if(state.compare.includes(id))state.compare=state.compare.filter(x=>x!==id);else if(state.compare.length<4)state.compare.push(id);else return toast("Puedes comparar hasta cuatro productos.");renderCompare();renderProducts();return}
+        const consult=e.target.closest("[data-whatsapp-product]");if(consult){const product=get(consult.dataset.whatsappProduct);waOpen(`Hola Zypuc, quisiera consultar por ${product.name}.`);return}
+        const idea=e.target.closest("[data-idea]");if(idea){waOpen(`Hola Zypuc, quisiera cotizar: ${idea.dataset.idea}.`);return}
+        const jp=e.target.closest("[data-jump]");if(jp){e.preventDefault();const pr=get(jp.dataset.jump);if(pr){setCat(pr.dept);$("#search").value=pr.name;renderProducts();document.getElementById("productos").scrollIntoView({behavior:"smooth"})}return}
+        const det=e.target.closest("[data-detail]");if(det){openDetail(det.dataset.detail);return}
+        const sh=e.target.closest("[data-share]");if(sh){shareProduct(sh.dataset.share);return}
+        const lg=e.target.closest("[data-legal]");if(lg){openLegal(lg.dataset.legal);return}
+        const add=e.target.closest("[data-add]");if(add){const item=state.cart.find(x=>x.id===add.dataset.add);item?item.qty++:state.cart.push({id:add.dataset.add,qty:1});renderCart();$("#cart").classList.remove("min");FX.burst(add);toast("Producto añadido al carrito");return}
+        const qty=e.target.closest("[data-qty]");if(qty){const item=state.cart.find(x=>x.id===qty.dataset.qty);item.qty+=+qty.dataset.d;if(item.qty<1)state.cart=state.cart.filter(x=>x!==item);renderCart();return}
+        const pay=e.target.closest("[data-payment]");if(pay){state.payment=pay.dataset.payment;$("#payment-value").textContent=state.payment;document.querySelectorAll("[data-payment]").forEach(x=>{x.classList.toggle("active",x===pay);x.setAttribute("aria-checked",String(x===pay))});return}
+        const view=e.target.closest("[data-view]");if(view)return renderAccount(view.dataset.view);
+        if(e.target.closest("#drawer-compare")){$("#compare-modal").classList.add("open");renderCompare()}
+        if(e.target.closest(".close-modal"))document.querySelectorAll(".modal-layer").forEach(x=>x.classList.remove("open"));
+        if(e.target.classList&&e.target.classList.contains("modal-layer"))e.target.classList.remove("open");
+        if(!e.target.closest("#sortwrap"))$("#sortwrap").classList.remove("open");
+      });
+      document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal-layer.open").forEach(x=>x.classList.remove("open"))});
+
+      document.addEventListener("submit",e=>{
+        e.preventDefault();
+        if(e.target.id==="profile-form"){state.profile={name:$("#pname").value.trim(),contact:$("#pcontact").value.trim(),email:$("#pemail").value.trim(),address:$("#paddress").value.trim()};sessionStorage.setItem("zypuc-profile",JSON.stringify(state.profile));renderAccount();toast("Cuenta guardada");return}
+        if(e.target.id==="review-form"){const name=$("#review-name").value.trim(),text=$("#review-text").value.trim();if(!name||text.length<12){$("#review-message").textContent="Escribe tu nombre y una reseña de al menos 12 caracteres.";return}reviews.unshift({name,product:$("#review-product").value,stars:+$("#review-stars").value,text});store.set("zypuc-reviews",reviews);state.reviewFilter="all";renderReviews();e.target.reset();$("#review-modal").classList.remove("open");toast("Tu reseña fue añadida.");return}
+        if(e.target.id==="checkout-form"){
+          const total=state.cart.reduce((a,x)=>a+get(x.id).price*x.qty,0);
+          const code="Z"+Date.now().toString(36).slice(-5).toUpperCase();
+          const lines=state.cart.map(x=>`• ${x.qty} × ${get(x.id).name} — ${money(get(x.id).price*x.qty)}`).join("\n");
+          const text=`Hola Zypuc, pedido ${code}:\n${lines}\nTotal: ${money(total)}\nPago: ${state.payment}\nNombre: ${state.profile.name}\nTeléfono: ${state.profile.contact}\nEntrega: ${state.profile.address}`;
+          orders.unshift({code,date:new Date().toISOString(),items:state.cart.map(x=>`${get(x.id).name} × ${x.qty}`).join(" · "),total,payment:state.payment});store.set("zypuc-orders",orders);
+          state.cart=[];renderCart();$("#checkout-modal").classList.remove("open");waOpen(text);toast("Pedido listo. Termina de enviarlo en WhatsApp.");
+        }
+      });
+    });
+
+  </script>
+ 
+</body></html>

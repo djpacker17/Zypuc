@@ -1,0 +1,654 @@
+{
+  "config": {
+    "whatsapp": "51951434075",
+    "telefonoVisible": "+51 951 434 075",
+    "envioPorUnidad": 8,
+    "comision": 15,
+    "diasVigenciaComparacion": 7
+  },
+  "subcategorias": {
+    "Tecnología": [
+      "Todos",
+      "Periféricos",
+      "Laptops",
+      "Wearables",
+      "Celulares",
+      "Licencias"
+    ],
+    "Deporte": [
+      "Todos",
+      "Zapatillas",
+      "Pelotas",
+      "Bicicletas",
+      "Accesorios"
+    ],
+    "Repostería": [
+      "Todos",
+      "Electro",
+      "Utensilios",
+      "Moldes"
+    ],
+    "Regalitos": [
+      "Todos",
+      "Coleccionables"
+    ]
+  },
+  "productos": [
+    {
+      "id": "jbl-tune-520bt",
+      "dept": "Tecnología",
+      "cat": "Periféricos",
+      "brand": "JBL",
+      "name": "Audífonos JBL Tune 520BT Bluetooth negro",
+      "model": "On-ear · Bluetooth 5.3",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/1498/PMP20000049270/full_image-1.jpeg",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Glowlink Pe",
+        "price": 139,
+        "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=jbl+tune+520bt",
+        "checked": "2026-10-14",
+        "match": [
+          "520bt"
+        ]
+      },
+      "ref": {
+        "store": "Ripley",
+        "seller": "Shopcellperu",
+        "price": 249,
+        "url": "https://simple.ripley.com.pe/audifonos-jbl-on-ear-tune-520bt-bluetooth-53-pure-bass-sound-negro-pmp20000049270",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "logitech-m170",
+      "dept": "Tecnología",
+      "cat": "Periféricos",
+      "brand": "Logitech",
+      "name": "Mouse inalámbrico Logitech M170",
+      "model": "Inalámbrico · receptor USB",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2065370085314/full_image-2065370085314.webp",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Ripley",
+        "price": 44.9,
+        "url": "https://simple.ripley.com.pe/mouse-inalambrico-logitech-m170-2065370085277",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "redragon-k552",
+      "dept": "Tecnología",
+      "cat": "Periféricos",
+      "brand": "Redragon",
+      "name": "Teclado mecánico Redragon Kumara K552 Rainbow (español)",
+      "model": "Mecánico · switch red · TKL",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2239/PMP00003343311/full_image-1.jpeg",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Inversiones Rumia",
+        "price": 149.99,
+        "url": "https://www.falabella.com.pe/falabella-pe/shop/redragon-kumara-k552",
+        "checked": "2026-10-14",
+        "match": [
+          "k552"
+        ]
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "lenovo-slim3i",
+      "dept": "Tecnología",
+      "cat": "Laptops",
+      "brand": "Lenovo",
+      "name": "Laptop Lenovo IdeaPad Slim 3i 15.6\" Core i3, 8 GB, 128 GB",
+      "model": "Cotizamos el mejor precio del momento",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3325/PMP20001398666/full_image-1.jpeg",
+      "consult": true,
+      "spec": {
+        "processor": "Intel Core i3",
+        "ram": "8 GB",
+        "storage": "128 GB",
+        "screen": "15.6 pulgadas",
+        "os": "Confirmar",
+        "condition": "Nueva"
+      }
+    },
+    {
+      "id": "redmi-watch-5-active",
+      "dept": "Tecnología",
+      "cat": "Wearables",
+      "brand": "Xiaomi",
+      "name": "Smartwatch Xiaomi Redmi Watch 5 Active",
+      "model": "Smartwatch · negro",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3985/PMP20000577564/full_image-1.jpeg",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Falabella",
+        "price": 129,
+        "url": "https://www.falabella.com.pe/falabella-pe/shop/redmi-watch-5-active",
+        "checked": "2026-10-14",
+        "match": [
+          "watch 5 active"
+        ]
+      },
+      "ref": {
+        "store": "Ripley",
+        "seller": "Accesories Store",
+        "price": 184,
+        "url": "https://simple.ripley.com.pe/smartwatch-xiaomi-negro-redmi-watch-5-active-pmp20000577564",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "samsung-a16",
+      "dept": "Tecnología",
+      "cat": "Celulares",
+      "brand": "Samsung",
+      "name": "Celular Samsung Galaxy A16 128 GB, 4 GB RAM",
+      "model": "Negro",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2065373022316/full_image-2065373022316.webp",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Millennials",
+        "price": 499,
+        "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=samsung+galaxy+a16",
+        "checked": "2026-10-14",
+        "match": [
+          "a16",
+          "128"
+        ]
+      },
+      "ref": {
+        "store": "Ripley",
+        "seller": "Ripley",
+        "price": 599,
+        "url": "https://simple.ripley.com.pe/celular-samsung-galaxy-a16-128gb-2065373022309",
+        "checked": "2026-10-14"
+      },
+      "spec": {
+        "ram": "4 GB",
+        "storage": "128 GB",
+        "camera": "50 MP",
+        "screen": "6.7 pulgadas",
+        "fiveg": "No",
+        "battery": "5000 mAh"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "redmi-a7-pro",
+      "dept": "Tecnología",
+      "cat": "Celulares",
+      "brand": "Xiaomi",
+      "name": "Celular Xiaomi Redmi A7 Pro 128 GB, 4 GB RAM",
+      "model": "Negro",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2165/PMP20001667293/full_image-1.jpeg",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Belogar",
+        "price": 399.9,
+        "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=redmi+a7+pro",
+        "checked": "2026-10-14",
+        "match": [
+          "a7 pro",
+          "128"
+        ]
+      },
+      "ref": {
+        "store": "Ripley",
+        "seller": "Moviles Telcel Peru",
+        "price": 549,
+        "url": "https://simple.ripley.com.pe/xiaomi-redmi-a7-pro-128gb-4gb-black-pmp20001667293",
+        "checked": "2026-10-14"
+      },
+      "spec": {
+        "ram": "4 GB",
+        "storage": "128 GB",
+        "camera": "13 MP",
+        "screen": "6.9 pulgadas",
+        "fiveg": "No",
+        "battery": "Confirmar"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "moto-g06",
+      "dept": "Tecnología",
+      "cat": "Celulares",
+      "brand": "Motorola",
+      "name": "Celular Motorola Moto G06 64 GB, 4 GB RAM naranja",
+      "model": "Naranja",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5884/PMP20001557480/full_image-2.png",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Techno World",
+        "price": 380,
+        "url": "https://simple.ripley.com.pe/motorola-g06-4gb-64gb-naranja-pmp20001557480",
+        "checked": "2026-10-14"
+      },
+      "spec": {
+        "ram": "4 GB",
+        "storage": "64 GB",
+        "camera": "50 MP",
+        "screen": "Confirmar",
+        "fiveg": "No",
+        "battery": "Confirmar"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "netflix-ref",
+      "dept": "Tecnología",
+      "cat": "Licencias",
+      "brand": "Netflix",
+      "name": "Netflix · tarjeta de regalo oficial",
+      "model": "Solo tarjetas o códigos oficiales",
+      "image": "https://images.pexels.com/photos/5202917/pexels-photo-5202917.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "consult": true,
+      "digital": true,
+      "spec": {
+        "platform": "Netflix",
+        "access": "Tarjeta de regalo oficial",
+        "restrictions": "Disponibilidad y región por confirmar"
+      }
+    },
+    {
+      "id": "crunchyroll-ref",
+      "dept": "Tecnología",
+      "cat": "Licencias",
+      "brand": "Crunchyroll",
+      "name": "Crunchyroll · tarjeta de regalo oficial",
+      "model": "Solo tarjetas o códigos oficiales",
+      "image": "https://images.pexels.com/photos/265685/pexels-photo-265685.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "consult": true,
+      "digital": true,
+      "spec": {
+        "platform": "Crunchyroll",
+        "access": "Tarjeta de regalo oficial",
+        "restrictions": "Disponibilidad y región por confirmar"
+      }
+    },
+    {
+      "id": "prime-ref",
+      "dept": "Tecnología",
+      "cat": "Licencias",
+      "brand": "Prime Video",
+      "name": "Prime Video · tarjeta de regalo oficial",
+      "model": "Solo tarjetas o códigos oficiales",
+      "image": "https://images.pexels.com/photos/4009407/pexels-photo-4009407.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "consult": true,
+      "digital": true,
+      "spec": {
+        "platform": "Prime Video",
+        "access": "Tarjeta de regalo oficial",
+        "restrictions": "Disponibilidad y región por confirmar"
+      }
+    },
+    {
+      "id": "minecraft-ref",
+      "dept": "Tecnología",
+      "cat": "Licencias",
+      "brand": "Minecraft",
+      "name": "Minecraft · código oficial",
+      "model": "Edición y plataforma por confirmar",
+      "image": "https://images.pexels.com/photos/3977908/pexels-photo-3977908.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "consult": true,
+      "digital": true,
+      "spec": {
+        "platform": "PC / consola según edición",
+        "access": "Código oficial",
+        "restrictions": "Edición y región por confirmar"
+      }
+    },
+    {
+      "id": "steam-ref",
+      "dept": "Tecnología",
+      "cat": "Licencias",
+      "brand": "Steam",
+      "name": "Steam · tarjeta de saldo oficial",
+      "model": "Monto por confirmar",
+      "image": "https://images.pexels.com/photos/7858742/pexels-photo-7858742.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "consult": true,
+      "digital": true,
+      "spec": {
+        "platform": "Steam",
+        "access": "Tarjeta de saldo oficial",
+        "restrictions": "Monto y región por confirmar"
+      }
+    },
+    {
+      "id": "mikasa-v200w",
+      "dept": "Deporte",
+      "cat": "Pelotas",
+      "brand": "Mikasa",
+      "name": "Pelota de vóley Mikasa V200W (FIVB)",
+      "model": "Oficial FIVB · talla 5",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5088/PMP20000849859/full_image-1.jpeg",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Mi Deporte Peru",
+        "price": 419.9,
+        "url": "https://www.falabella.com.pe/falabella-pe/brand/MIKASA",
+        "checked": "2026-10-14",
+        "match": [
+          "v200w"
+        ]
+      },
+      "ref": {
+        "store": "Ripley",
+        "seller": "Fubball",
+        "price": 499.9,
+        "url": "https://simple.ripley.com.pe/pelota-de-voley-mikasa-v200w-fivb-approved-pmp20000849859",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "puma-attacanto",
+      "dept": "Deporte",
+      "cat": "Pelotas",
+      "brand": "Puma",
+      "name": "Pelota de fútbol Puma Attacanto Graphic",
+      "model": "Fútbol · talla 5",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2020361326432/full_image-2020361326432.webp",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Ripley",
+        "price": 34.99,
+        "url": "https://simple.ripley.com.pe/pelota-futbol-puma-attacanto-graphic-2020361326425",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "reebok-flexagon",
+      "dept": "Deporte",
+      "cat": "Zapatillas",
+      "brand": "Reebok",
+      "name": "Zapatillas mujer Reebok Flexagon Energy TR 4 negro",
+      "model": "Training",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2084327248220/full_image-2084327248220.webp",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Ripley",
+        "price": 88,
+        "url": "https://simple.ripley.com.pe/zapatillas-mujer-reebok-training-negro-flexagon-energy-tr-4-2084327248190",
+        "checked": "2026-10-14"
+      },
+      "stock": "Agotado",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "spinning-lcd",
+      "dept": "Deporte",
+      "cat": "Bicicletas",
+      "brand": "Digital Peru",
+      "name": "Bicicleta spinning estacionaria con pantalla LCD (hasta 120 kg)",
+      "model": "Con medidor de ritmo cardiaco",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2808/PMP20000197526/full_image-1.jpeg",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Digital Peru",
+        "price": 319,
+        "url": "https://simple.ripley.com.pe/bicicleta-spinning-estacionaria-pmp20000197526",
+        "checked": "2026-10-14"
+      },
+      "envio": 25,
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "everlast-mat",
+      "dept": "Deporte",
+      "cat": "Accesorios",
+      "brand": "Everlast",
+      "name": "Colchoneta Everlast yoga mat 6 mm verde lima",
+      "model": "Yoga y movilidad",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2397/PMP20000141544/full_image-1.jpeg",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Everlast",
+        "price": 69.9,
+        "url": "https://simple.ripley.com.pe/colchoneta-everlast-6mm-yoga-mat-verde-lima-pmp20000141544",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "ligas-resistencia",
+      "dept": "Deporte",
+      "cat": "Accesorios",
+      "brand": "Kuychi",
+      "name": "Set de 5 ligas de resistencia elástica",
+      "model": "Pilates y gym en casa",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2121/PMP20000177302/full_image-1.jpeg",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Kuychi Importaciones",
+        "price": 29,
+        "url": "https://simple.ripley.com.pe/set-5-ligas-resistencia-elastica-ejercicios-pilates-gym-pmp20000177302",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "shaker-600",
+      "dept": "Deporte",
+      "cat": "Accesorios",
+      "brand": "Genérico",
+      "name": "Tomatodo shaker deportivo 600 ml con compartimentos",
+      "model": "Para proteína y bebidas",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5411/PMP20001426967/full_image-1.jpeg",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Tequila Sunset Lima",
+        "price": 29.99,
+        "url": "https://simple.ripley.com.pe/tomatodo-shaker-deportivo-botella-mezclador-proteina-compartimentos-portatil-gym-600-ml-pmp20001426967",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "oster-fpsthm3532",
+      "dept": "Repostería",
+      "cat": "Electro",
+      "brand": "Oster",
+      "name": "Batidora de mano Oster FPSTHM3532, 250 W, 6 velocidades",
+      "model": "Blanca · función turbo",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5127/PMP20000757999/full_image-1.jpeg",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Electrogo by Credivargas",
+        "price": 99,
+        "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=batidora+oster+fpsthm3532",
+        "checked": "2026-10-14",
+        "match": [
+          "3532"
+        ]
+      },
+      "ref": {
+        "store": "Ripley",
+        "seller": "Ofertitas",
+        "price": 129,
+        "url": "https://simple.ripley.com.pe/batidora-de-mano-oster-250-watts-fpsth3532-blanco-pmp20000757999",
+        "checked": "2026-10-14"
+      },
+      "spec": {
+        "power": "250 W",
+        "material": "Plástico y acero",
+        "pieces": "Batidora + accesorios"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "mica-bowls",
+      "dept": "Repostería",
+      "cat": "Utensilios",
+      "brand": "Mica",
+      "name": "Set x3 bowls con tapa de acero inoxidable Mica",
+      "model": "Para mezclar y guardar",
+      "image": "https://media.falabella.com/falabellaPE/883021890_005/public",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Falabella",
+        "price": 49.9,
+        "url": "https://www.falabella.com.pe/falabella-pe/product/883021890/Set-X3-Bowls-Acero-Inoxidable-Mica/883021890",
+        "checked": "2026-10-14"
+      },
+      "spec": {
+        "pieces": "3 bowls con tapa",
+        "material": "Acero inoxidable"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "press-molde-brownies",
+      "dept": "Repostería",
+      "cat": "Moldes",
+      "brand": "Press",
+      "name": "Molde para brownies antiadherente Press 30.5 x 20.3 x 4 cm",
+      "model": "Antiadherente",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3872/PMP20000033695/full_image-1.jpeg",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Press",
+        "price": 26.9,
+        "url": "https://simple.ripley.com.pe/molde-para-brownies-antiadherente-305-x-203-x-4-cm-pmp20000033695",
+        "checked": "2026-10-14"
+      },
+      "spec": {
+        "capacity": "30.5 x 20.3 x 4 cm",
+        "material": "Antiadherente",
+        "oven": "Sí"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "funko-bitty-pokemon",
+      "dept": "Regalitos",
+      "cat": "Coleccionables",
+      "brand": "Funko",
+      "name": "Funko Bitty Pop! Pokémon pack x4 (Charmander, Jolteon, Lapras, Rattata)",
+      "model": "Mini figuras de colección",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4467/PMP20001074529/full_image-1.jpeg",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Chase Funko Peru",
+        "price": 109,
+        "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=funko+bitty+pokemon",
+        "checked": "2026-10-14",
+        "match": [
+          "bitty",
+          "charmander"
+        ]
+      },
+      "ref": {
+        "store": "Ripley",
+        "seller": "Comprafacil USA Express",
+        "price": 195,
+        "url": "https://simple.ripley.com.pe/funko-pop-pack-de-4-bitty-de-pokemon-charmander-jolteon-lapras-rattata-pmp20001074529",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "oster-fpsths3611",
+      "dept": "Repostería",
+      "cat": "Electro",
+      "brand": "Oster",
+      "name": "Batidora de mano y pedestal Oster FPSTHS3611, 250 W, tazón 3.7 L",
+      "model": "Blanca · 6 velocidades",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2735/PMP20000712418/full_image-1.jpeg",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Tiendas Cia",
+        "price": 237,
+        "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=batidora+oster+fpsths3611",
+        "checked": "2026-10-14",
+        "match": [
+          "3611"
+        ]
+      },
+      "ref": {
+        "store": "Ripley",
+        "seller": "Yoldi",
+        "price": 399,
+        "url": "https://simple.ripley.com.pe/batidora-oster-fpsths3611-de-mano-y-pedestal-250w-pmp20000712418",
+        "checked": "2026-10-14"
+      },
+      "envio": 12,
+      "spec": {
+        "power": "250 W",
+        "capacity": "Tazón 3.7 L",
+        "pieces": "Batidora, pedestal y tazón"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "imaco-hes35r",
+      "dept": "Repostería",
+      "cat": "Electro",
+      "brand": "Imaco",
+      "name": "Horno eléctrico Imaco HES35R 35 L, 1500 W, con rostizador",
+      "model": "Gris · 35 litros",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2019122187108/full_image-2019122187108",
+      "buy": {
+        "store": "Ripley",
+        "seller": "Ripley",
+        "price": 299,
+        "url": "https://simple.ripley.com.pe/horno-electrico-imaco-35l-hes35r-1500w-gris-2019122187108p",
+        "checked": "2026-10-14"
+      },
+      "envio": 25,
+      "spec": {
+        "power": "1500 W",
+        "capacity": "35 litros",
+        "oven": "Sí"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    },
+    {
+      "id": "funko-squirtle",
+      "dept": "Regalitos",
+      "cat": "Coleccionables",
+      "brand": "Funko",
+      "name": "Funko Pop! Pokémon: Squirtle",
+      "model": "Figura de vinilo en su caja",
+      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4467/PMP20001074381/full_image-1.jpeg",
+      "buy": {
+        "store": "Falabella",
+        "seller": "Pop Hunters",
+        "price": 60.59,
+        "url": "https://www.falabella.com.pe/falabella-pe/search?Ntt=funko+pop+squirtle",
+        "checked": "2026-10-14",
+        "match": [
+          "squirtle"
+        ]
+      },
+      "ref": {
+        "store": "Ripley",
+        "seller": "Comprafacil USA Express",
+        "price": 130,
+        "url": "https://simple.ripley.com.pe/funko-pop-squirtle-de-pokemon-pmp20001074381",
+        "checked": "2026-10-14"
+      },
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
+    }
+  ]
+}
