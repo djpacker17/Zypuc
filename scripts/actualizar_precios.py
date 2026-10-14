@@ -8,6 +8,7 @@ Reglas para no molestar a las tiendas ni mostrar datos falsos:
 - Pocas visitas: una por link, con pausa entre cada una, unas pocas veces al día.
 - Si no se puede leer un precio, se conserva el último precio bueno con su fecha.
   La tienda deja de mostrar "En X cuesta..." cuando ese dato tiene más de 7 días.
+- Guarda un historial diario de cada precio (la tienda dibuja el gráfico).
 - Si el precio nuevo es absurdo (menos de 40 % o más de 250 % del anterior),
   se descarta y se avisa en el resumen.
 
@@ -192,6 +193,17 @@ def main() -> int:
             else:
                 nuevo.update(ok=False, method=metodo)
                 resumen.append(f"❌ {p['id']} ({lado}): no se pudo leer [{metodo}], se mantiene S/ {base}")
+            # Historial: un punto por día (el último precio leído ese día), máximo 120 días
+            hist = [h for h in (anterior.get("history") or []) if isinstance(h, list) and len(h) == 2]
+            if not hist and anterior.get("price"):
+                hist = [[str(anterior.get("checked") or link.get("checked") or "")[:10], anterior["price"]]]
+            if precio:
+                hoy = ahora[:10]
+                if hist and hist[-1][0] == hoy:
+                    hist[-1] = [hoy, round(precio, 2)]
+                else:
+                    hist.append([hoy, round(precio, 2)])
+            nuevo["history"] = hist[-120:]
             salida["items"].setdefault(p["id"], {})[lado] = nuevo
             time.sleep(random.uniform(3, 6))
 

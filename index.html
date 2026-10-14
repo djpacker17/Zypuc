@@ -3,7 +3,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="theme-color" content="#f6f9fe">
-  <link rel="icon" href="logo-claro.png">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Zypuc">
   <meta property="og:title" content="Zypuc · Tecnología y dulzura">
   <meta property="og:description" content="Tecnología, deporte, repostería y regalitos con entrega en Pucallpa. Te mostramos cuánto cuesta en otra tienda.">
   <meta property="og:image" content="logo-claro.png">
@@ -11,7 +15,7 @@
   <meta name="description" content="Zypuc: tecnología, deporte, repostería y regalitos con entrega en Pucallpa. Te mostramos cuánto cuesta en otra tienda.">
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Raleway:wght@700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Raleway:wght@700;800&amp;family=Press+Start+2P&amp;display=swap" rel="stylesheet">
   <style>
     :root{
       --paper:#f6f9fe;--surface:#ffffff;--surface2:#edf4ff;--ink:#14213b;--muted:#65738c;
@@ -205,7 +209,7 @@
     .vs-store a{color:var(--brand);font-weight:800;text-decoration:none}
     .vs-store a:hover{text-decoration:underline}
     .src-note{font-size:.7rem;color:var(--muted);margin-top:6px}
-    .price small{font:600 .72rem "DM Sans";color:var(--muted);display:block}
+    .price small{font:600 .72rem "DM Sans",sans-serif;color:var(--muted);display:block}
     .pay-dot{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;color:#fff;font-weight:800;flex:none}
     .empty-reviews{padding:22px;text-align:center;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}
     .live-pill{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:800;color:var(--muted);margin-left:8px}
@@ -309,6 +313,177 @@
     /* botones heredan la tipografía de la tienda */
     button,input,select,textarea{font-family:inherit}
     .select-copy strong{font-family:Raleway,sans-serif;letter-spacing:-.01em}
+    .price{font-family:Raleway,"DM Sans",sans-serif!important}
+
+    /* ===================== Zypi, la mascota ===================== */
+    .zypi{position:fixed;left:14px;bottom:122px;z-index:58;width:86px;touch-action:none;user-select:none;-webkit-user-select:none}
+    .zypi[hidden]{display:none}
+    .zypi-btn{all:unset;display:block;width:86px;height:93px;cursor:grab;filter:drop-shadow(0 10px 14px #0003);-webkit-tap-highlight-color:transparent}
+    .zypi.dragging .zypi-btn{cursor:grabbing}
+    .zypi-btn:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:22px}
+    .zypi-svg{width:100%;height:100%;overflow:visible}
+    .zf1{stop-color:color-mix(in srgb,var(--brand) 42%,#fff)}.zf2{stop-color:var(--brand)}
+    .z-frost{fill:url(#zf)}
+    .z-liner{fill:color-mix(in srgb,var(--accent) 32%,#fff)}
+    .z-stripes{fill:none;stroke:color-mix(in srgb,var(--accent) 70%,#000);stroke-width:2;opacity:.45}
+    .z-arm,.z-ant{fill:none;stroke:color-mix(in srgb,var(--brand) 65%,#000);stroke-width:4.5;stroke-linecap:round}
+    .z-ant{stroke-width:3}
+    .z-hand{fill:color-mix(in srgb,var(--brand) 65%,#000)}
+    .z-tip{fill:var(--accent);filter:drop-shadow(0 0 4px var(--accent));animation:zTip 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes zTip{50%{transform:scale(1.25) rotate(25deg);opacity:.8}}
+    .z-shadow{fill:#0003;animation:zShadow 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .z-body{animation:zBob 3.2s ease-in-out infinite}
+    @keyframes zBob{50%{transform:translateY(-4px)}}
+    @keyframes zShadow{50%{transform:scaleX(.85);opacity:.65}}
+    .z-eye{fill:#fff}.z-pupil{fill:#14213b}.z-hl{fill:#fff}
+    .z-eyes-open{animation:zBlink 5s infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes zBlink{0%,93%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+    .z-alt{fill:none;stroke:#14213b;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;display:none}
+    .z-blush{fill:#ff8fae;opacity:.75}
+    .z-mouth{fill:none;stroke:#14213b;stroke-width:2.6;stroke-linecap:round}
+    .z-mouth-o{fill:#14213b;display:none}
+    .zypi.talking .z-mouth{display:none}
+    .zypi.talking .z-mouth-o{display:block;animation:zTalk .22s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
+    @keyframes zTalk{to{transform:scaleY(.35)}}
+    .zypi.happy .z-eyes-open,.zypi.sleeping .z-eyes-open,.zypi.dizzy .z-eyes-open{display:none}
+    .zypi.happy .z-happy,.zypi.sleeping .z-sleep,.zypi.dizzy .z-dizzy{display:block}
+    .zypi.sleeping .z-body{animation:zBreath 3.6s ease-in-out infinite}
+    @keyframes zBreath{50%{transform:translateY(2px)}}
+    .zypi.dizzy .zypi-btn{animation:zSpin .8s linear 3}
+    @keyframes zSpin{to{transform:rotate(360deg)}}
+    .zypi.jump .zypi-btn{animation:zJump .7s cubic-bezier(.3,1.6,.5,1)}
+    @keyframes zJump{0%{transform:none}25%{transform:translateY(3px) scale(1.08,.9)}55%{transform:translateY(-24px) scale(.95,1.06)}100%{transform:none}}
+    .zypi.talking .z-arm-r{animation:zWave .45s ease-in-out 4 alternate;transform-box:view-box;transform-origin:85px 97px}
+    @keyframes zWave{to{transform:rotate(-30deg)}}
+    .acc{display:none}
+    .zypi[data-acc=band] .acc-band,.zypi[data-acc=chef] .acc-chef,.zypi[data-acc=bow] .acc-bow,.zypi[data-acc=flower] .acc-flower,.zypi[data-acc=visor] .acc-visor,.zypi[data-acc=crown] .acc-crown,.zypi[data-acc=leaf] .acc-leaf,.zypi[data-acc=umbrella] .acc-umbrella,.zypi[data-acc=shades] .acc-shades,.zypi[data-acc=cap] .acc-cap{display:inline}
+    .zypi:is([data-acc=chef],[data-acc=crown],[data-acc=umbrella],[data-acc=cap]) :is(.z-ant,.z-tip){display:none}
+    .zypi:is([data-acc=visor],[data-acc=shades]) :is(.z-eyes-open,.z-alt){display:none!important}
+    .zypi.gold .zypi-btn{filter:drop-shadow(0 0 10px #ffd35c) drop-shadow(0 10px 14px #0003)}
+    .zypi.gold .zf1{stop-color:#fff3c4}.zypi.gold .zf2{stop-color:#e7a910}
+    .zypi-z{position:absolute;right:4px;top:-4px;display:none;font-weight:800;color:var(--brand);pointer-events:none}
+    .zypi.sleeping .zypi-z{display:block}
+    .zypi-z i{position:absolute;font-style:normal;font-size:13px;opacity:0;animation:zz 3s infinite}
+    .zypi-z i:nth-child(2){animation-delay:1s;font-size:16px}.zypi-z i:nth-child(3){animation-delay:2s;font-size:20px}
+    @keyframes zz{0%{opacity:0;transform:none}30%{opacity:1}100%{opacity:0;transform:translate(16px,-34px)}}
+    .zypi-bubble{position:absolute;left:0;bottom:calc(100% + 6px);width:min(270px,calc(100vw - 28px));background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow);font-size:.88rem;line-height:1.45;opacity:0;transform:translateY(8px) scale(.96);transform-origin:bottom left;pointer-events:none;transition:opacity .22s,transform .22s}
+    .zypi-bubble.show{opacity:1;transform:none;pointer-events:auto}
+    .zypi-bubble:after{content:"";position:absolute;left:30px;bottom:-7px;width:12px;height:12px;background:var(--surface);border-right:1px solid var(--line);border-bottom:1px solid var(--line);transform:rotate(45deg)}
+    .zypi-bubble.right{left:auto;right:0;transform-origin:bottom right}.zypi-bubble.right:after{left:auto;right:30px}
+    .zypi-bubble.below{bottom:auto;top:calc(100% + 6px);transform-origin:top left}.zypi-bubble.below:after{bottom:auto;top:-7px;transform:rotate(225deg)}
+    .zypi-bubble p{margin:0 0 8px}
+    .zb-actions{display:flex;gap:6px;flex-wrap:wrap}
+    .zb-actions button{font-family:inherit;font-size:.74rem;font-weight:800;border:1px solid var(--line);background:var(--surface2);color:var(--brand);border-radius:999px;padding:5px 10px;cursor:pointer}
+    .zypi-heart{position:fixed;z-index:59;width:20px;height:20px;pointer-events:none}
+    body.motion-off .zypi *,body.tab-hidden .zypi *{animation-play-state:paused!important}
+
+    /* ===================== Botones flotantes, chip y logro ===================== */
+    .to-top{position:fixed;left:18px;bottom:72px;z-index:55;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s;cursor:pointer}
+    .to-top.show{opacity:1;transform:none;pointer-events:auto}
+    .to-top svg{width:20px;height:20px}
+    .secret-chip{position:fixed;top:84px;left:50%;z-index:61;display:flex;gap:8px;align-items:center;max-width:calc(100% - 24px);white-space:nowrap;background:var(--surface);border:1px solid var(--brand);color:var(--ink);padding:5px 5px 5px 12px;border-radius:999px;font-size:.78rem;box-shadow:var(--shadow);opacity:0;transform:translate(-50%,-16px);pointer-events:none;transition:.3s}
+    .secret-chip.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+    .secret-chip span{overflow:hidden;text-overflow:ellipsis}
+    .secret-chip svg{width:16px;height:16px;color:var(--brand);flex:none}
+    .secret-chip button{flex:none;border:0;background:var(--brand);color:var(--brand-ink);font-family:inherit;font-weight:800;border-radius:999px;padding:5px 11px;cursor:pointer}
+    .ach-pop{position:fixed;top:14px;left:50%;z-index:120;display:flex;gap:12px;align-items:center;min-width:250px;max-width:calc(100% - 24px);padding:12px 18px 12px 14px;border-radius:16px;background:linear-gradient(135deg,#1b1340,#3a1d6e);color:#fff;border:1px solid #ffd35c;box-shadow:0 18px 40px #0006;transform:translate(-50%,-160%);pointer-events:none}
+    .ach-pop.show{animation:achIn 3.6s cubic-bezier(.2,.9,.3,1.2) both}
+    .ach-pop svg{width:30px;height:30px;color:#ffd35c;flex:none;filter:drop-shadow(0 0 6px #ffd35c88)}
+    .ach-pop small{display:block;font-size:.7rem;color:#ffd35c;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+    .ach-pop strong{display:block;font-size:1rem}
+    @keyframes achIn{0%{transform:translate(-50%,-160%)}12%,86%{transform:translate(-50%,0)}100%{transform:translate(-50%,-160%)}}
+
+    /* ===================== Logros ===================== */
+    .logros-top{display:flex;align-items:center;gap:12px}
+    .logros-bar{flex:1;height:10px;border-radius:99px;background:var(--surface2);overflow:hidden}
+    .logros-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--accent));border-radius:inherit;transition:width .6s}
+    .ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-top:12px}
+    .ach{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+    .ach svg{flex:none;width:26px;height:26px}
+    .ach strong{display:block;color:var(--ink)}.ach small{display:block;font-size:.76rem;line-height:1.4}
+    .ach.on{border-style:solid;border-color:color-mix(in srgb,var(--brand) 45%,var(--line));background:var(--surface2)}.ach.on svg{color:var(--brand)}
+    .logros-h{margin:18px 0 8px}
+    .theme-pick{display:flex;flex-wrap:wrap;gap:8px}
+    .theme-pick .dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;border:1px solid #fff8;vertical-align:-1px}
+    .site-footer .link span{display:inline-block;margin-left:4px;padding:1px 7px;border-radius:999px;background:var(--surface2);color:var(--brand);font-size:.72rem;font-weight:800}
+
+    /* ===================== Historial, vistos, favoritos, ahorro ===================== */
+    .ph{margin-top:14px;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--surface2)}
+    .ph-head{display:flex;justify-content:space-between;gap:8px;font-size:.84rem;align-items:center}
+    .ph-head span{color:var(--muted);font-size:.74rem;display:flex;gap:6px;align-items:center}
+    .k{display:inline-block;width:14px;height:3px;border-radius:2px}.k.ours{background:var(--brand)}.k.other{background:var(--muted)}
+    .ph-svg{width:100%;height:90px;display:block;margin-top:8px}
+    .ph-svg polyline{fill:none;stroke-width:2.5;vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round}
+    .ph-svg .ours{stroke:var(--brand)}.ph-svg .other{stroke:var(--muted);stroke-dasharray:5 4}
+    .ph-foot{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);gap:6px}
+    .ph .copy{margin:6px 0 0;font-size:.8rem}
+    .recent{margin-top:22px}.recent[hidden]{display:none}
+    .recent-head{display:flex;justify-content:space-between;align-items:center}
+    .recent-head h3{margin:0;font-size:1.05rem}
+    .recent .link{background:none;border:0;color:var(--brand);font-family:inherit;font-weight:800;cursor:pointer}
+    .recent-row{display:flex;gap:10px;overflow-x:auto;padding:10px 2px 6px;scroll-snap-type:x mandatory}
+    .recent-card{flex:0 0 150px;scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;cursor:pointer;color:var(--ink);font-family:inherit;transition:transform .2s}
+    .recent-card:hover{transform:translateY(-3px)}
+    .recent-card img{width:100%;height:96px;object-fit:contain;background:#fff;border-radius:10px}
+    .recent-card span{font-size:.76rem;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .recent-card b{font-size:.85rem;color:var(--brand)}
+    .fav-line{display:flex;align-items:center;gap:10px}
+    .fav-line img{width:52px;height:52px;object-fit:contain;background:#fff;border-radius:10px;flex:none}
+    .fav-line div{flex:1;min-width:0}.fav-line strong{display:block;font-size:.84rem}.fav-line small{color:var(--brand);font-weight:800}
+    .cart-save{margin:6px 14px 0;padding:7px 10px;border-radius:10px;background:#e9fbf3;color:#0d7a4f;font-size:.78rem;font-weight:800}
+    body.dark .cart-save{background:#0f3a2a;color:#7ff0bf}
+    .cart-save[hidden]{display:none}
+
+    /* ===================== Temas secretos ===================== */
+    body.secret.secret.s-sakura{--paper:#120a20;--surface:#1d1230;--surface2:#2a1840;--ink:#fdeef6;--muted:#d3b6cf;--line:#44294f;--brand:#ff7eb6;--accent:#ffc2dd;--brand-ink:#2a0718;--focus:#ffd35c}
+    body.secret.secret.s-neon{--paper:#07060f;--surface:#110f22;--surface2:#1a1533;--ink:#f2f0ff;--muted:#b6b0d9;--line:#2e2752;--brand:#ff3bd4;--accent:#22e5ff;--brand-ink:#12001a;--focus:#22e5ff}
+    body.secret.secret.s-arcade{--paper:#0b0b1a;--surface:#14142b;--surface2:#1d1d3d;--ink:#f4f4ff;--muted:#a8a8d8;--line:#34346a;--brand:#ffd35c;--accent:#4ade80;--brand-ink:#1a1200;--focus:#4ade80}
+    body.secret.secret.s-bosque{--paper:#06150f;--surface:#0d2219;--surface2:#133025;--ink:#eefbf2;--muted:#a9cdb6;--line:#23493a;--brand:#7fdc8c;--accent:#e8c75a;--brand-ink:#04140a;--focus:#e8c75a}
+    body.secret.secret.s-tormenta{--paper:#0b111b;--surface:#131c2b;--surface2:#1a2638;--ink:#eef4ff;--muted:#a9b8cf;--line:#2a3a55;--brand:#9cc7ff;--accent:#ffe066;--brand-ink:#07111f;--focus:#ffe066}
+    body.secret.secret.s-atardecer{--paper:#fff1e0;--surface:#fffaf5;--surface2:#ffe3cf;--ink:#3a1a2a;--muted:#86566a;--line:#f1cdb8;--brand:#e8572d;--accent:#b84a8f;--brand-ink:#ffffff;--focus:#b84a8f}
+    .bg-secret{opacity:0}
+    body.secret .bg:not(.bg-secret){opacity:0!important}
+    body.secret .bg-secret{opacity:1;filter:none!important}
+    .bg-secret:before,.bg-secret:after{content:"";position:absolute;inset:0;pointer-events:none}
+    body.s-sakura .bg-secret{background:radial-gradient(circle at 82% 16%,#fff6e0 0 52px,#fff6e055 56px,transparent 150px),linear-gradient(180deg,#120a20,#2a1033 65%,#3d1640)}
+    body.s-sakura .bg-secret:before{background:radial-gradient(circle,#fff9 1px,transparent 1.6px) 0 0/90px 90px,radial-gradient(circle,#fff6 1px,transparent 1.6px) 45px 30px/130px 130px;animation:twinkle 4s ease-in-out infinite alternate}
+    body.s-sakura .bg-secret:after{background:radial-gradient(ellipse at 15% 115%,#ff7eb655,transparent 50%),radial-gradient(ellipse at 85% 120%,#b84a8f66,transparent 55%)}
+    @keyframes twinkle{to{opacity:.35}}
+    body.s-neon .bg-secret{background:radial-gradient(ellipse at 50% 58%,#ff3bd440,transparent 45%),linear-gradient(180deg,#07060f 0%,#140a2a 60%,#07060f 100%)}
+    body.s-neon .bg-secret:before{inset:52% 0 auto 0;height:2px;background:linear-gradient(90deg,transparent,#ff3bd4,#22e5ff,transparent);box-shadow:0 0 18px #ff3bd4}
+    body.s-neon .bg-secret:after{top:auto;height:48%;left:-60%;right:-60%;background:linear-gradient(#22e5ff66 2px,transparent 2px) 0 0/100% 46px,linear-gradient(90deg,#ff3bd466 2px,transparent 2px) 0 0/70px 100%;transform:perspective(260px) rotateX(62deg);transform-origin:50% 100%;animation:gridRun 2.4s linear infinite;-webkit-mask:linear-gradient(transparent,#000 40%);mask:linear-gradient(transparent,#000 40%)}
+    @keyframes gridRun{to{background-position:0 46px,0 0}}
+    body.s-neon h1{text-shadow:0 0 22px #ff3bd466}
+    body.s-neon .fall-item svg{filter:drop-shadow(0 0 6px #ff3bd4)}
+    body.s-arcade .bg-secret{background:radial-gradient(circle,#fff 1px,transparent 1.5px) 0 0/60px 60px,radial-gradient(circle,#ffd35c 1px,transparent 1.5px) 30px 30px/90px 90px,linear-gradient(180deg,#0b0b1a,#16163a)}
+    body.s-arcade .bg-secret:before{background:radial-gradient(ellipse at center,transparent 60%,#000a 100%)}
+    body.s-arcade .bg-secret:after{background:repeating-linear-gradient(0deg,transparent 0 2px,#00000066 2px 4px);opacity:.5}
+    body.s-arcade h1,body.s-arcade h2,body.s-arcade .price,body.s-arcade .bigprice,body.s-arcade .eyebrow{font-family:"Press Start 2P",monospace!important;letter-spacing:0!important}
+    body.s-arcade h1{font-size:clamp(1.2rem,3.2vw,2.1rem)!important;line-height:1.45!important}
+    body.s-arcade h2{font-size:clamp(1rem,2.4vw,1.5rem)!important;line-height:1.5!important}
+    body.s-arcade .price{font-size:.95rem!important}
+    body.s-arcade :is(.product,.btn,.panel,.chip,.cat,.select,.hero-stat){border-radius:4px!important}
+    body.s-bosque .bg-secret{background:radial-gradient(ellipse at 20% 30%,#1f6b3a55,transparent 50%),radial-gradient(ellipse at 80% 80%,#2a8a4a44,transparent 50%),linear-gradient(180deg,#06150f,#0b2a1c)}
+    body.s-bosque .bg-secret:before{top:auto;height:32%;background:radial-gradient(ellipse at 10% 100%,#04100b 0 30%,transparent 31%),radial-gradient(ellipse at 40% 100%,#04100b 0 25%,transparent 26%),radial-gradient(ellipse at 75% 100%,#04100b 0 32%,transparent 33%),radial-gradient(ellipse at 100% 100%,#04100b 0 22%,transparent 23%)}
+    body.s-bosque .bg-secret:after{background:radial-gradient(circle,#fff38a 1.5px,#fff38a44 3px,transparent 5px) 0 0/140px 160px,radial-gradient(circle,#fff38a 1.2px,#fff38a33 3px,transparent 5px) 70px 80px/180px 140px;animation:fireflies 6s ease-in-out infinite alternate}
+    @keyframes fireflies{0%{opacity:.25;background-position:0 0,70px 80px}100%{opacity:1;background-position:20px -30px,40px 50px}}
+    body.s-tormenta .bg-secret{background:radial-gradient(ellipse at 50% -10%,#3a4a66,transparent 60%),linear-gradient(180deg,#0b111b,#1a2638)}
+    body.s-tormenta .bg-secret:before{background:repeating-linear-gradient(100deg,transparent 0 22px,#9cc7ff1c 22px 23px);background-size:200px 200px;animation:rainDiag .6s linear infinite}
+    body.s-tormenta .bg-secret:after{background:#dfe9ff;opacity:0;animation:flash 9s infinite}
+    @keyframes rainDiag{to{background-position:-40px 200px}}
+    @keyframes flash{0%,88%,100%{opacity:0}89%{opacity:.22}90%{opacity:.04}91.5%{opacity:.18}93%{opacity:0}}
+    body.s-atardecer .bg-secret{background:linear-gradient(180deg,#fff1e0 0%,#ffd9bf 45%,#ffc6bd 75%,#f6c0d8 100%)}
+    body.s-atardecer .bg-secret:before{background:repeating-linear-gradient(90deg,transparent 0 79px,#e8572d18 79px 80px),repeating-linear-gradient(0deg,transparent 0 79px,#e8572d18 79px 80px);-webkit-mask:linear-gradient(transparent 55%,#000);mask:linear-gradient(transparent 55%,#000)}
+    body.s-atardecer .bg-secret:after{inset:auto;left:50%;bottom:-150px;width:460px;height:460px;margin-left:-230px;border-radius:50%;background:linear-gradient(#ffd35c,#ff7a59 60%,#e8572d);-webkit-mask:repeating-linear-gradient(180deg,#000 0 22px,transparent 22px 30px);mask:repeating-linear-gradient(180deg,#000 0 22px,transparent 22px 30px);opacity:.5}
+    body.motion-off .bg-secret:before,body.motion-off .bg-secret:after,body.tab-hidden .bg-secret:before,body.tab-hidden .bg-secret:after{animation-play-state:paused}
+
+    @media(max-width:560px){
+      .zypi{width:64px;left:10px;bottom:150px}.zypi-btn{width:64px;height:70px}
+      .to-top{bottom:96px;left:12px;width:38px;height:38px}
+      .secret-chip{top:80px;font-size:.72rem}
+      .ach-grid{grid-template-columns:1fr}
+    }
+    body:has(.drawer.open) .zypi,body:has(.modal-layer.open) .zypi,body:has(.drawer.open) .to-top{opacity:0;pointer-events:none;transition:opacity .2s}
 
   </style>
  </head>
@@ -536,7 +711,7 @@
     <div class="shell cols">
      <div><img class="logo logo-light" src="logo-claro.png" alt="Zypuc"><img class="logo logo-dark" src="logo-oscuro.png" alt="" aria-hidden="true"><p class="copy">Emprendimiento estudiantil de Pucallpa: tecnología, deporte, repostería y regalitos, con entrega en la ciudad.</p><a class="libro" href="https://wa.me/51951434075?text=Hola%20Zypuc%2C%20quiero%20presentar%20un%20reclamo." target="_blank" rel="noopener">Libro de Reclamaciones</a></div>
      <div><h4>Tienda</h4><a href="#productos" data-goto="productos" data-cat="Tecnología">Tecnología</a><a href="#productos" data-goto="productos" data-cat="Deporte">Deporte</a><a href="#productos" data-goto="productos" data-cat="Repostería">Repostería</a><a href="#productos" data-goto="productos" data-cat="Regalitos">Regalitos</a></div>
-     <div><h4>Ayuda</h4><a href="#como-comprar">Cómo comprar</a><a href="#soporte">Soporte</a><button class="link" data-legal="terminos" type="button">Términos y condiciones</button><button class="link" data-legal="privacidad" type="button">Privacidad de datos</button></div>
+     <div><h4>Ayuda</h4><a href="#como-comprar">Cómo comprar</a><a href="#soporte">Soporte</a><button class="link" data-legal="terminos" type="button">Términos y condiciones</button><button class="link" data-legal="privacidad" type="button">Privacidad de datos</button><button class="link" data-logros type="button">Logros secretos <span id="logros-count">0/12</span></button><button class="link" id="install-btn" type="button" hidden>Instalar Zypuc como app</button><button class="link" id="zypi-show" data-zypi-show type="button" hidden>Mostrar a Zypi</button></div>
     </div>
     <div class="shell legal"><span>© 2026 Zypuc · Tecnología y dulzura</span><span>Precios en soles. Fotos de cada producto tomadas de la tienda donde se vende.</span></div>
    </footer>
@@ -611,6 +786,7 @@
         }).join("");
         if(shower){layer.classList.add("shower");clearTimeout(rain.t);rain.t=setTimeout(()=>{layer.classList.remove("shower");rain(cat,false)},2600)}
       }
+      function addSet(k,arr){ITEMS[k]=arr}
       function setMotion(on){motion=on;document.body.classList.toggle("motion-off",!on)}
       function burst(fromEl){
         if(reduce||!motion||!fromEl)return;
@@ -661,7 +837,281 @@
         const t0=performance.now(),d=1200;const step=t=>{const k=Math.min(1,(t-t0)/d),e=1-Math.pow(1-k,3);el.textContent=fmt(to*e);if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step);
       }
       document.addEventListener("visibilitychange",()=>{document.body.classList.toggle("tab-hidden",document.hidden)});
-      return {rain,burst,setMotion,initTheme,toggleTheme,tilt,countUp,get motion(){return motion}};
+      return {rain,burst,addSet,applyTheme,setMotion,initTheme,toggleTheme,tilt,countUp,get motion(){return motion}};
+    })();
+
+    /* ===================== Zypuc Secrets: mascota Zypi, temas secretos y logros ===================== */
+    const ZYPI_SVG=/*ZYPI*/`<svg class="zypi-svg" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs><linearGradient id="zf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="zf1"/><stop offset="1" class="zf2"/></linearGradient></defs>
+      <ellipse class="z-shadow" cx="60" cy="124" rx="30" ry="5"/>
+      <g class="z-body">
+        <path class="z-ant" d="M60 34 Q57 22 62 14"/>
+        <path class="z-tip" d="M62 3 L64.2 8.8 L70 11 L64.2 13.2 L62 19 L59.8 13.2 L54 11 L59.8 8.8Z"/>
+        <path class="z-arm z-arm-l" d="M35 97 Q23 100 16 91"/><circle class="z-hand z-arm-l" cx="15.5" cy="90" r="4.2"/>
+        <path class="z-arm z-arm-r" d="M85 97 Q97 100 104 91"/><circle class="z-hand z-arm-r" cx="104.5" cy="90" r="4.2"/>
+        <path class="z-liner" d="M30 78 H90 L83 114 Q82 118 78 118 H42 Q38 118 37 114 Z"/>
+        <path class="z-stripes" d="M44 79 L47 117 M55 79 L56.5 117 M65 79 L63.5 117 M76 79 L73 117"/>
+        <path class="z-frost" d="M24 81 C11 77 11 60 26 56 C23 40 40 29 54 34 C60 25 73 27 77 36 C93 33 103 46 96 57 C109 62 109 78 96 81 Z"/>
+        <g class="z-sprinkles"><rect x="34" y="44" width="6" height="2.6" rx="1.3" transform="rotate(-30 37 45)" fill="#ffd35c"/><rect x="80" y="46" width="6" height="2.6" rx="1.3" transform="rotate(25 83 47)" fill="#10b8aa"/><rect x="58" y="38" width="6" height="2.6" rx="1.3" transform="rotate(70 61 39)" fill="#fff"/><rect x="25" y="68" width="6" height="2.6" rx="1.3" transform="rotate(40 28 69)" fill="#1262d4"/><rect x="91" y="68" width="6" height="2.6" rx="1.3" transform="rotate(-50 94 69)" fill="#ffd35c"/></g>
+        <g class="z-face">
+          <g class="z-eyes-open"><ellipse class="z-eye" cx="47" cy="60" rx="8" ry="9"/><ellipse class="z-eye" cx="73" cy="60" rx="8" ry="9"/>
+            <g class="z-pupils"><circle class="z-pupil" cx="47" cy="61" r="5"/><circle class="z-pupil" cx="73" cy="61" r="5"/><circle class="z-hl" cx="49" cy="58.5" r="1.8"/><circle class="z-hl" cx="75" cy="58.5" r="1.8"/></g></g>
+          <path class="z-alt z-happy" d="M40 62 Q47 53 54 62 M66 62 Q73 53 80 62"/>
+          <path class="z-alt z-sleep" d="M40 61 Q47 66 54 61 M66 61 Q73 66 80 61"/>
+          <path class="z-alt z-dizzy" d="M42 55 L52 65 M52 55 L42 65 M68 55 L78 65 M78 55 L68 65"/>
+          <ellipse class="z-blush" cx="36" cy="70" rx="5" ry="3"/><ellipse class="z-blush" cx="84" cy="70" rx="5" ry="3"/>
+          <path class="z-mouth" d="M55 70 Q60 75 65 70"/><ellipse class="z-mouth-o" cx="60" cy="72" rx="3.5" ry="3"/>
+        </g>
+        <g class="acc acc-band"><path d="M24 48 Q60 33 96 48 L95 54 Q60 40 25 54Z" fill="#e3263d"/><path d="M95 50 L106 44 M95 53 L107 55" stroke="#e3263d" stroke-width="3.2" stroke-linecap="round"/></g>
+        <g class="acc acc-chef"><path d="M40 40 C31 30 40 17 50 22 C54 11 70 11 72 22 C82 17 91 30 80 40 Z" fill="#fff" stroke="#e5d9d2" stroke-width="1.5"/><rect x="41" y="35" width="38" height="9" rx="3" fill="#fff" stroke="#e5d9d2" stroke-width="1.5"/></g>
+        <g class="acc acc-bow"><path d="M86 36 L73 28 L74 44Z M86 36 L99 28 L98 44Z" fill="#e85fa8"/><circle cx="86" cy="36" r="4" fill="#c43c86"/></g>
+        <g class="acc acc-flower"><g fill="#ffc2dd"><circle cx="34" cy="33" r="5.5"/><circle cx="41.6" cy="38.5" r="5.5"/><circle cx="38.7" cy="47.4" r="5.5"/><circle cx="29.3" cy="47.4" r="5.5"/><circle cx="26.4" cy="38.5" r="5.5"/></g><circle cx="34" cy="41" r="3.6" fill="#ff7eb6"/></g>
+        <g class="acc acc-visor"><rect x="33" y="51" width="54" height="17" rx="8.5" fill="#0a0a1a" stroke="#ff3bd4" stroke-width="2.2"/><rect x="38" y="57" width="44" height="3.4" rx="1.7" fill="#22e5ff"/></g>
+        <g class="acc acc-crown"><path d="M43 36 V22 L50 29 L56 17 L60 26 L64 17 L70 29 L77 22 V36Z" fill="#ffd35c" stroke="#e79510" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="31" r="2.6" fill="#e3263d"/></g>
+        <g class="acc acc-leaf"><path d="M63 21 C70 6 87 7 90 11 C86 22 73 27 63 21Z" fill="#4f9f2f"/><path d="M63 21 Q73 14 88 11" stroke="#2f6b1a" stroke-width="1.6" fill="none"/></g>
+        <g class="acc acc-umbrella"><path d="M24 32 Q60 -2 96 32 Q90 28 84 32 Q78 27 72 32 Q66 27 60 32 Q54 27 48 32 Q42 27 36 32 Q30 28 24 32Z" fill="#1262d4"/><path d="M60 32 V40" stroke="#14213b" stroke-width="2.6"/></g>
+        <g class="acc acc-shades"><rect x="35" y="53" width="21" height="13" rx="5.5" fill="#14213b"/><rect x="64" y="53" width="21" height="13" rx="5.5" fill="#14213b"/><path d="M56 58 H64" stroke="#14213b" stroke-width="3"/><path d="M39 57 l5 0" stroke="#ffffff88" stroke-width="2" stroke-linecap="round"/></g>
+        <g class="acc acc-cap"><path d="M28 47 Q46 14 84 26 Q97 34 102 52 Q82 33 28 47Z" fill="#7b3fc4"/><path d="M28 47 Q60 36 86 34" stroke="#a678ef" stroke-width="3" fill="none"/><circle cx="102" cy="54" r="5" fill="#fff"/></g>
+      </g>
+    </svg>`/*/ZYPI*/;
+
+    const ZS=(()=>{
+      const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+      const st={get(k,d){try{const v=JSON.parse(localStorage.getItem(k));return v??d}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
+      const norm=s=>String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").trim();
+      const pick=a=>a[Math.floor(Math.random()*a.length)];
+      const S=(body,vb="0 0 48 48")=>`<svg viewBox="${vb}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${body}</svg>`;
+      const PX=(rows,pal)=>{const w=rows[0].length,h=rows.length;let r="";rows.forEach((row,y)=>[...row].forEach((c,x)=>{if(pal[c])r+=`<rect x="${x}" y="${y}" width="1.02" height="1.02" fill="${pal[c]}"/>`}));return `<svg viewBox="0 0 ${w} ${h}" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${r}</svg>`};
+      const CLOUD='<path d="M14 36a9 9 0 0 1 0-18 12 12 0 0 1 23-2 8 8 0 0 1 1 20z"';
+
+      /* Temas secretos (todos originales de Zypuc) */
+      const THEMES={
+        sakura:{name:"Sakura nocturno",dark:true,acc:"flower",color:"#120a20",words:["sakura","hanami"],line:"Luna llena y pétalos cayendo. ¡Qué bonito se ve todo!",items:[
+          S('<path d="M24 5c8 6 13 17 6 31-2 4-10 4-12 0C11 22 16 11 24 5z" fill="#ffb3d1"/><path d="M24 12v21" stroke="#ff7eb6" stroke-width="1.6"/>'),
+          S('<g fill="#ffc2dd"><circle cx="24" cy="12" r="8"/><circle cx="35.4" cy="20.3" r="8"/><circle cx="31" cy="33.7" r="8"/><circle cx="17" cy="33.7" r="8"/><circle cx="12.6" cy="20.3" r="8"/></g><circle cx="24" cy="24" r="5" fill="#ff7eb6"/>'),
+          S('<path d="M24 2v5M24 42v4" stroke="#ffd35c" stroke-width="2"/><rect x="13" y="7" width="22" height="4" rx="2" fill="#7a2a1a"/><ellipse cx="24" cy="25" rx="14" ry="14" fill="#ff5a5a"/><path d="M14 19h20M11 25h26M14 31h20" stroke="#d93d3d" stroke-width="1.5"/><rect x="13" y="38" width="22" height="4" rx="2" fill="#7a2a1a"/>'),
+          S('<path d="M24 4l4 16 16 4-16 4-4 16-4-16-16-4 16-4z" fill="#fff6e0"/>')]},
+        neon:{name:"Ciudad neón",dark:true,acc:"visor",color:"#07060f",words:["neon"],line:"Visor nocturno activado. ¡Bienvenido a la ciudad neón!",items:[
+          S('<circle cx="24" cy="24" r="15" fill="none" stroke="#22e5ff" stroke-width="4"/>'),
+          S('<path d="M24 7 42 39H6z" fill="none" stroke="#ff3bd4" stroke-width="4" stroke-linejoin="round"/>'),
+          S('<path d="M24 8v32M8 24h32" stroke="#b8ff3b" stroke-width="5" stroke-linecap="round"/>'),
+          S('<path d="M24 5 41 24 24 43 7 24z" fill="none" stroke="#ffd35c" stroke-width="4" stroke-linejoin="round"/>')]},
+        arcade:{name:"Modo arcade",dark:true,acc:"crown",color:"#0b0b1a",words:["arcade","konami","maquinita"],line:"¡Insert coin! Modo arcade activado.",items:[
+          PX([".XX.XX.","XXXXXXX","XXXXXXX",".XXXXX.","..XXX..","...X..."],{X:"#ff4d6d"}),
+          PX(["..YYY..",".YYOYY.","YYYOYYY","YYYOYYY","YYYOYYY",".YYOYY.","..YYY.."],{Y:"#ffd35c",O:"#e79510"}),
+          PX(["...Y...","...Y...","YYYYYYY",".YYYYY.","..YYY..",".YY.YY.","YY...YY"],{Y:"#4ade80"}),
+          PX([".CCCCC.","CWCCCCC","CCCCCCC",".CCCCC.","..CCC..","...C..."],{C:"#22d3ee",W:"#ffffff"})]},
+        bosque:{name:"Bosque de luciérnagas",dark:true,acc:"leaf",color:"#06150f",words:["bosque","luciernaga","luciernagas"],line:"Shhh… escucha a las luciérnagas.",items:[
+          S('<path d="M8 40C8 18 22 8 42 6c0 20-10 34-34 34z" fill="#4f9f2f"/><path d="M8 40 34 14" stroke="#2f6b1a" stroke-width="2"/>'),
+          S('<path d="M8 40C8 18 22 8 42 6c0 20-10 34-34 34z" fill="#e8a33d"/><path d="M8 40 34 14" stroke="#a8641a" stroke-width="2"/>'),
+          S('<circle cx="24" cy="24" r="12" fill="#fff38a" opacity=".3"/><circle cx="24" cy="24" r="5" fill="#fff38a"/>'),
+          S('<path d="M12 20h24c0 12-5 22-12 24-7-2-12-12-12-24z" fill="#c58a4a"/><path d="M10 21c0-8 6-12 14-12s14 4 14 12z" fill="#7a5230"/><path d="M24 9V3" stroke="#7a5230" stroke-width="3" stroke-linecap="round"/>')]},
+        tormenta:{name:"Tormenta eléctrica",dark:true,acc:"umbrella",color:"#0b111b",words:["rayo","rayos","tormenta","trueno"],line:"¡Trajiste la tormenta! Menos mal tengo paraguas.",items:[
+          S('<path d="M24 4C18 16 12 22 12 30a12 12 0 0 0 24 0c0-8-6-14-12-26z" fill="#9cc7ff"/>'),
+          S('<path d="M27 3 9 27h13l-3 18 20-26H25z" fill="#ffe066" stroke="#e79510" stroke-width="2" stroke-linejoin="round"/>'),
+          S(CLOUD+' fill="#c9d6ea"/>'),
+          S('<path d="M24 10C20 18 16 22 16 28a8 8 0 0 0 16 0c0-6-4-10-8-18z" fill="#6fa8ff"/>')]},
+        atardecer:{name:"Atardecer retro",dark:false,acc:"shades",color:"#fff1e0",words:["atardecer","sunset"],line:"Atardecer retro: lentes puestos y a comprar.",items:[
+          S('<circle cx="24" cy="24" r="10" fill="#ffd35c"/><g stroke="#ffb020" stroke-width="3" stroke-linecap="round"><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4"/></g>'),
+          S('<path d="M6 26c6-6 12-6 18 0 6-6 12-6 18 0" fill="none" stroke="#5a2a4a" stroke-width="3" stroke-linecap="round"/>'),
+          S('<path d="M4 22 44 6 32 42 22 28z" fill="#fff"/><path d="M22 28 44 6" stroke="#c46aa8" stroke-width="2"/>'),
+          S(CLOUD+' fill="#ffd2e0"/>')]}
+      };
+      const ACH=[
+        {id:"t-sakura",icon:"flower-2",title:"Sakura nocturno",desc:"Desbloqueaste el tema Sakura nocturno.",hint:"Escribe en el buscador el nombre de la flor más famosa de Japón."},
+        {id:"t-neon",icon:"building-2",title:"Ciudad neón",desc:"Desbloqueaste el tema Ciudad neón.",hint:"Busca la luz que brilla en los letreros de noche."},
+        {id:"t-arcade",icon:"gamepad-2",title:"Modo arcade",desc:"Desbloqueaste el tema Modo arcade.",hint:"Los gamers de antes conocen un código de flechas… En celular, busca cómo se llaman las maquinitas en inglés."},
+        {id:"t-bosque",icon:"trees",title:"Bosque de luciérnagas",desc:"Desbloqueaste el tema Bosque de luciérnagas.",hint:"Busca el lugar donde viven muchos árboles juntos."},
+        {id:"t-tormenta",icon:"cloud-lightning",title:"Tormenta eléctrica",desc:"Desbloqueaste el tema Tormenta eléctrica.",hint:"Busca lo que cae del cielo con mucho brillo en una tormenta."},
+        {id:"t-atardecer",icon:"sunset",title:"Atardecer retro",desc:"Desbloqueaste el tema Atardecer retro.",hint:"El logo de arriba guarda un secreto si lo tocas 7 veces seguidas."},
+        {id:"caricia",icon:"heart-handshake",title:"Mejores amigos",desc:"Acariciaste a Zypi.",hint:"Deja el mouse quieto sobre Zypi (en celular, mantenlo presionado)."},
+        {id:"mareo",icon:"rotate-cw",title:"¡Qué mareo!",desc:"Tocaste a Zypi 10 veces seguidas.",hint:"Zypi no aguanta que lo toquen muchas veces rápido."},
+        {id:"buho",icon:"moon",title:"Búho nocturno",desc:"Visitaste Zypuc pasadas las 11 de la noche.",hint:"Vuelve muy, muy tarde."},
+        {id:"explorador",icon:"compass",title:"Explorador",desc:"Visitaste las 4 categorías.",hint:"Date una vuelta por todas las categorías."},
+        {id:"coleccion",icon:"heart",title:"Coleccionista",desc:"Guardaste 5 favoritos.",hint:"Llena tu lista de favoritos."},
+        {id:"pedido",icon:"shopping-bag",title:"Primer pedido",desc:"Enviaste tu primer pedido.",hint:"Haz tu primer pedido por WhatsApp."}
+      ];
+      const CAT_ACC={"Tecnología":"","Deporte":"band","Repostería":"chef","Regalitos":"bow"};
+      const CAT_LINE={"Tecnología":"Modo tecnología: antena encendida.","Deporte":"¡Vincha puesta! A movernos.","Repostería":"Gorro de chef listo. ¿Hornear algo rico?","Regalitos":"Lazo puesto. ¿A quién vamos a sorprender?"};
+      const TIPS=["Todos nuestros precios ya incluyen el envío a Pucallpa.","Haces tu pedido y te respondemos por WhatsApp para confirmar stock y fecha.","Pagas con Yape o Plin, sin complicaciones.","Toca la balanza de un producto para compararlo con otro.","Los precios de otras tiendas se revisan solos cada pocas horas.","Si te gusta algo, toca el corazón y queda en tus favoritos."];
+
+      let unlocked=st.get("zypuc-logros",[]),active=null,visited=st.get("zypuc-visited",[]);
+      let el,btn,bubble,pupils,hideT,talkT,idleT,sleeping=false,taps=[],justDragged=false,firstCat=true,deferredInstall=null;
+      const night=()=>{const h=new Date().getHours();return h>=23||h<5};
+      const has=id=>unlocked.includes(id);
+
+      /* ---------- Logros ---------- */
+      function unlock(id){
+        if(has(id))return;const a=ACH.find(x=>x.id===id);if(!a)return;
+        unlocked.push(id);st.set("zypuc-logros",unlocked);updateCount();
+        const pop=document.getElementById("ach-pop");
+        if(pop){pop.innerHTML=`<i data-lucide="${a.icon}"></i><div><small>¡Logro desbloqueado! · ${unlocked.length}/${ACH.length}</small><strong>${a.title}</strong></div>`;window.lucide&&lucide.createIcons();pop.classList.remove("show");void pop.offsetWidth;pop.classList.add("show");clearTimeout(unlock.t);unlock.t=setTimeout(()=>pop.classList.remove("show"),3600)}
+        if(unlocked.length===ACH.length)setTimeout(master,1800);
+      }
+      function master(){el&&el.classList.add("gold");say("¡Encontraste todos los secretos de Zypuc! Ahora soy Zypi dorado.",{ms:7000});FX.rain(active||state.cat,true)}
+      function updateCount(){const c=document.getElementById("logros-count");if(c)c.textContent=`${unlocked.length}/${ACH.length}`}
+      function renderLogros(){
+        const body=document.getElementById("logros-body");if(!body)return;
+        const pct=Math.round(unlocked.length/ACH.length*100);
+        const themes=Object.entries(THEMES).filter(([k])=>has("t-"+k));
+        body.innerHTML=`<div class="logros-top"><div class="logros-bar"><i style="width:${pct}%"></i></div><strong>${unlocked.length} de ${ACH.length}</strong></div>
+          <p class="copy">Zypuc tiene secretos escondidos. Cada uno que encuentres queda guardado en este dispositivo.</p>
+          <div class="ach-grid">${ACH.map(a=>has(a.id)?`<div class="ach on"><i data-lucide="${a.icon}"></i><div><strong>${a.title}</strong><small>${a.desc}</small></div></div>`:`<div class="ach"><i data-lucide="lock"></i><div><strong>???</strong><small>Pista: ${a.hint}</small></div></div>`).join("")}</div>
+          <h3 class="logros-h">Temas secretos</h3>
+          ${themes.length?`<div class="theme-pick">${themes.map(([k,t])=>`<button class="chip ${active===k?"active":""}" data-secret="${k}" type="button"><span class="dot" style="background:${t.color}"></span>${t.name}</button>`).join("")}<button class="chip ${!active?"active":""}" data-secret="none" type="button">Tema normal</button></div>`:`<p class="copy">Todavía no desbloqueas ningún tema. ¡Sigue las pistas!</p>`}
+          <p class="copy" style="margin-top:14px"><button class="btn" data-zypi-show type="button"><i data-lucide="smile"></i>${st.get("zypuc-zypi-hidden",false)?"Mostrar a Zypi":"Llamar a Zypi"}</button></p>`;
+        window.lucide&&lucide.createIcons();
+      }
+      function openLogros(){renderLogros();document.getElementById("logros-modal").classList.add("open")}
+
+      /* ---------- Temas secretos ---------- */
+      function applySecret(key){
+        const t=THEMES[key];const b=document.body;
+        Object.keys(THEMES).forEach(k=>b.classList.remove("s-"+k));
+        if(t){b.classList.add("secret","s-"+key);b.classList.toggle("dark",t.dark)}else{b.classList.remove("secret");FX.initTheme()}
+        active=t?key:null;st.set("zypuc-secret",active);
+        document.querySelector('meta[name="theme-color"]')?.setAttribute("content",t?t.color:(b.classList.contains("dark")?"#091323":"#f6f9fe"));
+        FX.rain(active||state.cat,true);setAcc();renderChip();
+      }
+      function activate(key,silent){
+        if(!THEMES[key])return;
+        const run=()=>applySecret(key);
+        if(!silent&&document.startViewTransition&&!reduce&&FX.motion){document.documentElement.style.setProperty("--vt-x",innerWidth/2+"px");document.documentElement.style.setProperty("--vt-y",innerHeight/2+"px");document.startViewTransition(run)}else run();
+        if(!silent){unlock("t-"+key);setTimeout(()=>say(THEMES[key].line),350)}
+        if(document.getElementById("logros-modal")?.classList.contains("open"))renderLogros();
+      }
+      function exit(){if(!active)return;applySecret(null);toast("Volviste al tema normal");if(document.getElementById("logros-modal")?.classList.contains("open"))renderLogros()}
+      function renderChip(){
+        const c=document.getElementById("secret-chip");if(!c)return;
+        if(!active){c.classList.remove("show");return}
+        c.innerHTML=`<i data-lucide="sparkles"></i><span>Tema secreto: <b>${THEMES[active].name}</b></span><button type="button" data-secret="none">Salir</button>`;c.classList.add("show");window.lucide&&lucide.createIcons();
+      }
+
+      /* ---------- Zypi, la mascota ---------- */
+      function setAcc(){if(!el)return;el.dataset.acc=active?THEMES[active].acc:(night()?"cap":(CAT_ACC[state.cat]||""))}
+      function mood(m,ms){if(!el)return;el.classList.remove("happy","dizzy");if(m){el.classList.add(m);clearTimeout(mood.t);mood.t=setTimeout(()=>el.classList.remove(m),ms||1400)}}
+      function jump(){if(!el||reduce)return;el.classList.remove("jump");void el.offsetWidth;el.classList.add("jump")}
+      function say(text,o={}){
+        if(!el||el.hidden)return;wake();
+        bubble.querySelector("p").textContent=text;
+        const acts=o.actions||[["Logros","logros"],["Ocultar","hide"]];
+        bubble.querySelector(".zb-actions").innerHTML=acts.map(([l,a])=>`<button type="button" data-zb="${a}">${l}</button>`).join("");
+        const r=btn.getBoundingClientRect();bubble.classList.toggle("below",r.top<200);bubble.classList.toggle("right",r.left>innerWidth/2);
+        bubble.classList.add("show");el.classList.add("talking");
+        clearTimeout(talkT);talkT=setTimeout(()=>el.classList.remove("talking"),Math.min(3200,600+text.length*38));
+        clearTimeout(hideT);hideT=setTimeout(()=>bubble.classList.remove("show"),o.ms||6000);
+      }
+      function nextLine(){
+        const deals=(typeof products!=="undefined"?products:[]).filter(p=>p.vs);
+        const locked=ACH.filter(a=>!has(a.id));
+        const opts=[()=>pick(TIPS)];
+        if(deals.length)opts.push(()=>{const p=pick(deals);return `${p.name}: en Zypuc ${money(p.price)}, en ${p.vs.store} ${money(p.vs.price)}. ¡Te ahorras ${money(p.vs.save)}!`});
+        if(locked.length)opts.push(()=>"Psst… "+pick(locked).hint,()=>`Llevas ${unlocked.length} de ${ACH.length} logros secretos.`);
+        if(deferredInstall)opts.push(()=>"¿Sabías que puedes instalar Zypuc como app? Búscalo abajo en Ayuda.");
+        return pick(opts)();
+      }
+      function hearts(){
+        if(reduce)return;const r=btn.getBoundingClientRect();
+        for(let i=0;i<6;i++){const h=document.createElement("span");h.className="zypi-heart";h.innerHTML=S('<path d="M24 42S5 30 5 17c0-6 5-10 10-10 4 0 7 2 9 6 2-4 5-6 9-6 5 0 10 4 10 10 0 13-19 25-19 25z" fill="#ff5f9e"/>');
+          h.style.left=r.left+r.width/2+"px";h.style.top=r.top+20+"px";document.body.appendChild(h);
+          h.animate([{transform:"translate(-50%,0) scale(.4)",opacity:0},{transform:`translate(calc(-50% + ${(Math.random()-.5)*80}px),-40px) scale(1)`,opacity:1,offset:.3},{transform:`translate(calc(-50% + ${(Math.random()-.5)*120}px),-110px) scale(.8)`,opacity:0}],{duration:1300+i*120,easing:"ease-out"}).onfinish=()=>h.remove()}
+      }
+      function pet(){hearts();mood("happy",1800);say(pick(["¡Jeje, me haces cosquillas!","Aww, gracias. ¡Eres buena gente!","¡Más cariño, más cupcakes!"]));unlock("caricia")}
+      function dizzy(){mood("dizzy",2600);say("Todo me da vueltas… ¡ya, ya, suficiente!");unlock("mareo")}
+      function sleep(){if(!el||sleeping||bubble.classList.contains("show"))return;sleeping=true;el.classList.add("sleeping")}
+      function wake(){if(sleeping){sleeping=false;el.classList.remove("sleeping")}}
+      function activity(){wake();clearTimeout(idleT);idleT=setTimeout(sleep,night()?20000:45000)}
+      function onTap(){
+        const now=Date.now();taps=taps.filter(t=>now-t<4000);taps.push(now);
+        if(taps.length>=10){taps=[];return dizzy()}
+        if(sleeping){wake();jump();return say("¡Ah! Estaba soñando con cupcakes. ¿En qué te ayudo?")}
+        jump();say(nextLine());
+      }
+      function setHidden(h){st.set("zypuc-zypi-hidden",h);if(el)el.hidden=h;const s=document.getElementById("zypi-show");if(s)s.hidden=!h}
+      function placeSaved(){
+        const p=st.get("zypuc-zypi-pos",null);if(!p)return;
+        el.style.left=Math.min(innerWidth-90,Math.max(4,p.x*innerWidth))+"px";el.style.top=Math.min(innerHeight-110,Math.max(70,p.y*innerHeight))+"px";el.style.bottom="auto";
+      }
+      function buildZypi(){
+        el=document.createElement("div");el.id="zypi";el.className="zypi";
+        el.innerHTML=`<div class="zypi-bubble" role="status" aria-live="polite"><p></p><div class="zb-actions"></div></div><button class="zypi-btn" type="button" aria-label="Zypi, la mascota de Zypuc. Tócalo para que te hable.">${ZYPI_SVG}</button><span class="zypi-z" aria-hidden="true"><i>z</i><i>z</i><i>Z</i></span>`;
+        document.body.appendChild(el);btn=el.querySelector(".zypi-btn");bubble=el.querySelector(".zypi-bubble");pupils=el.querySelector(".z-pupils");
+        placeSaved();setAcc();setHidden(st.get("zypuc-zypi-hidden",false));
+        if(unlocked.length===ACH.length)el.classList.add("gold");
+        /* ojos que siguen el puntero */
+        let raf=0,px=0,py=0;
+        document.addEventListener("pointermove",e=>{px=e.clientX;py=e.clientY;activity();if(raf)return;raf=requestAnimationFrame(()=>{raf=0;if(el.hidden||sleeping)return;const r=btn.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height*.45,dx=px-cx,dy=py-cy,d=Math.hypot(dx,dy)||1,k=Math.min(1,d/180);pupils.setAttribute("transform",`translate(${(dx/d*3.2*k).toFixed(2)} ${(dy/d*3*k).toFixed(2)})`)})},{passive:true});
+        ["keydown","scroll","touchstart"].forEach(ev=>addEventListener(ev,activity,{passive:true}));activity();
+        /* arrastrar, tocar, acariciar */
+        let drag=null,petT=0,hoverT=0;
+        btn.addEventListener("pointerdown",e=>{
+          const r=el.getBoundingClientRect();drag={x:e.clientX,y:e.clientY,l:r.left,t:r.top,moved:false};try{btn.setPointerCapture(e.pointerId)}catch{}
+          if(e.pointerType!=="mouse"){clearTimeout(petT);petT=setTimeout(()=>{if(drag&&!drag.moved){justDragged=true;pet()}},700)}
+        });
+        btn.addEventListener("pointermove",e=>{
+          if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+          if(!drag.moved&&Math.hypot(dx,dy)>7){drag.moved=true;clearTimeout(petT);el.classList.add("dragging");bubble.classList.remove("show")}
+          if(drag.moved){el.style.left=Math.min(innerWidth-80,Math.max(0,drag.l+dx))+"px";el.style.top=Math.min(innerHeight-100,Math.max(60,drag.t+dy))+"px";el.style.bottom="auto"}
+        });
+        const end=()=>{clearTimeout(petT);if(drag&&drag.moved){justDragged=true;el.classList.remove("dragging");const r=el.getBoundingClientRect();st.set("zypuc-zypi-pos",{x:r.left/innerWidth,y:r.top/innerHeight});jump()}drag=null};
+        btn.addEventListener("pointerup",end);btn.addEventListener("pointercancel",end);
+        btn.addEventListener("click",()=>{if(justDragged){justDragged=false;return}onTap()});
+        btn.addEventListener("pointerenter",e=>{if(e.pointerType!=="mouse")return;clearTimeout(hoverT);hoverT=setTimeout(pet,2000)});
+        btn.addEventListener("pointerleave",()=>clearTimeout(hoverT));
+        btn.addEventListener("pointerdown",()=>clearTimeout(hoverT));
+        bubble.addEventListener("pointerenter",()=>clearTimeout(hideT));
+        bubble.addEventListener("pointerleave",()=>{hideT=setTimeout(()=>bubble.classList.remove("show"),2500)});
+        bubble.addEventListener("click",e=>{const a=e.target.closest("[data-zb]");if(!a)return;bubble.classList.remove("show");
+          if(a.dataset.zb==="logros")openLogros();else if(a.dataset.zb==="hide"){setHidden(true);toast("Zypi se fue a descansar. Lo puedes llamar desde el pie de página.")}else if(a.dataset.zb==="install")install()});
+        addEventListener("resize",()=>{if(el.style.top)placeSaved()});
+      }
+
+      /* ---------- Instalar como app ---------- */
+      async function install(){
+        if(deferredInstall){deferredInstall.prompt();try{await deferredInstall.userChoice}catch{}deferredInstall=null;return}
+        if(/iphone|ipad|ipod/i.test(navigator.userAgent))return toast("En iPhone: toca Compartir y luego “Agregar a inicio”.");
+        toast("Abre el menú del navegador y elige “Instalar app” o “Agregar a pantalla de inicio”.");
+      }
+
+      /* ---------- Inicio ---------- */
+      function init(){
+        document.body.insertAdjacentHTML("beforeend",`<div id="secret-chip" class="secret-chip" role="status"></div><div id="ach-pop" class="ach-pop" role="status" aria-live="polite"></div>
+          <div id="logros-modal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="logros-title"><section class="modal"><div class="modal-head"><div><p class="eyebrow">Secretos de Zypuc</p><h2 id="logros-title">Logros</h2></div><button class="icon-btn close-modal" type="button" aria-label="Cerrar"><i data-lucide="x"></i></button></div><div id="logros-body"></div></section></div>`);
+        document.querySelector(".bg-stage")?.insertAdjacentHTML("beforeend",'<div class="bg bg-secret"></div>');
+        Object.entries(THEMES).forEach(([k,t])=>FX.addSet(k,t.items));
+        buildZypi();updateCount();
+        const saved=st.get("zypuc-secret",null);if(saved&&THEMES[saved]&&has("t-"+saved))activate(saved,true);
+        if(night())setTimeout(()=>{unlock("buho");say("Uy, qué tarde es. Yo ya tengo mi gorrito de dormir…")},2500);
+        /* palabras secretas en el buscador */
+        const search=document.getElementById("search");
+        search&&search.addEventListener("input",()=>{const v=norm(search.value);const key=Object.keys(THEMES).find(k=>THEMES[k].words.includes(v));if(key){search.value="";search.blur();renderProducts();activate(key)}});
+        /* código de flechas */
+        const code=["arrowup","arrowup","arrowdown","arrowdown","arrowleft","arrowright","arrowleft","arrowright","b","a"];let ci=0;
+        document.addEventListener("keydown",e=>{if(/input|textarea|select/i.test(e.target.tagName))return;const k=e.key.toLowerCase();ci=k===code[ci]?ci+1:(k===code[0]?1:0);if(ci===code.length){ci=0;activate("arcade")}});
+        /* logo 7 veces */
+        let lt=[];
+        document.addEventListener("click",e=>{
+          const logo=e.target.closest(".header .logo");
+          if(logo){const now=Date.now();lt=lt.filter(t=>now-t<3500);lt.push(now);if(lt.length>=7){lt=[];activate("atardecer")}}
+          const s=e.target.closest("[data-secret]");if(s){s.dataset.secret==="none"?exit():activate(s.dataset.secret,true);if(s.dataset.secret!=="none")say(THEMES[s.dataset.secret].line);return}
+          if(e.target.closest("[data-logros]")){openLogros();return}
+          if(e.target.closest("[data-zypi-show]")){setHidden(false);el.style.left="";el.style.top="";el.style.bottom="";st.set("zypuc-zypi-pos",null);document.getElementById("logros-modal").classList.remove("open");jump();say("¡Volví! ¿Me extrañaste?")}
+          if(e.target.closest("#install-btn"))install();
+        });
+        addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredInstall=e;const b=document.getElementById("install-btn");if(b)b.hidden=false});
+        if(!matchMedia("(display-mode: standalone)").matches&&matchMedia("(hover:none)").matches){const b=document.getElementById("install-btn");if(b)b.hidden=false}
+        if("serviceWorker" in navigator&&location.protocol==="https:")navigator.serviceWorker.register("sw.js").catch(()=>{});
+        setTimeout(()=>{if(!st.get("zypuc-zypi-hello",false)){st.set("zypuc-zypi-hello",true);say("¡Hola! Soy Zypi, la mascota de Zypuc. Tócame cuando quieras: te cuento ofertas y… algunos secretos.",{ms:8000})}},3200);
+      }
+      function onCat(cat){
+        if(!visited.includes(cat)){visited.push(cat);st.set("zypuc-visited",visited)}
+        if(visited.length>=4)unlock("explorador");
+        setAcc();if(!firstCat&&!active){jump();say(CAT_LINE[cat]||"",{ms:3200})}firstCat=false;
+      }
+      function onAdd(p){if(!el)return;jump();mood("happy",1300);if(p&&p.vs)say(`¡Buena elección! Te ahorras ${money(p.vs.save)} frente a ${p.vs.store}.`,{ms:4200})}
+      function onFav(n){if(n>=5)unlock("coleccion")}
+      function onOrder(){unlock("pedido");setTimeout(()=>{jump();say("¡Pedido enviado! Te responderemos por WhatsApp muy pronto.")},600)}
+      return {init,onCat,onAdd,onFav,onOrder,exit,active:()=>active,rainKey:()=>active};
     })();
 
     const $=s=>document.querySelector(s);
@@ -682,18 +1132,19 @@
       const buy=p.buy?{...p.buy}:null,ref=p.ref?{...p.ref}:null;
       for(const [side,obj] of [["buy",buy],["ref",ref]]){const l=liveOf(p.id,side);if(obj&&l&&l.price>0&&daysSince(l.checked)<=daysSince(obj.checked)){obj.price=l.price;obj.checked=l.checked;obj.live=true}}
       let price=0;
-      if(!p.consult&&buy&&buy.price){const envio=p.envio??CONFIG.envioPorUnidad,com=p.comision??CONFIG.comision;price=round90((buy.price+envio)*(1+com/100))}
+      if(!p.consult&&buy&&buy.price)price=ourPrice(p,buy.price);
       if(!p.consult&&p.price)price=p.price;
       let vs=null;
       if(ref&&ref.price&&price&&ref.price>price&&daysSince(ref.checked)<=CONFIG.diasVigenciaComparacion)vs={...ref,save:ref.price-price};
       return {...p,price,buy,ref,vs,stock:p.stock||(p.consult?"Precio a consultar":"Disponible"),reference:buy?`${buy.store}`:"",save:vs?vs.save:0,cls:DEPT_CLASS[p.dept]||"tech"};
     }
+    function ourPrice(p,buyPrice){const envio=p.envio??CONFIG.envioPorUnidad,com=p.comision??CONFIG.comision;return round90((buyPrice+envio)*(1+com/100))}
     function rebuild(){products=RAW.map(build)}
     async function loadRemote(){
       let changed=false;
       try{const r=await fetch("productos.json",{cache:"no-store"});if(r.ok){const d=await r.json();if(d.productos){CONFIG=d.config||CONFIG;subs=d.subcategorias||subs;RAW=d.productos;changed=true}}}catch{}
       try{const r=await fetch("precios.json",{cache:"no-store"});if(r.ok){LIVE=await r.json();changed=true}}catch{}
-      if(changed){rebuild();renderCats();renderProducts();renderSelect();renderCart();renderLive();fillReviewProducts();renderTicker();renderStats()}
+      if(changed){rebuild();renderCats();renderProducts();renderSelect();renderCart();renderLive();fillReviewProducts();renderTicker();renderStats();renderRecent()}
     }
     function renderLive(){
       const el=$("#live-pill");if(!el)return;
@@ -704,6 +1155,7 @@
     let state={cat:"Tecnología",sub:"Todos",max:2300,sort:"featured",cart:store.get("zypuc-cart")||[],fav:store.get("zypuc-fav")||[],compare:[],payment:"Yape",motion:!matchMedia("(prefers-reduced-motion:reduce)").matches,profile:null,reviewFilter:"all"};
     let reviews=store.get("zypuc-reviews")||[];
     let orders=store.get("zypuc-orders")||[];
+    let recent=store.get("zypuc-recent")||[];
     let toastTimer;
     const get=id=>products.find(x=>x.id===id);
     const saveCart=()=>store.set("zypuc-cart",state.cart);
@@ -711,7 +1163,7 @@
     function toast(text){$("#toast").textContent=text;$("#toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("#toast").classList.remove("show"),2700)}
     function maxForCat(){const v=products.filter(p=>p.dept===state.cat).map(p=>p.price);return Math.max(100,Math.ceil(Math.max(0,...v)))}
     let rainReady=false;
-    function themeRain(){FX.rain(state.cat,rainReady);rainReady=true}
+    function themeRain(){FX.rain(ZS.rainKey()||state.cat,rainReady);rainReady=true}
     function renderCats(){
       $("#catbar").innerHTML=Object.keys(subs).map(x=>`<button class="cat ${x===state.cat?"active":""}" data-cat="${x}" type="button">${x}</button>`).join("");
       $("#subbar").innerHTML=(subs[state.cat]||["Todos"]).map(x=>`<button class="chip ${x===state.sub?"active":""}" data-sub="${x}" type="button">${x}</button>`).join("");
@@ -786,8 +1238,41 @@
         <ul>${p.buy?`<li>Lo compramos nuevo en ${esc(p.buy.store)} y te lo entregamos en Pucallpa.</li>`:""}${p.entrega?`<li>${esc(p.entrega)}.</li>`:""}<li>Pagas por Yape, Plin u otro medio que coordinemos por WhatsApp.</li>${p.digital?"<li>Solo tarjetas o códigos oficiales.</li>":""}</ul>
         <div class="row">${p.price&&p.stock!=="Agotado"?`<button class="btn primary" data-add="${p.id}" type="button">Añadir al carrito <i data-lucide="shopping-bag"></i></button>`:`<button class="btn primary" data-whatsapp-product="${p.id}" type="button">Consultar por WhatsApp</button>`}<button class="btn" data-share="${p.id}" type="button"><i data-lucide="share-2"></i>Compartir</button></div>
       </div></div>`;
+      $("#detail-body .pd > div:last-child").insertAdjacentHTML("beforeend",historyBlock(p));
       $("#detail-title").textContent=p.brand||"Producto";$("#detail-modal").classList.add("open");window.lucide&&lucide.createIcons();
+      const di=$("#detail-body img");di&&di.addEventListener("error",()=>{di.src=placeholder(p)},{once:true});
+      recent=[id,...recent.filter(x=>x!==id)].slice(0,8);store.set("zypuc-recent",recent);renderRecent();
     }
+    function series(p,side){
+      const l=liveOf(p.id,side),src=p[side];
+      const h=(l&&Array.isArray(l.history)&&l.history.length)?l.history:(src&&src.price?[[String(src.checked||"").slice(0,10),src.price]]:[]);
+      return h.filter(x=>Array.isArray(x)&&x[1]>0);
+    }
+    function historyBlock(p){
+      if(p.consult||!p.buy)return "";
+      const ours=series(p,"buy").map(([d,v])=>[d,ourPrice(p,v)]),other=p.ref?series(p,"ref"):[];
+      if(ours.length<2)return `<div class="ph"><strong>Historial de precio</strong><p class="copy">Guardamos el precio de este producto desde el ${fmtDate(ours[0]&&ours[0][0])}. Cada vez que se revise, aquí verás cómo cambia.</p></div>`;
+      const all=[...ours,...other].map(x=>x[1]),min=Math.min(...all),max=Math.max(...all),W=320,H=90,pad=7;
+      const dates=[...new Set([...ours,...other].map(x=>x[0]))].sort(),xi=d=>pad+dates.indexOf(d)/Math.max(1,dates.length-1)*(W-2*pad);
+      const y=v=>max===min?H/2:pad+(1-(v-min)/(max-min))*(H-2*pad),line=s=>s.map(([d,v])=>`${xi(d).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+      const low=Math.min(...ours.map(x=>x[1]));
+      return `<div class="ph"><div class="ph-head"><strong>Historial de precio</strong><span><i class="k ours"></i>Zypuc${other.length>1?` <i class="k other"></i>${esc(p.ref.store)}`:""}</span></div>
+        <svg viewBox="0 0 ${W} ${H}" class="ph-svg" preserveAspectRatio="none" role="img" aria-label="Historial del precio en Zypuc">${other.length>1?`<polyline class="other" points="${line(other)}"/>`:""}<polyline class="ours" points="${line(ours)}"/></svg>
+        <div class="ph-foot"><span>${fmtDate(dates[0])}</span><span>Más bajo en Zypuc: <b>${money(low)}</b></span><span>${fmtDate(dates[dates.length-1])}</span></div></div>`;
+    }
+    function renderRecent(){
+      let w=$("#recent");if(!w){$("#empty").insertAdjacentHTML("afterend",'<div id="recent" class="recent" hidden></div>');w=$("#recent")}
+      const items=recent.map(get).filter(Boolean);if(!items.length){w.hidden=true;w.innerHTML="";return}
+      w.hidden=false;w.innerHTML=`<div class="recent-head"><h3>Vistos recientemente</h3><button class="link" data-clear-recent type="button">Borrar</button></div><div class="recent-row">${items.map(p=>`<button class="recent-card" data-detail="${p.id}" type="button"><img src="${esc(p.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"><span>${esc(p.name)}</span><b>${p.price?money(p.price):"Consultar"}</b></button>`).join("")}</div>`;
+      w.querySelectorAll("img").forEach((img,i)=>img.addEventListener("error",()=>{img.src=placeholder(items[i])},{once:true}));
+    }
+    function shareFavs(){
+      const items=state.fav.map(get).filter(Boolean);if(!items.length)return toast("Aún no tienes favoritos.");
+      const text="Mi lista de deseos en Zypuc:\n"+items.map(p=>`• ${p.name} — ${p.price?money(p.price):"precio a consultar"}`).join("\n")+"\n"+shareUrl();
+      if(navigator.share){navigator.share({title:"Mi lista Zypuc",text}).catch(()=>{});return}
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`,"_blank","noopener,noreferrer");
+    }
+
     function openLegal(which){
       $("#legal-title").textContent=which==="privacidad"?"Privacidad de datos":"Términos y condiciones";
       $("#legal-body").innerHTML=which==="privacidad"?LEGAL.privacidad:LEGAL.terminos;$("#legal-modal").classList.add("open");
@@ -806,6 +1291,9 @@
       state.cart=state.cart.filter(x=>get(x.id));
       const count=state.cart.reduce((a,x)=>a+x.qty,0),total=state.cart.reduce((a,x)=>a+get(x.id).price*x.qty,0);
       $("#cart-title").textContent=`Carrito · ${count}`;$("#total").textContent=money(total);$("#cart-empty").classList.toggle("hidden",!!count);
+      const saved=state.cart.reduce((a,x)=>{const p=get(x.id);return a+(p.vs?p.vs.save*x.qty:0)},0);
+      let cs=$("#cart-save");if(!cs){$("#total").parentElement.insertAdjacentHTML("afterend",'<div id="cart-save" class="cart-save"></div>');cs=$("#cart-save")}
+      cs.hidden=!saved;cs.textContent=`Te ahorras ${money(saved)} frente a otras tiendas`;
       $("#cart-items").innerHTML=state.cart.map(x=>`<div class="cart-line"><span>${esc(get(x.id).name)} × ${x.qty}</span><span><button data-qty="${x.id}" data-d="-1" type="button" aria-label="Reducir">−</button> ${money(get(x.id).price*x.qty)} <button data-qty="${x.id}" data-d="1" type="button" aria-label="Aumentar">+</button></span></div>`).join("");
       saveCart();
     }
@@ -841,16 +1329,17 @@
       const cls=DEPT_CLASS[cat];
       document.body.classList.toggle("sport",cat==="Deporte");document.body.classList.toggle("baking",cat==="Repostería");document.body.classList.toggle("gifts",cat==="Regalitos");
       ["tech","sport","baking","gifts"].forEach(c=>document.body.classList.toggle("cat-"+c,c===cls));
-      document.querySelectorAll(".maincat").forEach(b=>b.classList.toggle("active",b.dataset.cat===cat));themeRain();renderCats();renderProducts();renderSelect();
+      document.querySelectorAll(".maincat").forEach(b=>b.classList.toggle("active",b.dataset.cat===cat));themeRain();renderCats();renderProducts();renderSelect();ZS.onCat(cat);
     }
     function clearFilters(){state.sub="Todos";state.max=maxForCat();$("#search").value="";$("#max-price").value=state.max;$("#range-value").textContent=money(state.max);$("#fav-filter").checked=false;$("#ref-filter").checked=false;$("#save-filter").checked=false;renderCats();renderProducts()}
     function waOpen(text){window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`,"_blank","noopener,noreferrer")}
     function renderAccount(view="profile"){
       document.querySelectorAll("[data-view]").forEach(v=>v.classList.toggle("active",v.dataset.view===view));const root=$("#account-content");
       if(view==="profile")root.innerHTML=`<div class="panel mt-3"><h3>${state.profile?`Hola, ${esc(state.profile.name)}`:"Tu cuenta Zypuc"}</h3><p class="copy">No solicitamos contraseñas. Tus datos se quedan en este dispositivo.</p><form id="profile-form"><label class="label" for="pname">Nombre</label><input id="pname" class="field" required value="${state.profile?esc(state.profile.name):""}"><label class="label" for="pcontact">Teléfono</label><input id="pcontact" class="field" required value="${state.profile?esc(state.profile.contact):""}"><label class="label" for="pemail">Correo</label><input id="pemail" type="email" class="field" required value="${state.profile?esc(state.profile.email):""}"><label class="label" for="paddress">Dirección o colegio</label><textarea id="paddress" class="field" required>${state.profile?esc(state.profile.address):""}</textarea><button class="btn primary w-full mt-3" type="submit">Guardar cuenta</button></form></div>`;
-      else if(view==="favorites")root.innerHTML=state.fav.length?state.fav.map(id=>get(id)?`<div class="panel mt-3">${esc(get(id).name)}</div>`:"").join(""):'<p class="copy mt-4">Aún no tienes favoritos.</p>';
+      else if(view==="favorites"){const items=state.fav.map(get).filter(Boolean);root.innerHTML=items.length?items.map(p=>`<div class="panel mt-3 fav-line"><img src="${esc(p.image)}" alt="" referrerpolicy="no-referrer"><div><strong>${esc(p.name)}</strong><small>${p.price?money(p.price):"Precio a consultar"}</small></div><button class="round" data-fav="${p.id}" type="button" aria-label="Quitar de favoritos"><i data-lucide="x"></i></button></div>`).join("")+`<button class="btn primary w-full mt-3" data-share-favs type="button"><i data-lucide="share-2"></i>Compartir mi lista</button>`:'<p class="copy mt-4">Aún no tienes favoritos. Toca el corazón de un producto para guardarlo aquí.</p>';root.querySelectorAll(".fav-line img").forEach((img,i)=>img.addEventListener("error",()=>{img.src=placeholder(items[i])},{once:true}))}
       else if(view==="compare")root.innerHTML=`<div class="panel mt-3"><p class="copy">Tienes ${state.compare.length} producto(s) en comparación.</p><button id="drawer-compare" class="btn w-full" type="button">Abrir comparador</button></div>`;
       else root.innerHTML=orders.length?orders.map(o=>`<div class="panel mt-3"><strong>${esc(o.code)}</strong> · ${new Date(o.date).toLocaleDateString("es-PE")}<p class="copy">${esc(o.items)}</p><strong>${money(o.total)}</strong> · ${esc(o.payment)}</div>`).join(""):'<p class="copy mt-4">Tus pedidos aparecerán aquí cuando los envíes por WhatsApp.</p>';
+      window.lucide&&lucide.createIcons();
     }
 
     document.addEventListener("DOMContentLoaded",()=>{
@@ -859,14 +1348,18 @@
       const saved=sessionStorage.getItem("zypuc-profile");if(saved){try{state.profile=JSON.parse(saved)}catch{}}
       const toolbar=document.querySelector(".toolbar");if(toolbar)toolbar.insertAdjacentHTML("afterend",'<div style="margin-top:8px"><span id="live-pill" class="live-pill off"><i></i>Precios revisados el 14 oct</span></div>');
       fillReviewProducts();renderTicker();renderStats();
-      setCat("Tecnología");renderCart();renderCompare();renderReviews();renderLive();window.lucide&&lucide.createIcons();
+      setCat("Tecnología");renderCart();renderCompare();renderReviews();renderLive();renderRecent();ZS.init();
+      document.body.insertAdjacentHTML("beforeend",'<button id="to-top" class="to-top" type="button" aria-label="Volver arriba"><i data-lucide="arrow-up"></i></button>');
+      $("#to-top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+      addEventListener("scroll",()=>$("#to-top").classList.toggle("show",scrollY>900),{passive:true});
+      window.lucide&&lucide.createIcons();
       $("#support-number")&&($("[data-template-id=support-number]").textContent=CONFIG.telefonoVisible);
       setTimeout(()=>$("#intro").classList.add("done"),900);
       const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");revealObserver.unobserve(entry.target)}}),{threshold:.12});
       document.querySelectorAll("h1,h2,.eyebrow,section .copy").forEach((el,i)=>{el.classList.add("reveal");el.style.transitionDelay=`${Math.min(i*35,280)}ms`;revealObserver.observe(el)});
       loadRemote();
 
-      $("#theme-toggle").onclick=e=>{const dark=FX.toggleTheme(e);toast(dark?"Modo oscuro activado":"Modo claro activado")};
+      $("#theme-toggle").onclick=e=>{if(ZS.active()){ZS.exit();return}const dark=FX.toggleTheme(e);toast(dark?"Modo oscuro activado":"Modo claro activado")};
       $("#motion-toggle").onclick=()=>{state.motion=!state.motion;FX.setMotion(state.motion);$("#rain-layer").classList.toggle("rain-paused",!state.motion);$("#motion-toggle").setAttribute("aria-label",state.motion?"Pausar lluvia y animaciones":"Reanudar lluvia y animaciones");toast(state.motion?"Animaciones reanudadas":"Animaciones pausadas")};
       $("#account-open").onclick=()=>{$("#drawer").classList.add("open");$("#drawer").setAttribute("aria-hidden","false");renderAccount()};
       $("#drawer-close").onclick=()=>{$("#drawer").classList.remove("open");$("#drawer").setAttribute("aria-hidden","true")};
@@ -889,15 +1382,17 @@
         const sub=e.target.closest("[data-sub]");if(sub){state.sub=sub.dataset.sub;renderCats();renderProducts();return}
         const sort=e.target.closest("[data-sort]");if(sort){state.sort=sort.dataset.sort;$("#sort-label").textContent=sort.textContent;document.querySelectorAll("[data-sort]").forEach(b=>b.classList.toggle("active",b===sort));$("#sortwrap").classList.remove("open");renderProducts();return}
         const rf=e.target.closest("[data-rfilter]");if(rf){state.reviewFilter=rf.dataset.rfilter;renderReviews();return}
-        const fav=e.target.closest("[data-fav]");if(fav){state.fav.includes(fav.dataset.fav)?state.fav=state.fav.filter(x=>x!==fav.dataset.fav):state.fav.push(fav.dataset.fav);store.set("zypuc-fav",state.fav);renderProducts();return}
+        const fav=e.target.closest("[data-fav]");if(fav){state.fav.includes(fav.dataset.fav)?state.fav=state.fav.filter(x=>x!==fav.dataset.fav):state.fav.push(fav.dataset.fav);store.set("zypuc-fav",state.fav);renderProducts();ZS.onFav(state.fav.length);if($("#drawer").classList.contains("open")&&$("[data-view=favorites]")?.classList.contains("active"))renderAccount("favorites");return}
         const compare=e.target.closest("[data-compare]");if(compare){const id=compare.dataset.compare;if(state.compare.includes(id))state.compare=state.compare.filter(x=>x!==id);else if(state.compare.length<4)state.compare.push(id);else return toast("Puedes comparar hasta cuatro productos.");renderCompare();renderProducts();return}
         const consult=e.target.closest("[data-whatsapp-product]");if(consult){const product=get(consult.dataset.whatsappProduct);waOpen(`Hola Zypuc, quisiera consultar por ${product.name}.`);return}
         const idea=e.target.closest("[data-idea]");if(idea){waOpen(`Hola Zypuc, quisiera cotizar: ${idea.dataset.idea}.`);return}
         const jp=e.target.closest("[data-jump]");if(jp){e.preventDefault();const pr=get(jp.dataset.jump);if(pr){setCat(pr.dept);$("#search").value=pr.name;renderProducts();document.getElementById("productos").scrollIntoView({behavior:"smooth"})}return}
+        if(e.target.closest("[data-clear-recent]")){recent=[];store.set("zypuc-recent",recent);renderRecent();return}
+        if(e.target.closest("[data-share-favs]")){shareFavs();return}
         const det=e.target.closest("[data-detail]");if(det){openDetail(det.dataset.detail);return}
         const sh=e.target.closest("[data-share]");if(sh){shareProduct(sh.dataset.share);return}
         const lg=e.target.closest("[data-legal]");if(lg){openLegal(lg.dataset.legal);return}
-        const add=e.target.closest("[data-add]");if(add){const item=state.cart.find(x=>x.id===add.dataset.add);item?item.qty++:state.cart.push({id:add.dataset.add,qty:1});renderCart();$("#cart").classList.remove("min");FX.burst(add);toast("Producto añadido al carrito");return}
+        const add=e.target.closest("[data-add]");if(add){const item=state.cart.find(x=>x.id===add.dataset.add);item?item.qty++:state.cart.push({id:add.dataset.add,qty:1});renderCart();$("#cart").classList.remove("min");FX.burst(add);ZS.onAdd(get(add.dataset.add));toast("Producto añadido al carrito");return}
         const qty=e.target.closest("[data-qty]");if(qty){const item=state.cart.find(x=>x.id===qty.dataset.qty);item.qty+=+qty.dataset.d;if(item.qty<1)state.cart=state.cart.filter(x=>x!==item);renderCart();return}
         const pay=e.target.closest("[data-payment]");if(pay){state.payment=pay.dataset.payment;$("#payment-value").textContent=state.payment;document.querySelectorAll("[data-payment]").forEach(x=>{x.classList.toggle("active",x===pay);x.setAttribute("aria-checked",String(x===pay))});return}
         const view=e.target.closest("[data-view]");if(view)return renderAccount(view.dataset.view);
@@ -906,7 +1401,7 @@
         if(e.target.classList&&e.target.classList.contains("modal-layer"))e.target.classList.remove("open");
         if(!e.target.closest("#sortwrap"))$("#sortwrap").classList.remove("open");
       });
-      document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal-layer.open").forEach(x=>x.classList.remove("open"))});
+      document.addEventListener("keydown",e=>{if(e.key==="/"&&!/input|textarea|select/i.test(e.target.tagName)){e.preventDefault();document.getElementById("productos").scrollIntoView({behavior:"smooth"});$("#search").focus({preventScroll:true});return}if(e.key==="Escape")document.querySelectorAll(".modal-layer.open").forEach(x=>x.classList.remove("open"))});
 
       document.addEventListener("submit",e=>{
         e.preventDefault();
@@ -918,7 +1413,7 @@
           const lines=state.cart.map(x=>`• ${x.qty} × ${get(x.id).name} — ${money(get(x.id).price*x.qty)}`).join("\n");
           const text=`Hola Zypuc, pedido ${code}:\n${lines}\nTotal: ${money(total)}\nPago: ${state.payment}\nNombre: ${state.profile.name}\nTeléfono: ${state.profile.contact}\nEntrega: ${state.profile.address}`;
           orders.unshift({code,date:new Date().toISOString(),items:state.cart.map(x=>`${get(x.id).name} × ${x.qty}`).join(" · "),total,payment:state.payment});store.set("zypuc-orders",orders);
-          state.cart=[];renderCart();$("#checkout-modal").classList.remove("open");waOpen(text);toast("Pedido listo. Termina de enviarlo en WhatsApp.");
+          state.cart=[];renderCart();$("#checkout-modal").classList.remove("open");waOpen(text);toast("Pedido listo. Termina de enviarlo en WhatsApp.");ZS.onOrder();
         }
       });
     });

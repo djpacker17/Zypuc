@@ -13,6 +13,7 @@ Los pedidos llegan por WhatsApp al **+51 951 434 075**.
 | `scripts/actualizar_precios.py` | Programa que visita los links de cada producto y lee el precio. |
 | `.github/workflows/precios.yml` | Le dice a GitHub que corra el actualizador cada 6 horas. |
 | `logo-claro.png`, `logo-oscuro.png` | Logo para fondo claro y para modo oscuro. |
+| `manifest.webmanifest`, `sw.js`, `icon-*.png` | Permiten instalar la tienda como app en el celular y abrirla sin internet. |
 
 ## Cómo se calcula el precio
 
@@ -61,3 +62,28 @@ En GitHub: pestaña **Actions** → **Actualizar precios** → **Run workflow**.
 
 En GitHub: **Settings → Pages → Branch: main / (root) → Save**. En un par de minutos la tienda queda en
 `https://djpacker17.github.io/Zypuc/`.
+
+## Zypi y los secretos (spoiler para el equipo)
+
+Zypi es la mascota de la tienda: sigue el mouse con los ojos, habla al tocarlo, se puede arrastrar, salta al añadir al carrito, se duerme si nadie lo toca y cambia de accesorio según la categoría.
+
+| Secreto | Cómo se activa |
+|---|---|
+| Tema Sakura nocturno | Escribir `sakura` en el buscador |
+| Tema Ciudad neón | Escribir `neon` |
+| Tema Modo arcade | Teclas ↑ ↑ ↓ ↓ ← → ← → B A (o escribir `arcade`) |
+| Tema Bosque de luciérnagas | Escribir `bosque` |
+| Tema Tormenta eléctrica | Escribir `rayo` |
+| Tema Atardecer retro | Tocar el logo de arriba 7 veces seguidas |
+| Mejores amigos | Dejar el mouse quieto sobre Zypi (o mantenerlo presionado en el celular) |
+| ¡Qué mareo! | Tocar a Zypi 10 veces seguidas |
+| Búho nocturno | Entrar después de las 11 p. m. |
+| Explorador | Visitar las 4 categorías |
+| Coleccionista | Guardar 5 favoritos |
+| Primer pedido | Enviar un pedido por WhatsApp |
+
+Con los 12 logros, Zypi se vuelve dorado. Los logros se ven en el pie de página → **Logros secretos**.
+
+## Historial de precios
+
+El actualizador guarda un precio por día en `precios.json`. En la ficha de cada producto aparece un gráfico con nuestro precio y el de la otra tienda.
