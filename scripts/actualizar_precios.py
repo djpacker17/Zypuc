@@ -27,6 +27,9 @@ from pathlib import Path
 
 import requests
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from privado import clave, descifrar  # noqa: E402
+
 RAIZ = Path(__file__).resolve().parent.parent
 PRODUCTOS = RAIZ / "productos.json"
 PRECIOS = RAIZ / "precios.json"
@@ -129,7 +132,20 @@ def precio_tarjeta(item: dict) -> float | None:
     return min(valores) if valores else None
 
 
+def imagen_tarjeta(item: dict) -> str | None:
+    for k in ("mediaUrls", "imageUrls", "images"):
+        v = item.get(k)
+        if isinstance(v, list) and v and isinstance(v[0], str) and v[0].startswith("http"):
+            return v[0]
+    v = item.get("imageUrl") or item.get("image")
+    return v if isinstance(v, str) and v.startswith("http") else None
+
+
+ULTIMA_IMAGEN: dict = {}
+
+
 def precio_falabella_listado(doc: str, vendedor: str, palabras: list[str]) -> float | None:
+    ULTIMA_IMAGEN.clear()
     m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', doc, re.S)
     if not m:
         return None
@@ -144,8 +160,13 @@ def precio_falabella_listado(doc: str, vendedor: str, palabras: list[str]) -> fl
             continue
         p = precio_tarjeta(item)
         if p:
-            candidatos.append(p)
-    return min(candidatos) if candidatos else None
+            candidatos.append((p, imagen_tarjeta(item)))
+    if not candidatos:
+        return None
+    precio, img = min(candidatos, key=lambda c: c[0])
+    if img:
+        ULTIMA_IMAGEN["url"] = img
+    return precio
 
 
 def leer_precio(link: dict) -> tuple[float | None, str]:
@@ -164,7 +185,10 @@ def leer_precio(link: dict) -> tuple[float | None, str]:
 
 
 def main() -> int:
-    productos = json.loads(PRODUCTOS.read_text(encoding="utf-8"))["productos"]
+    datos = json.loads(PRODUCTOS.read_text(encoding="utf-8"))
+    productos = datos["productos"]
+    contrasena = __import__("os").environ.get("ZYPUC_CLAVE", "").strip()
+    k = clave(contrasena, datos["config"]["adminSalt"]) if contrasena and datos["config"].get("adminSalt") else None
     previo = json.loads(PRECIOS.read_text(encoding="utf-8")) if PRECIOS.exists() else {"items": {}}
     ahora = datetime.now(timezone.utc).isoformat(timespec="seconds")
     salida = {"updated": ahora, "items": {}}
@@ -173,26 +197,50 @@ def main() -> int:
     for p in productos:
         for lado in ("buy", "ref"):
             link = p.get(lado)
-            if not link or not link.get("url"):
+            if not link:
+                continue
+            privado = lado == "buy" and "priv" in link
+            if privado:
+                problema = None
+                if not k:
+                    problema = "falta el secreto ZYPUC_CLAVE, no se revisó"
+                else:
+                    try:
+                        link = {**link, **descifrar(link["priv"], k)}
+                    except Exception:
+                        problema = "la clave ZYPUC_CLAVE no es la correcta"
+                if problema:
+                    guardado = previo.get("items", {}).get(p["id"], {}).get(lado)
+                    if guardado:  # se conserva el último precio bueno
+                        salida["items"].setdefault(p["id"], {})[lado] = guardado
+                    resumen.append(f"🔒 {p['id']} (compra): {problema}")
+                    continue
+            if not link.get("url"):
                 continue
             anterior = previo.get("items", {}).get(p["id"], {}).get(lado) or {
                 "price": link.get("price"), "checked": link.get("checked")}
-            nuevo = dict(anterior)
+            nuevo = {k2: v for k2, v in dict(anterior).items() if k2 != "method"}
             nuevo["lastTry"] = ahora
+            ULTIMA_IMAGEN.clear()
             try:
                 precio, metodo = leer_precio(link)
             except Exception as e:  # red caída, bloqueo, etc.
                 precio, metodo = None, f"error: {type(e).__name__}"
+            if privado:  # no dejamos pistas de la tienda en los registros públicos
+                metodo = "privado" if precio else ("privado: " + metodo.split(":")[0] if metodo.startswith(("HTTP", "error")) else "privado")
+            etiqueta = "compra" if lado == "buy" else "otra tienda"
             base = anterior.get("price") or link.get("price")
             if precio and base and not (0.4 * base <= precio <= 2.5 * base):
-                resumen.append(f"⚠️ {p['id']} ({lado}): precio raro {precio} vs {base}, descartado")
+                resumen.append(f"⚠️ {p['id']} ({etiqueta}): precio raro {precio} vs {base}, descartado")
                 precio = None
             if precio:
                 nuevo.update(price=round(precio, 2), checked=ahora, ok=True, method=metodo)
-                resumen.append(f"✅ {p['id']} ({lado}): S/ {precio:.2f} [{metodo}]")
+                resumen.append(f"✅ {p['id']} ({etiqueta}): S/ {precio:.2f}")
             else:
                 nuevo.update(ok=False, method=metodo)
-                resumen.append(f"❌ {p['id']} ({lado}): no se pudo leer [{metodo}], se mantiene S/ {base}")
+                resumen.append(f"❌ {p['id']} ({etiqueta}): no se pudo leer [{metodo}], se mantiene S/ {base}")
+            if ULTIMA_IMAGEN.get("url"):
+                nuevo["image"] = ULTIMA_IMAGEN["url"]
             # Historial: un punto por día (el último precio leído ese día), máximo 120 días
             hist = [h for h in (anterior.get("history") or []) if isinstance(h, list) and len(h) == 2]
             if not hist and anterior.get("price"):

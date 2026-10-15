@@ -10,6 +10,9 @@ Los pedidos llegan por WhatsApp al **+51 951 434 075**.
 | `index.html` | La tienda completa. Se abre con doble clic o desde GitHub Pages. |
 | `productos.json` | **La lista de productos.** Aquí se agregan, quitan o editan productos. |
 | `precios.json` | Lo escribe solo el actualizador de precios. No hace falta tocarlo. |
+| `resenas.json` | Reseñas publicadas (se generan desde el Panel Zypuc). |
+| `pedidos.json` | Estado de cada pedido para "Rastrea tu pedido" (se genera desde el Panel Zypuc). |
+| `scripts/privado.py` | Cifra y descifra los links de compra. |
 | `scripts/actualizar_precios.py` | Programa que visita los links de cada producto y lee el precio. |
 | `.github/workflows/precios.yml` | Le dice a GitHub que corra el actualizador cada 6 horas. |
 | `logo-claro.png`, `logo-oscuro.png` | Logo para fondo claro y para modo oscuro. |
@@ -29,30 +32,32 @@ El aviso **"En Ripley cuesta S/ X · Ver en Ripley"** solo aparece si:
 
 Si el actualizador no puede leer un precio, guarda el último precio bueno con su fecha. Pasados 7 días sin poder revisarlo, el aviso desaparece solo. Así nunca mostramos una comparación vieja o falsa.
 
+## Modo equipo (LeoZypuc)
+
+En la tienda: **Cuenta → Equipo Zypuc** → usuario `LeoZypuc` y la contraseña del equipo (no está escrita en ningún archivo).
+Al entrar ves en cada producto **dónde comprarlo**, el vendedor, el link y tu ganancia, y aparece el botón **Panel** con:
+
+- **Productos:** tabla con precio Zypuc, dónde comprar, otra tienda, ganancia y si el precio se pudo revisar.
+- **Comprar pedido:** arma el carrito del cliente y verás qué comprar, dónde y cuánto ganas.
+- **Agregar / editar:** formulario para un producto nuevo o para cambiar dónde se compra. Genera el `productos.json` completo para pegarlo en GitHub.
+- **Reseñas:** publica las reseñas que los clientes te mandan por WhatsApp (`resenas.json`).
+- **Estados de pedidos:** actualiza lo que el cliente ve en "Rastrea tu pedido" (`pedidos.json`).
+
+Los links de compra van **cifrados** dentro de `productos.json` (campo `priv`). Así, aunque el repositorio sea público, nadie ve dónde compramos sin la contraseña.
+
+### Secreto para el actualizador (una sola vez)
+
+Para que GitHub pueda revisar los precios de compra, necesita la contraseña:
+**Settings → Secrets and variables → Actions → New repository secret** → Name: `ZYPUC_CLAVE`, Secret: la contraseña del equipo → **Add secret**.
+Sin ese secreto, la tienda sigue funcionando con el último precio guardado.
+
 ## Agregar un producto
 
-En GitHub, abre `productos.json`, toca el lápiz ✏️ y copia uno de los productos como modelo:
+Lo más fácil: entra como LeoZypuc → **Panel → Agregar / editar**, llena el formulario y sigue los 3 pasos que aparecen (copiar, abrir en GitHub, pegar y guardar).
 
-```json
-{
-  "id": "nombre-corto-sin-espacios",
-  "dept": "Tecnología",
-  "cat": "Periféricos",
-  "brand": "Marca",
-  "name": "Nombre completo tal como lo vende la tienda",
-  "model": "Detalle corto",
-  "image": "link de la foto del producto en la tienda",
-  "buy": { "store": "Falabella", "seller": "Vendedor", "price": 99.9, "url": "link del producto", "checked": "2026-10-14" },
-  "ref": { "store": "Ripley", "seller": "Vendedor", "price": 129, "url": "link del producto en la tienda más cara", "checked": "2026-10-14" },
-  "spec": {}
-}
-```
-
-- `buy` = donde lo compramos (la tienda más barata). `ref` = la tienda que lo vende más caro (es opcional).
-- Para la foto: abre el producto en Ripley o Falabella, clic derecho sobre la foto → "Copiar dirección de imagen".
-- Usa el **link exacto del producto**, no el de una búsqueda: así el actualizador puede leer el precio.
-- Para un producto sin precio (se consulta por WhatsApp) pon `"consult": true` y no pongas `buy`.
-- `dept` puede ser `Tecnología`, `Deporte`, `Repostería` o `Regalitos`. `cat` debe ser una de las subcategorías de `subcategorias`.
+- Usa el **link exacto del producto** (o una búsqueda de Falabella con el nombre exacto): así el actualizador puede leer el precio.
+- Para la foto: abre el producto en la tienda, clic derecho sobre la foto → "Copiar dirección de imagen". Si la dejas vacía y el producto es de Falabella, el actualizador intenta traer la foto solo.
+- La "tienda más cara" es opcional. Solo se muestra si de verdad es más cara que nuestro precio.
 
 ## Correr el actualizador a mano
 
