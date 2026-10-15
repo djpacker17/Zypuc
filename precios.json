@@ -1,256 +1,476 @@
 {
-  "updated": "2026-10-14T23:02:52+00:00",
+  "updated": "2026-10-15T04:42:23+00:00",
   "items": {
     "jbl-tune-520bt": {
       "buy": {
         "price": 139.0,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            139.0
+          ],
+          [
+            "2026-10-15",
+            139.0
+          ]
+        ]
       },
       "ref": {
         "price": 249,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            249
+          ]
+        ]
       }
     },
     "logitech-m170": {
       "buy": {
         "price": 44.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            44.9
+          ]
+        ]
       }
     },
     "redragon-k552": {
       "buy": {
         "price": 149.99,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            149.99
+          ],
+          [
+            "2026-10-15",
+            149.99
+          ]
+        ]
       }
     },
     "redmi-watch-5-active": {
       "buy": {
         "price": 129.0,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            129.0
+          ],
+          [
+            "2026-10-15",
+            129.0
+          ]
+        ]
       },
       "ref": {
         "price": 184,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            184
+          ]
+        ]
       }
     },
     "samsung-a16": {
       "buy": {
         "price": 499.0,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            499.0
+          ],
+          [
+            "2026-10-15",
+            499.0
+          ]
+        ]
       },
       "ref": {
         "price": 599,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            599
+          ]
+        ]
       }
     },
     "redmi-a7-pro": {
       "buy": {
         "price": 399.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            399.9
+          ]
+        ]
       },
       "ref": {
         "price": 549,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            549
+          ]
+        ]
       }
     },
     "moto-g06": {
       "buy": {
         "price": 380,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            380
+          ]
+        ]
       }
     },
     "mikasa-v200w": {
       "buy": {
         "price": 419.9,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            419.9
+          ],
+          [
+            "2026-10-15",
+            419.9
+          ]
+        ]
       },
       "ref": {
         "price": 499.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            499.9
+          ]
+        ]
       }
     },
     "puma-attacanto": {
       "buy": {
         "price": 34.99,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            34.99
+          ]
+        ]
       }
     },
     "reebok-flexagon": {
       "buy": {
         "price": 88,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            88
+          ]
+        ]
       }
     },
     "spinning-lcd": {
       "buy": {
         "price": 319,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            319
+          ]
+        ]
       }
     },
     "everlast-mat": {
       "buy": {
         "price": 69.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            69.9
+          ]
+        ]
       }
     },
     "ligas-resistencia": {
       "buy": {
         "price": 29,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            29
+          ]
+        ]
       }
     },
     "shaker-600": {
       "buy": {
         "price": 29.99,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            29.99
+          ]
+        ]
       }
     },
     "oster-fpsthm3532": {
       "buy": {
         "price": 99.0,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            99.0
+          ],
+          [
+            "2026-10-15",
+            99.0
+          ]
+        ]
       },
       "ref": {
         "price": 129,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            129
+          ]
+        ]
       }
     },
     "mica-bowls": {
       "buy": {
         "price": 49.9,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-producto"
+        "method": "falabella-producto",
+        "history": [
+          [
+            "2026-10-14",
+            49.9
+          ],
+          [
+            "2026-10-15",
+            49.9
+          ]
+        ]
       }
     },
     "press-molde-brownies": {
       "buy": {
         "price": 26.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            26.9
+          ]
+        ]
       }
     },
     "funko-bitty-pokemon": {
       "buy": {
         "price": 109.0,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            109.0
+          ],
+          [
+            "2026-10-15",
+            109.0
+          ]
+        ]
       },
       "ref": {
         "price": 195,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            195
+          ]
+        ]
       }
     },
     "oster-fpsths3611": {
       "buy": {
         "price": 237.0,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            237.0
+          ],
+          [
+            "2026-10-15",
+            237.0
+          ]
+        ]
       },
       "ref": {
         "price": 399,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            399
+          ]
+        ]
       }
     },
     "imaco-hes35r": {
       "buy": {
         "price": 299,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            299
+          ]
+        ]
       }
     },
     "funko-squirtle": {
       "buy": {
         "price": 60.59,
-        "checked": "2026-10-14T23:02:52+00:00",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "checked": "2026-10-15T04:42:23+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": true,
-        "method": "falabella-listado"
+        "method": "falabella-listado",
+        "history": [
+          [
+            "2026-10-14",
+            60.59
+          ],
+          [
+            "2026-10-15",
+            60.59
+          ]
+        ]
       },
       "ref": {
         "price": 130,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-14T23:02:52+00:00",
+        "lastTry": "2026-10-15T04:42:23+00:00",
         "ok": false,
-        "method": "HTTP 403"
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-14",
+            130
+          ]
+        ]
       }
     }
   }
