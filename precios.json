@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T21:24:56+00:00",
+  "updated": "2026-10-15T23:22:24+00:00",
   "items": {
     "jbl-tune-520bt": {
       "buy": {
@@ -22,15 +22,15 @@
       "ref": {
         "price": 249,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-15T23:22:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-14",
             249
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "logitech-m170": {
@@ -88,15 +88,15 @@
       "ref": {
         "price": 184,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-15T23:22:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-14",
             184
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "samsung-a16": {
@@ -120,15 +120,15 @@
       "ref": {
         "price": 599,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-15T23:22:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-14",
             599
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "redmi-a7-pro": {
@@ -148,15 +148,15 @@
       "ref": {
         "price": 549,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-15T23:22:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-14",
             549
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "moto-g06": {
@@ -195,15 +195,15 @@
       "ref": {
         "price": 499.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-15T23:22:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-14",
             499.9
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "puma-attacanto": {
@@ -317,15 +317,15 @@
       "ref": {
         "price": 129,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-15T23:22:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-14",
             129
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "mica-bowls": {
@@ -383,15 +383,15 @@
       "ref": {
         "price": 195,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-15T23:22:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-14",
             195
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "oster-fpsths3611": {
@@ -415,15 +415,15 @@
       "ref": {
         "price": 399,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-15T23:22:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-14",
             399
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "imaco-hes35r": {
@@ -462,13 +462,118 @@
       "ref": {
         "price": 130,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-15T23:22:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-14",
             130
+          ]
+        ],
+        "method": "HTTP 403"
+      }
+    },
+    "roblox-6": {
+      "ref": {
+        "price": 40,
+        "checked": "2026-10-15",
+        "lastTry": "2026-10-15T23:22:24+00:00",
+        "ok": false,
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-15",
+            40
+          ]
+        ]
+      }
+    },
+    "roblox-25": {
+      "ref": {
+        "price": 149,
+        "checked": "2026-10-15",
+        "lastTry": "2026-10-15T23:22:24+00:00",
+        "ok": false,
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-15",
+            149
+          ]
+        ]
+      }
+    },
+    "psn-10-peru": {
+      "ref": {
+        "price": 65,
+        "checked": "2026-10-15",
+        "lastTry": "2026-10-15T23:22:24+00:00",
+        "ok": false,
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-15",
+            65
+          ]
+        ]
+      }
+    },
+    "psn-50-peru": {
+      "ref": {
+        "price": 252,
+        "checked": "2026-10-15",
+        "lastTry": "2026-10-15T23:22:24+00:00",
+        "ok": false,
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-15",
+            252
+          ]
+        ]
+      }
+    },
+    "eshop-10": {
+      "ref": {
+        "price": 65,
+        "checked": "2026-10-15",
+        "lastTry": "2026-10-15T23:22:24+00:00",
+        "ok": false,
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-15",
+            65
+          ]
+        ]
+      }
+    },
+    "nso-12": {
+      "ref": {
+        "price": 119,
+        "checked": "2026-10-15",
+        "lastTry": "2026-10-15T23:22:24+00:00",
+        "ok": false,
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-15",
+            119
+          ]
+        ]
+      }
+    },
+    "redmi-buds-6-play": {
+      "ref": {
+        "price": 59.35,
+        "checked": "2026-10-15",
+        "lastTry": "2026-10-15T23:22:24+00:00",
+        "ok": false,
+        "method": "HTTP 403",
+        "history": [
+          [
+            "2026-10-15",
+            59.35
           ]
         ]
       }
