@@ -211,8 +211,8 @@ def main() -> int:
                         problema = "la clave ZYPUC_CLAVE no es la correcta"
                 if problema:
                     guardado = previo.get("items", {}).get(p["id"], {}).get(lado)
-                    if guardado:  # se conserva el último precio bueno
-                        salida["items"].setdefault(p["id"], {})[lado] = guardado
+                    if guardado:  # se conserva el último precio bueno, sin pistas de la tienda
+                        salida["items"].setdefault(p["id"], {})[lado] = {k2: v for k2, v in guardado.items() if k2 != "method"}
                     resumen.append(f"🔒 {p['id']} (compra): {problema}")
                     continue
             if not link.get("url"):
