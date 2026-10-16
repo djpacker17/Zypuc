@@ -144,7 +144,7 @@ def imagen_tarjeta(item: dict) -> str | None:
 ULTIMA_IMAGEN: dict = {}
 
 
-def precio_falabella_listado(doc: str, vendedor: str, palabras: list[str]) -> float | None:
+def precio_falabella_listado(doc: str, vendedor: str, palabras: list[str], fuera: list[str] | None = None) -> float | None:
     ULTIMA_IMAGEN.clear()
     m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', doc, re.S)
     if not m:
@@ -152,11 +152,13 @@ def precio_falabella_listado(doc: str, vendedor: str, palabras: list[str]) -> fl
     data = json.loads(m.group(1))
     candidatos = []
     for item in iter_resultados(data):
-        nombre = f"{item.get('brand', '')} {item.get('displayName', '')}".lower()
-        seller = str(item.get("sellerName") or item.get("seller") or "").lower()
-        if palabras and not all(w.lower() in nombre for w in palabras):
+        nombre = sin_tildes(f"{item.get('brand', '')} {item.get('displayName', '')}")
+        seller = sin_tildes(item.get("sellerName") or item.get("seller") or "")
+        if palabras and not all(sin_tildes(w) in nombre for w in palabras):
             continue
-        if vendedor and vendedor.lower() not in seller:
+        if any(sin_tildes(w) in nombre for w in (fuera if fuera is not None else EXCLUIR)):
+            continue
+        if vendedor and sin_tildes(vendedor) not in seller:
             continue
         p = precio_tarjeta(item)
         if p:
@@ -169,8 +171,63 @@ def precio_falabella_listado(doc: str, vendedor: str, palabras: list[str]) -> fl
     return precio
 
 
+VTEX = ("oechsle.pe", "plazavea.com.pe", "promart.pe", "coolbox.pe")
+# Accesorios que comparten nombre con el producto (no deben contar como "el mismo producto")
+EXCLUIR = ["funda", "case ", "protector", "correa", "cargador", "repuesto", "llavero", "mica ", "estuche"]
+
+
+def sin_tildes(t: str) -> str:
+    import unicodedata
+    return unicodedata.normalize("NFD", str(t or "").lower()).encode("ascii", "ignore").decode()
+
+
+def precio_vtex(link: dict) -> float | None:
+    """Tiendas VTEX (Oechsle, Plaza Vea, Promart, Coolbox) tienen una API pública de catálogo.
+    - Con "q" + "match": precio MÁS BAJO de esa tienda para ese producto (comparación honesta).
+    - Sin "q": el producto exacto del link (…/nombre/p)."""
+    from urllib.parse import urlparse, quote
+    u = urlparse(link["url"])
+    base = f"{u.scheme}://{u.netloc}"
+    if link.get("q"):
+        api = f"{base}/api/catalog_system/pub/products/search?ft={quote(link['q'])}&_from=0&_to=29"
+    else:
+        slug = u.path.strip("/").split("/")[0]
+        api = f"{base}/api/catalog_system/pub/products/search/{slug}/p"
+    r = requests.get(api, headers={**HEADERS, "Accept": "application/json"}, timeout=30)
+    if r.status_code not in (200, 206):
+        return None
+    palabras = [sin_tildes(w) for w in link.get("match", [])]
+    fuera = [sin_tildes(w) for w in link.get("excluir", EXCLUIR)]
+    vendedor = sin_tildes(link.get("seller", "")) if not link.get("q") else ""
+    candidatos = []
+    for prod in r.json():
+        nombre = sin_tildes(f"{prod.get('brand', '')} {prod.get('productName', '')}")
+        if palabras and not all(w in nombre for w in palabras):
+            continue
+        if any(w in nombre for w in fuera):
+            continue
+        for it in prod.get("items") or []:
+            img = ((it.get("images") or [{}])[0]).get("imageUrl")
+            for sel in it.get("sellers") or []:
+                of = sel.get("commertialOffer") or {}
+                if of.get("AvailableQuantity", 0) > 0 and of.get("Price"):
+                    if vendedor and vendedor not in sin_tildes(sel.get("sellerName")):
+                        continue
+                    candidatos.append((float(of["Price"]), img))
+    if not candidatos and vendedor:  # el vendedor ya no lo tiene: tomamos la mejor oferta del mismo producto
+        return precio_vtex({**link, "seller": ""})
+    if not candidatos:
+        return None
+    precio, img = min(candidatos, key=lambda c: c[0])
+    if img:
+        ULTIMA_IMAGEN["url"] = img
+    return precio
+
+
 def leer_precio(link: dict) -> tuple[float | None, str]:
     url = link["url"]
+    if any(d in url for d in VTEX):
+        return precio_vtex(link), "vtex-minimo" if link.get("q") else "vtex"
     r = requests.get(url, headers=HEADERS, timeout=30)
     if r.status_code != 200:
         return None, f"HTTP {r.status_code}"
@@ -178,9 +235,13 @@ def leer_precio(link: dict) -> tuple[float | None, str]:
     if "ripley.com.pe" in url:
         return precio_ripley(doc), "ripley"
     if "falabella.com.pe" in url and "/product/" in url:
-        return (precio_json_ld(doc) or precio_meta(doc)), "falabella-producto"
+        p = precio_json_ld(doc) or precio_meta(doc)
+        m = re.search(r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"', doc)
+        if p and m:
+            ULTIMA_IMAGEN["url"] = html.unescape(m.group(1))
+        return p, "falabella-producto"
     if "falabella.com.pe" in url:
-        return precio_falabella_listado(doc, link.get("seller", ""), link.get("match", [])), "falabella-listado"
+        return precio_falabella_listado(doc, link.get("seller", ""), link.get("match", []), link.get("excluir")), "falabella-listado"
     return (precio_json_ld(doc) or precio_meta(doc)), "generico"
 
 

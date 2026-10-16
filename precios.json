@@ -1,58 +1,6 @@
 {
   "updated": "2026-10-16T00:48:24+00:00",
   "items": {
-    "jbl-tune-520bt": {
-      "buy": {
-        "price": 139.0,
-        "checked": "2026-10-16T00:48:24+00:00",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": true,
-        "history": [
-          [
-            "2026-10-14",
-            139.0
-          ],
-          [
-            "2026-10-15",
-            139.0
-          ],
-          [
-            "2026-10-16",
-            139.0
-          ]
-        ],
-        "method": "privado",
-        "image": "https://media.falabella.com.pe/falabellaPE/151560335_01/public"
-      },
-      "ref": {
-        "price": 249,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            249
-          ]
-        ],
-        "method": "HTTP 403"
-      }
-    },
-    "logitech-m170": {
-      "buy": {
-        "price": 44.9,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            44.9
-          ]
-        ],
-        "method": "privado: HTTP 403"
-      }
-    },
     "redragon-k552": {
       "buy": {
         "price": 149.99,
@@ -99,19 +47,6 @@
         ],
         "method": "privado",
         "image": "https://media.falabella.com.pe/falabellaPE/20670082_1/public"
-      },
-      "ref": {
-        "price": 184,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            184
-          ]
-        ],
-        "method": "HTTP 403"
       }
     },
     "samsung-a16": {
@@ -136,35 +71,9 @@
         ],
         "method": "privado",
         "image": "https://media.falabella.com.pe/falabellaPE/148228022_01/public"
-      },
-      "ref": {
-        "price": 599,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            599
-          ]
-        ],
-        "method": "HTTP 403"
       }
     },
     "redmi-a7-pro": {
-      "buy": {
-        "price": 399.9,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            399.9
-          ]
-        ],
-        "method": "privado"
-      },
       "ref": {
         "price": 549,
         "checked": "2026-10-14",
@@ -177,21 +86,6 @@
           ]
         ],
         "method": "HTTP 403"
-      }
-    },
-    "moto-g06": {
-      "buy": {
-        "price": 380,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            380
-          ]
-        ],
-        "method": "privado: HTTP 403"
       }
     },
     "mikasa-v200w": {
@@ -231,119 +125,7 @@
         "method": "HTTP 403"
       }
     },
-    "puma-attacanto": {
-      "buy": {
-        "price": 34.99,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            34.99
-          ]
-        ],
-        "method": "privado: HTTP 403"
-      }
-    },
-    "reebok-flexagon": {
-      "buy": {
-        "price": 88,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            88
-          ]
-        ],
-        "method": "privado: HTTP 403"
-      }
-    },
-    "spinning-lcd": {
-      "buy": {
-        "price": 319,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            319
-          ]
-        ],
-        "method": "privado: HTTP 403"
-      }
-    },
-    "everlast-mat": {
-      "buy": {
-        "price": 69.9,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            69.9
-          ]
-        ],
-        "method": "privado: HTTP 403"
-      }
-    },
-    "ligas-resistencia": {
-      "buy": {
-        "price": 29,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            29
-          ]
-        ],
-        "method": "privado: HTTP 403"
-      }
-    },
-    "shaker-600": {
-      "buy": {
-        "price": 29.99,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            29.99
-          ]
-        ],
-        "method": "privado: HTTP 403"
-      }
-    },
     "oster-fpsthm3532": {
-      "buy": {
-        "price": 99.0,
-        "checked": "2026-10-16T00:48:24+00:00",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": true,
-        "history": [
-          [
-            "2026-10-14",
-            99.0
-          ],
-          [
-            "2026-10-15",
-            99.0
-          ],
-          [
-            "2026-10-16",
-            99.0
-          ]
-        ],
-        "method": "privado",
-        "image": "https://media.falabella.com.pe/falabellaPE/158389411_01/public"
-      },
       "ref": {
         "price": 129,
         "checked": "2026-10-14",
@@ -379,21 +161,6 @@
           ]
         ],
         "method": "privado"
-      }
-    },
-    "press-molde-brownies": {
-      "buy": {
-        "price": 26.9,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            26.9
-          ]
-        ],
-        "method": "privado: HTTP 403"
       }
     },
     "funko-bitty-pokemon": {
@@ -468,21 +235,6 @@
           ]
         ],
         "method": "HTTP 403"
-      }
-    },
-    "imaco-hes35r": {
-      "buy": {
-        "price": 299,
-        "checked": "2026-10-14",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-14",
-            299
-          ]
-        ],
-        "method": "privado: HTTP 403"
       }
     },
     "funko-squirtle": {
@@ -816,34 +568,6 @@
           [
             "2026-10-16",
             40.0
-          ]
-        ]
-      },
-      "ref": {
-        "price": 59.35,
-        "checked": "2026-10-15",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-15",
-            59.35
-          ]
-        ],
-        "method": "HTTP 403"
-      }
-    },
-    "squish-stitch-25": {
-      "buy": {
-        "price": 39.9,
-        "checked": "2026-10-15",
-        "lastTry": "2026-10-16T00:48:24+00:00",
-        "ok": false,
-        "method": "privado: HTTP 403",
-        "history": [
-          [
-            "2026-10-15",
-            39.9
           ]
         ]
       }

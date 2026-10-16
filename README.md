@@ -32,11 +32,28 @@ El aviso **"En Ripley cuesta S/ X · Ver en Ripley"** solo aparece si:
 
 Si el actualizador no puede leer un precio, guarda el último precio bueno con su fecha. Pasados 7 días sin poder revisarlo, el aviso desaparece solo. Así nunca mostramos una comparación vieja o falsa.
 
+## Qué tiendas se revisan solas
+
+| Tienda | ¿El actualizador la lee? |
+|---|---|
+| Falabella | Sí (páginas de producto y búsquedas) |
+| Oechsle, Plaza Vea, Promart, Coolbox | Sí (usan una API pública de catálogo) |
+| Ripley | No: bloquea a GitHub |
+
+- Las **compras** están todas en tiendas que se leen solas.
+- En las comparaciones con Oechsle, Plaza Vea, Promart o Coolbox el actualizador busca el **precio más bajo de esa tienda** para ese producto (no el de un vendedor caro), así la comparación siempre es honesta.
+- Las comparaciones con **Ripley** se confirman a mano: **Panel → Revisar comparaciones** (toma 2 minutos a la semana). Si no se confirman, se ocultan solas a los 7 días.
+
+## Minijuego Zypi Catch
+
+Sección "Juego" de la tienda. Zypi atrapa productos con su canasta y esquiva etiquetas de precio inflado. Tiene combos, poderes (imán, escudo, x2, cámara lenta, +1 vida), niveles, sonido y récord guardado en cada dispositivo. Con 500 y 2000 puntos se desbloquean logros.
+
 ## Modo equipo (LeoZypuc)
 
 En la tienda: **Cuenta → Equipo Zypuc** → usuario `LeoZypuc` y la contraseña del equipo (no está escrita en ningún archivo).
 Al entrar ves en cada producto **dónde comprarlo**, el vendedor, el link y tu ganancia, y aparece el botón **Panel** con:
 
+- **Revisar comparaciones:** confirma los precios de Ripley.
 - **Productos:** tabla con precio Zypuc, dónde comprar, otra tienda, ganancia y si el precio se pudo revisar.
 - **Comprar pedido:** arma el carrito del cliente y verás qué comprar, dónde y cuánto ganas.
 - **Agregar / editar:** formulario para un producto nuevo o para cambiar dónde se compra. Genera el `productos.json` completo para pegarlo en GitHub.
