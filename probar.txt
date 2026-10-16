@@ -1,0 +1,15 @@
+OK 206 https://www.oechsle.pe/api/catalog_system/pub/products/search?ft=funko%20pop&_from=0&_to=4
+    [{"productId":"1001501191","productName":"FUNKO POP STAR WARS - BO-KATAN 692","brand":"FUNKO","brandId":2001375,"brandImageUrl":null,"linkText":"funko-pop-star-wars-bo-katan-692-1001501191","productReference":"139460774","productReferenceCode":null,"categoryId":"1222505","productTitle":"FUNKO POP ST
+OK 206 https://www.plazavea.com.pe/api/catalog_system/pub/products/search?ft=funko%20pop&_from=0&_to=4
+    [{"productId":"101751831","productName":"Funko Pop Ikora","brand":"FUNKO","brandId":40222162,"brandImageUrl":null,"linkText":"funko-pop-ikora-101751831","productReference":"74896996651442","productReferenceCode":null,"categoryId":"929","productTitle":"Funko Pop Ikora | plazaVea","metaTagDescription"
+OK 206 https://www.promart.pe/api/catalog_system/pub/products/search?ft=balanza&_from=0&_to=4
+    [{"productId":"116128","productName":"Balanza Eléctronica Vidrio TSF1301 Capacidad 180 kg","brand":"Orange","brandId":949,"brandImageUrl":null,"linkText":"balanza-electronica-vidrio-plus","productReference":"116128","productReferenceCode":"116128","categoryId":"956","productTitle":"Balanza Eléctroni
+OK 206 https://www.coolbox.pe/api/catalog_system/pub/products/search?ft=redmi&_from=0&_to=4
+    [{"productId":"100441863","productName":"Celular Xiaomi Redmi Note 15 Pro 5G 512GB, 8GB RAM, cámara trasera 200MP y frontal 20MP, 6.83\", titanium","brand":"Xiaomi","brandId":2000058,"brandImageUrl":null,"linkText":"xiaomi-redmi-note-15-pro-5g-512gb-8gb-ram-camara-principal-200mp-8mp-frontal-20mp-6-
+FAIL https://api.mercadolibre.com/sites/MPE/search?q=funko%20gojo&limit=3 HTTPError HTTP Error 403: Forbidden
+OK 200 https://www.sodimac.com.pe/sodimac-pe/search?Ntt=lampara+luna
+    <!DOCTYPE html><html><head><meta name="viewport" content="width=device-width" data-next-head=""/><title data-testid="title" data-next-head="">Sodimac Perú💥¡Compra online!</title><meta data-testid="charset" charSet="UTF-8" data-next-head=""/><script type="text/javascript" id="353549f9-8cad-4c20-a1c1-
+FAIL https://www.tottus.com.pe/tottus-pe/search?Ntt=peluche+stitch HTTPError HTTP Error 503: Service Unavailable
+FAIL https://simple.ripley.com.pe/audifonos-jbl-on-ear-tune-520bt-bluetooth-53-pure-bass-sound-negro-pmp20000049270 HTTPError HTTP Error 403: Forbidden
+OK 200 https://www.hiraoka.com.pe/catalogsearch/result/?q=oster
+    <!doctype html> <html lang="es">     <head >         <script>     var LOCALE = 'es\u002DPE';     var BASE_URL = 'https\u003A\u002F\u002Fhiraoka.com.pe\u002F';     var require = {         'baseUrl': 'https\u003A\u002F\u002Fhiraoka.com.pe\u002Fstatic\u002Fversion1791387320\u002Ffrontend\u002FInfracomm
