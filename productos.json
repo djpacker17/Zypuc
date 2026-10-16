@@ -1,14 +1,15 @@
 {
   "config": {
-    "whatsapp": "51951434075",
-    "telefonoVisible": "+51 951 434 075",
+    "whatsapp": "51939670295",
+    "telefonoVisible": "+51 939 670 295",
     "envioPorUnidad": 8,
     "comision": 15,
     "diasVigenciaComparacion": 7,
     "adminUser": "LeoZypuc",
     "adminSalt": "0ef994174fc4160245f5dffdc09f4406",
     "adminCheck": "oyXwHvVxBnDPdC7H+YhYGc/N7rrXEmmWP3jGd9IQGSv6y7nuzDA=",
-    "repo": "djpacker17/Zypuc"
+    "repo": "djpacker17/Zypuc",
+    "sheetsApi": "https://script.google.com/macros/s/AKfycbw3T7I7RA1BUC2qqX_Iukx0KwHMqTca_sasC5NAWt7-JzwpRFmNIj8QRaKczT2P37dXwg/exec"
   },
   "subcategorias": {
     "Tecnología": [

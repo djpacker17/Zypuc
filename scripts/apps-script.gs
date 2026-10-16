@@ -46,7 +46,8 @@ function configurar() {
   });
   const ped = ss.getSheetByName('Pedidos');
   ped.getRange('C2:C1000').setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(ESTADOS, true).build());
-  ss.getSheetByName('Reseñas').getRange('F2:F1000').insertCheckboxes();
+  const res = ss.getSheetByName('Reseñas'), libre = ultimaFila(res) + 1; // quita casillas sueltas en filas vacías
+  if (res.getMaxRows() >= libre) res.getRange(libre, 6, res.getMaxRows() - libre + 1, 1).removeCheckboxes().clearContent();
   const hoja1 = ss.getSheetByName('Hoja 1') || ss.getSheetByName('Sheet1');
   if (hoja1 && ss.getSheets().length > 1 && hoja1.getLastRow() === 0) ss.deleteSheet(hoja1);
   ScriptApp.getProjectTriggers().forEach(function (t) { ScriptApp.deleteTrigger(t); });
@@ -62,7 +63,17 @@ function ahora() { return Utilities.formatDate(new Date(), CONFIG.ZONA, 'yyyy-MM
 function hoy() { return Utilities.formatDate(new Date(), CONFIG.ZONA, 'yyyy-MM-dd'); }
 function txt(v, max) { return String(v == null ? '' : v).replace(/[\u0000-\u001f]/g, ' ').trim().slice(0, max || 300); }
 function esEquipo(k) { return k && String(k) === CONFIG.CLAVE_EQUIPO; }
-function filas(n) { const sh = hoja(n); const v = sh.getDataRange().getValues(); v.shift(); return v; }
+function filas(n) {
+  const v = hoja(n).getDataRange().getValues(); v.shift();
+  v.forEach(function (r, i) { r.fila = i + 2; });
+  return v.filter(function (r) { return r[0] !== '' && r[0] !== null; }); // ignora filas vacías
+}
+function ultimaFila(sh) { // última fila con fecha (ignora casillas vacías)
+  const col = sh.getRange(1, 1, sh.getMaxRows(), 1).getValues();
+  let ult = col.length; while (ult > 1 && (col[ult - 1][0] === '' || col[ult - 1][0] === null)) ult--;
+  return ult;
+}
+function agregar(sh, fila) { const n = ultimaFila(sh) + 1; sh.getRange(n, 1, 1, fila.length).setValues([fila]); return n; }
 function fecha(v) { return v instanceof Date ? Utilities.formatDate(v, CONFIG.ZONA, 'yyyy-MM-dd HH:mm') : String(v || ''); }
 function correo() { return CONFIG.CORREO || Session.getEffectiveUser().getEmail(); }
 function antiSpam(clave) {
@@ -94,9 +105,9 @@ function doGet(e) {
 }
 
 function resumenEquipo() {
-  const ped = filas('Pedidos').map(function (f, i) { return { fila: i + 2, fecha: fecha(f[0]), code: f[1], estado: f[2], nota: f[3], nombre: f[4], telefono: String(f[5]), entrega: f[6], pago: f[7], items: f[8], total: f[9] }; }).reverse().slice(0, 60);
-  const res = filas('Reseñas').map(function (f, i) { return { fila: i + 2, fecha: fecha(f[0]), name: f[1], product: f[2], stars: f[3], text: f[4], aprobada: f[5] === true }; }).reverse().slice(0, 60);
-  const avi = filas('Avisos').map(function (f, i) { return { fila: i + 2, fecha: fecha(f[0]), id: f[1], producto: f[2], precio: f[3], telefono: String(f[4]), nombre: f[5], estado: f[6], actual: f[7] }; }).reverse().slice(0, 80);
+  const ped = filas('Pedidos').map(function (f, i) { return { fila: f.fila, fecha: fecha(f[0]), code: f[1], estado: f[2], nota: f[3], nombre: f[4], telefono: String(f[5]), entrega: f[6], pago: f[7], items: f[8], total: f[9] }; }).reverse().slice(0, 60);
+  const res = filas('Reseñas').map(function (f, i) { return { fila: f.fila, fecha: fecha(f[0]), name: f[1], product: f[2], stars: f[3], text: f[4], aprobada: f[5] === true }; }).reverse().slice(0, 60);
+  const avi = filas('Avisos').map(function (f, i) { return { fila: f.fila, fecha: fecha(f[0]), id: f[1], producto: f[2], precio: f[3], telefono: String(f[4]), nombre: f[5], estado: f[6], actual: f[7] }; }).reverse().slice(0, 80);
   const desde = Utilities.formatDate(new Date(Date.now() - 30 * 864e5), CONFIG.ZONA, 'yyyy-MM-dd');
   const agg = {};
   filas('Estadísticas').forEach(function (f) {
@@ -133,21 +144,21 @@ function nuevoPedido(d) {
   if (!antiSpam('ped')) return { ok: false, error: 'limite' };
   const sh = hoja('Pedidos');
   if (filas('Pedidos').some(function (f) { return String(f[1]).toUpperCase() === code; })) return { ok: true, repetido: true };
-  sh.appendRow([ahora(), code, 'recibido', '', txt(d.name, 80), "'" + txt(d.phone, 20), txt(d.address, 200), txt(d.payment, 20), txt(d.items, 900), Number(d.total) || 0, ahora()]);
+  agregar(sh, [ahora(), code, 'recibido', '', txt(d.name, 80), "'" + txt(d.phone, 20), txt(d.address, 200), txt(d.payment, 20), txt(d.items, 900), Number(d.total) || 0, ahora()]);
   return { ok: true };
 }
 function nuevaResena(d) {
   const name = txt(d.name, 60), text = txt(d.text, 600), stars = Math.max(1, Math.min(5, Number(d.stars) || 0));
   if (!name || text.length < 12) return { ok: false, error: 'datos' };
   if (!antiSpam('res')) return { ok: false, error: 'limite' };
-  hoja('Reseñas').appendRow([ahora(), name, txt(d.product, 120), stars, text, false]);
-  hoja('Reseñas').getRange(hoja('Reseñas').getLastRow(), 6).insertCheckboxes();
+  const rf = agregar(hoja('Reseñas'), [ahora(), name, txt(d.product, 120), stars, text, false]);
+  hoja('Reseñas').getRange(rf, 6).insertCheckboxes();
   return { ok: true };
 }
 function nuevoAviso(d) {
   const phone = txt(d.phone, 20).replace(/[^\d+]/g, ''); if (phone.length < 9) return { ok: false, error: 'telefono' };
   if (!antiSpam('avi')) return { ok: false, error: 'limite' };
-  hoja('Avisos').appendRow([ahora(), txt(d.id, 60), txt(d.product, 120), Number(d.price) || 0, "'" + phone, txt(d.name, 60), 'esperando', '']);
+  agregar(hoja('Avisos'), [ahora(), txt(d.id, 60), txt(d.product, 120), Number(d.price) || 0, "'" + phone, txt(d.name, 60), 'esperando', '']);
   return { ok: true };
 }
 function sumarEventos(d) {
@@ -159,7 +170,7 @@ function sumarEventos(d) {
   ev.forEach(function (x) {
     const id = txt(x.id, 60), c = col[x.type]; if (!id || !c) return;
     let fila = idx[id];
-    if (!fila) { sh.appendRow([dia, id, txt(x.name, 120), 0, 0, 0]); fila = sh.getLastRow(); idx[id] = fila; }
+    if (!fila) { fila = agregar(sh, [dia, id, txt(x.name, 120), 0, 0, 0]); idx[id] = fila; }
     const r = sh.getRange(fila, c); r.setValue((Number(r.getValue()) || 0) + 1);
   });
   return { ok: true };
@@ -172,7 +183,7 @@ function cambiarEstado(d) {
   for (let i = v.length - 1; i >= 1; i--) if (String(v[i][1]).toUpperCase() === code) {
     sh.getRange(i + 1, 3, 1, 2).setValues([[estado, txt(d.nota, 200)]]); sh.getRange(i + 1, 11).setValue(ahora()); return { ok: true };
   }
-  sh.appendRow([ahora(), code, estado, txt(d.nota, 200), '', '', '', '', '(creado desde el panel)', '', ahora()]);
+  agregar(sh, [ahora(), code, estado, txt(d.nota, 200), '', '', '', '', '(creado desde el panel)', '', ahora()]);
   return { ok: true, creado: true };
 }
 function aprobarResena(d) {

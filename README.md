@@ -1,7 +1,14 @@
 # Zypuc · Tienda en línea
 
 Tienda de Zypuc (tecnología, deporte, repostería y regalitos) con entrega en Pucallpa.
-Los pedidos llegan por WhatsApp al **+51 951 434 075**.
+Los pedidos llegan por WhatsApp al **+51 939 670 295**.
+
+## Marca
+
+- **Eslogan:** Lo que buscas, cerca.
+- **Colores:** azul eléctrico `#0B5ED7`, turquesa `#14B8A6`, ámbar `#F59E0B` (acento), azul noche `#0F172A` y blanco.
+- **Tipografías (Google Fonts):** Fredoka para títulos y Nunito Sans para textos.
+- Texto oscuro sobre turquesa o ámbar; texto blanco solo sobre azul o azul noche.
 
 ## Archivos
 
@@ -17,6 +24,8 @@ Los pedidos llegan por WhatsApp al **+51 951 434 075**.
 | `scripts/actualizar_precios.py` | Programa que visita los links de cada producto y lee el precio. |
 | `.github/workflows/precios.yml` | Le dice a GitHub que corra el actualizador cada 6 horas. |
 | `logo-claro.png`, `logo-oscuro.png` | Logo para fondo claro y para modo oscuro. |
+| `marca/` | Logo en SVG y PNG (claro, oscuro, grande), Zypi solo y el ícono para foto de perfil. |
+| `og.png` | Imagen que aparece al compartir el link por WhatsApp o Facebook. |
 | `manifest.webmanifest`, `sw.js`, `icon-*.png` | Permiten instalar la tienda como app en el celular y abrirla sin internet. |
 
 ## Cómo se calcula el precio
