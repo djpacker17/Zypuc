@@ -1055,21 +1055,6 @@
         "method": "privado"
       }
     },
-    "stitch-munchlings-25": {
-      "buy": {
-        "price": 9.9,
-        "checked": "2026-10-15",
-        "lastTry": "2026-10-16T01:26:28+00:00",
-        "ok": false,
-        "history": [
-          [
-            "2026-10-15",
-            9.9
-          ]
-        ],
-        "method": "privado"
-      }
-    },
     "spinning-ultrabyte": {
       "buy": {
         "price": 329.0,
