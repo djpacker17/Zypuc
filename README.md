@@ -1,7 +1,7 @@
 # Zypuc · Tienda en línea
 
 Tienda de Zypuc (tecnología, deporte, repostería y regalitos) con entrega en Pucallpa.
-Los pedidos llegan por WhatsApp al **+51 951 434 075**.
+Los pedidos llegan por WhatsApp
 
 ## Archivos
 
@@ -67,14 +67,6 @@ Los links de compra van **cifrados** dentro de `productos.json` (campo `priv`). 
 Para que GitHub pueda revisar los precios de compra, necesita la contraseña:
 **Settings → Secrets and variables → Actions → New repository secret** → Name: `ZYPUC_CLAVE`, Secret: la contraseña del equipo → **Add secret**.
 Sin ese secreto, la tienda sigue funcionando con el último precio guardado.
-
-## Agregar un producto
-
-Lo más fácil: entra como LeoZypuc → **Panel → Agregar / editar**, llena el formulario y sigue los 3 pasos que aparecen (copiar, abrir en GitHub, pegar y guardar).
-
-- Usa el **link exacto del producto** (o una búsqueda de Falabella con el nombre exacto): así el actualizador puede leer el precio.
-- Para la foto: abre el producto en la tienda, clic derecho sobre la foto → "Copiar dirección de imagen". Si la dejas vacía y el producto es de Falabella, el actualizador intenta traer la foto solo.
-- La "tienda más cara" es opcional. Solo se muestra si de verdad es más cara que nuestro precio.
 
 ## Correr el actualizador a mano
 
