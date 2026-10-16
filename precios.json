@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-15T23:22:24+00:00",
+  "updated": "2026-10-16T00:48:24+00:00",
   "items": {
     "jbl-tune-520bt": {
       "buy": {
         "price": 139.0,
-        "checked": "2026-10-15T21:24:56+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": true,
         "history": [
           [
@@ -15,13 +15,19 @@
           [
             "2026-10-15",
             139.0
+          ],
+          [
+            "2026-10-16",
+            139.0
           ]
-        ]
+        ],
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/151560335_01/public"
       },
       "ref": {
         "price": 249,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
@@ -36,21 +42,22 @@
       "buy": {
         "price": 44.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             44.9
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "redragon-k552": {
       "buy": {
         "price": 149.99,
-        "checked": "2026-10-15T21:24:56+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": true,
         "history": [
           [
@@ -60,15 +67,21 @@
           [
             "2026-10-15",
             149.99
+          ],
+          [
+            "2026-10-16",
+            149.99
           ]
-        ]
+        ],
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/126101275_01/public"
       }
     },
     "redmi-watch-5-active": {
       "buy": {
         "price": 129.0,
-        "checked": "2026-10-15T21:24:56+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": true,
         "history": [
           [
@@ -78,13 +91,19 @@
           [
             "2026-10-15",
             129.0
+          ],
+          [
+            "2026-10-16",
+            129.0
           ]
-        ]
+        ],
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/20670082_1/public"
       },
       "ref": {
         "price": 184,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
@@ -98,9 +117,9 @@
     "samsung-a16": {
       "buy": {
         "price": 499.0,
-        "checked": "2026-10-15T04:42:23+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
-        "ok": false,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
         "history": [
           [
             "2026-10-14",
@@ -109,13 +128,19 @@
           [
             "2026-10-15",
             499.0
+          ],
+          [
+            "2026-10-16",
+            499.0
           ]
-        ]
+        ],
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/148228022_01/public"
       },
       "ref": {
         "price": 599,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
@@ -130,19 +155,20 @@
       "buy": {
         "price": 399.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             399.9
           ]
-        ]
+        ],
+        "method": "privado"
       },
       "ref": {
         "price": 549,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
@@ -157,21 +183,22 @@
       "buy": {
         "price": 380,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             380
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "mikasa-v200w": {
       "buy": {
         "price": 419.9,
-        "checked": "2026-10-15T21:24:56+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": true,
         "history": [
           [
@@ -181,13 +208,19 @@
           [
             "2026-10-15",
             419.9
+          ],
+          [
+            "2026-10-16",
+            419.9
           ]
-        ]
+        ],
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/132584414_01/public"
       },
       "ref": {
         "price": 499.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
@@ -202,91 +235,97 @@
       "buy": {
         "price": 34.99,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             34.99
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "reebok-flexagon": {
       "buy": {
         "price": 88,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             88
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "spinning-lcd": {
       "buy": {
         "price": 319,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             319
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "everlast-mat": {
       "buy": {
         "price": 69.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             69.9
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "ligas-resistencia": {
       "buy": {
         "price": 29,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             29
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "shaker-600": {
       "buy": {
         "price": 29.99,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             29.99
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "oster-fpsthm3532": {
       "buy": {
         "price": 99.0,
-        "checked": "2026-10-15T21:24:56+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": true,
         "history": [
           [
@@ -296,13 +335,19 @@
           [
             "2026-10-15",
             99.0
+          ],
+          [
+            "2026-10-16",
+            99.0
           ]
-        ]
+        ],
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/158389411_01/public"
       },
       "ref": {
         "price": 129,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
@@ -316,8 +361,8 @@
     "mica-bowls": {
       "buy": {
         "price": 49.9,
-        "checked": "2026-10-15T21:24:56+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": true,
         "history": [
           [
@@ -327,29 +372,35 @@
           [
             "2026-10-15",
             49.9
+          ],
+          [
+            "2026-10-16",
+            49.9
           ]
-        ]
+        ],
+        "method": "privado"
       }
     },
     "press-molde-brownies": {
       "buy": {
         "price": 26.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             26.9
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "funko-bitty-pokemon": {
       "buy": {
         "price": 109.0,
-        "checked": "2026-10-15T21:24:56+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": true,
         "history": [
           [
@@ -359,13 +410,19 @@
           [
             "2026-10-15",
             109.0
+          ],
+          [
+            "2026-10-16",
+            109.0
           ]
-        ]
+        ],
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/152017096_01/public"
       },
       "ref": {
         "price": 195,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
@@ -379,8 +436,8 @@
     "oster-fpsths3611": {
       "buy": {
         "price": 237.0,
-        "checked": "2026-10-15T21:24:56+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": true,
         "history": [
           [
@@ -390,13 +447,19 @@
           [
             "2026-10-15",
             237.0
+          ],
+          [
+            "2026-10-16",
+            237.0
           ]
-        ]
+        ],
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/127849474_01/public"
       },
       "ref": {
         "price": 399,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
@@ -411,21 +474,22 @@
       "buy": {
         "price": 299,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
             "2026-10-14",
             299
           ]
-        ]
+        ],
+        "method": "privado: HTTP 403"
       }
     },
     "funko-squirtle": {
       "buy": {
         "price": 60.59,
-        "checked": "2026-10-15T21:24:56+00:00",
-        "lastTry": "2026-10-15T21:24:56+00:00",
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": true,
         "history": [
           [
@@ -435,13 +499,19 @@
           [
             "2026-10-15",
             60.59
+          ],
+          [
+            "2026-10-16",
+            60.59
           ]
-        ]
+        ],
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/121545960_01/public"
       },
       "ref": {
         "price": 130,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
         "history": [
           [
@@ -453,106 +523,467 @@
       }
     },
     "roblox-6": {
+      "buy": {
+        "price": 24.7,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/147216569_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            24.7
+          ],
+          [
+            "2026-10-16",
+            24.7
+          ]
+        ]
+      },
       "ref": {
         "price": 40,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-15",
             40
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "roblox-25": {
+      "buy": {
+        "price": 93.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/147216526_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            93
+          ],
+          [
+            "2026-10-16",
+            93.0
+          ]
+        ]
+      },
       "ref": {
         "price": 149,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-15",
             149
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "psn-10-peru": {
+      "buy": {
+        "price": 32.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/158089786_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            32
+          ],
+          [
+            "2026-10-16",
+            32.0
+          ]
+        ]
+      },
       "ref": {
         "price": 65,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-15",
             65
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "psn-50-peru": {
+      "buy": {
+        "price": 155.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/158089797_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            155
+          ],
+          [
+            "2026-10-16",
+            155.0
+          ]
+        ]
+      },
       "ref": {
         "price": 252,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-15",
             252
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "eshop-10": {
+      "buy": {
+        "price": 39.79,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/147216448_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            39.79
+          ],
+          [
+            "2026-10-16",
+            39.79
+          ]
+        ]
+      },
       "ref": {
         "price": 65,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-15",
             65
           ]
-        ]
+        ],
+        "method": "HTTP 403"
       }
     },
     "nso-12": {
+      "buy": {
+        "price": 79.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/147216467_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            79
+          ],
+          [
+            "2026-10-16",
+            79.0
+          ]
+        ]
+      },
       "ref": {
         "price": 119,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-15",
             119
           ]
+        ],
+        "method": "HTTP 403"
+      }
+    },
+    "freefire-520": {
+      "buy": {
+        "price": 16.5,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/157952814_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            16.5
+          ],
+          [
+            "2026-10-16",
+            16.5
+          ]
+        ]
+      }
+    },
+    "steam-40": {
+      "buy": {
+        "price": 48.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/157454290_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            48
+          ],
+          [
+            "2026-10-16",
+            48.0
+          ]
+        ]
+      }
+    },
+    "minecraft-pc": {
+      "buy": {
+        "price": 72.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/147216555_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            72
+          ],
+          [
+            "2026-10-16",
+            72.0
+          ]
+        ]
+      }
+    },
+    "xbox-10": {
+      "buy": {
+        "price": 41.99,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/147216463_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            41.99
+          ],
+          [
+            "2026-10-16",
+            41.99
+          ]
         ]
       }
     },
     "redmi-buds-6-play": {
+      "buy": {
+        "price": 40.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/138481967_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            40
+          ],
+          [
+            "2026-10-16",
+            40.0
+          ]
+        ]
+      },
       "ref": {
         "price": 59.35,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-15T23:22:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
         "ok": false,
-        "method": "HTTP 403",
         "history": [
           [
             "2026-10-15",
             59.35
+          ]
+        ],
+        "method": "HTTP 403"
+      }
+    },
+    "squish-stitch-25": {
+      "buy": {
+        "price": 39.9,
+        "checked": "2026-10-15",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": false,
+        "method": "privado: HTTP 403",
+        "history": [
+          [
+            "2026-10-15",
+            39.9
+          ]
+        ]
+      }
+    },
+    "funko-gojo-1114": {
+      "buy": {
+        "price": 69.92,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/121444062_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            69.92
+          ],
+          [
+            "2026-10-16",
+            69.92
+          ]
+        ]
+      }
+    },
+    "funko-tanjiro-2501": {
+      "buy": {
+        "price": 69.92,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/158419178_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            69.92
+          ],
+          [
+            "2026-10-16",
+            69.92
+          ]
+        ]
+      }
+    },
+    "funko-naruto-2110": {
+      "buy": {
+        "price": 69.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/151443427_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            69
+          ],
+          [
+            "2026-10-16",
+            69.0
+          ]
+        ]
+      }
+    },
+    "rosa-venus-azul": {
+      "buy": {
+        "price": 59.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/145838169_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            59
+          ],
+          [
+            "2026-10-16",
+            59.0
+          ]
+        ]
+      }
+    },
+    "rosas-aura-4": {
+      "buy": {
+        "price": 159.0,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/145848377_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            159
+          ],
+          [
+            "2026-10-16",
+            159.0
+          ]
+        ]
+      }
+    },
+    "lampara-luna-3d": {
+      "buy": {
+        "price": 47.9,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/132673638_01/public",
+        "history": [
+          [
+            "2026-10-15",
+            47.9
+          ],
+          [
+            "2026-10-16",
+            47.9
+          ]
+        ]
+      }
+    },
+    "balanza-wurden": {
+      "buy": {
+        "price": 59.9,
+        "checked": "2026-10-16T00:48:24+00:00",
+        "lastTry": "2026-10-16T00:48:24+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://media.falabella.com.pe/falabellaPE/883331058_005/public",
+        "history": [
+          [
+            "2026-10-15",
+            47.9
+          ],
+          [
+            "2026-10-16",
+            59.9
           ]
         ]
       }
