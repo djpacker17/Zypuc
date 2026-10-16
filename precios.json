@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-16T04:34:45+00:00",
+  "updated": "2026-10-16T05:19:07+00:00",
   "items": {
     "jbl-tune-520bt": {
       "buy": {
         "price": 135.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com/falabellaPE/150951394_01/public",
         "history": [
@@ -22,8 +22,8 @@
       },
       "ref": {
         "price": 189.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://coolboxpe.vteximg.com.br/arquivos/ids/573084/115.png?v=639245748518430000",
         "history": [
@@ -42,8 +42,8 @@
     "logitech-m170": {
       "buy": {
         "price": 39.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/551985/20187625.jpg?v=637425721645170000",
         "history": [
@@ -62,8 +62,8 @@
     "redragon-k552": {
       "buy": {
         "price": 149.99,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "history": [
           [
@@ -84,8 +84,8 @@
       },
       "ref": {
         "price": 216.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://coolboxpe.vteximg.com.br/arquivos/ids/368890/image-072007a24fce4443839c36456943ec28.jpg?v=638943332975800000",
         "history": [
@@ -104,8 +104,8 @@
     "redmi-watch-5-active": {
       "buy": {
         "price": 129.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "history": [
           [
@@ -126,8 +126,8 @@
       },
       "ref": {
         "price": 159.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/34765744/imageUrl_1.jpg?v=639155161337070000",
         "history": [
@@ -146,8 +146,8 @@
     "samsung-a16": {
       "buy": {
         "price": 499.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "history": [
           [
@@ -168,8 +168,8 @@
       },
       "ref": {
         "price": 549.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/35140924/imageUrl_1.jpg?v=639181944900500000",
         "history": [
@@ -188,8 +188,8 @@
     "redmi-a7-pro": {
       "buy": {
         "price": 449.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com/falabellaPE/153383841_01/public",
         "history": [
@@ -207,7 +207,7 @@
       "ref": {
         "price": 549,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -221,8 +221,8 @@
     "mikasa-v200w": {
       "buy": {
         "price": 419.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "history": [
           [
@@ -244,7 +244,7 @@
       "ref": {
         "price": 499.9,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -258,8 +258,8 @@
     "puma-attacanto": {
       "buy": {
         "price": 34.3,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com/falabellaPE/21391161_1/public",
         "history": [
@@ -278,8 +278,8 @@
     "everlast-mat": {
       "buy": {
         "price": 69.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/145796063_01/public",
         "history": [
@@ -298,8 +298,8 @@
     "oster-fpsthm3532": {
       "buy": {
         "price": 89.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/1348295/20216483.jpg?v=637526653717600000",
         "history": [
@@ -317,7 +317,7 @@
       "ref": {
         "price": 129,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -331,8 +331,8 @@
     "mica-bowls": {
       "buy": {
         "price": 49.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "history": [
           [
@@ -355,8 +355,8 @@
     "press-molde-brownies": {
       "buy": {
         "price": 20.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://oechsle.vteximg.com.br/arquivos/ids/15406982/image-28e14f14731b4a03a67dd87758defb44.jpg?v=638284002727230000",
         "history": [
@@ -375,8 +375,8 @@
     "funko-bitty-pokemon": {
       "buy": {
         "price": 109.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "history": [
           [
@@ -398,7 +398,7 @@
       "ref": {
         "price": 195,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -412,8 +412,8 @@
     "oster-fpsths3611": {
       "buy": {
         "price": 237.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "history": [
           [
@@ -435,7 +435,7 @@
       "ref": {
         "price": 399,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -449,8 +449,8 @@
     "imaco-hes35r": {
       "buy": {
         "price": 299.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://oechsle.vteximg.com.br/arquivos/ids/16469213/6012.jpg?v=638327701554530000",
         "history": [
@@ -467,8 +467,8 @@
       },
       "ref": {
         "price": 409.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://coolboxpe.vteximg.com.br/arquivos/ids/483470/image-112a925e528541e2b60d2a0db528a338.jpg?v=638914053134100000",
         "history": [
@@ -487,8 +487,8 @@
     "funko-squirtle": {
       "buy": {
         "price": 60.59,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "history": [
           [
@@ -510,7 +510,7 @@
       "ref": {
         "price": 130,
         "checked": "2026-10-14",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -524,8 +524,8 @@
     "roblox-6": {
       "buy": {
         "price": 24.7,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/147216569_01/public",
         "history": [
@@ -543,7 +543,7 @@
       "ref": {
         "price": 40,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -557,8 +557,8 @@
     "roblox-25": {
       "buy": {
         "price": 93.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/147216526_01/public",
         "history": [
@@ -576,7 +576,7 @@
       "ref": {
         "price": 149,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -590,8 +590,8 @@
     "psn-10-peru": {
       "buy": {
         "price": 32.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/158089786_01/public",
         "history": [
@@ -609,7 +609,7 @@
       "ref": {
         "price": 65,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -623,8 +623,8 @@
     "psn-50-peru": {
       "buy": {
         "price": 155.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/158089797_01/public",
         "history": [
@@ -642,7 +642,7 @@
       "ref": {
         "price": 252,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -656,8 +656,8 @@
     "eshop-10": {
       "buy": {
         "price": 39.79,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/147216448_01/public",
         "history": [
@@ -675,7 +675,7 @@
       "ref": {
         "price": 65,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -689,8 +689,8 @@
     "nso-12": {
       "buy": {
         "price": 79.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/147216467_01/public",
         "history": [
@@ -708,7 +708,7 @@
       "ref": {
         "price": 119,
         "checked": "2026-10-15",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "history": [
           [
@@ -723,7 +723,7 @@
       "buy": {
         "price": 16.5,
         "checked": "2026-10-16T01:33:25+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": false,
         "image": "https://media.falabella.com.pe/falabellaPE/157952814_01/public",
         "history": [
@@ -742,8 +742,8 @@
     "steam-40": {
       "buy": {
         "price": 48.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/157454290_01/public",
         "history": [
@@ -762,8 +762,8 @@
     "minecraft-pc": {
       "buy": {
         "price": 72.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/147216555_01/public",
         "history": [
@@ -782,8 +782,8 @@
     "xbox-10": {
       "buy": {
         "price": 41.99,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/147216463_01/public",
         "history": [
@@ -802,8 +802,8 @@
     "redmi-buds-6-play": {
       "buy": {
         "price": 40.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/138481967_01/public",
         "history": [
@@ -820,8 +820,8 @@
       },
       "ref": {
         "price": 59.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://promart.vteximg.com.br/arquivos/ids/10702695/imageUrl_1.jpg?v=639137306105400000",
         "history": [
@@ -840,8 +840,8 @@
     "funko-gojo-1114": {
       "buy": {
         "price": 69.92,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/121444062_01/public",
         "history": [
@@ -860,8 +860,8 @@
     "funko-tanjiro-2501": {
       "buy": {
         "price": 69.92,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/158419178_01/public",
         "history": [
@@ -880,8 +880,8 @@
     "funko-naruto-2110": {
       "buy": {
         "price": 69.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/151443427_01/public",
         "history": [
@@ -900,8 +900,8 @@
     "rosa-venus-azul": {
       "buy": {
         "price": 59.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/145838169_01/public",
         "history": [
@@ -920,8 +920,8 @@
     "rosas-aura-4": {
       "buy": {
         "price": 159.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/145848377_01/public",
         "history": [
@@ -940,8 +940,8 @@
     "lampara-luna-3d": {
       "buy": {
         "price": 47.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/132673638_01/public",
         "history": [
@@ -960,8 +960,8 @@
     "balanza-wurden": {
       "buy": {
         "price": 59.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/883331058_005/public",
         "history": [
@@ -980,8 +980,8 @@
     "moto-g06-64": {
       "buy": {
         "price": 378.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com/falabellaPE/157257942_01/public",
         "history": [
@@ -998,8 +998,8 @@
       },
       "ref": {
         "price": 429.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://coolboxpe.vteximg.com.br/arquivos/ids/561274/464.png?v=639213905896270000",
         "history": [
@@ -1018,8 +1018,8 @@
     "ligas-5-kit": {
       "buy": {
         "price": 18.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/35312717/imageUrl_1.jpg?v=639193178125370000",
         "history": [
@@ -1038,8 +1038,8 @@
     "shaker-keep-700": {
       "buy": {
         "price": 5.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/30053920/20212982.jpg?v=638665061845970000",
         "history": [
@@ -1058,8 +1058,8 @@
     "stitch-hugmees-25": {
       "buy": {
         "price": 29.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/30603834/20468048.jpg?v=638751830931970000",
         "history": [
@@ -1078,8 +1078,8 @@
     "spinning-ultrabyte": {
       "buy": {
         "price": 329.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/128609570_01/public",
         "history": [
@@ -1098,8 +1098,8 @@
     "reebok-flex-trainer": {
       "buy": {
         "price": 169.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com.pe/falabellaPE/21052612_1/public",
         "history": [
@@ -1118,8 +1118,8 @@
     "redmi-buds-6-active": {
       "buy": {
         "price": 72.5,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "history": [
           [
@@ -1136,8 +1136,8 @@
       },
       "ref": {
         "price": 75.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://oechsle.vteximg.com.br/arquivos/ids/22124806/imageUrl_1.jpg?v=638936876265770000",
         "history": [
@@ -1156,8 +1156,8 @@
     "pelota-trionda-club": {
       "buy": {
         "price": 48.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com/falabellaPE/21056566_1/public",
         "history": [
@@ -1176,8 +1176,8 @@
     "cuerda-saltar-mu": {
       "buy": {
         "price": 8.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/808087/20200816.jpg?v=637490367578970000",
         "history": [
@@ -1196,8 +1196,8 @@
     "molde-ositos": {
       "buy": {
         "price": 19.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com/falabellaPE/152693826_01/public",
         "history": [
@@ -1216,8 +1216,8 @@
     "molde-15-rosas": {
       "buy": {
         "price": 22.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com/falabellaPE/155494328_01/public",
         "history": [
@@ -1236,8 +1236,8 @@
     "squish-pikachu": {
       "buy": {
         "price": 39.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/27189740/20357743.jpg?v=638267105836770000",
         "history": [
@@ -1256,8 +1256,8 @@
     "funko-luffy-snakeman": {
       "buy": {
         "price": 69.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://oechsle.vteximg.com.br/arquivos/ids/23315562/imageUrl_1.jpg?v=638999931976670000",
         "history": [
@@ -1276,8 +1276,8 @@
     "funko-goku-14": {
       "buy": {
         "price": 69.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://oechsle.vteximg.com.br/arquivos/ids/20663691/imageUrl_1.jpg?v=638769998526870000",
         "history": [
@@ -1296,8 +1296,8 @@
     "funko-spiderman-1422": {
       "buy": {
         "price": 69.0,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com/falabellaPE/153477346_01/public",
         "history": [
@@ -1316,8 +1316,8 @@
     "hotwheels-basico": {
       "buy": {
         "price": 10.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://plazavea.vteximg.com.br/arquivos/ids/228839/25299.jpg?v=637003562392600000",
         "history": [
@@ -1336,8 +1336,8 @@
     "lego-71051-minifig": {
       "buy": {
         "price": 29.9,
-        "checked": "2026-10-16T04:34:45+00:00",
-        "lastTry": "2026-10-16T04:34:45+00:00",
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
         "ok": true,
         "image": "https://media.falabella.com/falabellaPE/152135381_01/public",
         "history": [
@@ -1351,6 +1351,179 @@
           ]
         ],
         "method": "privado"
+      }
+    },
+    "mikasa-v330w": {
+      "buy": {
+        "price": 184.9,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://oechsle.vteximg.com.br/arquivos/ids/11855889/image-b05a1df756434dc881b68d6967e7bed7.jpg?v=638013118809700000",
+        "history": [
+          [
+            "2026-10-16",
+            184.9
+          ]
+        ]
+      },
+      "ref": {
+        "price": 239.0,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "vtex-minimo",
+        "image": "https://plazavea.vteximg.com.br/arquivos/ids/31145849/imageUrl_1.jpg?v=638793453573730000",
+        "history": [
+          [
+            "2026-10-16",
+            239.0
+          ]
+        ]
+      }
+    },
+    "rodilleras-depormax": {
+      "buy": {
+        "price": 50.9,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://oechsle.vteximg.com.br/arquivos/ids/23733396/imageUrl_1.jpg?v=639032943072400000",
+        "history": [
+          [
+            "2026-10-16",
+            50.9
+          ]
+        ]
+      }
+    },
+    "casio-fx82la": {
+      "buy": {
+        "price": 69.9,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://coolboxpe.vteximg.com.br/arquivos/ids/239910/FX-82LAPLUS2-BK.jpg?v=639274200254430000",
+        "history": [
+          [
+            "2026-10-16",
+            69.9
+          ]
+        ]
+      }
+    },
+    "casio-fx991ms2": {
+      "buy": {
+        "price": 95.0,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://oechsle.vteximg.com.br/arquivos/ids/24749440/imageUrl_1.jpg?v=639099722417000000",
+        "history": [
+          [
+            "2026-10-16",
+            95.0
+          ]
+        ]
+      }
+    },
+    "microsd-sandisk-64": {
+      "buy": {
+        "price": 29.0,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://plazavea.vteximg.com.br/arquivos/ids/704162/20208599.jpg?v=637472277379970000",
+        "history": [
+          [
+            "2026-10-16",
+            29.0
+          ]
+        ]
+      }
+    },
+    "cargador-somostel-20w": {
+      "buy": {
+        "price": 14.9,
+        "checked": "2026-10-16",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": false,
+        "method": "privado",
+        "history": [
+          [
+            "2026-10-16",
+            14.9
+          ]
+        ]
+      }
+    },
+    "mousepad-hp-7035": {
+      "buy": {
+        "price": 19.9,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://oechsle.vteximg.com.br/arquivos/ids/25883978/imageUrl_1.jpg?v=639184826246370000",
+        "history": [
+          [
+            "2026-10-16",
+            19.9
+          ]
+        ]
+      }
+    },
+    "manga-viva-home": {
+      "buy": {
+        "price": 11.9,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://plazavea.vteximg.com.br/arquivos/ids/31561549/20134141.jpg?v=638864591802700000",
+        "history": [
+          [
+            "2026-10-16",
+            11.9
+          ]
+        ]
+      }
+    },
+    "espatula-ilko": {
+      "buy": {
+        "price": 5.9,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://plazavea.vteximg.com.br/arquivos/ids/35666759/20465400.jpg?v=639221542798930000",
+        "history": [
+          [
+            "2026-10-16",
+            5.9
+          ]
+        ]
+      }
+    },
+    "oso-ramo-rosa": {
+      "buy": {
+        "price": 18.9,
+        "checked": "2026-10-16T05:19:07+00:00",
+        "lastTry": "2026-10-16T05:19:07+00:00",
+        "ok": true,
+        "method": "privado",
+        "image": "https://promart.vteximg.com.br/arquivos/ids/10304389/imageUrl_1.jpg?v=639081721203830000",
+        "history": [
+          [
+            "2026-10-16",
+            18.9
+          ]
+        ]
       }
     }
   }
