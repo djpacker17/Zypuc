@@ -122,17 +122,21 @@
       "dept": "Tecnología",
       "cat": "Laptops",
       "brand": "Lenovo",
-      "name": "Laptop Lenovo IdeaPad Slim 3i 15.6\" Core i3, 8 GB, 128 GB",
-      "model": "Cotizamos el mejor precio del momento",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3325/PMP20001398666/full_image-1.jpeg",
-      "consult": true,
+      "name": "Laptop Lenovo IdeaPad Slim 3 15.6\" Core i3-N305, 8 GB RAM, 256 GB SSD",
+      "model": "Intel Core i3-N305 · Windows 11 · pantalla Full HD",
+      "image": "https://media.falabella.com.pe/falabellaPE/155394811_01/public",
       "spec": {
-        "processor": "Intel Core i3",
+        "processor": "Intel Core i3-N305",
         "ram": "8 GB",
-        "storage": "128 GB",
+        "storage": "256 GB SSD",
         "screen": "15.6 pulgadas",
-        "os": "Confirmar",
+        "os": "Windows 11",
         "condition": "Nueva"
+      },
+      "buy": {
+        "price": 1699.0,
+        "checked": "2026-10-16",
+        "priv": "5hRQP0Y5AQrKGrddASgAF6ImPmTu/FxuG2B/7p9QXAbsBXm7BA7S8pNXfbmOV7zBak2nkuhoUys2Bz3oQ/z4xgjzriVSkO7g5lZFjjWLmhTKQOWFTPjtQEJB7wOKooJVkGqiE/+gQ5OH6A+21Z2pHWKWL3W+xlcLkWNJ2lJihFLsRraaO2jqTSgYU6JKFl/PDjTa1dOvx0XceT2oOubxPpsilYu5w6/Pi8Bjt7K2og+GppEM+9aQ1ZiTYLmma6zCwPnbXYFz/tKW6rq/H/ildtm6Ppjh9q+kIvbf+krHyYX4gRF8dZlYqbMF8JwGRoaznbi7pnoTQT/0GxM/jRw="
       }
     },
     {
@@ -692,6 +696,17 @@
         "price": 72,
         "checked": "2026-10-15",
         "priv": "jePBuF0RF9HanqpzBTLnLKGOHjpI32fnSsqkeTDnH4Usjw4b6GeM9Z7LBFrFII4NxC9ixeZBh6adLMwFAuhW6q6+1BcX6fIOxHI3167ZqvzTbXWFj3u0oE0yiOuqtRtWo33Z596JG3h8pPPfO1Ghrwy39+derRHqCLMW07L3bgrKbHlxjVIDW8nBmcsv/rhOOle5qlzS2DFuvrXEtLWCpMuUZtjrzNZBtuufEoXK8M4fnYWUSdMS4EX9GA=="
+      },
+      "ref": {
+        "store": "Coolbox",
+        "price": 119.0,
+        "url": "https://www.coolbox.pe/clave-digital-minecraft-java-bedrock-edition-windows-store-key-pc-fix-mcjvbdws/p",
+        "q": "minecraft java bedrock",
+        "match": [
+          "java",
+          "bedrock"
+        ],
+        "checked": "2026-10-16"
       }
     },
     {
@@ -978,7 +993,18 @@
       "stock": "Agotado",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
-      "imageAuto": true
+      "imageAuto": true,
+      "ref": {
+        "store": "Oechsle",
+        "price": 230.3,
+        "url": "https://www.oechsle.pe/zapatillas-cross-training-reebok-hombre-flex-trainer-100225471-blanco-3077521/p",
+        "q": "reebok flex trainer hombre",
+        "match": [
+          "flex trainer",
+          "hombre"
+        ],
+        "checked": "2026-10-16"
+      }
     },
     {
       "id": "redmi-buds-6-active",
