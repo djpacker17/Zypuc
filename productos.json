@@ -9,7 +9,11 @@
     "adminSalt": "0ef994174fc4160245f5dffdc09f4406",
     "adminCheck": "oyXwHvVxBnDPdC7H+YhYGc/N7rrXEmmWP3jGd9IQGSv6y7nuzDA=",
     "repo": "djpacker17/Zypuc",
-    "sheetsApi": "https://script.google.com/macros/s/AKfycbw3T7I7RA1BUC2qqX_Iukx0KwHMqTca_sasC5NAWt7-JzwpRFmNIj8QRaKczT2P37dXwg/exec"
+    "sheetsApi": "https://script.google.com/macros/s/AKfycbw3T7I7RA1BUC2qqX_Iukx0KwHMqTca_sasC5NAWt7-JzwpRFmNIj8QRaKczT2P37dXwg/exec",
+    "yape": {
+      "numero": "961525279",
+      "nombre": ""
+    }
   },
   "subcategorias": {
     "Tecnología": [
