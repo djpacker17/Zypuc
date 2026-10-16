@@ -1,7 +1,7 @@
 # Zypuc · Tienda en línea
 
 Tienda de Zypuc (tecnología, deporte, repostería y regalitos) con entrega en Pucallpa.
-Los pedidos llegan por WhatsApp
+Los pedidos llegan por WhatsApp al **+51 951 434 075**.
 
 ## Archivos
 
@@ -13,6 +13,7 @@ Los pedidos llegan por WhatsApp
 | `resenas.json` | Reseñas publicadas (se generan desde el Panel Zypuc). |
 | `pedidos.json` | Estado de cada pedido para "Rastrea tu pedido" (se genera desde el Panel Zypuc). |
 | `scripts/privado.py` | Cifra y descifra los links de compra. |
+| `scripts/apps-script.gs` | Código del Centro de datos (Google Sheets). La copia real, con la clave, está en tu Drive. |
 | `scripts/actualizar_precios.py` | Programa que visita los links de cada producto y lee el precio. |
 | `.github/workflows/precios.yml` | Le dice a GitHub que corra el actualizador cada 6 horas. |
 | `logo-claro.png`, `logo-oscuro.png` | Logo para fondo claro y para modo oscuro. |
@@ -44,9 +45,27 @@ Si el actualizador no puede leer un precio, guarda el último precio bueno con s
 - En las comparaciones con Oechsle, Plaza Vea, Promart o Coolbox el actualizador busca el **precio más bajo de esa tienda** para ese producto (no el de un vendedor caro), así la comparación siempre es honesta.
 - Las comparaciones con **Ripley** se confirman a mano: **Panel → Revisar comparaciones** (toma 2 minutos a la semana). Si no se confirman, se ocultan solas a los 7 días.
 
-## Minijuego Zypi Catch
+## Minijuegos
 
-Sección "Juego" de la tienda. Zypi atrapa productos con su canasta y esquiva etiquetas de precio inflado. Tiene combos, poderes (imán, escudo, x2, cámara lenta, +1 vida), niveles, sonido y récord guardado en cada dispositivo. Con 500 y 2000 puntos se desbloquean logros.
+**Zypi Catch**: Zypi atrapa productos con su canasta y esquiva etiquetas de precio inflado. Tiene combos, poderes (imán, escudo, x2, cámara lenta, +1 vida) y tres modos:
+- **Clásico**: 3 vidas, la dificultad sube por niveles.
+- **Contrarreloj**: 60 segundos; cada etiqueta inflada resta 3 segundos.
+- **Zen**: sin etiquetas malas ni vidas, para relajarse.
+
+**Memoria Zypuc**: voltea cartas y encuentra las parejas (Fácil 4×3, Normal 4×4, Difícil 6×4).
+
+Los récords se guardan por modo y por nivel en cada dispositivo. Varios logros secretos se desbloquean jugando.
+
+## Centro de datos (Google Sheets)
+
+Con la hoja **Zypuc · Centro de datos** de tu Drive conectada, la tienda:
+- guarda cada pedido en la pestaña **Pedidos** (además del WhatsApp de siempre). Cambias el **Estado** ahí y "Rastrea tu pedido" se actualiza solo;
+- recibe reseñas en **Reseñas**: marcas la casilla **Aprobada** y se publican;
+- guarda los "Avísame si baja de precio" en **Avisos** y te manda un correo cuando el precio baja;
+- cuenta vistas, carritos y compartidos por producto (anónimo) en **Estadísticas**;
+- te manda un resumen diario por correo a las 7 a. m.
+
+Para conectarlo: abre la hoja → Extensiones → Apps Script → pega el código → Implementar → Aplicación web (acceso: cualquier usuario) → copia la URL que termina en `/exec` y ponla en `config.sheetsApi` de `productos.json` (o en **Panel → Centro de datos**, que genera el archivo listo).
 
 ## Modo equipo (LeoZypuc)
 
@@ -67,6 +86,14 @@ Los links de compra van **cifrados** dentro de `productos.json` (campo `priv`). 
 Para que GitHub pueda revisar los precios de compra, necesita la contraseña:
 **Settings → Secrets and variables → Actions → New repository secret** → Name: `ZYPUC_CLAVE`, Secret: la contraseña del equipo → **Add secret**.
 Sin ese secreto, la tienda sigue funcionando con el último precio guardado.
+
+## Agregar un producto
+
+Lo más fácil: entra como LeoZypuc → **Panel → Agregar / editar**, llena el formulario y sigue los 3 pasos que aparecen (copiar, abrir en GitHub, pegar y guardar).
+
+- Usa el **link exacto del producto** (o una búsqueda de Falabella con el nombre exacto): así el actualizador puede leer el precio.
+- Para la foto: abre el producto en la tienda, clic derecho sobre la foto → "Copiar dirección de imagen". Si la dejas vacía y el producto es de Falabella, el actualizador intenta traer la foto solo.
+- La "tienda más cara" es opcional. Solo se muestra si de verdad es más cara que nuestro precio.
 
 ## Correr el actualizador a mano
 

@@ -13,8 +13,10 @@
   "subcategorias": {
     "Tecnología": [
       "Todos",
+      "Colegio",
       "Audio",
       "Periféricos",
+      "Accesorios",
       "Celulares",
       "Wearables",
       "Laptops",
@@ -1157,6 +1159,176 @@
         "price": 29.9,
         "checked": "2026-10-15",
         "priv": "+fy4J/rCq9r3RGGoxg763QPm5uW1S+f/elNzNXyDOg+vqg0dHSrDQ7g3AXFLkX1GUV3Ya9y6PzhhXwrMxQXVodzreBelKEOaogWgtp0+4tdC3GpeBKJPkZ9nYa2AgrKyEyE6gRlwUaKtIv75AtK8z9peGzOs+dpgbvzSGnK9me4Tr9Upy78i6t2T6shh7WkIFPpqPTGvwlGnoy+2/1ioYfZYUr9uJqtbyKP1JOhLXR0="
+      }
+    },
+    {
+      "id": "mikasa-v330w",
+      "dept": "Deporte",
+      "cat": "Pelotas",
+      "brand": "Mikasa",
+      "name": "Pelota de vóley Mikasa V330W",
+      "model": "Oficial de competencia · tamaño 5",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/11855889/image-b05a1df756434dc881b68d6967e7bed7.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 184.9,
+        "checked": "2026-10-16",
+        "priv": "NK0psxj/zd6q4YdfUstV+0/Ya8/sbXvAxnWdkZkC5t4iSsjf+r0qOPtunDf+gpSSLPUQtWmKV2/PZq60xlCi5V3V5bjR0ziBg4WLZP0ZJK5sxmRGtPHuvw9IPzH97bq025bx8eyFB8BkzqcTjy6mHJlopTC7U/jwQPMrmeAI3XBCuLUTRhm+fnXctGkCwdlGzNxW"
+      },
+      "ref": {
+        "store": "Plaza Vea",
+        "price": 239,
+        "url": "https://www.plazavea.com.pe/balon-de-voley-mikasa-v330w-101376437/p",
+        "q": "mikasa v330w",
+        "match": [
+          "v330w"
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "rodilleras-depormax",
+      "dept": "Deporte",
+      "cat": "Accesorios",
+      "brand": "Depormax",
+      "name": "Rodilleras para vóley de alto impacto (par)",
+      "model": "Acolchado de silicona · negro",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/23733396/imageUrl_1.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 50.9,
+        "checked": "2026-10-16",
+        "priv": "zswELO1fVLh3dEaYeirrJx7GVwLgLdBlAtIor3ziAkC0w7+MkApOmhz/PmGPQmEN+oZcRxSliDYfcW9wkq/n8X6U5r/RmXNne8DKPd92cNGKF/zbncBXF1FSEZCo5gK2k2FSQXKbjwBFiRzmw2NxZqlGRhAkoqX9xy3UMxPnu/9Jw9e408Ivgdn6XSh4UJsnaRZmXynZ6A9qNpbXLOJcAtGPzcVVgP7VQ00="
+      }
+    },
+    {
+      "id": "casio-fx82la",
+      "dept": "Tecnología",
+      "cat": "Colegio",
+      "brand": "Casio",
+      "name": "Calculadora científica Casio fx-82LA Plus 2",
+      "model": "252 funciones · pantalla natural",
+      "image": "https://coolboxpe.vteximg.com.br/arquivos/ids/239910/FX-82LAPLUS2-BK.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 69.9,
+        "checked": "2026-10-16",
+        "priv": "IRsHamI2ttTezWfDoVq/u8EoOCL1K+4NtawQWWJYZqclKsT27WuUKY/qEi5Xqfr8XnqBLfwVklZpzGlU91wTj7ASyDsxijuuHJu+Pv7DbPWgvXzMXbUm1AdGlayagpAZzZsWt7iQhsET1B4MqxaBpdYIt9zjnvfVhuNy6ETi8OGA6HaSxARQTnOdwlF1C0DIw4Ef0FuvlIcw0QD1HAj4xyeP21FafiBawnNGGxq5GFg="
+      }
+    },
+    {
+      "id": "casio-fx991ms2",
+      "dept": "Tecnología",
+      "cat": "Colegio",
+      "brand": "Casio",
+      "name": "Calculadora científica Casio fx-991MS 2",
+      "model": "401 funciones · para secundaria y universidad",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/24749440/imageUrl_1.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 95,
+        "checked": "2026-10-16",
+        "priv": "zMDgyLjdKer9WkUoouVa6zX/G0hnOmZ3Gv/qsXmamTfaXbzE6pVc5Jv5py2k+i8z3ns607Wflu5pGjzPJ6Ojtou1fo3K0kiBCGVCiLFFB3mfN8weMc4i8np36XMnw95j0JK4UuEkPjbc0JRE1w0hYCvSPybzPICWgOFqIW+YJmFW5q9/khWEH/e2+EkGhgdbhGSMdaMDHA=="
+      }
+    },
+    {
+      "id": "microsd-sandisk-64",
+      "dept": "Tecnología",
+      "cat": "Accesorios",
+      "brand": "SanDisk",
+      "name": "Tarjeta microSD SanDisk Ultra 64 GB con adaptador",
+      "model": "Para celular, cámara o consola",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/704162/20208599.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 29,
+        "checked": "2026-10-16",
+        "priv": "L16kGPyWym/i7CH4QLNMq0U1cSFgl5lYkz4aCqh4uhZHTrdbNMG8ZLdbYZT166EeBPDiKyTe+h4bKAJgR96qki0FvGUugSmpe4ea9S/2/0tTv+GADKMgjiyytBlZK1A2qVc5WMLQkTX5uK8l88XZqVQhjMjVvpLUw/GpQr2O7S01JRLx8wcCD7BZYQr67LrtMuuGzZFkyOU="
+      }
+    },
+    {
+      "id": "cargador-somostel-20w",
+      "dept": "Tecnología",
+      "cat": "Accesorios",
+      "brand": "Somostel",
+      "name": "Cargador rápido 20 W + cable USB tipo C",
+      "model": "Carga rápida QC 3.0",
+      "image": "https://promart.vteximg.com.br/arquivos/ids/8474014/154873.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 14.9,
+        "checked": "2026-10-16",
+        "priv": "9gIHhb4T5wcock8WlldDM0WfHy59bv0Pe1Gl2So40pvaWqw6Yjy+BonjiFGwGUsYcEv0IPrlCpFeP5y7zllMfCW/DlA+kF4ccibd2sXNPQ4LOQZoUy2hA4WRE/P4Rtn+DV8C+ZaUV7AH2NmJxoh4Ty2AW6eBZS/vnVErx/Mu9FU5p0MoyTTL2OO4HMAKXt0gRK95X6l91O4lYjHHWdAKWs83tbYOHJ9Z"
+      }
+    },
+    {
+      "id": "mousepad-hp-7035",
+      "dept": "Tecnología",
+      "cat": "Periféricos",
+      "brand": "HP",
+      "name": "Mousepad gamer HP MP7035 (70 × 35 cm)",
+      "model": "Grande · antideslizante",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/25883978/imageUrl_1.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 19.9,
+        "checked": "2026-10-16",
+        "priv": "Do06l5tMDty+pGQ6k3/aw8qIhCfyGss/4RjNf6PonrZJM2+HMimIAzNY9HZJSZ7FHTys2KMYapk6wQWnnbq/Z/jE9l1xPYtN2E1RzGfMfTF8muKZNGweqg3McqmFynWVivqZnaRVSPGctNh7P/7KQ980ELN0mclfzkkiKea/dNYeiylxHTjqUw0Bn1Hrlo5ryTOYbeaIkqeRM6KGAiSSHXqTRtzEeCGwKRA8FKQ="
+      }
+    },
+    {
+      "id": "manga-viva-home",
+      "dept": "Repostería",
+      "cat": "Utensilios",
+      "brand": "Viva Home",
+      "name": "Set de manga pastelera con boquillas",
+      "model": "Para decorar tortas y cupcakes",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/31561549/20134141.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 11.9,
+        "checked": "2026-10-16",
+        "priv": "vHgxmvCTJLFs85gEKtgalEv2cxtps2ML69+mBhLAWoafo3I6991ThzFg6Y00gEuxzra06xW1eiLcX2W9FC9zXYQBvkz3FPuLHynlo5I4CnNuaA/vF4hUOPvzXPXJsQdcySo6Qa6ttEOn/LJDknFSgx5lQRdg+7olinVqH6BEy8sDH/IUrcziLl/Sti+b"
+      }
+    },
+    {
+      "id": "espatula-ilko",
+      "dept": "Repostería",
+      "cat": "Utensilios",
+      "brand": "Ilko",
+      "name": "Espátula de nylon Ilko Everyday",
+      "model": "No raya tus moldes",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/35666759/20465400.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 5.9,
+        "checked": "2026-10-16",
+        "priv": "+7bbzAlvRCPa9DnVsl2LbtG9td0stcGBBesNCje64/jzO+wmkJp0ZWgtyHrV9hij1flODXRGA6YCQC35aQ2Hb2qlz9d9ZnlwjMO58e27L0n0P8njiQevsIiZZruZmYik9uuh8pra5BXcPJQfZcF21RujuvEg6M06RxwxFzzhNY1RSg0mwt9HG6E+ci2wDgl1ueicOrDpGBF0H0Pq"
+      }
+    },
+    {
+      "id": "oso-ramo-rosa",
+      "dept": "Regalitos",
+      "cat": "Peluches",
+      "brand": "Detalles",
+      "name": "Ramo de osito de peluche con rosa",
+      "model": "Regalo listo para entregar · rosado",
+      "image": "https://promart.vteximg.com.br/arquivos/ids/10304389/imageUrl_1.jpg",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 18.9,
+        "checked": "2026-10-16",
+        "priv": "9e5ULUdxWEeR4DvCE2eAhRSN5FJDbh78hfcVNXZz7PAijWpjXsC2EmMH509lNxdd54BWTjBOtmr81c/wVTCAHYC9ZxDQgIJuoD5dl5Ool07D8mLvSy0I8P5/btrEWXYVVDA2izOS+zPHfc5kVddT2GMOotstD2dA455VTLsHPDbR+tFCWamscVFby5sV4Gxr37NsMeki9HUnGg=="
       }
     }
   ]
