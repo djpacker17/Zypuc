@@ -1,9 +1,12 @@
 name: Probar tiendas (temporal)
 on: workflow_dispatch
+permissions:
+  contents: write
 jobs:
   probar:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: |
           python3 - <<'PY'
           import urllib.request, json
@@ -17,10 +20,15 @@ jobs:
              "https://www.tottus.com.pe/tottus-pe/search?Ntt=peluche+stitch",
              "https://simple.ripley.com.pe/audifonos-jbl-on-ear-tune-520bt-bluetooth-53-pure-bass-sound-negro-pmp20000049270",
              "https://www.hiraoka.com.pe/catalogsearch/result/?q=oster"]
+          out=[]
           for u in U:
               try:
                   r=urllib.request.urlopen(urllib.request.Request(u,headers=H),timeout=25); b=r.read(400).decode("utf-8","replace")
-                  print("OK",r.status,u,"\n   ",b.replace("\n"," ")[:300])
+                  out.append(f"OK {r.status} {u}\n    "+b.replace("\n"," ")[:300])
               except Exception as e:
-                  print("FAIL",u,type(e).__name__,str(e)[:120])
+                  out.append(f"FAIL {u} {type(e).__name__} {str(e)[:120]}")
+          open('probar.txt','w').write('\n'.join(out))
           PY
+      - run: |
+          git config user.name zypuc-precios; git config user.email zypuc-precios@users.noreply.github.com
+          git add probar.txt; git commit -m 'Resultado prueba'; git push
