@@ -1,0 +1,26 @@
+name: Probar tiendas (temporal)
+on: workflow_dispatch
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import urllib.request, json
+          H={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36","Accept":"application/json,text/html;q=0.9,*/*;q=0.8","Accept-Language":"es-PE,es;q=0.9"}
+          U=["https://www.oechsle.pe/api/catalog_system/pub/products/search?ft=funko%20pop&_from=0&_to=4",
+             "https://www.plazavea.com.pe/api/catalog_system/pub/products/search?ft=funko%20pop&_from=0&_to=4",
+             "https://www.promart.pe/api/catalog_system/pub/products/search?ft=balanza&_from=0&_to=4",
+             "https://www.coolbox.pe/api/catalog_system/pub/products/search?ft=redmi&_from=0&_to=4",
+             "https://api.mercadolibre.com/sites/MPE/search?q=funko%20gojo&limit=3",
+             "https://www.sodimac.com.pe/sodimac-pe/search?Ntt=lampara+luna",
+             "https://www.tottus.com.pe/tottus-pe/search?Ntt=peluche+stitch",
+             "https://simple.ripley.com.pe/audifonos-jbl-on-ear-tune-520bt-bluetooth-53-pure-bass-sound-negro-pmp20000049270",
+             "https://www.hiraoka.com.pe/catalogsearch/result/?q=oster"]
+          for u in U:
+              try:
+                  r=urllib.request.urlopen(urllib.request.Request(u,headers=H),timeout=25); b=r.read(400).decode("utf-8","replace")
+                  print("OK",r.status,u,"\n   ",b.replace("\n"," ")[:300])
+              except Exception as e:
+                  print("FAIL",u,type(e).__name__,str(e)[:120])
+          PY
