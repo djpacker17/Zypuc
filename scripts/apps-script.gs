@@ -1,5 +1,5 @@
 /**
- * ZYPUC · CENTRO DE DATOS (Google Apps Script)
+ * ZYPUC · CENTRO DE DATOS (Google Apps Script) · versión 2
  * ------------------------------------------------------------
  * Une la tienda con esta hoja de Google:
  *  - Pedidos: llegan solos cuando el cliente envía su pedido.
@@ -135,7 +135,7 @@ function doGet(e) {
       if (!esEquipo(p.key)) return json({ ok: false, error: 'clave' });
       return json({ ok: true, datos: resumenEquipo() });
     }
-    return json({ ok: true, zypuc: 'centro de datos activo', hora: ahora() });
+    return json({ ok: true, zypuc: 'centro de datos activo', version: 2, hora: ahora() });
   } catch (err) { return json({ ok: false, error: String(err) }); }
 }
 
