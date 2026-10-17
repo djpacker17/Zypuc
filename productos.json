@@ -61,7 +61,7 @@
       "brand": "JBL",
       "name": "Audífonos JBL Tune 520BT Bluetooth negro",
       "model": "On-ear · Bluetooth 5.3",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/1498/PMP20000049270/full_image-1.jpeg",
+      "image": "img/jbl-tune-520bt.jpg",
       "buy": {
         "price": 135,
         "checked": "2026-10-15",
@@ -103,7 +103,7 @@
       "brand": "Redragon",
       "name": "Teclado mecánico Redragon Kumara K552 Rainbow (español)",
       "model": "Mecánico · switch red · TKL",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2239/PMP00003343311/full_image-1.jpeg",
+      "image": "img/redragon-k552.jpg",
       "buy": {
         "price": 149.99,
         "checked": "2026-10-14",
@@ -177,7 +177,7 @@
       "brand": "Samsung",
       "name": "Celular Samsung Galaxy A16 128 GB, 4 GB RAM",
       "model": "Negro",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2065373022316/full_image-2065373022316.webp",
+      "image": "img/samsung-a16.jpg",
       "buy": {
         "price": 499,
         "checked": "2026-10-14",
@@ -211,7 +211,7 @@
       "brand": "Xiaomi",
       "name": "Celular Xiaomi Redmi A7 Pro 128 GB, 4 GB RAM",
       "model": "Negro",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2165/PMP20001667293/full_image-1.jpeg",
+      "image": "img/redmi-a7-pro.jpg",
       "buy": {
         "price": 449,
         "checked": "2026-10-15",
@@ -241,7 +241,7 @@
       "brand": "Mikasa",
       "name": "Pelota de vóley Mikasa V200W (FIVB)",
       "model": "Oficial FIVB · talla 5",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5088/PMP20000849859/full_image-1.jpeg",
+      "image": "img/mikasa-v200w.jpg",
       "buy": {
         "price": 419.9,
         "checked": "2026-10-14",
@@ -264,7 +264,7 @@
       "brand": "Puma",
       "name": "Pelota de fútbol Puma Attacanto Graphic",
       "model": "Fútbol · talla 5",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2020361326432/full_image-2020361326432.webp",
+      "image": "img/puma-attacanto.jpg",
       "buy": {
         "price": 34.3,
         "checked": "2026-10-15",
@@ -280,7 +280,7 @@
       "brand": "Everlast",
       "name": "Colchoneta Everlast yoga mat 6 mm verde lima",
       "model": "Yoga y movilidad",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2397/PMP20000141544/full_image-1.jpeg",
+      "image": "img/everlast-mat.jpg",
       "buy": {
         "price": 69.9,
         "checked": "2026-10-15",
@@ -296,7 +296,7 @@
       "brand": "Oster",
       "name": "Batidora de mano Oster FPSTHM3532, 250 W, 6 velocidades",
       "model": "Blanca · función turbo",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5127/PMP20000757999/full_image-1.jpeg",
+      "image": "img/oster-fpsthm3532.jpg",
       "buy": {
         "price": 89,
         "checked": "2026-10-15",
@@ -342,7 +342,7 @@
       "brand": "Press",
       "name": "Molde para brownies antiadherente Press 30.5 x 20.3 x 4 cm",
       "model": "Antiadherente",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3872/PMP20000033695/full_image-1.jpeg",
+      "image": "img/press-molde-brownies.jpg",
       "buy": {
         "price": 20.9,
         "checked": "2026-10-15",
@@ -362,7 +362,7 @@
       "brand": "Funko",
       "name": "Funko Bitty Pop! Pokémon pack x4 (Charmander, Jolteon, Lapras, Rattata)",
       "model": "Mini figuras de colección",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4467/PMP20001074529/full_image-1.jpeg",
+      "image": "img/funko-bitty-pokemon.jpg",
       "buy": {
         "price": 109,
         "checked": "2026-10-14",
@@ -385,7 +385,7 @@
       "brand": "Oster",
       "name": "Batidora de mano y pedestal Oster FPSTHS3611, 250 W, tazón 3.7 L",
       "model": "Blanca · 6 velocidades",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2735/PMP20000712418/full_image-1.jpeg",
+      "image": "img/oster-fpsths3611.jpg",
       "buy": {
         "price": 237,
         "checked": "2026-10-14",
@@ -413,7 +413,7 @@
       "brand": "Imaco",
       "name": "Horno eléctrico Imaco HES35R 35 L, 1500 W, con rostizador",
       "model": "Gris · 35 litros",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2019122187108/full_image-2019122187108",
+      "image": "img/imaco-hes35r.jpg",
       "buy": {
         "price": 299,
         "checked": "2026-10-15",
@@ -444,7 +444,7 @@
       "brand": "Funko",
       "name": "Funko Pop! Pokémon: Squirtle",
       "model": "Figura de vinilo en su caja",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4467/PMP20001074381/full_image-1.jpeg",
+      "image": "img/funko-squirtle.jpg",
       "buy": {
         "price": 60.59,
         "checked": "2026-10-14",
@@ -467,7 +467,7 @@
       "brand": "Roblox",
       "name": "Gift Card Roblox 6 USD (Robux)",
       "model": "Código digital oficial",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/1838/PMP00001685598/full_image-1.jpeg",
+      "image": "img/roblox-6.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -496,7 +496,7 @@
       "brand": "Roblox",
       "name": "Gift Card Roblox 25 USD (Robux)",
       "model": "Código digital oficial",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/1838/PMP00001292808/full_image-1.jpeg",
+      "image": "img/roblox-25.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -525,7 +525,7 @@
       "brand": "PlayStation",
       "name": "Tarjeta PlayStation Store 10 USD (cuenta Perú)",
       "model": "Código digital oficial",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/1838/PMP00002144609/full_image-1.jpeg",
+      "image": "img/psn-10-peru.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -554,7 +554,7 @@
       "brand": "PlayStation",
       "name": "Tarjeta PlayStation Store 50 USD (cuenta Perú)",
       "model": "Código digital oficial",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/1838/PMP00002144613/full_image-1.jpeg",
+      "image": "img/psn-50-peru.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -583,7 +583,7 @@
       "brand": "Nintendo",
       "name": "Tarjeta Nintendo eShop 10 USD",
       "model": "Código digital oficial",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/1838/PMP00000634840/full_image-1.jpeg",
+      "image": "img/eshop-10.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -612,7 +612,7 @@
       "brand": "Nintendo",
       "name": "Nintendo Switch Online 12 meses",
       "model": "Membresía individual · código digital",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/1838/PMP00000634824/full_image-1.jpeg",
+      "image": "img/nso-12.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -740,7 +740,7 @@
       "brand": "Xiaomi",
       "name": "Audífonos Xiaomi Redmi Buds 6 Play negro",
       "model": "Bluetooth 5.4 · hasta 36 h",
-      "image": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/5673/PMP20001144639/full_image-1.png",
+      "image": "img/redmi-buds-6-play.jpg",
       "ref": {
         "store": "Promart",
         "price": 59.9,
@@ -2038,7 +2038,7 @@
       "brand": "Deco Home",
       "name": "Árbol de Navidad 180 cm con 600 ramas",
       "model": "Verde · fácil de armar",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/36359495/20631655.jpg?v=639270053418600000",
+      "image": "img/arbol-navidad-180.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2055,7 +2055,7 @@
       "brand": "Deco Home",
       "name": "Luces LED navideñas x100 (luz cálida)",
       "model": "Con funciones de luz",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/36359407/20630866.jpg?v=639270040852800000",
+      "image": "img/luces-led-100.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2071,7 +2071,7 @@
       "brand": "Genérico",
       "name": "Set de 12 esferas navideñas plateadas",
       "model": "Para decorar el árbol",
-      "image": "https://media.falabella.com.pe/falabellaPE/136895776_01/public",
+      "image": "img/bolas-navidad-12.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2087,7 +2087,7 @@
       "brand": "Genérico",
       "name": "Nacimiento navideño clásico con casita",
       "model": "Tres personajes",
-      "image": "https://media.falabella.com.pe/tottusPE/43633993_1/public",
+      "image": "img/nacimiento-casita.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2103,7 +2103,7 @@
       "brand": "Genérico",
       "name": "Peluche navideño osito",
       "model": "Ideal para regalar",
-      "image": "https://media.falabella.com.pe/tottusPE/43633121_1/public",
+      "image": "img/peluche-osito-navidad.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2119,7 +2119,7 @@
       "brand": "Genérico",
       "name": "Gorros navideños \"Feliz Navidad\" (pack x6)",
       "model": "Para la familia o la oficina",
-      "image": "https://media.falabella.com.pe/falabellaPE/124586193_01/public",
+      "image": "img/gorros-navidad-6.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2135,7 +2135,7 @@
       "brand": "Sharwinn",
       "name": "Set de 3 calcetines navideños de 36 cm",
       "model": "Para colgar en la pared o puerta",
-      "image": "https://media.falabella.com.pe/falabellaPE/149927178_01/public",
+      "image": "img/calcetines-navidad-3.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2151,7 +2151,7 @@
       "brand": "Floripa",
       "name": "Corona navideña de moras rojas 31 cm",
       "model": "Para la puerta",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/36344496/imageUrl_1.jpg?v=639269074550870000",
+      "image": "img/corona-navidad-moras.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2167,7 +2167,7 @@
       "brand": "Genérico",
       "name": "Guirnalda navideña Holly Berrie 270 cm",
       "model": "Con hojas y bayas",
-      "image": "https://media.falabella.com.pe/sodimacPE/3435237_01/public",
+      "image": "img/guirnalda-holly-270.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2183,7 +2183,7 @@
       "brand": "Genérico",
       "name": "Peluche reno dorado navideño 60 cm",
       "model": "Decoración grande",
-      "image": "https://media.falabella.com.pe/tottusPE/43631341_1/public",
+      "image": "img/reno-dorado-60.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2199,7 +2199,7 @@
       "brand": "Logitech",
       "name": "Mouse gamer Logitech G203 Lightsync RGB",
       "model": "8000 DPI · negro",
-      "image": "https://media.falabella.com.pe/falabellaPE/158182876_01/public",
+      "image": "img/logitech-g203.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2215,7 +2215,7 @@
       "brand": "Genérico",
       "name": "Micrófono karaoke Bluetooth con parlante",
       "model": "Recargable · efecto eco",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/27046627/imageUrl_1.jpg?v=639241849935100000",
+      "image": "img/microfono-karaoke-bt.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2231,7 +2231,7 @@
       "brand": "Genérico",
       "name": "Guantes de box rojos talla 16 oz",
       "model": "Para entrenar",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/35645747/imageUrl_1.jpg?v=639219962189330000",
+      "image": "img/guantes-box-16.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2247,7 +2247,7 @@
       "brand": "Umbro",
       "name": "Mochila deportiva Umbro Gym Sack",
       "model": "Azul · ligera",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/21107309/2840639.jpg?v=638823683046030000",
+      "image": "img/umbro-gym-sack.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2263,7 +2263,7 @@
       "brand": "Gibben",
       "name": "Mangas pasteleras desechables talla S",
       "model": "Pack para decorar",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/16823018/imageUrl_1.jpg?v=638359298380500000",
+      "image": "img/mangas-desechables-s.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2279,7 +2279,7 @@
       "brand": "Genérico",
       "name": "Molde de silicona para chocolates de corazón",
       "model": "Para bombones y gomitas",
-      "image": "https://media.falabella.com.pe/sodimacPE/3500020_01/public",
+      "image": "img/molde-chocolate-corazon.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2295,7 +2295,7 @@
       "brand": "Genérico",
       "name": "Set de 3 cortadores de galletas",
       "model": "Formas surtidas",
-      "image": "https://media.falabella.com.pe/tottusPE/43314946_2/public",
+      "image": "img/cortadores-galleta-3.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2311,7 +2311,7 @@
       "brand": "Funko",
       "name": "Funko Pop! Lilo & Stitch: Stitch Luau #1567",
       "model": "Figura de vinilo · 9 cm",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/21049989/imageUrl_1.jpg?v=638814548253270000",
+      "image": "img/funko-stitch-luau.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2327,7 +2327,7 @@
       "brand": "Rubik's",
       "name": "Cubo Rubik 3x3 original",
       "model": "Para retarte",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/18544236/20284238.jpg?v=637998442518800000",
+      "image": "img/cubo-rubik-3x3.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2343,7 +2343,7 @@
       "brand": "Mattel",
       "name": "Juego de cartas UNO Show 'em No Mercy",
       "model": "Para jugar en grupo",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/32991842/20423709.jpg?v=638987521060230000",
+      "image": "img/uno-no-mercy.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2359,7 +2359,7 @@
       "brand": "Disney",
       "name": "Peluche Disney Stitch disfrazado",
       "model": "Modelo surtido",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/32629470/20422544.jpg?v=638963045121270000",
+      "image": "img/stitch-disfrazado.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
