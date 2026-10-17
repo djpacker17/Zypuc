@@ -57,10 +57,10 @@ def main() -> int:
         vivo = (items.get(pid, {}).get("buy") or {}).get("image")
         if archivo.exists() and p.get("image") == local:
             continue
-        fuente = p.get("image") if str(p.get("image", "")).startswith("http") else vivo
-        if not fuente or not str(fuente).startswith("http"):
+        fuentes = [u for u in (p.get("image"), vivo) if u and str(u).startswith("http")]
+        if not fuentes:
             continue
-        if descargar(fuente, archivo):
+        if any(descargar(u, archivo) for u in dict.fromkeys(fuentes)):  # prueba cada foto hasta que una funcione
             p["image"] = local
             p.pop("imageAuto", None)
             nuevas += 1

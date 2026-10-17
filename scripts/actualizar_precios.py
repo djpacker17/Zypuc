@@ -142,6 +142,7 @@ def imagen_tarjeta(item: dict) -> str | None:
 
 
 ULTIMA_IMAGEN: dict = {}
+ESTADO: dict = {}  # p. ej. {'stock': 'agotado'} cuando la tienda muestra el producto sin unidades
 
 
 def precio_falabella_listado(doc: str, vendedor: str, palabras: list[str], fuera: list[str] | None = None) -> float | None:
@@ -200,12 +201,14 @@ def precio_vtex(link: dict) -> float | None:
     fuera = [sin_tildes(w) for w in link.get("excluir", EXCLUIR)]
     vendedor = sin_tildes(link.get("seller", "")) if not link.get("q") else ""
     candidatos = []
+    encontrado = False
     for prod in r.json():
         nombre = sin_tildes(f"{prod.get('brand', '')} {prod.get('productName', '')}")
         if palabras and not all(w in nombre for w in palabras):
             continue
         if any(w in nombre for w in fuera):
             continue
+        encontrado = True
         for it in prod.get("items") or []:
             img = ((it.get("images") or [{}])[0]).get("imageUrl")
             for sel in it.get("sellers") or []:
@@ -217,6 +220,8 @@ def precio_vtex(link: dict) -> float | None:
     if not candidatos and vendedor:  # el vendedor ya no lo tiene: tomamos la mejor oferta del mismo producto
         return precio_vtex({**link, "seller": ""})
     if not candidatos:
+        if encontrado and not link.get("q"):  # el producto existe pero nadie tiene unidades
+            ESTADO["stock"] = "agotado"
         return None
     precio, img = min(candidatos, key=lambda c: c[0])
     if img:
@@ -283,10 +288,15 @@ def main() -> int:
             nuevo = {k2: v for k2, v in dict(anterior).items() if k2 != "method"}
             nuevo["lastTry"] = ahora
             ULTIMA_IMAGEN.clear()
-            try:
-                precio, metodo = leer_precio(link)
-            except Exception as e:  # red caída, bloqueo, etc.
-                precio, metodo = None, f"error: {type(e).__name__}"
+            ESTADO.clear()
+            precio, metodo = None, "sin intentar"
+            for intento in range(2):  # un reintento si la red falla
+                try:
+                    precio, metodo = leer_precio(link)
+                    break
+                except Exception as e:  # red caída, bloqueo, etc.
+                    precio, metodo = None, f"error: {type(e).__name__}"
+                    time.sleep(4)
             if privado:  # no dejamos pistas de la tienda en los registros públicos
                 metodo = "privado" if precio else ("privado: " + metodo.split(":")[0] if metodo.startswith(("HTTP", "error")) else "privado")
             etiqueta = "compra" if lado == "buy" else "otra tienda"
@@ -294,6 +304,12 @@ def main() -> int:
             if precio and base and not (0.4 * base <= precio <= 2.5 * base):
                 resumen.append(f"⚠️ {p['id']} ({etiqueta}): precio raro {precio} vs {base}, descartado")
                 precio = None
+            if lado == "buy":
+                if precio:
+                    nuevo.pop("stock", None)
+                elif ESTADO.get("stock") == "agotado":
+                    nuevo["stock"] = "agotado"
+                    resumen.append(f"📦 {p['id']} (compra): agotado en la tienda")
             if precio:
                 nuevo.update(price=round(precio, 2), checked=ahora, ok=True, method=metodo)
                 resumen.append(f"✅ {p['id']} ({etiqueta}): S/ {precio:.2f}")
@@ -314,7 +330,8 @@ def main() -> int:
                     hist.append([hoy, round(precio, 2)])
             nuevo["history"] = hist[-120:]
             salida["items"].setdefault(p["id"], {})[lado] = nuevo
-            time.sleep(random.uniform(3, 6))
+            # Las APIs de catálogo responden rápido; las páginas HTML necesitan más pausa
+            time.sleep(random.uniform(1, 2) if any(d in link.get("url", "") for d in VTEX) else random.uniform(3, 5))
 
     PRECIOS.write_text(json.dumps(salida, ensure_ascii=False, indent=2), encoding="utf-8")
     print("\n".join(resumen))

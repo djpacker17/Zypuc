@@ -7,6 +7,8 @@
  *  - Rastreo: cambias "Estado" del pedido y el cliente lo ve al instante.
  *  - Avisos: clientes que quieren saber si un producto baja de precio.
  *  - Estadísticas: vistas, "al carrito" y compartidos por producto (sin datos personales).
+ *  - Encargos: lo que los clientes piden y no está en la tienda ("Pídelo y te lo cotizamos").
+ *  - Cupones: códigos de descuento que ustedes crean, activan y limitan desde la hoja.
  *  - Correo diario con el resumen y correo cuando un producto baja de precio.
  *
  * INSTALACIÓN (una sola vez):
@@ -26,11 +28,14 @@ const CONFIG = {
 };
 
 const HOJAS = {
-  'Pedidos': ['Fecha', 'Código', 'Estado', 'Nota para el cliente', 'Nombre', 'Teléfono', 'Entrega', 'Pago', 'Productos', 'Total (S/)', 'Actualizado'],
+  'Pedidos': ['Fecha', 'Código', 'Estado', 'Nota para el cliente', 'Nombre', 'Teléfono', 'Entrega', 'Pago', 'Productos', 'Total (S/)', 'Actualizado', 'Cupón'],
   'Reseñas': ['Fecha', 'Nombre', 'Producto', 'Estrellas', 'Reseña', 'Aprobada'],
   'Avisos': ['Fecha', 'Producto (id)', 'Producto', 'Precio al pedir (S/)', 'WhatsApp', 'Nombre', 'Estado', 'Precio actual (S/)'],
-  'Estadísticas': ['Fecha', 'Producto (id)', 'Producto', 'Vistas', 'Al carrito', 'Compartidos']
+  'Estadísticas': ['Fecha', 'Producto (id)', 'Producto', 'Vistas', 'Al carrito', 'Compartidos'],
+  'Encargos': ['Fecha', 'Producto pedido', 'Link', 'Presupuesto (S/)', 'Nombre', 'WhatsApp', 'Estado', 'Respuesta'],
+  'Cupones': ['Código', 'Tipo (% o S/)', 'Valor', 'Compra mínima (S/)', 'Vence (aaaa-mm-dd)', 'Activo (sí/no)', 'Usos', 'Máximo de usos', 'Nota']
 };
+const ESTADOS_ENCARGO = ['nuevo', 'cotizado', 'pedido', 'descartado'];
 const ESTADOS = ['recibido', 'pagado', 'comprado', 'en-camino', 'entregado', 'cancelado'];
 
 /* ===================== Instalación ===================== */
@@ -48,6 +53,11 @@ function configurar() {
   ped.getRange('C2:C1000').setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(ESTADOS, true).build());
   const res = ss.getSheetByName('Reseñas'), libre = ultimaFila(res) + 1; // quita casillas sueltas en filas vacías
   if (res.getMaxRows() >= libre) res.getRange(libre, 6, res.getMaxRows() - libre + 1, 1).removeCheckboxes().clearContent();
+  ss.getSheetByName('Encargos').getRange('G2:G1000').setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(ESTADOS_ENCARGO, true).build());
+  const cup = ss.getSheetByName('Cupones');
+  cup.getRange('F2:F200').setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(['sí', 'no'], true).build());
+  cup.getRange('B2:B200').setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(['%', 'S/'], true).build());
+  if (ultimaFila(cup) < 2) cup.getRange(2, 1, 1, 9).setValues([['BIENVENIDA', '%', 5, 30, '', 'no', 0, 100, 'Ejemplo: cambia "Activo" a "sí" para usarlo']]);
   const hoja1 = ss.getSheetByName('Hoja 1') || ss.getSheetByName('Sheet1');
   if (hoja1 && ss.getSheets().length > 1 && hoja1.getLastRow() === 0) ss.deleteSheet(hoja1);
   ScriptApp.getProjectTriggers().forEach(function (t) { ScriptApp.deleteTrigger(t); });
@@ -76,9 +86,30 @@ function ultimaFila(sh) { // última fila con fecha (ignora casillas vacías)
 function agregar(sh, fila) { const n = ultimaFila(sh) + 1; sh.getRange(n, 1, 1, fila.length).setValues([fila]); return n; }
 function fecha(v) { return v instanceof Date ? Utilities.formatDate(v, CONFIG.ZONA, 'yyyy-MM-dd HH:mm') : String(v || ''); }
 function correo() { return CONFIG.CORREO || Session.getEffectiveUser().getEmail(); }
-function antiSpam(clave) {
+function antiSpam(clave, max) {
   const c = CacheService.getScriptCache(); const n = Number(c.get(clave) || 0);
-  if (n > 30) return false; c.put(clave, String(n + 1), 3600); return true;
+  if (n > (max || 30)) return false; c.put(clave, String(n + 1), 3600); return true;
+}
+function siActivo(v) { return v === true || /^s[ií]$/i.test(String(v).trim()); }
+
+/* ===================== Cupones ===================== */
+function validarCupon(codigo, total) {
+  const code = txt(codigo, 30).toUpperCase();
+  const no = function (m) { return { ok: true, valido: false, mensaje: m }; };
+  if (!code) return no('Escribe un código.');
+  if (!hoja('Cupones')) return no('Ese cupón no existe.');
+  const f = filas('Cupones').filter(function (r) { return String(r[0]).trim().toUpperCase() === code; })[0];
+  if (!f) return no('Ese cupón no existe.');
+  if (!siActivo(f[5])) return no('Ese cupón no está activo.');
+  if (f[4] && fecha(f[4]).slice(0, 10) < hoy()) return no('Ese cupón ya venció.');
+  if (Number(f[7]) && Number(f[6]) >= Number(f[7])) return no('Ese cupón ya se agotó.');
+  const minimo = Number(f[3]) || 0, t = Number(total) || 0;
+  if (t < minimo) return no('Este cupón es para compras desde S/ ' + minimo.toFixed(2) + '.');
+  const tipo = String(f[1]).indexOf('%') >= 0 ? '%' : 'S/', valor = Number(f[2]) || 0;
+  let desc = tipo === '%' ? t * valor / 100 : valor;
+  desc = Math.round(Math.min(desc, t) * 10) / 10;
+  if (desc <= 0) return no('Ese cupón no tiene descuento.');
+  return { ok: true, valido: true, code: code, tipo: tipo, valor: valor, desc: desc, fila: f.fila, mensaje: '¡Cupón aplicado! Ahorras S/ ' + desc.toFixed(2) + '.' };
 }
 
 /* ===================== Lectura (GET) ===================== */
@@ -95,6 +126,10 @@ function doGet(e) {
       const f = filas('Pedidos').filter(function (x) { return String(x[1]).toUpperCase() === code; }).pop();
       if (!f) return json({ ok: true, pedido: null });
       return json({ ok: true, pedido: { estado: f[2] || 'recibido', nota: f[3] || '', fecha: fecha(f[10] || f[0]).slice(0, 10), creado: fecha(f[0]).slice(0, 10) } });
+    }
+    if (p.action === 'cupon') {
+      if (!antiSpam('cup', 300)) return json({ ok: true, valido: false, mensaje: 'Intenta en unos minutos.' });
+      const v = validarCupon(p.code, p.total); delete v.fila; return json(v);
     }
     if (p.action === 'equipo') {
       if (!esEquipo(p.key)) return json({ ok: false, error: 'clave' });
@@ -116,7 +151,8 @@ function resumenEquipo() {
     agg[k].vistas += Number(f[3]) || 0; agg[k].carrito += Number(f[4]) || 0; agg[k].compartidos += Number(f[5]) || 0;
   });
   const stats = Object.keys(agg).map(function (k) { return agg[k]; }).sort(function (a, b) { return b.vistas - a.vistas; });
-  return { pedidos: ped, resenas: res, avisos: avi, stats: stats };
+  const enc = hoja('Encargos') ? filas('Encargos').map(function (f) { return { fila: f.fila, fecha: fecha(f[0]), producto: f[1], link: f[2], presupuesto: f[3], nombre: f[4], telefono: String(f[5]), estado: f[6], respuesta: f[7] }; }).reverse().slice(0, 60) : [];
+  return { pedidos: ped, resenas: res, avisos: avi, stats: stats, encargos: enc };
 }
 
 /* ===================== Escritura (POST) ===================== */
@@ -133,6 +169,8 @@ function doPost(e) {
       case 'eventos': return json(sumarEventos(d));
       case 'estado': return json(cambiarEstado(d));
       case 'aprobar': return json(aprobarResena(d));
+      case 'encargo': return json(nuevoEncargo(d));
+      case 'encargoEstado': return json(cambiarEncargo(d));
       default: return json({ ok: false, error: 'accion' });
     }
   } catch (err) { return json({ ok: false, error: String(err) }); }
@@ -144,7 +182,13 @@ function nuevoPedido(d) {
   if (!antiSpam('ped')) return { ok: false, error: 'limite' };
   const sh = hoja('Pedidos');
   if (filas('Pedidos').some(function (f) { return String(f[1]).toUpperCase() === code; })) return { ok: true, repetido: true };
-  agregar(sh, [ahora(), code, 'recibido', '', txt(d.name, 80), "'" + txt(d.phone, 20), txt(d.address, 200), txt(d.payment, 20), txt(d.items, 900), Number(d.total) || 0, ahora()]);
+  let cupon = '';
+  if (d.cupon) {
+    const v = validarCupon(d.cupon, Number(d.subtotal) || Number(d.total));
+    if (v.valido) { const c = hoja('Cupones').getRange(v.fila, 7); c.setValue((Number(c.getValue()) || 0) + 1); cupon = v.code + ' (-S/ ' + v.desc.toFixed(2) + ')'; }
+    else cupon = txt(d.cupon, 30) + ' (no válido: ' + v.mensaje + ')';
+  }
+  agregar(sh, [ahora(), code, 'recibido', '', txt(d.name, 80), "'" + txt(d.phone, 20), txt(d.address, 200), txt(d.payment, 20), txt(d.items, 900), Number(d.total) || 0, ahora(), cupon]);
   return { ok: true };
 }
 function nuevaResena(d) {
@@ -185,6 +229,19 @@ function cambiarEstado(d) {
   }
   agregar(sh, [ahora(), code, estado, txt(d.nota, 200), '', '', '', '', '(creado desde el panel)', '', ahora()]);
   return { ok: true, creado: true };
+}
+function nuevoEncargo(d) {
+  const prod = txt(d.producto, 200); if (prod.length < 3) return { ok: false, error: 'datos' };
+  if (!antiSpam('enc')) return { ok: false, error: 'limite' };
+  const sh = hoja('Encargos'); if (!sh) return { ok: false, error: 'falta la hoja Encargos (corre configurar)' };
+  agregar(sh, [ahora(), prod, txt(d.link, 300), txt(d.presupuesto, 20), txt(d.name, 60), "'" + txt(d.phone, 20), 'nuevo', '']);
+  return { ok: true };
+}
+function cambiarEncargo(d) {
+  if (!esEquipo(d.key)) return { ok: false, error: 'clave' };
+  const fila = Number(d.fila), estado = ESTADOS_ENCARGO.indexOf(d.estado) >= 0 ? d.estado : null;
+  if (fila < 2 || !estado) return { ok: false };
+  hoja('Encargos').getRange(fila, 7, 1, 2).setValues([[estado, txt(d.respuesta, 200)]]); return { ok: true };
 }
 function aprobarResena(d) {
   if (!esEquipo(d.key)) return { ok: false, error: 'clave' };
@@ -230,6 +287,7 @@ function resumenDiario() {
   const nuevos = filas('Pedidos').filter(function (f) { return fecha(f[0]) >= ayer; });
   const abiertos = filas('Pedidos').filter(function (f) { return ['entregado', 'cancelado'].indexOf(f[2]) < 0 && f[1]; });
   const pend = filas('Reseñas').filter(function (f) { return f[5] !== true && f[1]; });
+  const encargos = hoja('Encargos') ? filas('Encargos').filter(function (f) { return fecha(f[0]) >= ayer; }) : [];
   let fallos = [], vencen = [];
   try {
     const t = datosTienda();
@@ -243,12 +301,13 @@ function resumenDiario() {
     });
   } catch (err) { fallos.push('No se pudo leer la tienda: ' + err); }
   const top = resumenEquipo().stats.slice(0, 5);
-  if (!nuevos.length && !pend.length && !fallos.length && !vencen.length && !abiertos.length) return;
+  if (!nuevos.length && !pend.length && !fallos.length && !vencen.length && !abiertos.length && !encargos.length) return;
   const li = function (a) { return a.length ? '<ul>' + a.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>' : '<p>—</p>'; };
   const html = '<div style="font-family:Arial,sans-serif;max-width:620px">' +
     '<h2 style="color:#1262d4">Zypuc · resumen del día</h2>' +
     '<h3>🛍️ Pedidos nuevos (24 h): ' + nuevos.length + '</h3>' + li(nuevos.map(function (f) { return '<b>' + f[1] + '</b> · ' + f[4] + ' · S/ ' + f[9] + ' · ' + f[8]; })) +
     '<h3>📦 Pedidos abiertos: ' + abiertos.length + '</h3>' + li(abiertos.slice(-15).map(function (f) { return f[1] + ' → ' + f[2]; })) +
+    '<h3>🔎 Encargos nuevos (24 h): ' + encargos.length + '</h3>' + li(encargos.map(function (f) { return '<b>' + f[1] + '</b>' + (f[3] ? ' · hasta S/ ' + f[3] : '') + (f[4] ? ' · ' + f[4] : ''); })) +
     '<h3>⭐ Reseñas por aprobar: ' + pend.length + '</h3>' + li(pend.slice(-10).map(function (f) { return f[1] + ' (' + f[3] + '★): ' + String(f[4]).slice(0, 80); })) +
     '<h3>⚠️ Precios que no se pudieron leer</h3>' + li(fallos) +
     '<h3>🔎 Comparaciones con Ripley por confirmar</h3>' + li(vencen) +
