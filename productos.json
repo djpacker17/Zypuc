@@ -1382,7 +1382,7 @@
       "cat": "Celulares",
       "brand": "Xiaomi",
       "name": "Celular Xiaomi Redmi Note 15 256 GB, 8 GB RAM",
-      "model": "Pantalla 6.7\" · cámara 108 MP",
+      "model": "Pantalla 6.7\" · cámara 108 MP · color según stock",
       "image": "img/redmi-note-15-256.jpg",
       "spec": {
         "ram": "8 GB",
@@ -1395,7 +1395,7 @@
       "buy": {
         "price": 799.0,
         "checked": "2026-10-16",
-        "priv": "DpVZhagYmB+Vg+KKJHUZVrKFjC+2yyjfNJzynhhuSgXXlLrp1P8wHgOyIUAs0nBLWU4U+qcwTrwdvfTySlmF7wlXC5yCg7IR8gnZHLvA/8rmRtWUZlSmnGRaAv4d7g87VFuTsL4XQnmNRu5BevczCFH6gh32KeXqQxcSZSuAQDcjrSm4f5iPiCH1W8cYKWe6k1MXremidX0BpyXj1Ma1xkms9hRZabxdWGmRlnIel4OHw8o="
+        "priv": "xNR1ffXnzhMFJSvDVfHpO3PNxgkxgBgP6ZVzzR8KeqKVZ6pfhhabm4fWcSYGPnO3ayng9Kq55bLozpcSRCnU4sm4b9jwJYBca4Lp6c/t+H69YoSF1rlplCdijFmfkK/OAcNv/W2Jt202NWpDlmKn6LY8SPpy+sYJZ6mg+zpfbEVmsap+4u8aj3HaavpvuvwfAFvD/RzDztLm2aENRJbE787MoqQlezexeLiI7oz1hUO5oK43HQ9T4irR4CT64U5kJduW8fPV4FtuJSoDus5cheNpPeVJQlSxdiV8MduT8g/SPHL661cjnFxP4KJZ5yoJzTQ1UoXpTQ4kCm1khNX6dQ+ZqaRQjTT5AVDydeIRxZBq1X5WS/00Xuf3I4I="
       },
       "ref": {
         "store": "Coolbox",
@@ -2205,7 +2205,7 @@
       "buy": {
         "price": 82.9,
         "checked": "2026-10-16",
-        "priv": "cW44qTGVs+iwQTh0LGg6nm8Nrual4pX3b6fX4LYTabtRpHjSFXQ2cygNOkapumwnYP6bFmMPt6he6Ov6nwftvG8Z24YrboO0UZCBTsyplwY/mnfoDPaRsgGquAbqwWH9MjGEESIMmzFsdC/LX5iL+3t1s9tvFhoCo9NRDHqe5eG+gJaxu06JrLOqx7WYEaHvB2Ne8eMy7q2B7P4mUCDY+4AR4rR8laVpmH9Gy7rH6dk="
+        "priv": "Q+BPDTM0LvQqO6BWTXMhT9PpYlnb+1n3deh4TWH9hfv6utSm3vPRJVrPoSR//Qx0L7O7nNa97q1ss7TqFtgO6rc3ZOuj7hAfYOSS0l0LnXBNO6cu12RaDNm2MQ/B4z/YG2lru/beWTesW6qZ8z8TCmdA/ZLo+kfAVIjHkLx1aDqfn1zGpAmBmx4ngi0L5I6XH+pmtVrNxUxhGX99dn7EuaXHeC/Xe80JBqCBWGeYG6H/jVN436s="
       }
     },
     {
