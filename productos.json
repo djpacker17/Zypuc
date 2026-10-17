@@ -86,7 +86,7 @@
       "brand": "Logitech",
       "name": "Mouse inalámbrico Logitech M170 azul",
       "model": "Inalámbrico · receptor USB",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/551985/20187625.jpg",
+      "image": "img/logitech-m170.jpg",
       "buy": {
         "price": 39.9,
         "checked": "2026-10-15",
@@ -128,7 +128,7 @@
       "brand": "Lenovo",
       "name": "Laptop Lenovo IdeaPad Slim 3 15.6\" Core i3-N305, 8 GB RAM, 256 GB SSD",
       "model": "Intel Core i3-N305 · Windows 11 · pantalla Full HD",
-      "image": "https://media.falabella.com.pe/falabellaPE/155394811_01/public",
+      "image": "img/lenovo-slim3i.jpg",
       "spec": {
         "processor": "Intel Core i3-N305",
         "ram": "8 GB",
@@ -150,7 +150,7 @@
       "brand": "Xiaomi",
       "name": "Smartwatch Xiaomi Redmi Watch 5 Active",
       "model": "Smartwatch · negro",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22124751/imageUrl_1.jpg",
+      "image": "img/redmi-watch-5-active.jpg",
       "buy": {
         "price": 145.0,
         "checked": "2026-10-16",
@@ -322,7 +322,7 @@
       "brand": "Mica",
       "name": "Set x3 bowls con tapa de acero inoxidable Mica",
       "model": "Para mezclar y guardar",
-      "image": "https://media.falabella.com/falabellaPE/883021890_005/public",
+      "image": "img/mica-bowls.jpg",
       "buy": {
         "price": 49.9,
         "checked": "2026-10-14",
@@ -640,7 +640,7 @@
       "brand": "Garena",
       "name": "Free Fire 520 diamantes + 10 % bonus",
       "model": "Código digital oficial",
-      "image": "",
+      "image": "img/freefire-520.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -649,7 +649,6 @@
         "restrictions": "Para cuentas de Free Fire de Perú"
       },
       "entrega": "Te enviamos el código por WhatsApp en 24 a 48 horas (estimado)",
-      "imageAuto": true,
       "buy": {
         "price": 16.5,
         "checked": "2026-10-15",
@@ -663,7 +662,7 @@
       "brand": "Steam",
       "name": "Steam Wallet 40 soles",
       "model": "Código digital oficial",
-      "image": "",
+      "image": "img/steam-40.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -672,7 +671,6 @@
         "restrictions": "Para cuentas de Steam de Perú"
       },
       "entrega": "Te enviamos el código por WhatsApp en 24 a 48 horas (estimado)",
-      "imageAuto": true,
       "buy": {
         "price": 48,
         "checked": "2026-10-15",
@@ -686,7 +684,7 @@
       "brand": "Minecraft",
       "name": "Minecraft Java y Bedrock Edition para PC",
       "model": "Juego completo · código digital",
-      "image": "",
+      "image": "img/minecraft-pc.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -695,7 +693,6 @@
         "restrictions": "Se canjea con una cuenta Microsoft"
       },
       "entrega": "Te enviamos el código por WhatsApp en 24 a 48 horas (estimado)",
-      "imageAuto": true,
       "buy": {
         "price": 72,
         "checked": "2026-10-15",
@@ -720,7 +717,7 @@
       "brand": "Xbox",
       "name": "Tarjeta Xbox 10 USD",
       "model": "Código digital oficial",
-      "image": "",
+      "image": "img/xbox-10.jpg",
       "digital": true,
       "envio": 0,
       "spec": {
@@ -729,7 +726,6 @@
         "restrictions": "Para cuentas Microsoft de EE. UU."
       },
       "entrega": "Te enviamos el código por WhatsApp en 24 a 48 horas (estimado)",
-      "imageAuto": true,
       "buy": {
         "price": 41.99,
         "checked": "2026-10-15",
@@ -769,8 +765,7 @@
       "brand": "Funko",
       "name": "Funko Pop! Jujutsu Kaisen: Satoru Gojo #1114",
       "model": "Figura de vinilo original · 9 cm",
-      "image": "",
-      "imageAuto": true,
+      "image": "img/funko-gojo-1114.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -786,8 +781,7 @@
       "brand": "Funko",
       "name": "Funko Pop! Demon Slayer: Tanjiro Kamado #2501",
       "model": "Figura de vinilo original · 9 cm",
-      "image": "",
-      "imageAuto": true,
+      "image": "img/funko-tanjiro-2501.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -803,8 +797,7 @@
       "brand": "Funko",
       "name": "Funko Pop! Naruto: Naruto Uzumaki #2110",
       "model": "Figura de vinilo original · 9 cm",
-      "image": "",
-      "imageAuto": true,
+      "image": "img/funko-naruto-2110.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -820,8 +813,7 @@
       "brand": "Airosa",
       "name": "Rosa preservada Venus en azul",
       "model": "Rosa natural preservada · dura años",
-      "image": "",
-      "imageAuto": true,
+      "image": "img/rosa-venus-azul.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -837,8 +829,7 @@
       "brand": "Airosa",
       "name": "Caja premium con 4 rosas rojas preservadas Aura",
       "model": "Rosas naturales preservadas",
-      "image": "",
-      "imageAuto": true,
+      "image": "img/rosas-aura-4.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -854,8 +845,7 @@
       "brand": "Genérico",
       "name": "Lámpara Luna 3D 15 cm con 16 colores y control remoto",
       "model": "Recargable por USB · táctil",
-      "image": "",
-      "imageAuto": true,
+      "image": "img/lampara-luna-3d.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -871,8 +861,7 @@
       "brand": "Wurden",
       "name": "Balanza digital de cocina Wurden negra",
       "model": "Para pesar ingredientes al gramo",
-      "image": "",
-      "imageAuto": true,
+      "image": "img/balanza-wurden.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -888,7 +877,7 @@
       "brand": "Motorola",
       "name": "Celular Motorola Moto G06 64 GB, 4 GB RAM",
       "model": "Pantalla 6.9\" · cámara 50 MP",
-      "image": "https://media.falabella.com.pe/falabellaPE/157257942_01/public",
+      "image": "img/moto-g06-64.jpg",
       "buy": {
         "price": 349,
         "checked": "2026-10-15",
@@ -922,7 +911,7 @@
       "brand": "Kuychi",
       "name": "Kit de 5 ligas de resistencia (5 a 40 lb)",
       "model": "Bandas elásticas de látex para glúteos y piernas",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/35312717/imageUrl_1.jpg",
+      "image": "img/ligas-5-kit.jpg",
       "buy": {
         "price": 18.9,
         "checked": "2026-10-15",
@@ -938,7 +927,7 @@
       "brand": "Keep",
       "name": "Tomatodo shaker KEEP 700 ml",
       "model": "Para batidos y proteína",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/30053920/20212982.jpg",
+      "image": "img/shaker-keep-700.jpg",
       "buy": {
         "price": 5.9,
         "checked": "2026-10-15",
@@ -954,7 +943,7 @@
       "brand": "Squishmallows",
       "name": "Peluche Squishmallows Hugmees Stitch 25 cm",
       "model": "Original Disney · súper suave",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/30603834/20468048.jpg",
+      "image": "img/stitch-hugmees-25.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -970,7 +959,7 @@
       "brand": "Ultrabyte",
       "name": "Bicicleta spinning estacionaria Ultrabyte con pantalla (hasta 120 kg)",
       "model": "Pantalla de carga y sensor de pulso",
-      "image": "",
+      "image": "img/spinning-ultrabyte.jpg",
       "buy": {
         "price": 329,
         "checked": "2026-10-15",
@@ -978,8 +967,7 @@
       },
       "envio": 25,
       "spec": {},
-      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
-      "imageAuto": true
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)"
     },
     {
       "id": "reebok-flex-trainer",
@@ -988,7 +976,7 @@
       "brand": "Reebok",
       "name": "Zapatillas de training hombre Reebok Flex Trainer",
       "model": "Para gimnasio y uso diario",
-      "image": "",
+      "image": "img/reebok-flex-trainer.jpg",
       "buy": {
         "price": 169,
         "checked": "2026-10-15",
@@ -997,7 +985,6 @@
       "stock": "Agotado",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
-      "imageAuto": true,
       "ref": {
         "store": "Oechsle",
         "price": 230.3,
@@ -1017,7 +1004,7 @@
       "brand": "Xiaomi",
       "name": "Audífonos Xiaomi Redmi Buds 6 Active azul",
       "model": "Bluetooth 5.4 · hasta 30 h · IPX4",
-      "image": "https://media.falabella.com.pe/falabellaPE/138584767_01/public",
+      "image": "img/redmi-buds-6-active.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1043,7 +1030,7 @@
       "brand": "Adidas",
       "name": "Pelota Adidas Trionda Club · Mundial FIFA 2026",
       "model": "Pelota oficial del Mundial 2026 (versión club)",
-      "image": "https://media.falabella.com.pe/falabellaPE/21056566_1/public",
+      "image": "img/pelota-trionda-club.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1059,7 +1046,7 @@
       "brand": "MU Group",
       "name": "Cuerda para saltar MU Group negra",
       "model": "Ajustable · para cardio",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/808087/20200816.jpg",
+      "image": "img/cuerda-saltar-mu.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1075,7 +1062,7 @@
       "brand": "Alessa",
       "name": "Molde de silicona de ositos de gomita",
       "model": "Para gomitas, chocolates y gelatina",
-      "image": "https://media.falabella.com.pe/falabellaPE/152693826_01/public",
+      "image": "img/molde-ositos.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1091,7 +1078,7 @@
       "brand": "Alessa",
       "name": "Molde de silicona de 15 rosas",
       "model": "Para chocolates, jabones y postres",
-      "image": "https://media.falabella.com.pe/falabellaPE/155494328_01/public",
+      "image": "img/molde-15-rosas.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1107,7 +1094,7 @@
       "brand": "Squishmallows",
       "name": "Peluche Squishmallows Pikachu",
       "model": "Original Pokémon · súper suave",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/27189740/20357743.jpg",
+      "image": "img/squish-pikachu.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1123,7 +1110,7 @@
       "brand": "Funko",
       "name": "Funko Pop! One Piece: Snake Man Luffy",
       "model": "Figura de vinilo original",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/23315562/imageUrl_1.jpg",
+      "image": "img/funko-luffy-snakeman.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1139,7 +1126,7 @@
       "brand": "Funko",
       "name": "Funko Pop! Dragon Ball: Super Saiyan Goku #14",
       "model": "Figura de vinilo original",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/20663691/imageUrl_1.jpg",
+      "image": "img/funko-goku-14.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1155,7 +1142,7 @@
       "brand": "Funko",
       "name": "Funko Pop! Marvel: Spider-Man #1422",
       "model": "Figura de vinilo original",
-      "image": "https://media.falabella.com.pe/falabellaPE/153477346_01/public",
+      "image": "img/funko-spiderman-1422.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1171,7 +1158,7 @@
       "brand": "Hot Wheels",
       "name": "Auto Hot Wheels básico (modelo sorpresa)",
       "model": "Escala 1:64 · coleccionable",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/228839/25299.jpg",
+      "image": "img/hotwheels-basico.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1187,7 +1174,7 @@
       "brand": "LEGO",
       "name": "LEGO Minifiguras 71051 · edición Animales",
       "model": "Sobre sorpresa con 1 minifigura",
-      "image": "https://media.falabella.com.pe/falabellaPE/152135381_01/public",
+      "image": "img/lego-71051-minifig.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1203,7 +1190,7 @@
       "brand": "Mikasa",
       "name": "Pelota de vóley Mikasa V330W",
       "model": "Oficial de competencia · tamaño 5",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/11855889/image-b05a1df756434dc881b68d6967e7bed7.jpg",
+      "image": "img/mikasa-v330w.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1229,7 +1216,7 @@
       "brand": "Depormax",
       "name": "Rodilleras para vóley de alto impacto (par)",
       "model": "Acolchado de silicona · negro",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/23733396/imageUrl_1.jpg",
+      "image": "img/rodilleras-depormax.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1245,7 +1232,7 @@
       "brand": "Casio",
       "name": "Calculadora científica Casio fx-82LA Plus 2",
       "model": "252 funciones · pantalla natural",
-      "image": "https://coolboxpe.vteximg.com.br/arquivos/ids/239910/FX-82LAPLUS2-BK.jpg",
+      "image": "img/casio-fx82la.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1261,7 +1248,7 @@
       "brand": "Casio",
       "name": "Calculadora científica Casio fx-991MS 2",
       "model": "401 funciones · para secundaria y universidad",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/24749440/imageUrl_1.jpg",
+      "image": "img/casio-fx991ms2.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1277,7 +1264,7 @@
       "brand": "SanDisk",
       "name": "Tarjeta microSD SanDisk Ultra 64 GB con adaptador",
       "model": "Para celular, cámara o consola",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/704162/20208599.jpg",
+      "image": "img/microsd-sandisk-64.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1293,7 +1280,7 @@
       "brand": "McDodo",
       "name": "Cargador rápido McDodo 20 W USB-C",
       "model": "Carga rápida PD · compatible con iPhone y Android",
-      "image": "",
+      "image": "img/cargador-mcdodo-20w.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1309,7 +1296,7 @@
       "brand": "HP",
       "name": "Mousepad gamer HP MP7035 (70 × 35 cm)",
       "model": "Grande · antideslizante",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/25883978/imageUrl_1.jpg",
+      "image": "img/mousepad-hp-7035.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1325,7 +1312,7 @@
       "brand": "Viva Home",
       "name": "Set de manga pastelera con boquillas",
       "model": "Para decorar tortas y cupcakes",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/31561549/20134141.jpg",
+      "image": "img/manga-viva-home.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1341,7 +1328,7 @@
       "brand": "Ilko",
       "name": "Espátula de nylon Ilko Everyday",
       "model": "No raya tus moldes",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/35666759/20465400.jpg",
+      "image": "img/espatula-ilko.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1357,7 +1344,7 @@
       "brand": "Detalles",
       "name": "Ramo de osito de peluche con rosa",
       "model": "Regalo listo para entregar · rosado",
-      "image": "https://promart.vteximg.com.br/arquivos/ids/10304389/imageUrl_1.jpg",
+      "image": "img/oso-ramo-rosa.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1373,7 +1360,7 @@
       "brand": "Samsung",
       "name": "Celular Samsung Galaxy A07 128 GB, 4 GB RAM",
       "model": "Pantalla 6.7\" · cámara 50 MP",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/32777877/20533239.jpg?v=639155133568900000",
+      "image": "img/samsung-a07-128.jpg",
       "spec": {
         "ram": "4 GB",
         "storage": "128 GB",
@@ -1395,7 +1382,7 @@
       "brand": "Xiaomi",
       "name": "Celular Xiaomi Redmi Note 15 256 GB, 8 GB RAM",
       "model": "Pantalla 6.7\" · cámara 108 MP",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34474989/20570055.jpg?v=639154316846730000",
+      "image": "img/redmi-note-15-256.jpg",
       "spec": {
         "ram": "8 GB",
         "storage": "256 GB",
@@ -1428,7 +1415,7 @@
       "brand": "Honor",
       "name": "Celular Honor X6c 256 GB, 6 GB RAM",
       "model": "Negro · batería de larga duración",
-      "image": "https://media.falabella.com.pe/falabellaPE/157666134_01/public",
+      "image": "img/honor-x6c-256.jpg",
       "spec": {
         "ram": "6 GB",
         "storage": "256 GB",
@@ -1448,7 +1435,7 @@
       "brand": "ASUS",
       "name": "Laptop ASUS Vivobook 15 Intel Core 3, 8 GB RAM, 512 GB SSD",
       "model": "15.6\" Full HD · X1504VA",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34478721/20624589.jpg?v=639220827606700000",
+      "image": "img/asus-vivobook15-512.jpg",
       "spec": {
         "processor": "Intel Core 3 100U",
         "ram": "8 GB",
@@ -1471,7 +1458,7 @@
       "brand": "Lenovo",
       "name": "Laptop Lenovo IdeaPad Slim 3 Ryzen 5, 8 GB RAM, 512 GB SSD",
       "model": "15.6\" · Arctic Grey",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/20667156/2750845.jpg?v=638769827722530000",
+      "image": "img/lenovo-slim3-r5.jpg",
       "spec": {
         "processor": "AMD Ryzen 5 7520U",
         "ram": "8 GB",
@@ -1494,7 +1481,7 @@
       "brand": "Samsung",
       "name": "Tablet Samsung Galaxy Tab A11 8.7\" 64 GB, 4 GB RAM",
       "model": "Gris · ideal para clases y videos",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22844324/2985849.jpg?v=638981478371700000",
+      "image": "img/tab-a11-64.jpg",
       "spec": {
         "ram": "4 GB",
         "storage": "64 GB",
@@ -1514,7 +1501,7 @@
       "brand": "Xiaomi",
       "name": "Tablet Xiaomi Redmi Pad 2 9.7\" 128 GB, 4 GB RAM",
       "model": "Gris grafito",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/25306143/3115839.jpg?v=639147381633570000",
+      "image": "img/redmi-pad-2.jpg",
       "spec": {
         "ram": "4 GB",
         "storage": "128 GB",
@@ -1534,7 +1521,7 @@
       "brand": "Lenovo",
       "name": "Tablet Lenovo Tab One 8.7\" 128 GB, 4 GB RAM",
       "model": "Luna Grey",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34369289/20506350.jpg?v=639125101459770000",
+      "image": "img/lenovo-tab-one.jpg",
       "spec": {
         "ram": "4 GB",
         "storage": "128 GB",
@@ -1554,7 +1541,7 @@
       "brand": "JBL",
       "name": "Parlante Bluetooth JBL Go Essential 2",
       "model": "Negro · resistente al agua",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/24924903/3069661.jpg?v=639120698617470000",
+      "image": "img/jbl-go-essential-2.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1570,7 +1557,7 @@
       "brand": "JBL",
       "name": "Parlante Bluetooth JBL Flip 7",
       "model": "Negro · 35 W · resistente al agua IP67",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34187070/20585408.jpg?v=639101353614770000",
+      "image": "img/jbl-flip-7.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1586,7 +1573,7 @@
       "brand": "Sony",
       "name": "Audífonos Sony MDR-ZX110AP con micrófono",
       "model": "Over ear · con cable",
-      "image": "https://promart.vteximg.com.br/arquivos/ids/8436451/136820.jpg?v=639171400613600000",
+      "image": "img/sony-zx110ap.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1602,7 +1589,7 @@
       "brand": "Xiaomi",
       "name": "Smartband Xiaomi Band 9 Active",
       "model": "Pantalla 1.47\" · 50 modos deportivos",
-      "image": "https://coolboxpe.vteximg.com.br/arquivos/ids/484869/image-21e71584307c470db6214bcdb029de85.jpg?v=638919987396030000",
+      "image": "img/xiaomi-band-9-active.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1618,7 +1605,7 @@
       "brand": "Philco",
       "name": "Power bank Philco 10 000 mAh",
       "model": "Negro · FLP2710",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/25675562/imageUrl_1.jpg?v=639171903432600000",
+      "image": "img/powerbank-philco-10000.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1634,7 +1621,7 @@
       "brand": "Nium",
       "name": "Soporte de celular para escritorio Nium",
       "model": "Grafito · plegable",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/27095916/imageUrl_1.jpg?v=639247068995000000",
+      "image": "img/soporte-nium.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1650,7 +1637,7 @@
       "brand": "Nike",
       "name": "Zapatillas running hombre Nike Revolution 8",
       "model": "Negro · dinos tu talla",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/24534801/2930639.jpg?v=639080697815400000",
+      "image": "img/nike-revolution-8.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1666,7 +1653,7 @@
       "brand": "Adidas",
       "name": "Zapatillas running mujer Adidas Runfalcon 5",
       "model": "Dinos tu talla",
-      "image": "https://media.falabella.com.pe/falabellaPE/21020760_1/public",
+      "image": "img/adidas-runfalcon-5-m.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1682,7 +1669,7 @@
       "brand": "Puma",
       "name": "Zapatillas urbanas hombre Puma Caven III",
       "model": "Dinos tu talla",
-      "image": "https://media.falabella.com.pe/falabellaPE/21384738_1/public",
+      "image": "img/puma-caven-3.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1698,7 +1685,7 @@
       "brand": "MU Group",
       "name": "Pesa rusa (kettlebell) MU Group 6 kg",
       "model": "Para entrenar en casa",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/28808450/20354623.jpg?v=638449099678900000",
+      "image": "img/kettlebell-mu-6.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1714,7 +1701,7 @@
       "brand": "MU Group",
       "name": "Mancuerna MU Group 2 kg (1 unidad)",
       "model": "Para brazos y tonificación",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/29382682/20200821.jpg?v=638603897341830000",
+      "image": "img/mancuerna-mu-2.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1730,7 +1717,7 @@
       "brand": "Aswan",
       "name": "Rueda abdominal roller",
       "model": "Negro · para abdomen y core",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/26085184/imageUrl_1.jpg?v=639196633613930000",
+      "image": "img/rueda-abdominal.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1746,7 +1733,7 @@
       "brand": "Spalding",
       "name": "Pelota de básquet Spalding TF-150 Varsity N.º 7",
       "model": "Goma · para cancha exterior",
-      "image": "https://media.falabella.com.pe/falabellaPE/153824103_01/public",
+      "image": "img/spalding-tf150.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1762,7 +1749,7 @@
       "brand": "Imaco",
       "name": "Batidora de mano Imaco HM505 150 W",
       "model": "Roja · 5 velocidades",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22778009/2160923-1.jpg?v=638974612761900000",
+      "image": "img/imaco-hm505.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1778,7 +1765,7 @@
       "brand": "Blackline",
       "name": "Horno eléctrico Blackline 9 L",
       "model": "Negro · para kekes pequeños y galletas",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/29033703/20395165.jpg?v=638501480596670000",
+      "image": "img/horno-blackline-9l.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1794,7 +1781,7 @@
       "brand": "Maxicompra",
       "name": "Set de 3 moldes desmontables para tortas",
       "model": "Antiadherentes · 3 tamaños",
-      "image": "https://media.falabella.com.pe/falabellaPE/151305580_01/public",
+      "image": "img/moldes-desmontables-3.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1810,7 +1797,7 @@
       "brand": "Gibben",
       "name": "Molde para 6 cupcakes antiadherente",
       "model": "Para muffins y cupcakes",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/16823031/imageUrl_1.jpg?v=638359298962800000",
+      "image": "img/molde-cupcake-6.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1826,7 +1813,7 @@
       "brand": "Alessa",
       "name": "Base giratoria premium para decorar tortas",
       "model": "Con antideslizante",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/35765488/imageUrl_1.jpg?v=639226622663970000",
+      "image": "img/base-giratoria-alessa.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1842,7 +1829,7 @@
       "brand": "Viva Home",
       "name": "Rodillo de silicona para repostería",
       "model": "Antiadherente",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/354050/20132504.jpg?v=637298429619630000",
+      "image": "img/rodillo-silicona.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1858,7 +1845,7 @@
       "brand": "Ankafa",
       "name": "Set de 6 cucharas medidoras",
       "model": "Para recetas exactas",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34961098/imageUrl_1.jpg?v=639171002145470000",
+      "image": "img/cucharas-medidoras-6.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1874,7 +1861,7 @@
       "brand": "Kisses",
       "name": "Peluche capibara en paltita 30 cm",
       "model": "Kisses · súper suave",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22483378/2925227.jpg?v=638957284402300000",
+      "image": "img/capibara-paltita-30.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1890,7 +1877,7 @@
       "brand": "Kisses",
       "name": "Peluche oso Kisses 50 cm",
       "model": "Grande para abrazar",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34500922/20568928.jpg?v=639131649108470000",
+      "image": "img/oso-kisses-50.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1906,7 +1893,7 @@
       "brand": "Kisses",
       "name": "Peluche capibara cumpleañero 25 cm",
       "model": "Kisses · ideal para cumpleaños",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22483380/2925225.jpg?v=638957289353000000",
+      "image": "img/capibara-cumple-25.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1922,7 +1909,7 @@
       "brand": "Hot Wheels",
       "name": "Hot Wheels Pullback pack de 6 autos 13 cm",
       "model": "Autos a fricción",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/29148272/20393784.jpg?v=638532344769570000",
+      "image": "img/hotwheels-pullback-6.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1938,7 +1925,7 @@
       "brand": "Hot Wheels",
       "name": "Hot Wheels Monster Trucks Attack Pack",
       "model": "Modelo surtido",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/35818354/20635047.jpg?v=639228549358500000",
+      "image": "img/hotwheels-monster-pack.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1954,7 +1941,7 @@
       "brand": "LEGO",
       "name": "LEGO Classic Comida creativa",
       "model": "Para construir y jugar",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/24440525/imageUrl_1.jpg?v=639071353355300000",
+      "image": "img/lego-classic-comida.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1970,7 +1957,7 @@
       "brand": "Genérico",
       "name": "Proyector galaxia astronauta con control remoto",
       "model": "Nebulosa y estrellas en tu cuarto",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/27273774/imageUrl_1.jpg?v=639264026815200000",
+      "image": "img/proyector-astronauta.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -1986,7 +1973,7 @@
       "brand": "Decore",
       "name": "Lámpara de mesa LED hongo",
       "model": "13 × 17.5 cm · modelo surtido",
-      "image": "https://promart.vteximg.com.br/arquivos/ids/10950308/lampara-de-mesa-led-hongo-surtido-13x17-5cm-decore-170603_170603_1.jpg?v=639174716040700000",
+      "image": "img/lampara-hongo-led.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2002,7 +1989,7 @@
       "brand": "Playmate",
       "name": "Taza mágica 11 oz \"Odio madrugar\"",
       "model": "Cambia de color con bebida caliente",
-      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22210446/imageUrl_1.jpg?v=638939471402600000",
+      "image": "img/taza-magica-madrugar.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2018,7 +2005,7 @@
       "brand": "Deco Home",
       "name": "Taza Pócima Mágica",
       "model": "Para regalar a fans de la magia",
-      "image": "https://plazavea.vteximg.com.br/arquivos/ids/36108344/20630933.jpg?v=639245720649630000",
+      "image": "img/taza-pocima.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
@@ -2034,7 +2021,7 @@
       "brand": "Airosa",
       "name": "Rosas preservadas con tallo 30 cm en caja de acetato",
       "model": "Duran años sin agua",
-      "image": "https://media.falabella.com.pe/falabellaPE/153541252_01/public",
+      "image": "img/rosas-tallo-acetato.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
