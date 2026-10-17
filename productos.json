@@ -18,33 +18,37 @@
   "subcategorias": {
     "Tecnología": [
       "Todos",
-      "Colegio",
+      "Celulares",
+      "Laptops",
+      "Tablets",
       "Audio",
+      "Wearables",
       "Periféricos",
       "Accesorios",
-      "Celulares",
-      "Wearables",
-      "Laptops",
+      "Colegio",
       "Códigos digitales"
     ],
     "Deporte": [
       "Todos",
       "Zapatillas",
       "Pelotas",
+      "Fitness",
       "Bicicletas",
       "Accesorios"
     ],
     "Repostería": [
       "Todos",
       "Electro",
-      "Utensilios",
-      "Moldes"
+      "Moldes",
+      "Utensilios"
     ],
     "Regalitos": [
       "Todos",
-      "Figuras y Funko",
       "Peluches",
+      "Juguetes",
+      "Figuras y Funko",
       "Flores eternas",
+      "Tazas y detalles",
       "Decoración"
     ]
   },
@@ -271,7 +275,7 @@
     {
       "id": "everlast-mat",
       "dept": "Deporte",
-      "cat": "Accesorios",
+      "cat": "Fitness",
       "brand": "Everlast",
       "name": "Colchoneta Everlast yoga mat 6 mm verde lima",
       "model": "Yoga y movilidad",
@@ -914,7 +918,7 @@
     {
       "id": "ligas-5-kit",
       "dept": "Deporte",
-      "cat": "Accesorios",
+      "cat": "Fitness",
       "brand": "Kuychi",
       "name": "Kit de 5 ligas de resistencia (5 a 40 lb)",
       "model": "Bandas elásticas de látex para glúteos y piernas",
@@ -1051,7 +1055,7 @@
     {
       "id": "cuerda-saltar-mu",
       "dept": "Deporte",
-      "cat": "Accesorios",
+      "cat": "Fitness",
       "brand": "MU Group",
       "name": "Cuerda para saltar MU Group negra",
       "model": "Ajustable · para cardio",
@@ -1163,7 +1167,7 @@
     {
       "id": "hotwheels-basico",
       "dept": "Regalitos",
-      "cat": "Figuras y Funko",
+      "cat": "Juguetes",
       "brand": "Hot Wheels",
       "name": "Auto Hot Wheels básico (modelo sorpresa)",
       "model": "Escala 1:64 · coleccionable",
@@ -1179,7 +1183,7 @@
     {
       "id": "lego-71051-minifig",
       "dept": "Regalitos",
-      "cat": "Figuras y Funko",
+      "cat": "Juguetes",
       "brand": "LEGO",
       "name": "LEGO Minifiguras 71051 · edición Animales",
       "model": "Sobre sorpresa con 1 minifigura",
@@ -1360,6 +1364,683 @@
         "price": 18.9,
         "checked": "2026-10-16",
         "priv": "9e5ULUdxWEeR4DvCE2eAhRSN5FJDbh78hfcVNXZz7PAijWpjXsC2EmMH509lNxdd54BWTjBOtmr81c/wVTCAHYC9ZxDQgIJuoD5dl5Ool07D8mLvSy0I8P5/btrEWXYVVDA2izOS+zPHfc5kVddT2GMOotstD2dA455VTLsHPDbR+tFCWamscVFby5sV4Gxr37NsMeki9HUnGg=="
+      }
+    },
+    {
+      "id": "samsung-a07-128",
+      "dept": "Tecnología",
+      "cat": "Celulares",
+      "brand": "Samsung",
+      "name": "Celular Samsung Galaxy A07 128 GB, 4 GB RAM",
+      "model": "Pantalla 6.7\" · cámara 50 MP",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/32777877/20533239.jpg?v=639155133568900000",
+      "spec": {
+        "ram": "4 GB",
+        "storage": "128 GB",
+        "camera": "50 MP",
+        "screen": "6.7 pulgadas",
+        "fiveg": "No"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 499.0,
+        "checked": "2026-10-16",
+        "priv": "3A/d0BX2cZvN2O68dNP1qe8xghHRqAnO9dRr035UZUYswuvjyk4sKwQBxEcdnBvIosXuzubXWdkgcT9bb4ARP+skHZMpqchBtCWzPZIBwULiYQyC0BKP98OvI8Fb9ikliRsHKJaUfwo5WXLn967mXpS8Q+JpqCYmG6yL71ZKfwHQ4Q4L+IUmBlvzWpWoxBxWs6Xm5iOqNTwAJr7gKIARS6nAqfeUQWs="
+      }
+    },
+    {
+      "id": "redmi-note-15-256",
+      "dept": "Tecnología",
+      "cat": "Celulares",
+      "brand": "Xiaomi",
+      "name": "Celular Xiaomi Redmi Note 15 256 GB, 8 GB RAM",
+      "model": "Pantalla 6.7\" · cámara 108 MP",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34474989/20570055.jpg?v=639154316846730000",
+      "spec": {
+        "ram": "8 GB",
+        "storage": "256 GB",
+        "camera": "108 MP",
+        "screen": "6.7 pulgadas",
+        "fiveg": "No"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 799.0,
+        "checked": "2026-10-16",
+        "priv": "DpVZhagYmB+Vg+KKJHUZVrKFjC+2yyjfNJzynhhuSgXXlLrp1P8wHgOyIUAs0nBLWU4U+qcwTrwdvfTySlmF7wlXC5yCg7IR8gnZHLvA/8rmRtWUZlSmnGRaAv4d7g87VFuTsL4XQnmNRu5BevczCFH6gh32KeXqQxcSZSuAQDcjrSm4f5iPiCH1W8cYKWe6k1MXremidX0BpyXj1Ma1xkms9hRZabxdWGmRlnIel4OHw8o="
+      },
+      "ref": {
+        "store": "Coolbox",
+        "price": 979.0,
+        "url": "https://www.coolbox.pe/xiaomi-redmi-note-15-256gb-8gb-ram-camara-principal-108mp-8mp-frontal-20mp-6-77--morado-100442161/p",
+        "q": "redmi note 15 256",
+        "match": [
+          "note 15",
+          "256"
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "honor-x6c-256",
+      "dept": "Tecnología",
+      "cat": "Celulares",
+      "brand": "Honor",
+      "name": "Celular Honor X6c 256 GB, 6 GB RAM",
+      "model": "Negro · batería de larga duración",
+      "image": "https://media.falabella.com.pe/falabellaPE/157666134_01/public",
+      "spec": {
+        "ram": "6 GB",
+        "storage": "256 GB",
+        "fiveg": "No"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 759.0,
+        "checked": "2026-10-16",
+        "priv": "2af9M+yNPUb+f2fCweFSbzSROT6DNyvzHXTt3O1HiL8eq7X+VVtgqwF/AySgH7n6DZU/wKJVIifjjkQZ62zbxr0jlMuSee5hg01YnBweXMWLhW3bHfv6RShJyH/bmJkWEiiJBJ6WvN6U7TWzo9w2sroXnvOQ8n7G+xDifSYeuXfU161g4dBqeVeyZ43pACgvIdVzKhmzx1CbLTNWMv1hp1Fu/UR3By2p05iJyBo="
+      }
+    },
+    {
+      "id": "asus-vivobook15-512",
+      "dept": "Tecnología",
+      "cat": "Laptops",
+      "brand": "ASUS",
+      "name": "Laptop ASUS Vivobook 15 Intel Core 3, 8 GB RAM, 512 GB SSD",
+      "model": "15.6\" Full HD · X1504VA",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34478721/20624589.jpg?v=639220827606700000",
+      "spec": {
+        "processor": "Intel Core 3 100U",
+        "ram": "8 GB",
+        "storage": "512 GB SSD",
+        "screen": "15.6 pulgadas",
+        "os": "Windows 11",
+        "condition": "Nueva"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 1899.0,
+        "checked": "2026-10-16",
+        "priv": "GLVgTHCtEkkSd8A7J3/0Im4774ctaxkIE0kvaW31rxUfzM9MRaVPHyeH+IezJTLz1gzkzqW1OUAYe0blB0LhF5ngitsGJMKszDgy8apQzfITh+eM+DOc1F0rf9rDbak0nryIvLFQL1M+TjfO8bzyo0lFq/092cu/7gAoE8Uvey4YvIRu4JJeSc0ASEz8ecxKDzoxuWgNIXqpjh+N/WKvDsVHlK4wSTDdThU3MbdSsLFnwFjI5jkyS48zdyu2Q3hZ2MxzgoG6"
+      }
+    },
+    {
+      "id": "lenovo-slim3-r5",
+      "dept": "Tecnología",
+      "cat": "Laptops",
+      "brand": "Lenovo",
+      "name": "Laptop Lenovo IdeaPad Slim 3 Ryzen 5, 8 GB RAM, 512 GB SSD",
+      "model": "15.6\" · Arctic Grey",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/20667156/2750845.jpg?v=638769827722530000",
+      "spec": {
+        "processor": "AMD Ryzen 5 7520U",
+        "ram": "8 GB",
+        "storage": "512 GB SSD",
+        "screen": "15.6 pulgadas",
+        "os": "Windows 11",
+        "condition": "Nueva"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 2049.0,
+        "checked": "2026-10-16",
+        "priv": "OIH/ixl4MVN1xdE7b8ZzpAnM2vPvBjb/X6/h+Sr+JfcZvJFFX/xGG7cxNnUOC0md23Sc00XtJ5w5E/Y5WeymPOM17kN3dUQUrJSeHn3ERjSSzZzV4muTIVhzmp0PAyJ09J3PCRgVuSKIXIAre4PdZrAq1eGd0zc/FdK/PkK01ISrtTCl3aEAXYuq+CrHm5MroKvjGk8KGZgWHdhdV7UX7y1HNSbBNYp87jqus3ALXL6R65o9Bt3/pH8="
+      }
+    },
+    {
+      "id": "tab-a11-64",
+      "dept": "Tecnología",
+      "cat": "Tablets",
+      "brand": "Samsung",
+      "name": "Tablet Samsung Galaxy Tab A11 8.7\" 64 GB, 4 GB RAM",
+      "model": "Gris · ideal para clases y videos",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22844324/2985849.jpg?v=638981478371700000",
+      "spec": {
+        "ram": "4 GB",
+        "storage": "64 GB",
+        "screen": "8.7 pulgadas"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 479.0,
+        "checked": "2026-10-16",
+        "priv": "4Ivi5WKhpN8FASTe7AneWAX/9sMq66TZjTEeDWk2Rfj5mLSBijbbByaWRUEqDTTAIURkH1WzjxAK5I9NpqdAwtVjpjDkzbhIlPvus8uL4i4AbHqIgDJL4diLKyvSnILR9nXrO9DrETv8SV61YoLvBDUKLD5axUVjSs6d7B0nkuHRVVIJgRyUT6At2DS3SqGAN9XMK+vo2Hyppv3n9Kw="
+      }
+    },
+    {
+      "id": "redmi-pad-2",
+      "dept": "Tecnología",
+      "cat": "Tablets",
+      "brand": "Xiaomi",
+      "name": "Tablet Xiaomi Redmi Pad 2 9.7\" 128 GB, 4 GB RAM",
+      "model": "Gris grafito",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/25306143/3115839.jpg?v=639147381633570000",
+      "spec": {
+        "ram": "4 GB",
+        "storage": "128 GB",
+        "screen": "9.7 pulgadas"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 499.0,
+        "checked": "2026-10-16",
+        "priv": "2L+X4Ci5/WGo6YKKf7paydc8yv52Ni6cy2OKomHL1nrMgOZuMLrUdqZyd9u03KTb5JZNSHKXKnjRtlbEpfu4UgZL4FfbNaYpdrr2Qgumb3noW35MVU2M8oJl9mnoBgDU5HLVKfcf0uZzk/gcbaY4tu8v+WQKo0iN5U7OvYb/2omfQOpbSYT742i0GGiKu6ugOHk2NUWoaOw="
+      }
+    },
+    {
+      "id": "lenovo-tab-one",
+      "dept": "Tecnología",
+      "cat": "Tablets",
+      "brand": "Lenovo",
+      "name": "Tablet Lenovo Tab One 8.7\" 128 GB, 4 GB RAM",
+      "model": "Luna Grey",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34369289/20506350.jpg?v=639125101459770000",
+      "spec": {
+        "ram": "4 GB",
+        "storage": "128 GB",
+        "screen": "8.7 pulgadas"
+      },
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 449.0,
+        "checked": "2026-10-16",
+        "priv": "JRnU8CzRkMwtIlbKH2zInRe0EkfO1vDWXnjkhdSylGfGkj3AZdF4PPLwxJfvX21ekeKG0IxGy6fZbB8QoxggxTxGuthCH8zT1hqvWNLWP9l7ytLU+dG8xdbYZ7uidhltsfp7lTDPgPIuKg57CDSZFfO7Uw1+6YydzWcIdsdGi/MIUB+9JqxRGeKS5d9fWtqeh5hf1NIMIA7UlHk="
+      }
+    },
+    {
+      "id": "jbl-go-essential-2",
+      "dept": "Tecnología",
+      "cat": "Audio",
+      "brand": "JBL",
+      "name": "Parlante Bluetooth JBL Go Essential 2",
+      "model": "Negro · resistente al agua",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/24924903/3069661.jpg?v=639120698617470000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 119.0,
+        "checked": "2026-10-16",
+        "priv": "2Af0FMStdOcSoG3XPyZe2/Sw+MrYBgNF5iUi6+dNtkbQxbIL3goZUNORgg1MMtwCRtMFuSR+cWs4LWwkweKcSOh1zPxbE6YtVZe7BGsolj1Pb/QXqRB3L6dp7P8Ix7JjoLR658JOs4JrzDxsm3muUt52tw3GX1h3Ck3lRSG+6z5YV0jEUOcmIrgL0zglgRmOSidDSxWT2g=="
+      }
+    },
+    {
+      "id": "jbl-flip-7",
+      "dept": "Tecnología",
+      "cat": "Audio",
+      "brand": "JBL",
+      "name": "Parlante Bluetooth JBL Flip 7",
+      "model": "Negro · 35 W · resistente al agua IP67",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34187070/20585408.jpg?v=639101353614770000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 379.0,
+        "checked": "2026-10-16",
+        "priv": "HDZsJ9F3aFBntlO73Rx3djXZZ6Dpnel+3teVRF7dHVkSu//nX0lA4NkQ651nRLvV+m6I+iT6nRDcVUweEUeJ9+FZHsvgH4og4/9rzX34DbiNk3bPVvouwi2oQrSSCqES2f8vL3wyruLuEKHor0W1okyjhXoldxcjTPqcbjZAvsb8fRFtv5JS1UXzGjSKx0GY5EPhHtbZlSJn"
+      }
+    },
+    {
+      "id": "sony-zx110ap",
+      "dept": "Tecnología",
+      "cat": "Audio",
+      "brand": "Sony",
+      "name": "Audífonos Sony MDR-ZX110AP con micrófono",
+      "model": "Over ear · con cable",
+      "image": "https://promart.vteximg.com.br/arquivos/ids/8436451/136820.jpg?v=639171400613600000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 49.0,
+        "checked": "2026-10-16",
+        "priv": "+Emlq+SByXYZkQP9gW2ZlK4EySp5T65xVfpjinSRQxsBasQ/YwEVAQl1+yRlC9U32xHHMkHp+L2a3CeYAfk94VICjn+UngikYbCctO1NdZJREQQQotwVeKLVY2Y+S2Ws0r0EXLmeDTbX5T+68TVPW4cCj/LOWOOhAfNVleNTIoXawpH5cCMsg7vR7JtXBKw="
+      }
+    },
+    {
+      "id": "xiaomi-band-9-active",
+      "dept": "Tecnología",
+      "cat": "Wearables",
+      "brand": "Xiaomi",
+      "name": "Smartband Xiaomi Band 9 Active",
+      "model": "Pantalla 1.47\" · 50 modos deportivos",
+      "image": "https://coolboxpe.vteximg.com.br/arquivos/ids/484869/image-21e71584307c470db6214bcdb029de85.jpg?v=638919987396030000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 119.0,
+        "checked": "2026-10-16",
+        "priv": "62d7wIgPp43qj8Xqo9DD5usnbOABefioxTbT/ZelvHT7jd3fsXPMXLU3u9fot8wjamisHATArrLAi+V/STSlZ7aso8XuE0ycYtPJD4Rkp6k2Vsckr1NbGIyGrdyWdjoJ4A7IXB8YAXcwCWDhfcWxIpSApB1A1Uhdj9LEot8Ds9lmohdEEnoVLQccr3sdaBCJRSC/D3Bk+KeF"
+      }
+    },
+    {
+      "id": "powerbank-philco-10000",
+      "dept": "Tecnología",
+      "cat": "Accesorios",
+      "brand": "Philco",
+      "name": "Power bank Philco 10 000 mAh",
+      "model": "Negro · FLP2710",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/25675562/imageUrl_1.jpg?v=639171903432600000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 49.9,
+        "checked": "2026-10-16",
+        "priv": "3+2Lpba9EyPvlavNXg3KCdyOQdA7YK7L9Bzg/4REvCWssNyBEVHFqzVtPd3nVdR5LJxCh5W8fDw2vyql/Vu6zhoAhNehJ8LLtngq0KpME3AV6GuZ0pWyySPuCSz/sxKERnjsiuz9GMbyiRzC90htaHgA8jcdkMtUblMamX13gHUcYEzZHZxZdXD3NSHIQ6ljGg4mK06dKtnrzUOrfV/Qhsv8hYLl"
+      }
+    },
+    {
+      "id": "soporte-nium",
+      "dept": "Tecnología",
+      "cat": "Accesorios",
+      "brand": "Nium",
+      "name": "Soporte de celular para escritorio Nium",
+      "model": "Grafito · plegable",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/27095916/imageUrl_1.jpg?v=639247068995000000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 9.0,
+        "checked": "2026-10-16",
+        "priv": "IqSJGTvA8rEbg779v/Ownrnnkw3xCrrxP30h7XQePzNgk7w/GMtAg0tQ9IWeJK724ki+A8cxbZ6dZaa+OI4TGwPBOj4AhJqTPyou4iwgM7KQKH12i28xYjKUW4B7WC9CwM1MZ9bUMHK+4ZEiy4BGOVHjqZ8pPhhPHAER4obNxUYIy3rrpynWJkO+QKifWw=="
+      }
+    },
+    {
+      "id": "nike-revolution-8",
+      "dept": "Deporte",
+      "cat": "Zapatillas",
+      "brand": "Nike",
+      "name": "Zapatillas running hombre Nike Revolution 8",
+      "model": "Negro · dinos tu talla",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/24534801/2930639.jpg?v=639080697815400000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 219.0,
+        "checked": "2026-10-16",
+        "priv": "LOfuTLwtYu7q5KwDzx3/4Td+yoYxraome65+Td5wWjP4hWbzuXiYUObdmW1AF2nxta45W2cX0PWhm85QqWSlel/y4ar1SC9YR5nLCXxmrpKG+AX9cDYq9rMf1ggLNsE6FDj5lJ40sY2rP6zpoBG4LhyPzdnbGTYsnVd+FSTm9i8PDit/YqMyPLsRO2W2fNm3R/zYuMCxi3hB9ekamRDevxOKojhoU99Q"
+      }
+    },
+    {
+      "id": "adidas-runfalcon-5-m",
+      "dept": "Deporte",
+      "cat": "Zapatillas",
+      "brand": "Adidas",
+      "name": "Zapatillas running mujer Adidas Runfalcon 5",
+      "model": "Dinos tu talla",
+      "image": "https://media.falabella.com.pe/falabellaPE/21020760_1/public",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 139.3,
+        "checked": "2026-10-16",
+        "priv": "e6pauQ/s9E7rwKSw3lYLvoVmTcp36loc9PRqcs2Befin6m2Ol26d/vXxWCAoqLB+rpSW2wn2iKHW4PyXGSS3HqLh7VGwNwKo2J8QHjw5rO6ub2mSSHInkWivSAaozlDU4pbU0Uyot0/Nt0timimBaY+7ax1S606E0Z6cuMYfApjjqTk/sdstfFnq/tKCIhpih1vkgPg+KJeEJsL+QZbT2z2jRNhWywQIcZp7xT8tgr8j4AJzbyNPTytuXHg="
+      }
+    },
+    {
+      "id": "puma-caven-3",
+      "dept": "Deporte",
+      "cat": "Zapatillas",
+      "brand": "Puma",
+      "name": "Zapatillas urbanas hombre Puma Caven III",
+      "model": "Dinos tu talla",
+      "image": "https://media.falabella.com.pe/falabellaPE/21384738_1/public",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 114.5,
+        "checked": "2026-10-16",
+        "priv": "Ruxg5wj22hlRsvkTtiAHEMvMHokUcHs7JMm8yZvwSUkUkkZ0PLv4ByLchVXWFpT87aMP/mPNQfwoOw5G8a7AmShGNEtCJc0pWaKnUPBsozCDewgUt+zW/R6csrsqg+rjUO29ubla5Cnuu4sMcKmwIvZmIyOor3hnZODJBU0FZR6+Ymu4114Q/yvxupOiQEP1GNrKYgkAHrmku8rSmDmOXV59kxY="
+      }
+    },
+    {
+      "id": "kettlebell-mu-6",
+      "dept": "Deporte",
+      "cat": "Fitness",
+      "brand": "MU Group",
+      "name": "Pesa rusa (kettlebell) MU Group 6 kg",
+      "model": "Para entrenar en casa",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/28808450/20354623.jpg?v=638449099678900000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 19.9,
+        "checked": "2026-10-16",
+        "priv": "wf4C7zYKKXFClqZ12xLGCwb+heG3VCO3cGynlNUQYiPVA87qRr6Z7G1duXECD4ImMuYqh+cR9JwR/v9c4ti4rh2gAuq9/g/QPi0LPPAKRIz78A/3QXMAYmcDC1JKlu783w8E3NLy52+GudNdwOk65sxUZOOtGFvfBcmU7B7NkLC5Ugrw23A08OoXVh8z3Jd8"
+      }
+    },
+    {
+      "id": "mancuerna-mu-2",
+      "dept": "Deporte",
+      "cat": "Fitness",
+      "brand": "MU Group",
+      "name": "Mancuerna MU Group 2 kg (1 unidad)",
+      "model": "Para brazos y tonificación",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/29382682/20200821.jpg?v=638603897341830000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 19.9,
+        "checked": "2026-10-16",
+        "priv": "DnO/4qCogpPtL1SuLvUXFeG+bvczGyJmp7RdP4uID7tKqaFE7CCQiG9WlG6qHpaFY0pTit4FtIaao5egWGroQY/E6n+BCarLIM8hntvk7TICE0vMneDcBFGMy626lWzs+I8+Ae5U8M9EzuM2OgIkTzQ6YVN8xqA4flMHWs7r9CAGe5DtX36RsSDvK9LFLIOhGxVB0SVu"
+      }
+    },
+    {
+      "id": "rueda-abdominal",
+      "dept": "Deporte",
+      "cat": "Fitness",
+      "brand": "Aswan",
+      "name": "Rueda abdominal roller",
+      "model": "Negro · para abdomen y core",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/26085184/imageUrl_1.jpg?v=639196633613930000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 36.9,
+        "checked": "2026-10-16",
+        "priv": "a3v/saPC+xaQqfxGj9Yw6soC/o6LynzZVU5RE5ZDRlZS4ZldGLmTTFP/xMx0dG8icFRiwmOerPmPzfaqqGCt0u/J5H7QFRaDFmSK15KasJN8bDaXyDfKZPYDYet298ZMiqkCfPVpYdqzSQ9C6HzIaaP3/UO5Q9SNnuz1jQImLg1mpqLkD6mMVNXv0zhf6fQ="
+      }
+    },
+    {
+      "id": "spalding-tf150",
+      "dept": "Deporte",
+      "cat": "Pelotas",
+      "brand": "Spalding",
+      "name": "Pelota de básquet Spalding TF-150 Varsity N.º 7",
+      "model": "Goma · para cancha exterior",
+      "image": "https://media.falabella.com.pe/falabellaPE/153824103_01/public",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 89.9,
+        "checked": "2026-10-16",
+        "priv": "cszECAwUu+Y7ramRpNzkfZLOycxlyoUatI10gOIxZDAYhyJtcHZgIzO1O8p8LLZeSojzyArW+Y/gCG2Obi4ylBZZPs1XpL2yl64EK59uvl1bh5LSX6GIhJJVKricuC+6I95wxXToyV75dHDhGCzsywcagql79TPO4kykuwMBw/ilru8Ktkq0zNQ4t592b47DQG0uubXu4lV3NsjH/N8WewHRl/Z8HqWYtlf0TA=="
+      }
+    },
+    {
+      "id": "imaco-hm505",
+      "dept": "Repostería",
+      "cat": "Electro",
+      "brand": "Imaco",
+      "name": "Batidora de mano Imaco HM505 150 W",
+      "model": "Roja · 5 velocidades",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22778009/2160923-1.jpg?v=638974612761900000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 49.0,
+        "checked": "2026-10-16",
+        "priv": "Bs3TbeMMmd+5GzFCotVEeJhITaG2+2JtDBR78oGHOGrgRyK1lCB7UiM8L6PcyR0vLm/PqpJ4lb9+QPIu5YJAyOWHhHateqa161HEjyfxKirE6oaAGeMIGcUW7XYC8Xm0BJ1XJQbKqI7NqEUlFgXVaXYsuue6rPlJqBEgfV2bUkcB0PmHB7MSHGhfsn1sgZuwZrs="
+      }
+    },
+    {
+      "id": "horno-blackline-9l",
+      "dept": "Repostería",
+      "cat": "Electro",
+      "brand": "Blackline",
+      "name": "Horno eléctrico Blackline 9 L",
+      "model": "Negro · para kekes pequeños y galletas",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/29033703/20395165.jpg?v=638501480596670000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 79.0,
+        "checked": "2026-10-16",
+        "priv": "dfmToRPObbpUqRE7n2epkDHEAWb3fJWWt2mWpLFoy/bS/imjA6bn+npBeutiabiim8eGlXXngwC1lQbc/uhMYCP/hDMVPLP+ZolnPPx0IjWsN1ILupvD9lnGHRnPJP7Pw3oH804nxotI5eJVa6EJjy5h3eB0vINlLg6D5pTSZZDXe0h1chKGStWDGJoRBEBkRJNwbtVD"
+      }
+    },
+    {
+      "id": "moldes-desmontables-3",
+      "dept": "Repostería",
+      "cat": "Moldes",
+      "brand": "Maxicompra",
+      "name": "Set de 3 moldes desmontables para tortas",
+      "model": "Antiadherentes · 3 tamaños",
+      "image": "https://media.falabella.com.pe/falabellaPE/151305580_01/public",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 18.9,
+        "checked": "2026-10-16",
+        "priv": "nvRMiRLpc8CqxYz3AJqrnMIIu+30BJKzofvAmYuxX9VzCjcZYK40xkJYMSKPFOSEOgtow65hDkye6+kS9SHJBTfZBI9xvuMYwuxMX4q34KFXtBEkGstYkNzb5/6YSuaAWS+5jY4ZOrpPSycmGCSXS2ATgVVQAlpcPedbmrTA3Vgs8xYVoVvJY3MqhSAz/wnzlN8HgCLkerooky/saaMQGrnR9t+ik3eIsBX/m9a/SqAb2Dhs23pUNspTWTwQ8virg2w="
+      }
+    },
+    {
+      "id": "molde-cupcake-6",
+      "dept": "Repostería",
+      "cat": "Moldes",
+      "brand": "Gibben",
+      "name": "Molde para 6 cupcakes antiadherente",
+      "model": "Para muffins y cupcakes",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/16823031/imageUrl_1.jpg?v=638359298962800000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 22.0,
+        "checked": "2026-10-16",
+        "priv": "LPlfCpbxCwVYgenwA/DXes8onI3B0hcD0TNSGsRczc84/FGKM78RFXaDar3rJ5shbHB5R7ExZHVGOodsVRVse5fDGo1NE1aZxsgl3p8Nbun9WDqQXsrZ9exej61Ps3pEwa9pRA96nKbgwEZDFRKwl1VbQC0EYeCcUT4c+eWugzW84IS8PGvTv8/fWQ/TWc8cQXQGihutaRBS0cCMDDu2kw=="
+      }
+    },
+    {
+      "id": "base-giratoria-alessa",
+      "dept": "Repostería",
+      "cat": "Utensilios",
+      "brand": "Alessa",
+      "name": "Base giratoria premium para decorar tortas",
+      "model": "Con antideslizante",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/35765488/imageUrl_1.jpg?v=639226622663970000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 34.0,
+        "checked": "2026-10-16",
+        "priv": "gYOBxI4gobRkiRUge7fp4y+1k22tGyrx6LQ8CcN6tSDzo5x7HAZtT0wU72HS4gqYlXxFvZu1JTFgpMeW7UgFWJllFYTlLrzgBcsRKSV6jhsJM/54abGiSJOo3t2R9482sSFqDl1D4JHPDFX6LwRjSxKmLYZE03ZtEwvtVUxuUF8xtki0kgpJp+Z7aIWh77u/AqitEOatMebbXGjcqubSpWZM63bAHYm0zy/8hPO68USDubUiLIMGgjWnTtCIIhnrH0ZHuMzCVxQWA7rR/nzopeO6"
+      }
+    },
+    {
+      "id": "rodillo-silicona",
+      "dept": "Repostería",
+      "cat": "Utensilios",
+      "brand": "Viva Home",
+      "name": "Rodillo de silicona para repostería",
+      "model": "Antiadherente",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/354050/20132504.jpg?v=637298429619630000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 14.9,
+        "checked": "2026-10-16",
+        "priv": "jtHRafRaqPbSfrtIw+W7oAjc2NndDKSJ60/RKM0jma4ZK4P6ZaXsSLyHirtKI8n6NkAbnnZm8Q8k0naVzyRMLIq7C+bbCATkFiC4Fx+wQd8gK3BHD9QSBYkvzin21bj6uStCdwV4+NBc5nxW1ZVRTjbHhbG2WJkEpxzKKuQVtOWAH32TPr3mRX3v"
+      }
+    },
+    {
+      "id": "cucharas-medidoras-6",
+      "dept": "Repostería",
+      "cat": "Utensilios",
+      "brand": "Ankafa",
+      "name": "Set de 6 cucharas medidoras",
+      "model": "Para recetas exactas",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34961098/imageUrl_1.jpg?v=639171002145470000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 10.0,
+        "checked": "2026-10-16",
+        "priv": "LfLKwJ4x4JI9RH8zI5QE6U0igwYlz78pA6xpkeO2PybZ0HqdWFKLqHZzp1+Bz3Z59HhRiCoaUfKvBzMZKktgXz6gNuH+Zy8WSybUbzA99rgoB8aRbCBSaaHhYoYQw9WfZszfVoabdItlx7l4dVKuhfn4rbAHemvIcJ8kavV2liQQnyQzWOt4S47eDeV5RnWCrN3xfqmnZ0ocTx1twjmvgd5aGXtEoal/"
+      }
+    },
+    {
+      "id": "capibara-paltita-30",
+      "dept": "Regalitos",
+      "cat": "Peluches",
+      "brand": "Kisses",
+      "name": "Peluche capibara en paltita 30 cm",
+      "model": "Kisses · súper suave",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22483378/2925227.jpg?v=638957284402300000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 29.95,
+        "checked": "2026-10-16",
+        "priv": "7WG68rlb5vqkmUVrToS6oIjGlVPao39qkxxd396wCvlJpiZFkY76UkOKNASZIwSYkMKgFLdI7JXgmPRSChrrTMAKPdhTupq4lCwYlNAX5SqmyUIJNDAsYkcsw3ft6OU6T6C6szmdI3QqTS4VwvHUElXYCpaT0PwaMLpY+bxFiZlAOrDMHl41quhJsmaJAMW9CXfixw=="
+      }
+    },
+    {
+      "id": "oso-kisses-50",
+      "dept": "Regalitos",
+      "cat": "Peluches",
+      "brand": "Kisses",
+      "name": "Peluche oso Kisses 50 cm",
+      "model": "Grande para abrazar",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/34500922/20568928.jpg?v=639131649108470000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 32.9,
+        "checked": "2026-10-16",
+        "priv": "CRoAReb7Cqk1+s9QqlQyt53GNQ8kmVkxl+ZT6BFZDJoTEzomgwKh4gisQQoSWGs4G96JdKfMte0PcjJmFVxnIfbUOCsGsyeyNWXjivKxwiEzZg6YyAwA0HYHUIrZMEMJJVk5FQCKHHPC7Dzfe5nn+4YmhzXkxiy/Zn76anWfMn3Idjz6ndWxUQ0TTf5I"
+      }
+    },
+    {
+      "id": "capibara-cumple-25",
+      "dept": "Regalitos",
+      "cat": "Peluches",
+      "brand": "Kisses",
+      "name": "Peluche capibara cumpleañero 25 cm",
+      "model": "Kisses · ideal para cumpleaños",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22483380/2925225.jpg?v=638957289353000000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 19.95,
+        "checked": "2026-10-16",
+        "priv": "GYsBhOLIkV/jbH1eTR4tMO3NHaKsI7VUMBISr+9Om8jm2CR3bHB5MAFiUa7OiygxkIZW60eLYPkM4UAYLIFdd3J3oZyLQUfgzZhaWcp4ajgRs3gbz/COnVQRLON59ZWRabKTWe47fdZYL2Dk+uyywzhSYppaLfUHix+oaY0ckUyG3UC3dxmY2fbLSeaN1bnqncaiwkaJ1qMAeOuu"
+      }
+    },
+    {
+      "id": "hotwheels-pullback-6",
+      "dept": "Regalitos",
+      "cat": "Juguetes",
+      "brand": "Hot Wheels",
+      "name": "Hot Wheels Pullback pack de 6 autos 13 cm",
+      "model": "Autos a fricción",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/29148272/20393784.jpg?v=638532344769570000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 29.9,
+        "checked": "2026-10-16",
+        "priv": "LtE5p1dcOJ93yzt+89QebBByImyq2x2njf6Mst4Xel2z6Vxgq2td0PwOinOyBlAOxAOIvuDQgWdvB5BM+QDJny5okFpWspxQ2RJIUToWOPaXQ7aKBj2422xM40j/uh/PqIEefo8rEV/e0WFxEMG7Q4mFlojHoKHYxJv8WC0wfSO5VsEfsnUCtmGqhhPbdvINu+Ko95JKajY/NVcjJ5pVDw=="
+      }
+    },
+    {
+      "id": "hotwheels-monster-pack",
+      "dept": "Regalitos",
+      "cat": "Juguetes",
+      "brand": "Hot Wheels",
+      "name": "Hot Wheels Monster Trucks Attack Pack",
+      "model": "Modelo surtido",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/35818354/20635047.jpg?v=639228549358500000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 47.9,
+        "checked": "2026-10-16",
+        "priv": "pG6aQlMRfAbVPG0KhObigT78/FotuRKvz6RDYzWEn5EAZcm4tn6F0rPWEQ7sWooBN2USygUV/KgKCbyHcAP5AadC0/ZzUENyEDt5r2WNdhJ/pmW2plXF2KNXB8EO4ttaGu4o6adZB6vFa/XHbIXLdsqIF9CZnrPxKsyx7t8V0DFgedKAu6vBAXjah8EpKzWTEdnzy1L0hrdaHx6YnOVCI+87dg=="
+      }
+    },
+    {
+      "id": "lego-classic-comida",
+      "dept": "Regalitos",
+      "cat": "Juguetes",
+      "brand": "LEGO",
+      "name": "LEGO Classic Comida creativa",
+      "model": "Para construir y jugar",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/24440525/imageUrl_1.jpg?v=639071353355300000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 70.0,
+        "checked": "2026-10-16",
+        "priv": "KQecQooIm6SKss8XWU02Uv4QHxezzT+mSXUivYV/2LJk6Ycp/aPGlDzQUzepzOskcvxSYRNzwTPeZKoYP2fKYnvir6LiNAwQlXUv+REHkqz+bZQZnTswQ06VjuzWjbD3VnN7qpbgspl+Fhv7VRLrYyhVtH4A+Oy4YGPh34vyXa7eF86vkWL0uu6zOXafyNFPDMlJbSQr1USTHZX5xaz2cMVSbCEQ+dr3Uf3Ne4klwk4CBU4QdfLswR+qAAkp38rDBUcE"
+      }
+    },
+    {
+      "id": "proyector-astronauta",
+      "dept": "Regalitos",
+      "cat": "Decoración",
+      "brand": "Genérico",
+      "name": "Proyector galaxia astronauta con control remoto",
+      "model": "Nebulosa y estrellas en tu cuarto",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/27273774/imageUrl_1.jpg?v=639264026815200000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 43.7,
+        "checked": "2026-10-16",
+        "priv": "TZtAvtTfhVALj3yc8Csi58GIkDV52mVZ8dpj9EgG6nY7u92US3bu+ao8jdD2RmTtR4bBLnIERGI1IRrGjycmxOL6f/VOlDy+IaZclKVBXTLJjQkXhaBULTuli0vjTcG3Kwe2z+dMxxJSZ2/rgWZeJTYznn9jvmkKYrKKGEcj+xRjMmunCWzgced1hE2qh27cph5a53xeGDZn5jW86RFuOc5D3FqjBZ227npVGV+7LxQ="
+      }
+    },
+    {
+      "id": "lampara-hongo-led",
+      "dept": "Regalitos",
+      "cat": "Decoración",
+      "brand": "Decore",
+      "name": "Lámpara de mesa LED hongo",
+      "model": "13 × 17.5 cm · modelo surtido",
+      "image": "https://promart.vteximg.com.br/arquivos/ids/10950308/lampara-de-mesa-led-hongo-surtido-13x17-5cm-decore-170603_170603_1.jpg?v=639174716040700000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 29.9,
+        "checked": "2026-10-16",
+        "priv": "PgcTEPnXoc8FNWdQKHUcNQO/82D3BY61S1wolfHF4hCIkhm9pNzyToP7PaC8OUQ5XZUNZoGkcOEmH6GZhvRoqh9FGcRKxQpfbygyUoRcgX3XuFeIG3GeIiVdHz6/psUjG5YHWGUYbafsaHuHUCdjCd6M/ITlrcXHy+WBRrYZVZA7/uqDj8j5f2l6iUgqjjUL9iDYeFuk0GQ3thJX3g=="
+      }
+    },
+    {
+      "id": "taza-magica-madrugar",
+      "dept": "Regalitos",
+      "cat": "Tazas y detalles",
+      "brand": "Playmate",
+      "name": "Taza mágica 11 oz \"Odio madrugar\"",
+      "model": "Cambia de color con bebida caliente",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/22210446/imageUrl_1.jpg?v=638939471402600000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 19.0,
+        "checked": "2026-10-16",
+        "priv": "6wHqmbfXyee5CAYv58Mji8mD1rok+TDr0fqnG+ARTKNmzaMELhZViReVWFBb4MFixaZHLsWY5sQOuRWhR7neaIjDVXsq+3ACXoN2ySfacp4tqxXEqu5INRprGGV4KyiYBXWF/jUA9I4vnEVD73Em16VExXUHa1cpphu53P5fNndtMeX9CaeNQl4h+lu0fQFX+QRXpG2kZpLOsPFnMGkMb5NpPgk2"
+      }
+    },
+    {
+      "id": "taza-pocima",
+      "dept": "Regalitos",
+      "cat": "Tazas y detalles",
+      "brand": "Deco Home",
+      "name": "Taza Pócima Mágica",
+      "model": "Para regalar a fans de la magia",
+      "image": "https://plazavea.vteximg.com.br/arquivos/ids/36108344/20630933.jpg?v=639245720649630000",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 10.9,
+        "checked": "2026-10-16",
+        "priv": "LCmGDMZrbCfBllX4v/tMl7c4fyOdo3gCtHai4dBr7yoWSq7v0Kx87GtWKhyNu3Q281dxu+eX9JG6848QUMCDNDpIOSUFH5YdvrDdqizfFeCaCZGROkPtEk1udB5qPR2f4XfE15g8AbHCifs1Anv61Rwy2/MgwyCasE0Rl/VhnPvyfYweyyxIMFnRZbUfko1vGeE="
+      }
+    },
+    {
+      "id": "rosas-tallo-acetato",
+      "dept": "Regalitos",
+      "cat": "Flores eternas",
+      "brand": "Airosa",
+      "name": "Rosas preservadas con tallo 30 cm en caja de acetato",
+      "model": "Duran años sin agua",
+      "image": "https://media.falabella.com.pe/falabellaPE/153541252_01/public",
+      "spec": {},
+      "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
+      "buy": {
+        "price": 79.0,
+        "checked": "2026-10-16",
+        "priv": "HH0vgUAT7J6vRXN5VUl1izM8PyAfpFT2pxZvt/2ZSLu63+/PlO9FgAiUhRGkZYQIa3r5rSzzx51i3qEoeGAz3D9Hr9wSrqKdWnM6N89teMRwDQgP6ClX0HDV562V2hA1BHmEeOGGKHHMLNPegT8rwShZKKzENFbvAAGQsTqkLw2xJ7EAJMKNI7F6P1ZRTFVHCu6uvLSuBkM4Ntqxqkmq3/z2TBTiNm3+utXRz9yppgC6yUFcWzoxzQIURqATse9V7JHIRZbzeQ=="
       }
     }
   ]
