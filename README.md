@@ -76,6 +76,27 @@ Con la hoja **Zypuc · Centro de datos** de tu Drive conectada, la tienda:
 
 Para conectarlo: abre la hoja → Extensiones → Apps Script → pega el código → Implementar → Aplicación web (acceso: cualquier usuario) → copia la URL que termina en `/exec` y ponla en `config.sheetsApi` de `productos.json` (o en **Panel → Centro de datos**, que genera el archivo listo).
 
+## Cupones de descuento
+
+En la pestaña **Cupones** de la hoja de Google cada fila es un cupón: código, tipo (`%` o `S/`), valor, compra mínima, fecha de vencimiento, **Activo** (`sí`/`no`) y máximo de usos. El cliente lo escribe en el checkout; la hoja lo valida y suma un uso cuando llega el pedido. El pedido guarda qué cupón se usó.
+
+## Encargos ("Pídelo y te lo cotizamos")
+
+Lo que los clientes piden y no está en la tienda llega a la pestaña **Encargos** (y también por WhatsApp). En el Panel → Pedidos y reseñas se cambia el estado (nuevo, cotizado, pedido, descartado) y se anota la respuesta. Sirve para saber qué productos agregar.
+
+## Agotados y "Bajó de precio"
+
+- Si una tienda muestra el producto sin unidades, el actualizador lo marca **Agotado** y el botón de compra se desactiva hasta que vuelva.
+- Si nuestro precio bajó S/ 3 o más en las últimas 2 semanas, el producto muestra la etiqueta **"Bajó S/ X"**.
+
+## Seguridad
+
+- Los links de compra van cifrados (AES-256) y solo se abren con la contraseña del equipo.
+- Las fotos de los productos se guardan en `img/` (no delatan en qué tienda compramos).
+- La página tiene reglas de seguridad del navegador (CSP), no se puede mostrar dentro de otra página y el código va compactado.
+- Activa la verificación en dos pasos en GitHub y en la cuenta de Google de la hoja.
+- `LICENSE`: todos los derechos reservados.
+
 ## Modo equipo (LeoZypuc)
 
 En la tienda: **Cuenta → Equipo Zypuc** → usuario `LeoZypuc` y la contraseña del equipo (no está escrita en ningún archivo).

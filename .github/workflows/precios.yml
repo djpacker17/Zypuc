@@ -15,24 +15,29 @@ concurrency:
 jobs:
   precios:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests cryptography
+      - run: pip install requests cryptography pillow
       - run: python scripts/actualizar_precios.py
         env:
           ZYPUC_CLAVE: ${{ secrets.ZYPUC_CLAVE }}
-      - name: Guardar precios.json
+      - name: Guardar fotos dentro de la web
+        run: python scripts/localizar_imagenes.py
+      - name: Guardar cambios
         run: |
-          if [ -n "$(git status --porcelain precios.json)" ]; then
+          if [ -n "$(git status --porcelain precios.json productos.json img)" ]; then
             git config user.name "zypuc-precios"
             git config user.email "zypuc-precios@users.noreply.github.com"
-            git add precios.json
+            git add precios.json productos.json img
             git commit -m "Precios actualizados"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && break
+              sleep 5
+            done
           else
             echo "Sin cambios"
           fi
