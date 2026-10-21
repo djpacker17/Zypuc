@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Zypuc">
+<defs><clipPath id="r"><rect width="1024" height="1024" rx="230"/></clipPath>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2380FF"/><stop offset=".5" stop-color="#0B5ED7"/><stop offset="1" stop-color="#083A94"/></linearGradient>
+<radialGradient id="gl" cx=".86" cy=".96" r=".62"><stop offset="0" stop-color="#14B8A6" stop-opacity=".8"/><stop offset="1" stop-color="#14B8A6" stop-opacity="0"/></radialGradient>
+<radialGradient id="gl2" cx=".12" cy=".04" r=".5"><stop offset="0" stop-color="#7FB2FF" stop-opacity=".45"/><stop offset="1" stop-color="#7FB2FF" stop-opacity="0"/></radialGradient>
+<linearGradient id="zg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D6EF0"/><stop offset="1" stop-color="#14B8A6"/></linearGradient>
+<linearGradient id="pin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#E8F4FF"/></linearGradient>
+<filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#031441" flood-opacity=".5"/></filter>
+</defs>
+<g clip-path="url(#r)">
+<rect width="1024" height="1024" fill="url(#bg)"/><rect width="1024" height="1024" fill="url(#gl)"/><rect width="1024" height="1024" fill="url(#gl2)"/>
+<g transform="translate(512 512) scale(.9) translate(-512 -512)">
+<ellipse cx="512" cy="872" rx="128" ry="24" fill="#2DD4BF"/>
+<g filter="url(#sh)"><path d="M512 190c-150 0-262 112-262 258 0 190 220 360 245 380a27 27 0 0 0 34 0c25-20 245-190 245-380 0-146-112-258-262-258z" fill="url(#pin)"/></g>
+<g transform="translate(512 462) rotate(-6) scale(.53) translate(-299 -340) translate(0 692) scale(1 -1)"><path d="M105 -11Q67 -11 40.5 15.5Q14 42 14 82Q14 96 17.0 107.5Q20 119 27 127L305 512H109Q87 512 65.0 515.5Q43 519 28.5 537.5Q14 556 14 600Q14 646 27.5 665.0Q41 684 62.5 688.0Q84 692 106 692H480Q518 692 544.5 665.0Q571 638 571 598Q571 584 568.0 572.5Q565 561 558 553L280 168H494Q516 168 536.5 164.0Q557 160 570.5 141.5Q584 123 584 80Q584 35 570.5 16.0Q557 -3 536.0 -7.0Q515 -11 492 -11Z" fill="url(#zg)"/></g>
+<g stroke="#2DD4BF" stroke-width="36" stroke-linecap="round"><path d="M752 236l40-54"/><path d="M796 300l64-24"/><path d="M700 192l8-64"/></g>
+</g></g></svg>

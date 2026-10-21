@@ -127,21 +127,21 @@
       "dept": "Tecnología",
       "cat": "Laptops",
       "brand": "Lenovo",
-      "name": "Laptop Lenovo IdeaPad Slim 3 15.6\" Core i3-N305, 8 GB RAM, 256 GB SSD",
+      "name": "Laptop Lenovo IdeaPad Slim 3 15.6\" Core i3-N305, 8 GB RAM, 128 GB SSD",
       "model": "Intel Core i3-N305 · Windows 11 · pantalla Full HD",
       "image": "img/lenovo-slim3i.jpg",
       "spec": {
         "processor": "Intel Core i3-N305",
         "ram": "8 GB",
-        "storage": "256 GB SSD",
+        "storage": "128 GB SSD",
         "screen": "15.6 pulgadas",
         "os": "Windows 11",
         "condition": "Nueva"
       },
       "buy": {
-        "price": 1699.0,
-        "checked": "2026-10-16",
-        "priv": "1HZ3ipMuL7DHOJ8YeRh0MtF93U3q6vbticKokW033nl9bWt7OTyt24WXE4kdpCi+LQMZlvzzHKcDr4VzeCUZTfC9P93iAKRMWPoKdAsIGDdzIxZRHN21qd7P3W6jpJ2SqwTOlrf+sitkkmz9rjzGugT4K6v+EEr4DKMsXLv0G6OZwklp0IgZdWbTyPhXKpCQ+dVvjmHbsTgGFgcdj57X1uD7QVZaez66+aJ7A7gckk/OKS62erCCIUlraH9a2Qk="
+        "price": 1659.0,
+        "checked": "2026-10-21",
+        "priv": "10dWP5wMG+DvE8cuPlXq8xygM3pmKsE8f0eUiJrll6wslup1l3Pt8AbiP2WuRG5j0XFJX+nVD/9LpVtA9COBRXWCGWjw++xxc8TqSj6Cqtd3rxD4lFyjXyZvJiTyE49pax6J4RZiAF6UjYTBRlzxQzCjpPLp9V3n16cwwafYU6Xf4TyGqYnbx/wE4OfTnAGzYcKZ7W3nNxozxEJDorlRGbkQgmvh5oufEz6k8zCeE5YD3slsCMrOq6eY7zTrMmOomf0bQygAUxDkwp9TimZe7l+fgzdRGE4gdonZjBo="
       }
     },
     {
@@ -844,15 +844,15 @@
       "dept": "Regalitos",
       "cat": "Decoración",
       "brand": "Genérico",
-      "name": "Lámpara Luna 3D 15 cm con 16 colores y control remoto",
-      "model": "Recargable por USB · táctil",
+      "name": "Lámpara Luna 3D táctil con 16 colores",
+      "model": "Luz LED · cambia de color al tocarla",
       "image": "img/lampara-luna-3d.jpg",
       "spec": {},
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
-        "price": 47.9,
-        "checked": "2026-10-15",
-        "priv": "DGXXKfqN2VyIaDYWGF2jOlaoX+2X9OvdcJDXFRW1cuaNuVIBe0BbpS2+mHPX811bFnKxENcjtzF/THq/KBmWPZTikjJYc4pkd6fyb3MXzpOd848e1aYBsiuHS337ce/QI22D7anQHYZuXs9TtLWbaeFxZI3pCjJ79U8HJvxdhAlVScQ8UYx2L3lnuO7hJ2GdvBBWNLoMcyqRE+vMcuBW9p9cc01dzfAosOH35p3ECGgHFKTh9ja8q6JtQMJid9/Fs/aRofe/"
+        "price": 24.9,
+        "checked": "2026-10-21",
+        "priv": "1kCULsGf3d3XaGpDaiWMCkt3kq+2s9pxmQOTdzaTEz9JtM6gAn8+FVtUeGjwLP0N1RDHw+v7LbPA3cnZVzdMbiVtECCEL3TbWvYrYfe/rYtE5FCdvVFGzjSj5in0G2ffkFXV+tWu4hWz+W+Y1V1eRxeQozo9h+w5GgD5K2RxrOxC+z0MjUt9LpNX5pNBWmw9DEUEEeF9oOn/W9TW5/6XIpzJ4M690eEclkGTMA=="
       }
     },
     {
@@ -1739,8 +1739,8 @@
       "entrega": "Llega a Pucallpa en 5 a 8 días (estimado)",
       "buy": {
         "price": 89.9,
-        "checked": "2026-10-16",
-        "priv": "B30dyBH2AsIB0yE/5fAr/ohhu4NecquA+gqul850Ze4lAeeT32V1QQiirwjmbzRUAwBDQJGW4ausZa3XztNUoayzcmiwfZ0ffdb3paXaoJYolual8e6c2bpAb9/YH5oXyIWwXygDLEjgVwhN9PIUI+0kWbxBvJ0Kw7WYkbbxPbiKXNnQ7eiH3i6wJG5vuJXqcCGOtnS1ECN9SiGo6vbymtZPQo3nM1HZM00xQw=="
+        "checked": "2026-10-21",
+        "priv": "facwS1ChiCaRw4uJ0Lz2QdvaEdiPmDsq/EuoDkWdR7ITq92Gf7x7Apdd/u+TVDDtIRYBTlyqEVAwYUjsh/pjDnIclEaIVpxvSIB20vMH6uyUaDNlPzULwmxjRCMmcu2TkIwRH2srvSnqolhC/bM2yLSdupumgNJHNma7R02JM5MvGMwjfTGaCCr/u5ypjUxbCJs68W0sszT6c04vo2lz7R5Dg+ylk6IPdizbIG1H+mh/cwxwRTUp3sGWdYA="
       }
     },
     {
