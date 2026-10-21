@@ -1,0 +1,45 @@
+name: Buscar fotos (temporal)
+on:
+  workflow_dispatch:
+    inputs:
+      terms:
+        required: true
+permissions:
+  contents: write
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Buscar y bajar miniaturas
+        env:
+          TERMS: ${{ github.event.inputs.terms }}
+        run: |
+          pip install pillow requests >/dev/null
+          python3 - <<'PY'
+          import os, json, requests, io
+          from PIL import Image
+          H={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/129 Safari/537.36","Accept":"application/json"}
+          os.makedirs("/tmp/out/t",exist_ok=True); out={}
+          for t in [x.strip() for x in os.environ["TERMS"].split("|") if x.strip()]:
+              try:
+                  r=requests.get("https://unsplash.com/napi/search/photos",params={"query":t,"per_page":20},headers=H,timeout=30).json()
+              except Exception as e:
+                  out[t]={"error":str(e)}; continue
+              res=[]
+              for p in r.get("results",[]):
+                  if p.get("premium") or p.get("plus"): continue
+                  pid=p["id"]; small=p["urls"]["small"]
+                  try:
+                      im=Image.open(io.BytesIO(requests.get(small,timeout=30).content)).convert("RGB"); im.thumbnail((400,400)); im.save(f"/tmp/out/t/{pid}.jpg",quality=80)
+                  except Exception: continue
+                  res.append({"id":pid,"desc":p.get("alt_description") or p.get("description"),"raw":p["urls"]["raw"],"user":p["user"]["name"],"page":p["links"]["html"]})
+                  if len(res)>=8: break
+              out[t]=res
+          json.dump(out,open("/tmp/out/fotos.json","w"),ensure_ascii=False,indent=1)
+          PY
+      - name: Guardar en rama investigacion
+        run: |
+          git init -q r && cd r && git checkout -q -b investigacion
+          cp -r /tmp/out/* . && git add -A
+          git -c user.name=zypuc -c user.email=zypuc@users.noreply.github.com commit -qm "Fotos"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" investigacion
