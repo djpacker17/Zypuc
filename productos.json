@@ -2381,7 +2381,7 @@
       ],
       "color": "#0B5ED7",
       "fruit": "🟡",
-      "img": "img/feria/cheesecake.jpg",
+      "img": "img/feria/cheesecake.jpg?v=2",
       "sticker": "img/feria/maracuya-fruta.jpg",
       "price": null,
       "credit": {
@@ -2401,13 +2401,13 @@
       ],
       "color": "#EA7A12",
       "fruit": "🧡",
-      "img": "img/feria/aguaje.jpg",
+      "img": "img/feria/aguaje.jpg?v=2",
       "sticker": "img/feria/aguaje-fruta.jpg",
       "price": null,
       "credit": {
-        "autor": "TheGirlsNY",
+        "autor": "saboraselvatm",
         "licencia": "CC BY-SA 2.0",
-        "url": "https://www.flickr.com/photos/55768440@N00/6049103170"
+        "url": "https://www.flickr.com/photos/132751681@N05/18907585764"
       }
     },
     {
@@ -2421,12 +2421,12 @@
       ],
       "color": "#1E293B",
       "fruit": "🍪",
-      "img": "img/feria/oreo.jpg",
+      "img": "img/feria/oreo.jpg?v=2",
       "price": null,
       "credit": {
-        "autor": "TheSpoonShadow",
-        "licencia": "CC BY 4.0",
-        "url": "https://commons.wikimedia.org/wiki/File:Cookies_and_Cream_Shake.jpg"
+        "autor": "gothica2007",
+        "licencia": "CC BY 2.0",
+        "url": "https://www.flickr.com/photos/94048531@N00/18511526386"
       }
     },
     {
@@ -2440,13 +2440,13 @@
       ],
       "color": "#C99A06",
       "fruit": "💛",
-      "img": "img/feria/maracuya.jpg",
+      "img": "img/feria/maracuya.jpg?v=2",
       "sticker": "img/feria/maracuya-fruta.jpg",
       "price": null,
       "credit": {
-        "autor": "@felixtriller from Cologne, Germany",
+        "autor": "gothica2007",
         "licencia": "CC BY 2.0",
-        "url": "https://commons.wikimedia.org/wiki/File:Siem_Reap_iced_passion_fruit_juice_(5057850765).jpg"
+        "url": "https://www.flickr.com/photos/94048531@N00/18539888801"
       }
     },
     {
@@ -2460,12 +2460,12 @@
       ],
       "color": "#14B8A6",
       "fruit": "🥑",
-      "img": "img/feria/triple.jpg",
+      "img": "img/feria/triple.jpg?v=2",
       "price": null,
       "credit": {
-        "autor": "Ocdp",
-        "licencia": "CC0",
-        "url": "https://commons.wikimedia.org/wiki/File:Egg_Sandwich_001.jpg"
+        "autor": "MiguelAlanCS",
+        "licencia": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Sanguche_triple.jpg"
       }
     }
   ],
