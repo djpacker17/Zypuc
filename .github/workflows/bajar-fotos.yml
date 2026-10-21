@@ -1,0 +1,43 @@
+name: Bajar fotos (temporal)
+on:
+  workflow_dispatch:
+    inputs:
+      lista:
+        required: true
+permissions:
+  contents: write
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar y optimizar
+        env:
+          LISTA: ${{ github.event.inputs.lista }}
+        run: |
+          pip install pillow requests >/dev/null
+          python3 - <<'PY'
+          import os, io, requests
+          from PIL import Image, ImageOps
+          os.makedirs("img/feria", exist_ok=True)
+          UAS=["ZypucBot/1.0 (https://djpacker17.github.io/Zypuc/; tienda escolar)","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36"]
+          ok=0
+          for par in os.environ["LISTA"].split("|"):
+              nombre,foco,url=par.split("=",2); fy,fx=[float(v) for v in foco.split(",")]; hecho=False
+              for ua in UAS:
+                  try:
+                      r=requests.get(url,headers={"User-Agent":ua},timeout=60)
+                      if r.status_code!=200: print(f"::warning::{nombre} HTTP {r.status_code} con UA {ua[:12]}"); continue
+                      im=ImageOps.exif_transpose(Image.open(io.BytesIO(r.content))).convert("RGB")
+                      w,h=im.size; s=min(w,h)
+                      x0=int((w-s)*fx); y0=int((h-s)*fy); im=im.crop((x0,y0,x0+s,y0+s)).resize((900,900),Image.LANCZOS)
+                      im.save(f"img/feria/{nombre}.jpg","JPEG",quality=82,optimize=True,progressive=True)
+                      print(f"::notice::{nombre} ok {w}x{h}"); hecho=True; ok+=1; break
+                  except Exception as e:
+                      print(f"::warning::{nombre} error {type(e).__name__}: {str(e)[:80]}")
+          if not ok: raise SystemExit(1)
+          PY
+      - name: Guardar
+        run: |
+          git config user.name "zypuc-precios"; git config user.email "zypuc-precios@users.noreply.github.com"
+          git add img/feria && git commit -m "Fotos de los antojitos" ; for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
