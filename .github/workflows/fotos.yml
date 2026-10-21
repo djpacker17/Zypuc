@@ -21,19 +21,20 @@ jobs:
           H={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/129 Safari/537.36","Accept":"application/json"}
           os.makedirs("/tmp/out/t",exist_ok=True); out={}
           for t in [x.strip() for x in os.environ["TERMS"].split("|") if x.strip()]:
+              res=[]
               try:
-                  r=requests.get("https://unsplash.com/napi/search/photos",params={"query":t,"per_page":20},headers=H,timeout=30).json()
+                  r=requests.get("https://api.openverse.org/v1/images/",params={"q":t,"license_type":"commercial,modification","page_size":30,"mature":"false"},headers=H,timeout=40).json()
+                  lista=r.get("results",[])
               except Exception as e:
                   out[t]={"error":str(e)}; continue
-              res=[]
-              for p in r.get("results",[]):
-                  if p.get("premium") or p.get("plus"): continue
-                  pid=p["id"]; small=p["urls"]["small"]
+              for p in lista:
+                  if (p.get("width") or 0)<700: continue
+                  pid=p["id"][:12]
                   try:
-                      im=Image.open(io.BytesIO(requests.get(small,timeout=30).content)).convert("RGB"); im.thumbnail((400,400)); im.save(f"/tmp/out/t/{pid}.jpg",quality=80)
+                      im=Image.open(io.BytesIO(requests.get(p.get("thumbnail") or p["url"],headers=H,timeout=30).content)).convert("RGB"); im.thumbnail((360,360)); im.save(f"/tmp/out/t/{pid}.jpg",quality=78)
                   except Exception: continue
-                  res.append({"id":pid,"desc":p.get("alt_description") or p.get("description"),"raw":p["urls"]["raw"],"user":p["user"]["name"],"page":p["links"]["html"]})
-                  if len(res)>=8: break
+                  res.append({"id":pid,"title":p.get("title"),"url":p["url"],"creator":p.get("creator"),"license":p.get("license"),"license_version":p.get("license_version"),"source":p.get("source"),"page":p.get("foreign_landing_url"),"w":p.get("width"),"h":p.get("height")})
+                  if len(res)>=10: break
               out[t]=res
           json.dump(out,open("/tmp/out/fotos.json","w"),ensure_ascii=False,indent=1)
           PY
