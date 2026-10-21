@@ -1,0 +1,36 @@
+name: Bajar fotos (temporal)
+on:
+  workflow_dispatch:
+    inputs:
+      lista:
+        required: true
+permissions:
+  contents: write
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar y optimizar
+        env:
+          LISTA: ${{ github.event.inputs.lista }}
+        run: |
+          pip install pillow requests >/dev/null
+          python3 - <<'PY'
+          import os, io, requests
+          from PIL import Image, ImageOps
+          os.makedirs("img/feria", exist_ok=True)
+          H={"User-Agent":"ZypucBot/1.0 (tienda escolar; contacto por GitHub)"}
+          for par in os.environ["LISTA"].split("|"):
+              nombre,url=par.split("=",1)
+              r=requests.get(url,headers=H,timeout=60); r.raise_for_status()
+              im=ImageOps.exif_transpose(Image.open(io.BytesIO(r.content))).convert("RGB")
+              w,h=im.size; s=min(w,h)  # recorte cuadrado centrado
+              im=im.crop(((w-s)//2,(h-s)//2,(w-s)//2+s,(h-s)//2+s)).resize((900,900),Image.LANCZOS)
+              im.save(f"img/feria/{nombre}.jpg","JPEG",quality=82,optimize=True,progressive=True)
+              print(nombre, w, h)
+          PY
+      - name: Guardar
+        run: |
+          git config user.name "zypuc-precios"; git config user.email "zypuc-precios@users.noreply.github.com"
+          git add img/feria && git commit -m "Fotos de los antojitos" && for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
