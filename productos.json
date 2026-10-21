@@ -2368,5 +2368,117 @@
         "priv": "Z5XfHdfi/xv5IzYuf1BEg3mN2iuM8r38CopKnTUpyu4t2+ZPGXB9CXlrSusAvk9S/o2ZdmwZJehG0jjpX9Y+yO7DNf6r3eZAK5IGMak62lwrv5KLcqsOV2NmnLnTgJtsIYUn5I5x1/05H9EiIWviVDqRP7B6PygoxpQ5XcxE56bjwRK1vjBurAEhNLQVDDUJpB+FpZPj"
       }
     }
+  ],
+  "antojitos": [
+    {
+      "id": "cheesecake",
+      "name": "Cheesecake",
+      "flavor": "de maracuyá",
+      "desc": "Cremoso, sobre base de galleta y bañado en salsa de maracuyá.",
+      "tags": [
+        "Postre",
+        "Porción o entero"
+      ],
+      "color": "#0B5ED7",
+      "fruit": "🟡",
+      "img": "img/feria/cheesecake.jpg",
+      "sticker": "img/feria/maracuya-fruta.jpg",
+      "price": null,
+      "credit": {
+        "autor": "Bernard DUPONT",
+        "licencia": "CC BY-SA 2.0",
+        "url": "https://www.flickr.com/photos/65695019@N07/54363959661"
+      }
+    },
+    {
+      "id": "frappe-aguaje",
+      "name": "Frappé",
+      "flavor": "de aguaje",
+      "desc": "El sabor de la Amazonía, bien heladito.",
+      "tags": [
+        "Bebida",
+        "Fruta de la región"
+      ],
+      "color": "#EA7A12",
+      "fruit": "🧡",
+      "img": "img/feria/aguaje.jpg",
+      "sticker": "img/feria/aguaje-fruta.jpg",
+      "price": null,
+      "credit": {
+        "autor": "TheGirlsNY",
+        "licencia": "CC BY-SA 2.0",
+        "url": "https://www.flickr.com/photos/55768440@N00/6049103170"
+      }
+    },
+    {
+      "id": "frappe-oreo",
+      "name": "Frappé",
+      "flavor": "de Oreo",
+      "desc": "Cremoso, con galleta Oreo y chantilly.",
+      "tags": [
+        "Bebida",
+        "El favorito"
+      ],
+      "color": "#1E293B",
+      "fruit": "🍪",
+      "img": "img/feria/oreo.jpg",
+      "price": null,
+      "credit": {
+        "autor": "TheSpoonShadow",
+        "licencia": "CC BY 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Cookies_and_Cream_Shake.jpg"
+      }
+    },
+    {
+      "id": "frappe-maracuya",
+      "name": "Frappé",
+      "flavor": "de maracuyá",
+      "desc": "Dulce, ácido y súper refrescante.",
+      "tags": [
+        "Bebida",
+        "Fruta de la región"
+      ],
+      "color": "#C99A06",
+      "fruit": "💛",
+      "img": "img/feria/maracuya.jpg",
+      "sticker": "img/feria/maracuya-fruta.jpg",
+      "price": null,
+      "credit": {
+        "autor": "@felixtriller from Cologne, Germany",
+        "licencia": "CC BY 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Siem_Reap_iced_passion_fruit_juice_(5057850765).jpg"
+      }
+    },
+    {
+      "id": "triple",
+      "name": "Triple",
+      "flavor": "palta, huevo y tomate",
+      "desc": "El clásico peruano, recién hecho.",
+      "tags": [
+        "Salado",
+        "Recién hecho"
+      ],
+      "color": "#14B8A6",
+      "fruit": "🥑",
+      "img": "img/feria/triple.jpg",
+      "price": null,
+      "credit": {
+        "autor": "Ocdp",
+        "licencia": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Egg_Sandwich_001.jpg"
+      }
+    }
+  ],
+  "antojitosCreditos": [
+    {
+      "autor": "Kristi Denby/Archivo Centro Takiwasi",
+      "licencia": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Fruto_de_aguaje_(Mauritia_flexuosa).jpg"
+    },
+    {
+      "autor": "Nana Pearls",
+      "licencia": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Passion_fruit_in_a_jar.jpg"
+    }
   ]
 }
