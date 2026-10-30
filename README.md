@@ -24,9 +24,9 @@ Los pedidos llegan por WhatsApp al **+51 939 670 295**.
 | `scripts/actualizar_precios.py` | Programa que visita los links de cada producto y lee el precio. |
 | `.github/workflows/precios.yml` | Le dice a GitHub que corra el actualizador cada 6 horas. |
 | `logo-claro.png`, `logo-oscuro.png` | Logo para fondo claro y para modo oscuro. |
-| `marca/` | Logo en SVG y PNG (claro, oscuro, grande), Zypi solo y el ícono para foto de perfil. |
+| `marca/` | Logo en SVG y PNG (claro, oscuro, grande), Zypi solo (`zypi.svg`, el mismo que usa la mascota flotante) y el ícono para foto de perfil. |
 | `og.png` | Imagen que aparece al compartir el link por WhatsApp o Facebook. |
-| `manifest.webmanifest`, `sw.js`, `icon-*.png` | Permiten instalar la tienda como app en el celular y abrirla sin internet. |
+| `manifest.webmanifest`, `sw.js`, `app-icon-*.png`, `apple-touch-icon-v3.png`, `favicon*` | Permiten instalar la tienda como app en el celular (con atajos a Productos, Antojitos y Rastrear) y abrirla sin internet. |
 
 ## Cómo se calcula el precio
 

@@ -1,37 +1,25 @@
 {
+  "id": "./",
   "name": "Zypuc · Lo que buscas, cerca.",
   "short_name": "Zypuc",
   "description": "Tecnología, deporte, repostería y regalitos con entrega en Pucallpa.",
   "lang": "es-PE",
+  "dir": "ltr",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f6f9fe",
+  "background_color": "#0B5ED7",
   "theme_color": "#0B5ED7",
+  "categories": ["shopping", "food"],
   "icons": [
-    {
-      "src": "icon-192.png?v=2",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "icon-512.png?v=2",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "icon-512-any.png?v=2",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "favicon.svg?v=2",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    }
+    { "src": "app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "app-icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "app-icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Productos", "short_name": "Productos", "url": "./#productos", "icons": [{ "src": "app-icon-192.png", "sizes": "192x192" }] },
+    { "name": "Antojitos Zypuc", "short_name": "Antojitos", "url": "./#antojitos", "icons": [{ "src": "app-icon-192.png", "sizes": "192x192" }] },
+    { "name": "Rastrear mi pedido", "short_name": "Rastrear", "url": "./#rastrear", "icons": [{ "src": "app-icon-192.png", "sizes": "192x192" }] }
   ]
 }
