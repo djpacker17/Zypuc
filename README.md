@@ -19,7 +19,7 @@ Los pedidos llegan por WhatsApp al **+51 939 670 295**.
 | `precios.json` | Lo escribe solo el actualizador de precios. No hace falta tocarlo. |
 | `resenas.json` | Reseñas publicadas (se generan desde el Panel Zypuc). |
 | `pedidos.json` | Estado de cada pedido para "Rastrea tu pedido" (se genera desde el Panel Zypuc). |
-| `scripts/privado.py` | Cifra y descifra los links de compra. |
+| `scripts/privado.py` | Cifra y descifra los datos de compra (tienda, link, precio de compra y comisión). |
 | `scripts/apps-script.gs` | Código del Centro de datos (Google Sheets). La copia real, con la clave, está en tu Drive. |
 | `scripts/actualizar_precios.py` | Programa que visita los links de cada producto y lee el precio. |
 | `.github/workflows/precios.yml` | Le dice a GitHub que corra el actualizador cada 6 horas. |
@@ -30,11 +30,11 @@ Los pedidos llegan por WhatsApp al **+51 939 670 295**.
 
 ## Cómo se calcula el precio
 
-```
-Precio Zypuc = (precio en la tienda donde compramos + envío a Pucallpa) × (1 + comisión)
-```
+El precio Zypuc incluye el envío a Pucallpa y nuestro servicio, y se redondea al siguiente ",90".
 
-Se redondea al siguiente ",90". El envío (S/ 8 por unidad) y la comisión (15 %) se cambian en `config` dentro de `productos.json`. Un producto puede tener su propio `"envio"` o `"comision"` (por ejemplo, la bicicleta tiene envío S/ 25).
+El **precio de compra, la tienda donde compramos y la comisión van cifrados** con la contraseña del equipo. GitHub (con el secreto `ZYPUC_CLAVE`) calcula el precio Zypuc y publica solo ese, en `buy.sale` de `productos.json` y en `sale` de `precios.json`. Así nadie puede sacar cuánto pagamos ni cuánto ganamos mirando la tienda o el repositorio. La fórmula y la comisión se ven solo en el modo equipo.
+
+Para cambiar la comisión o el precio de compra de un producto, usa **Panel → Agregar / editar** en el modo equipo: el formulario cifra los datos antes de generar el `productos.json`. El envío por unidad (`envioPorUnidad`) y el envío propio de un producto (`"envio"`) sí son visibles.
 
 El aviso **"En Ripley cuesta S/ X · Ver en Ripley"** solo aparece si:
 1. esa tienda de verdad lo vende más caro que nuestro precio, y
@@ -91,7 +91,7 @@ Lo que los clientes piden y no está en la tienda llega a la pestaña **Encargos
 
 ## Seguridad
 
-- Los links de compra van cifrados (AES-256) y solo se abren con la contraseña del equipo.
+- Los links, los precios de compra y la comisión van cifrados (AES-256) y solo se abren con la contraseña del equipo. Los registros de GitHub Actions tampoco los muestran.
 - Las fotos de los productos se guardan en `img/` (no delatan en qué tienda compramos).
 - La página tiene reglas de seguridad del navegador (CSP), no se puede mostrar dentro de otra página y el código va compactado.
 - Activa la verificación en dos pasos en GitHub y en la cuenta de Google de la hoja.
@@ -109,7 +109,7 @@ Al entrar ves en cada producto **dónde comprarlo**, el vendedor, el link y tu g
 - **Reseñas:** publica las reseñas que los clientes te mandan por WhatsApp (`resenas.json`).
 - **Estados de pedidos:** actualiza lo que el cliente ve en "Rastrea tu pedido" (`pedidos.json`).
 
-Los links de compra van **cifrados** dentro de `productos.json` (campo `priv`). Así, aunque el repositorio sea público, nadie ve dónde compramos sin la contraseña.
+Los datos de compra van **cifrados** (campo `priv`): en `productos.json` la tienda, el link y el precio de compra; en `precios.json` el precio de compra revisado y su historial; y en `config.priv` la comisión. Así, aunque el repositorio sea público, nadie ve dónde compramos ni a cuánto sin la contraseña.
 
 ### Secreto para el actualizador (una sola vez)
 
@@ -157,4 +157,4 @@ Con los 12 logros, Zypi se vuelve dorado. Los logros se ven en el pie de página
 
 ## Historial de precios
 
-El actualizador guarda un precio por día en `precios.json`. En la ficha de cada producto aparece un gráfico con nuestro precio y el de la otra tienda.
+El actualizador guarda un precio por día en `precios.json` (el de venta a la vista y el de compra cifrado). En la ficha de cada producto aparece un gráfico con nuestro precio y el de la otra tienda.

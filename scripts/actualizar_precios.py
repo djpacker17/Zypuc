@@ -2,7 +2,11 @@
 
 Lee productos.json, visita los links de cada producto (tienda donde compramos
 y tienda con la que comparamos) y guarda los precios encontrados en precios.json.
-La tienda (index.html) lee precios.json y recalcula todo sola.
+La tienda (index.html) lee precios.json y se actualiza sola.
+
+Privacidad: el precio de compra, la tienda donde compramos y la comisión van
+cifrados con la clave del equipo (secreto ZYPUC_CLAVE). Este script calcula el
+precio Zypuc y publica solo ese ("sale"); lo de compra queda en "priv".
 
 Reglas para no molestar a las tiendas ni mostrar datos falsos:
 - Pocas visitas: una por link, con pausa entre cada una, unas pocas veces al día.
@@ -18,6 +22,8 @@ from __future__ import annotations
 
 import html
 import json
+import math
+import os
 import random
 import re
 import sys
@@ -28,7 +34,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from privado import clave, descifrar  # noqa: E402
+from privado import cifrar, clave, descifrar  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 PRODUCTOS = RAIZ / "productos.json"
@@ -250,41 +256,118 @@ def leer_precio(link: dict) -> tuple[float | None, str]:
     return (precio_json_ld(doc) or precio_meta(doc)), "generico"
 
 
+CARPETA_PRIVADA = RAIZ / ".privado"   # solo existe dentro de GitHub Actions; no se sube (ver .gitignore)
+FOTOS_COMPRA = CARPETA_PRIVADA / "fotos-compra.json"
+# Datos de compra que nunca se publican sin cifrar (van dentro de "priv")
+CAMPOS_PRIVADOS = ("price", "url", "store", "seller", "q", "match", "excluir", "comision")
+
+
+def redondeo90(x: float) -> float:
+    """Igual que round90() de la tienda: sube al siguiente ",90"."""
+    e = math.floor(x)
+    return round(e + 0.9 if x <= e + 0.9 else e + 1.9, 2)
+
+
+def precio_venta(p: dict, privado: dict, compra, cfg: dict, comision) -> float | None:
+    """Precio Zypuc = (precio de compra + envío) × (1 + comisión), redondeado a ",90"."""
+    if not compra or compra <= 0:
+        return None
+    com = privado.get("comision", comision)
+    if com is None:
+        return None
+    envio = p.get("envio")
+    envio = cfg.get("envioPorUnidad", 0) if envio is None else envio
+    return redondeo90((compra + envio) * (1 + com / 100))
+
+
 def main() -> int:
     datos = json.loads(PRODUCTOS.read_text(encoding="utf-8"))
+    cfg = datos["config"]
     productos = datos["productos"]
-    contrasena = __import__("os").environ.get("ZYPUC_CLAVE", "").strip()
-    k = clave(contrasena, datos["config"]["adminSalt"]) if contrasena and datos["config"].get("adminSalt") else None
     previo = json.loads(PRECIOS.read_text(encoding="utf-8")) if PRECIOS.exists() else {"items": {}}
     ahora = datetime.now(timezone.utc).isoformat(timespec="seconds")
     salida = {"updated": ahora, "items": {}}
     resumen = []
+
+    # ---------- clave del equipo ----------
+    contrasena = os.environ.get("ZYPUC_CLAVE", "").strip()
+    k = clave(contrasena, cfg["adminSalt"]) if contrasena and cfg.get("adminSalt") else None
+    if k and cfg.get("adminCheck"):
+        try:
+            if descifrar(cfg["adminCheck"], k) != "zypuc-ok":
+                raise ValueError
+        except Exception:
+            k = None
+            resumen.append("🔒 La clave ZYPUC_CLAVE no es la correcta: no se revisaron los precios de compra.")
+    elif not k:
+        resumen.append("🔒 Falta el secreto ZYPUC_CLAVE: no se revisaron los precios de compra.")
+
+    # ---------- lo privado se cifra (comisión, precio y tienda de compra) ----------
+    cambio_productos = False
+    cfg_priv: dict = {}
+    if k and cfg.get("priv"):
+        try:
+            cfg_priv = descifrar(cfg["priv"], k)
+        except Exception:
+            resumen.append("🔒 No se pudo leer la configuración cifrada.")
+    if k and "comision" in cfg:
+        cfg_priv["comision"] = cfg.pop("comision")
+        cfg["priv"] = cifrar(cfg_priv, k)
+        cambio_productos = True
+    comision = cfg_priv.get("comision", cfg.get("comision"))
+
+    privados: dict = {}  # id -> datos de compra descifrados
+    if k:
+        for p in productos:
+            b = p.get("buy")
+            if not b:
+                continue
+            try:
+                dp = descifrar(b["priv"], k) if b.get("priv") else {}
+            except Exception:
+                resumen.append(f"🔒 {p['id']}: no se pudo descifrar su link de compra.")
+                continue
+            sueltos = {c: b.pop(c) for c in CAMPOS_PRIVADOS if c in b}
+            if "comision" in p:
+                sueltos["comision"] = p.pop("comision")
+            if sueltos:  # datos que estaban a la vista: pasan a la parte cifrada
+                dp.update(sueltos)
+                b["priv"] = cifrar(dp, k)
+                cambio_productos = True
+            venta = precio_venta(p, dp, dp.get("price"), cfg, comision)
+            if venta and b.get("sale") != venta:
+                b["sale"] = venta
+                cambio_productos = True
+            privados[p["id"]] = dp
+
+    fotos_compra: dict = {}
 
     for p in productos:
         for lado in ("buy", "ref"):
             link = p.get(lado)
             if not link:
                 continue
-            privado = lado == "buy" and "priv" in link
-            if privado:
-                problema = None
-                if not k:
-                    problema = "falta el secreto ZYPUC_CLAVE, no se revisó"
-                else:
-                    try:
-                        link = {**link, **descifrar(link["priv"], k)}
-                    except Exception:
-                        problema = "la clave ZYPUC_CLAVE no es la correcta"
-                if problema:
-                    guardado = previo.get("items", {}).get(p["id"], {}).get(lado)
-                    if guardado:  # se conserva el último precio bueno, sin pistas de la tienda
-                        salida["items"].setdefault(p["id"], {})[lado] = {k2: v for k2, v in guardado.items() if k2 != "method"}
-                    resumen.append(f"🔒 {p['id']} (compra): {problema}")
+            guardado = previo.get("items", {}).get(p["id"], {})
+            if lado == "buy":
+                if p["id"] not in privados:  # sin clave: se conserva lo publicado, tal cual
+                    for c in ("buy", "sale"):
+                        if c in guardado:
+                            salida["items"].setdefault(p["id"], {})[c] = guardado[c]
                     continue
+                dp = privados[p["id"]]
+                link = {**link, **dp}
+                anterior = guardado.get("buy") or {}
+                if "priv" in anterior:
+                    try:
+                        anterior = descifrar(anterior["priv"], k)
+                    except Exception:
+                        anterior = {}
+                anterior = anterior or {"price": dp.get("price"), "checked": p["buy"].get("checked")}
+            else:
+                anterior = guardado.get(lado) or {"price": link.get("price"), "checked": link.get("checked")}
             if not link.get("url"):
                 continue
-            anterior = previo.get("items", {}).get(p["id"], {}).get(lado) or {
-                "price": link.get("price"), "checked": link.get("checked")}
+            privado = lado == "buy"
             nuevo = {k2: v for k2, v in dict(anterior).items() if k2 != "method"}
             nuevo["lastTry"] = ahora
             ULTIMA_IMAGEN.clear()
@@ -302,7 +385,9 @@ def main() -> int:
             etiqueta = "compra" if lado == "buy" else "otra tienda"
             base = anterior.get("price") or link.get("price")
             if precio and base and not (0.4 * base <= precio <= 2.5 * base):
-                resumen.append(f"⚠️ {p['id']} ({etiqueta}): precio raro {precio} vs {base}, descartado")
+                # Los registros de GitHub Actions son públicos: el precio de compra nunca se escribe ahí
+                detalle = "precio raro" if privado else f"precio raro {precio} vs {base}"
+                resumen.append(f"⚠️ {p['id']} ({etiqueta}): {detalle}, descartado")
                 precio = None
             if lado == "buy":
                 if precio:
@@ -312,10 +397,11 @@ def main() -> int:
                     resumen.append(f"📦 {p['id']} (compra): agotado en la tienda")
             if precio:
                 nuevo.update(price=round(precio, 2), checked=ahora, ok=True, method=metodo)
-                resumen.append(f"✅ {p['id']} ({etiqueta}): S/ {precio:.2f}")
+                resumen.append(f"✅ {p['id']} ({etiqueta}): " + ("revisado" if privado else f"S/ {precio:.2f}"))
             else:
                 nuevo.update(ok=False, method=metodo)
-                resumen.append(f"❌ {p['id']} ({etiqueta}): no se pudo leer [{metodo}], se mantiene S/ {base}")
+                resumen.append(f"❌ {p['id']} ({etiqueta}): no se pudo leer [{metodo}], se mantiene el último precio"
+                               + ("" if privado else f" (S/ {base})"))
             if ULTIMA_IMAGEN.get("url"):
                 nuevo["image"] = ULTIMA_IMAGEN["url"]
             # Historial: un punto por día (el último precio leído ese día), máximo 120 días
@@ -329,13 +415,38 @@ def main() -> int:
                 else:
                     hist.append([hoy, round(precio, 2)])
             nuevo["history"] = hist[-120:]
-            salida["items"].setdefault(p["id"], {})[lado] = nuevo
+            if privado:
+                # Afuera solo queda el precio Zypuc (de venta); la compra va cifrada
+                foto = nuevo.pop("image", None)
+                if foto:
+                    fotos_compra[p["id"]] = foto
+                venta = {"price": precio_venta(p, dp, nuevo.get("price"), cfg, comision),
+                         "checked": nuevo.get("checked"), "lastTry": ahora, "ok": bool(nuevo.get("ok"))}
+                serie = []
+                for dia, valor in nuevo["history"]:
+                    v = precio_venta(p, dp, valor, cfg, comision)
+                    if v:
+                        serie.append([dia, v])
+                venta["history"] = serie
+                if nuevo.get("stock"):
+                    venta["stock"] = nuevo["stock"]
+                item = salida["items"].setdefault(p["id"], {})
+                item["buy"] = {"priv": cifrar(nuevo, k)}
+                if venta["price"]:
+                    item["sale"] = venta
+            else:
+                salida["items"].setdefault(p["id"], {})[lado] = nuevo
             # Las APIs de catálogo responden rápido; las páginas HTML necesitan más pausa
             time.sleep(random.uniform(1, 2) if any(d in link.get("url", "") for d in VTEX) else random.uniform(3, 5))
 
+    if cambio_productos:
+        PRODUCTOS.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
     PRECIOS.write_text(json.dumps(salida, ensure_ascii=False, indent=2), encoding="utf-8")
+    if fotos_compra:  # para localizar_imagenes.py; esta carpeta no se publica
+        CARPETA_PRIVADA.mkdir(exist_ok=True)
+        FOTOS_COMPRA.write_text(json.dumps(fotos_compra, ensure_ascii=False), encoding="utf-8")
     print("\n".join(resumen))
-    resumen_md = Path(__import__("os").environ.get("GITHUB_STEP_SUMMARY", "")) if __import__("os").environ.get("GITHUB_STEP_SUMMARY") else None
+    resumen_md = Path(os.environ["GITHUB_STEP_SUMMARY"]) if os.environ.get("GITHUB_STEP_SUMMARY") else None
     if resumen_md:
         resumen_md.write_text("## Precios Zypuc\n\n" + "\n".join(f"- {l}" for l in resumen) + "\n", encoding="utf-8")
     return 0

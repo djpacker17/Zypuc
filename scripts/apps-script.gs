@@ -1,5 +1,5 @@
 /**
- * ZYPUC · CENTRO DE DATOS (Google Apps Script) · versión 2
+ * ZYPUC · CENTRO DE DATOS (Google Apps Script) · versión 3
  * ------------------------------------------------------------
  * Une la tienda con esta hoja de Google:
  *  - Pedidos: llegan solos cuando el cliente envía su pedido.
@@ -256,8 +256,14 @@ function datosTienda() {
 }
 function precioZypuc(p, cfg, live) {
   if (!p.buy || p.consult) return null;
+  // GitHub publica el precio Zypuc ya calculado ("sale"); el de compra va cifrado.
+  const v = live && live.items && live.items[p.id] && live.items[p.id].sale;
+  if (v && v.price > 0) return v.price;
+  if (p.buy.sale > 0) return p.buy.sale;
+  // Formato antiguo (antes del cifrado)
   let compra = p.buy.price; const l = live && live.items && live.items[p.id] && live.items[p.id].buy;
   if (l && l.price > 0) compra = l.price;
+  if (!(compra > 0) || cfg.comision == null) return null;
   const x = (compra + (p.envio != null ? p.envio : cfg.envioPorUnidad)) * (1 + (p.comision != null ? p.comision : cfg.comision) / 100);
   const e = Math.floor(x); return x <= e + 0.9 ? e + 0.9 : e + 1.9;
 }
@@ -293,7 +299,8 @@ function resumenDiario() {
     const t = datosTienda();
     t.prod.productos.forEach(function (p) {
       const l = t.precios.items && t.precios.items[p.id];
-      if (p.buy && (!l || !l.buy || l.buy.ok === false)) fallos.push(p.name);
+      const lv = l && (l.sale || l.buy);
+      if (p.buy && (!lv || lv.ok === false)) fallos.push(p.name);
       if (p.ref && /ripley/i.test(p.ref.url || '')) {
         const dias = Math.floor((Date.now() - new Date(String(p.ref.checked).slice(0, 10) + 'T12:00:00').getTime()) / 864e5);
         if (dias >= 4) vencen.push(p.name + ' (' + (7 - dias > 0 ? 'se oculta en ' + (7 - dias) + ' días' : 'ya oculta') + ')');

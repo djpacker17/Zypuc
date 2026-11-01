@@ -1,6 +1,6 @@
 /* Zypuc: funciona sin internet con la última versión guardada.
    Siempre intenta traer lo más nuevo primero (precios frescos) y, si no hay conexión, usa la copia guardada. */
-const VERSION = "zypuc-v7";
+const VERSION = "zypuc-v8";
 const BASE = ["./", "index.html", "productos.json", "precios.json", "logo-claro.png", "logo-oscuro.png", "marca/zypi.svg", "favicon.svg", "app-icon-192.png", "app-icon-512.png", "app-icon-192-maskable.png", "favicon-32-v3.png", "apple-touch-icon-v3.png", "manifest.webmanifest"];
 
 self.addEventListener("install", e => {

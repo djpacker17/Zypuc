@@ -17,6 +17,7 @@ RAIZ = pathlib.Path(__file__).resolve().parent.parent
 PRODUCTOS = RAIZ / "productos.json"
 PRECIOS = RAIZ / "precios.json"
 CARPETA = RAIZ / "img"
+FOTOS_COMPRA = RAIZ / ".privado" / "fotos-compra.json"  # la deja actualizar_precios.py; no se publica
 LADO = 800  # px, lado mayor
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36",
@@ -49,12 +50,13 @@ def main() -> int:
     datos = json.loads(PRODUCTOS.read_text(encoding="utf-8"))
     precios = json.loads(PRECIOS.read_text(encoding="utf-8")) if PRECIOS.exists() else {"items": {}}
     items = precios.get("items", {})
+    fotos_compra = json.loads(FOTOS_COMPRA.read_text(encoding="utf-8")) if FOTOS_COMPRA.exists() else {}
     nuevas = fallidas = 0
     for p in datos["productos"]:
         pid = p["id"]
         local = f"img/{pid}.jpg"
         archivo = RAIZ / local
-        vivo = (items.get(pid, {}).get("buy") or {}).get("image")
+        vivo = fotos_compra.get(pid) or (items.get(pid, {}).get("buy") or {}).get("image")
         if archivo.exists() and p.get("image") == local:
             continue
         fuentes = [u for u in (p.get("image"), vivo) if u and str(u).startswith("http")]
